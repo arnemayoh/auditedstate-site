@@ -41,7 +41,7 @@
       box-shadow: 0 10px 30px rgba(0,0,0,0.05);
       border-radius: 6px;
     }
-    
+
     .links a {
       display: inline-block;
       margin: 10px 15px;
@@ -52,6 +52,29 @@
 
     .links a:hover {
       text-decoration: underline;
+    }
+    .nav {
+      padding: 16px 20px;
+      background: white;
+      border-bottom: 1px solid #eaeaea;
+      text-align: center;
+      position: sticky;
+      top: 0;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #111;
+      font-weight: 600;
+    }
+
+    .nav a:hover {
+      text-decoration: underline;
+    }
+
+    .nav .sep {
+      margin: 0 10px;
+      color: #999;
     }
   </style>
 </head>
@@ -88,4 +111,13 @@
   </div>
 
 </body>
+<div class="nav">
+  <a href="index.html">Audited State</a>
+  <span class="sep">·</span>
+  <a href="problem.html">Problem</a>
+  <span class="sep">·</span>
+  <a href="architecture.html">Architecture</a>
+  <span class="sep">·</span>
+  <a href="research.html">Research</a>
+</div>
 </html>
