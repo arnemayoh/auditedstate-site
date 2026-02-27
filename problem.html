@@ -1,139 +1,246 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>The Problem — Audited State</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI & the Continuity of Human Understanding | Audited State</title>
 
   <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      line-height: 1.6;
-      color: #111;
-      background: #f8f8f8;
+    :root {
+      --max-width: 820px;
+      --text-color: #111;
+      --muted: #666;
+      --border: #e5e5e5;
     }
 
-    .section {
-      padding: 70px 20px;
-      max-width: 820px;
-      margin: auto;
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: var(--text-color);
+      background: #fff;
+      line-height: 1.6;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 1rem;
+    }
+
+    .nav-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--text-color);
+    }
+
+    nav a {
+      margin-left: 1.2rem;
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      color: var(--text-color);
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2rem 1rem 4rem 1rem;
     }
 
     h1 {
-      margin-top: 0;
-      font-size: 38px;
-      line-height: 1.2;
+      font-size: 2rem;
+      margin-bottom: 1rem;
     }
 
     h2 {
-      margin-top: 40px;
-      font-size: 22px;
-    }
-
-    p {
-      font-size: 18px;
-      color: #222;
+      margin-top: 3rem;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
     }
 
     .lead {
-      font-size: 20px;
-      color: #333;
-      max-width: 760px;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
     }
 
-    .quote {
-      margin: 30px 0;
-      padding: 18px 20px;
-      border-left: 4px solid #ddd;
-      background: #fff;
-      border-radius: 6px;
-      font-size: 18px;
-      color: #222;
+    .concept-preview {
+      margin-top: 1.5rem;
     }
 
-    .note {
-      margin-top: 40px;
-      font-size: 16px;
-      color: #555;
-    }
-    .nav {
-      padding: 16px 20px;
-      background: white;
-      border-bottom: 1px solid #eaeaea;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
+    .concept-preview h3 {
+      margin-bottom: 0.3rem;
     }
 
-    .nav a {
+    .muted-link {
+      display: inline-block;
+      margin-top: 1rem;
       text-decoration: none;
-      color: #111;
-      font-weight: 600;
+      color: var(--muted);
     }
 
-    .nav a:hover {
-      text-decoration: underline;
+    .muted-link:hover {
+      color: var(--text-color);
     }
 
-    .nav .sep {
-      margin: 0 10px;
-      color: #999;
-    }    
+    blockquote {
+      margin-top: 4rem;
+      font-size: 1.2rem;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 1rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      nav {
+        display: none;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-<div class="nav">
-  <a href="index.html">Audited State</a>
-  <span class="sep">·</span>
-  <a href="problem.html">Problem</a>
-  <span class="sep">·</span>
-  <a href="architecture.html">Architecture</a>
-  <span class="sep">·</span>
-  <a href="research.html">Research</a>
-  <span class="sep">·</span>
-  <a href="quotes.html">Quotes</a>
-</div>
-
-  <div class="section">
-    <h1>The Problem</h1>
-
-    <p class="lead">
-      AI systems increasingly produce durable actions without durable reasons.
-      Decisions persist — but justification evaporates.
-    </p>
-
-    <div class="quote">
-      <strong>Shadow AI</strong> is intelligence without a trace.
-    </div>
-
-    <h2>What is failing?</h2>
-    <p>
-      The problem is not intelligence. The problem is accountability under scale.
-      When humans and AI collaborate, it becomes hard to answer a basic question:
-      <strong>Who decided this — and why?</strong>
-    </p>
-
-    <h2>Why it matters</h2>
-    <p>
-      Institutions rely on justification: law, medicine, engineering, hiring, finance, and governance.
-      If decision-making becomes faster than memory, trust collapses into debate.
-      The result is not only mistakes — but an inability to repair them without erasing history.
-    </p>
-
-    <h2>What PKOS responds to</h2>
-    <p>
-      PKOS is a structural response to this gap. It aims to preserve continuity by linking:
-      intention → validation → execution → memory.
-    </p>
-
-    <p class="note">
-      This site is intentionally written in common language first. Technical and research material exists,
-      but is introduced gradually.
-    </p>
+<header>
+  <div class="nav-container">
+    <a href="/" class="logo">Audited State</a>
+    <nav>
+      <a href="/problem.html">Problem</a>
+      <a href="/concepts.html">Concepts</a>
+      <a href="/architecture.html">Architecture</a>
+      <a href="/research.html">Research</a>
+    </nav>
   </div>
+</header>
+
+<main>
+
+<h1>The Problem</h1>
+
+<p class="lead">
+Artificial intelligence increases the speed, scale, and automation of decision-support and institutional action.
+What does not automatically increase is the preservation of meaning, responsibility, and justification.
+</p>
+
+<h2>From Memory to Acceleration</h2>
+
+<p>
+Modern institutions depend on durable records.
+Law, medicine, finance, engineering, and governance rely on the ability to reconstruct how and why decisions were made.
+</p>
+
+<p>
+Recorded intention enables accountability.
+Accountability enables learning.
+Learning enables stability across time.
+</p>
+
+<p>
+These mechanisms evolved under slower conditions.
+</p>
+
+<h2>The Structural Asymmetry</h2>
+
+<p>
+AI systems can generate analysis, recommendations, summaries, and drafts at machine scale.
+They compress cycles of iteration that previously unfolded over days, weeks, or months.
+</p>
+
+<p>
+When production accelerates faster than explanation, a structural asymmetry emerges:
+decisions persist, but their reasoning may not.
+</p>
+
+<h2>Opacity Without Malice</h2>
+
+<p>
+The problem is not deception.
+It is opacity.
+</p>
+
+<p>
+As systems become more seamless, decision points become less visible.
+Responsibility may remain human in principle, yet difficult to trace in practice.
+</p>
+
+<p>
+The question shifts from:
+</p>
+
+<p><strong>Who decided this?</strong></p>
+
+<p>
+to:
+</p>
+
+<p><strong>How did this happen?</strong></p>
+
+<h2>Consequences of Drift</h2>
+
+<p>
+When reasoning cannot be reconstructed:
+</p>
+
+<ul>
+  <li>Errors become harder to repair</li>
+  <li>Disagreements become harder to resolve</li>
+  <li>Policies detach from stated intentions</li>
+  <li>Institutional trust weakens</li>
+</ul>
+
+<p>
+Acceleration does not eliminate responsibility.
+It increases the difficulty of preserving it.
+</p>
+
+<h2>A Structural Question</h2>
+
+<p>
+The challenge is not whether AI should be used.
+It already is.
+</p>
+
+<p>
+The structural question is whether institutions can preserve continuity, agency, and accountability under accelerating conditions.
+</p>
+
+<p>
+If these elements remain visible, acceleration can amplify learning.
+If they do not, acceleration amplifies fragmentation.
+</p>
+
+<h2>Related Concepts</h2>
+
+<ul>
+  <li><a href="/continuity.html">Continuity</a></li>
+  <li><a href="/semantic-drift.html">Semantic Drift</a></li>
+  <li><a href="/human-agency.html">Human Agency</a></li>
+  <li><a href="/shadow-ai.html">Shadow AI</a></li>
+</ul>
+
+</main>
+<footer>
+© 2026 Audited State · AI & the Continuity of Human Understanding
+</footer>
 
 </body>
 </html>
