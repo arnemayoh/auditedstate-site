@@ -3,29 +3,38 @@
 
   <url><loc>https://auditedstate.app/</loc></url>
   <url><loc>https://auditedstate.app/problem.html</loc></url>
-  <url><loc>https://auditedstate.app/concepts.html</loc></url>
+  <url><loc>https://auditedstate.app/concept-map.html</loc></url>
   <url><loc>https://auditedstate.app/architecture.html</loc></url>
-  <url><loc>https://auditedstate.app/labs.html</loc></url>
-  <url><loc>https://auditedstate.app/governance.html</loc></url>
   <url><loc>https://auditedstate.app/research.html</loc></url>
-  <url><loc>https://auditedstate.app/contact.html</loc></url>
-  <url><loc>https://auditedstate.app/origin.html</loc></url>
+  <url><loc>https://auditedstate.app/governance.html</loc></url>
+  <url><loc>https://auditedstate.app/quotes.html</loc></url>
 
-  <url><loc>https://auditedstate.app/concepts/continuity.html</loc></url>
-  <url><loc>https://auditedstate.app/concepts/human-agency.html</loc></url>
-  <url><loc>https://auditedstate.app/concepts/semantic-drift.html</loc></url>
-  <url><loc>https://auditedstate.app/concepts/shadow-ai.html</loc></url>
-  <url><loc>https://auditedstate.app/concepts/governance-vs-control.html</loc></url>
-  <url><loc>https://auditedstate.app/concepts/constraint-as-enabler.html</loc></url>
+  <url><loc>https://auditedstate.app/about/</loc></url>
+  <url><loc>https://auditedstate.app/about/why-pkos.html</loc></url>
+  <url><loc>https://auditedstate.app/about/why-audited-state.html</loc></url>
+  <url><loc>https://auditedstate.app/about/first-record.html</loc></url>
+  <url><loc>https://auditedstate.app/about/origin.html</loc></url>
+  <url><loc>https://auditedstate.app/about/contact.html</loc></url>
+  <url><loc>https://auditedstate.app/about/research-vision.html</loc></url>
+  <url><loc>https://auditedstate.app/about/constitution.html</loc></url>
+
+  <url><loc>https://auditedstate.app/concepts/</loc></url>
   <url><loc>https://auditedstate.app/concepts/interpretive-entropy.html</loc></url>
   <url><loc>https://auditedstate.app/concepts/semantic-surface-area.html</loc></url>
   <url><loc>https://auditedstate.app/concepts/reconstruction-cost.html</loc></url>
   <url><loc>https://auditedstate.app/concepts/mutation-blast-radius.html</loc></url>
+  <url><loc>https://auditedstate.app/concepts/semantic-drift.html</loc></url>
   <url><loc>https://auditedstate.app/concepts/persistent-semantic-scaffold.html</loc></url>
   <url><loc>https://auditedstate.app/concepts/inspectable-accumulation.html</loc></url>
   <url><loc>https://auditedstate.app/concepts/authority-membrane.html</loc></url>
   <url><loc>https://auditedstate.app/concepts/epistemic-maturity.html</loc></url>
+  <url><loc>https://auditedstate.app/concepts/continuity.html</loc></url>
+  <url><loc>https://auditedstate.app/concepts/human-agency.html</loc></url>
+  <url><loc>https://auditedstate.app/concepts/governance-vs-control.html</loc></url>
+  <url><loc>https://auditedstate.app/concepts/constraint-as-enabler.html</loc></url>
+  <url><loc>https://auditedstate.app/concepts/shadow-ai.html</loc></url>
 
+  <url><loc>https://auditedstate.app/labs/</loc></url>
   <url><loc>https://auditedstate.app/labs/exploration.html</loc></url>
   <url><loc>https://auditedstate.app/labs/promotion.html</loc></url>
   <url><loc>https://auditedstate.app/labs/authorship.html</loc></url>
@@ -37,5 +46,7 @@
   <url><loc>https://auditedstate.app/eu-ai-act/eu-ai-act-continuity-of-agency.html</loc></url>
   <url><loc>https://auditedstate.app/eu-ai-act/eu-ai-act-audit-and-repair.html</loc></url>
   <url><loc>https://auditedstate.app/eu-ai-act/eu-ai-act-stewardship-of-structure.html</loc></url>
+
+  <url><loc>https://auditedstate.app/publications/pss-working-paper.html</loc></url>
 
 </urlset>
