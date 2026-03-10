@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audit & Repair | Audited State</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="canonical" href="https://auditedstate.app/concepts/audit-repair.html">
+</head>
+
+<body>
+
+<header>
+<div class="nav-container">
+<a href="/" class="logo">Audited State</a>
+<button class="mobile-toggle">☰</button>
+<nav>
+<a href="/problem.html">Problem</a>
+<a href="/concepts/">Concepts</a>
+<a href="/concept-map.html">Concept Map</a>
+<a href="/architecture.html">Architecture</a>
+<a href="/labs/">Labs</a>
+<a href="/research/">Research</a>
+<a href="/about/">About</a>
+</nav>
+</div>
+</header>
+
+<main>
+
+<h1>Audit & Repair</h1>
+
+<p class="lead">
+Audit & Repair is the process through which a reasoning system recognizes the consequences of its actions, acknowledges divergence between intention and outcome, and continues with revised understanding while preserving the historical lineage of decisions.
+</p>
+
+<p>
+In PKOS, audit is not merely inspection and repair is not merely fault correction.
+Together they form the feedback side of a continuity-preserving reasoning system.
+</p>
+
+<h2>From feedback to recognition</h2>
+
+<p>
+In cybernetic terms, feedback begins when a system encounters the response of its environment.
+Something in the world indicates that a prior assumption, decision, or reasoning trajectory did not fully hold.
+</p>
+
+<p>
+In PKOS, this response becomes meaningful through <strong>audit</strong>.
+Audit is the point at which the system stops, reconstructs the reasoning trajectory, and recognizes what happened.
+</p>
+
+<p>
+This includes recognition of:
+</p>
+
+<ul>
+<li>what was intended</li>
+<li>what actually occurred</li>
+<li>where divergence emerged</li>
+<li>who or what was affected</li>
+<li>what the system now understands that it did not understand before</li>
+</ul>
+
+<p>
+Audit therefore begins with recognition and acceptance rather than immediate correction.
+</p>
+
+<h2>Repair as continuation, not erasure</h2>
+
+<p>
+In many technical and institutional contexts, repair means removing faults, deleting bad states, or restoring a prior condition.
+PKOS takes a different approach.
+</p>
+
+<p>
+Repair does not erase the past.
+It preserves the historical record and asks a forward-looking question:
+</p>
+
+<blockquote>
+How can the system proceed in a way that reduces further harm, repairs what can be repaired, and carries learning into future reasoning?
+</blockquote>
+
+<p>
+This means repair in PKOS includes two dimensions:
+</p>
+
+<ul>
+<li><strong>repair of prior outcomes</strong> — where possible, addressing damage or misalignment already produced</li>
+<li><strong>repair of future direction</strong> — continuing with revised understanding so that new reasoning leads to different outcomes</li>
+</ul>
+
+<p>
+Repair is therefore not about adjusting people’s thoughts.  
+It is about extending the reasoning trajectory in light of acknowledged learning.
+</p>
+
+<h2>Restorative rather than punitive</h2>
+
+<p>
+Audit & Repair shares important ground with restorative practice.
+The emphasis is not on punishment or concealment, but on acknowledging consequences and restoring alignment.
+</p>
+
+<p>
+Within PKOS, this means that responsibility remains visible, but the purpose of repair is not to erase failure or expel actors from the reasoning system.
+The purpose is to make the system more capable of continuing without repeating the same damage.
+</p>
+
+<p>
+This gives audit and repair a distinct character:
+</p>
+
+<ul>
+<li>not blame without learning</li>
+<li>not correction without memory</li>
+<li>not restoration through deletion</li>
+</ul>
+
+<p>
+Instead, the system keeps the lineage visible and continues with stronger understanding.
+</p>
+
+<h2>Audit & Repair in PKOS</h2>
+
+<p>
+PKOS combines <a href="./feedforward.html">feedforward</a> and feedback mechanisms.
+</p>
+
+<p>
+The <a href="./pifr.html">PIFR</a> carries reasoning structure forward through time.
+Audit & Repair provides the feedback process through which the system encounters outcomes, reconstructs prior reasoning, and continues differently.
+</p>
+
+<pre>
+Feedforward → PIFR
+Feedback → Audit & Repair
+</pre>
+
+<p>
+Together these mechanisms allow reasoning systems to remain both continuous and corrigible.
+</p>
+
+<h2>Relation to cumulative reasoning</h2>
+
+<p>
+Without audit and repair, reasoning systems tend to oscillate between silent drift and abrupt rewrite.
+With audit and repair, earlier reasoning remains visible and later reasoning can continue from a more adequate understanding.
+</p>
+
+<p>
+This is one of the conditions for <a href="./cumulative-reasoning.html">cumulative reasoning</a>:
+the ability to extend prior reasoning across time rather than repeatedly reconstructing it or erasing it.
+</p>
+
+<h2>A simple sequence</h2>
+
+<pre>
+Environment Response
+        ↓
+Audit
+(recognition / acceptance)
+        ↓
+Repair
+(what did we learn?
+how do we proceed without further damage?
+what can be repaired?)
+        ↓
+New Reasoning
+        ↓
+New PIFR
+</pre>
+
+<p>
+In this way, audit and repair do not terminate reasoning.
+They restore its continuity.
+</p>
+
+<h2>Related Concepts</h2>
+
+<ul>
+<li><a href="./pifr.html">PIFR</a></li>
+<li><a href="./feedforward.html">Feedforward</a></li>
+<li><a href="./cumulative-reasoning.html">Cumulative Reasoning</a></li>
+<li><a href="./inspectable-accumulation.html">Inspectable Accumulation</a></li>
+<li><a href="./reasoning-traceability.html">Reasoning Traceability</a></li>
+</ul>
+
+</main>
+
+<footer>
+© 2026 Audited State · AI & the Continuity of Human Understanding
+</footer>
+
+<script>
+document.querySelector('.mobile-toggle').addEventListener('click', function() {
+document.querySelector('nav').classList.toggle('active');
+});
+</script>
+
+</body>
+</html>
