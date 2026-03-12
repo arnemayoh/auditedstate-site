@@ -131,6 +131,28 @@ blockquote {
   padding: 2rem 1rem;
 }
 
+.essay-attribution {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.essay-closing-quote {
+  margin: 3rem 0;
+  padding-left: 1rem;
+  border-left: 3px solid #ccc;
+  font-style: italic;
+}
+
+.research ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.research li {
+  margin-bottom: 1.2rem;
+}
 /* Footer */
 
 footer {
