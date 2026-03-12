@@ -3,7 +3,7 @@
 
   <url>
     <loc>https://auditedstate.app/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-12</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/architecture.html</loc>
@@ -36,6 +36,10 @@
   <url>
     <loc>https://auditedstate.app/concepts/assumption-inference-review.html</loc>
     <lastmod>2026-03-09</lastmod>
+  </url>
+  <url>
+    <loc>https://auditedstate.app/concepts/audit-repair.html</loc>
+    <lastmod>2026-03-10</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/concepts/authority-membrane.html</loc>
@@ -127,7 +131,7 @@
   </url>
   <url>
     <loc>https://auditedstate.app/research/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-12</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/research/bibliography.html</loc>
@@ -166,12 +170,40 @@
     <lastmod>2026-03-10</lastmod>
   </url>
   <url>
+    <loc>https://auditedstate.app/research/publications/essays/cybernetic-ecology-human-ai-systems.html</loc>
+    <lastmod>2026-03-12</lastmod>
+  </url>
+  <url>
     <loc>https://auditedstate.app/research/publications/essays/education-after-generative-ai.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
+  </url>
+  <url>
+    <loc>https://auditedstate.app/research/publications/essays/existential-fatigue-interpretive-entropy.html</loc>
+    <lastmod>2026-03-11</lastmod>
+  </url>
+  <url>
+    <loc>https://auditedstate.app/research/publications/essays/human-reasoning-expands-meaning-ai-reasoning-narrows-possibilities.html</loc>
+    <lastmod>2026-03-12</lastmod>
+  </url>
+  <url>
+    <loc>https://auditedstate.app/research/publications/essays/interpretive-entropy-loss-of-orientation.html</loc>
+    <lastmod>2026-03-11</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/research/publications/essays/reasoning-provenance-small-enterprises.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
+  </url>
+  <url>
+    <loc>https://auditedstate.app/research/publications/essays/shadow-ai-collapse-of-institutional-visibility.html</loc>
+    <lastmod>2026-03-11</lastmod>
+  </url>
+  <url>
+    <loc>https://auditedstate.app/research/publications/essays/trust-in-the-age-of-collaborative-conjecture.html</loc>
+    <lastmod>2026-03-11</lastmod>
+  </url>
+  <url>
+    <loc>https://auditedstate.app/research/publications/essays/why-courts-reconstruct-thinking-collective-reasoning.html</loc>
+    <lastmod>2026-03-12</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/research/publications/papers/pss-working-paper.html</loc>
@@ -179,7 +211,7 @@
   </url>
   <url>
     <loc>https://auditedstate.app/research/publications/pss-working-paper.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-12</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/labs/</loc>
