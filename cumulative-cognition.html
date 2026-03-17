@@ -75,20 +75,23 @@ This is <a href="/concepts/reasoning-fragmentation.html">reasoning fragmentation
 
 <h2>Shared Example</h2>
 
-<p>
-Conversation A<br/>
-↓<br/>
-Conversation B<br/>
-↓<br/>
-Conversation C
-</p>
+<div class="mermaid">
+graph TD
+A[Conversation A] --> B[Conversation B]
+B --> C[Conversation C]
+
+C -->|no continuity| D[Reconstruction]
+D --> A
+
+C -->|preserved reasoning (PIFR)| E[Accumulation]
+E --> F[Knowledge Structure]
+F --> G[Collective Cognition]
+G --> A
+</div>
 
 <p>
-Each reconstructs the same reasoning again.
-</p>
-
-<p>
-Continuity is lost between them.
+Without continuity, reasoning resets.
+With structure, it accumulates.
 </p>
 
 <h2>Brain Analogy</h2>
@@ -212,6 +215,11 @@ To explore how this structure operates:
 document.querySelector('.mobile-toggle').addEventListener('click', function() {
 document.querySelector('nav').classList.toggle('active');
 });
+</script>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
 </script>
 
 </body>
