@@ -3,15 +3,15 @@
 
   <url>
     <loc>https://auditedstate.app/</loc>
-    <lastmod>2026-03-12</lastmod>
+    <lastmod>2026-03-17</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/architecture.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-17</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/concept-map.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-17</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/governance.html</loc>
@@ -19,7 +19,7 @@
   </url>
   <url>
     <loc>https://auditedstate.app/problem.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-17</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/quotes.html</loc>
@@ -35,99 +35,135 @@
   </url>
   <url>
     <loc>https://auditedstate.app/concepts/assumption-inference-review.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-12</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/concepts/audit-repair.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-12</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/concepts/authority-membrane.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-12</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/concepts/collaborative-conjecture.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-12</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/concepts/constraint-as-enabler.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-12</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/concepts/continuity.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-12</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/concepts/cumulative-reasoning.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-12</lastmod>
+  </url>
+  <url>
+    <loc>https://auditedstate.app/concepts/decision-memory.html</loc>
+    <lastmod>2026-03-17</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/concepts/epistemic-maturity.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-12</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/concepts/feedforward.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-12</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/concepts/governance-vs-control.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-12</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/concepts/human-agency.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-12</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/concepts/inspectable-accumulation.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-12</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/concepts/inspectable-reasoning.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-12</lastmod>
+  </url>
+  <url>
+    <loc>https://auditedstate.app/concepts/interpretive-collapse.html</loc>
+    <lastmod>2026-03-17</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/concepts/interpretive-entropy.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-12</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/concepts/lexicon.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-17</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/concepts/mutation-blast-radius.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-12</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/concepts/persistent-semantic-scaffold.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-12</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/concepts/pifr.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-12</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/concepts/pkos.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-12</lastmod>
+  </url>
+  <url>
+    <loc>https://auditedstate.app/concepts/promotion-gate.html</loc>
+    <lastmod>2026-03-17</lastmod>
+  </url>
+  <url>
+    <loc>https://auditedstate.app/concepts/reasoning-acceleration.html</loc>
+    <lastmod>2026-03-17</lastmod>
+  </url>
+  <url>
+    <loc>https://auditedstate.app/concepts/reasoning-continuity.html</loc>
+    <lastmod>2026-03-17</lastmod>
+  </url>
+  <url>
+    <loc>https://auditedstate.app/concepts/reasoning-fragmentation.html</loc>
+    <lastmod>2026-03-17</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/concepts/reconstruction-cost.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-12</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/concepts/requisite-variety.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-12</lastmod>
+  </url>
+  <url>
+    <loc>https://auditedstate.app/concepts/responsibility-attribution.html</loc>
+    <lastmod>2026-03-17</lastmod>
+  </url>
+  <url>
+    <loc>https://auditedstate.app/concepts/responsibility-boundary.html</loc>
+    <lastmod>2026-03-17</lastmod>
+  </url>
+  <url>
+    <loc>https://auditedstate.app/concepts/semantic-anchor.html</loc>
+    <lastmod>2026-03-17</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/concepts/semantic-drift.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-12</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/concepts/semantic-surface-area.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-12</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/concepts/shadow-ai.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-12</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/research/</loc>
@@ -270,6 +306,22 @@
     <lastmod>2026-03-10</lastmod>
   </url>
   <url>
+    <loc>https://auditedstate.app/acceleration.html</loc>
+    <lastmod>2026-03-17</lastmod>
+  </url>
+  <url>
+    <loc>https://auditedstate.app/collaborative-conjecture.html</loc>
+    <lastmod>2026-03-17</lastmod>
+  </url>
+  <url>
+    <loc>https://auditedstate.app/continuity.html</loc>
+    <lastmod>2026-03-17</lastmod>
+  </url>
+  <url>
+    <loc>https://auditedstate.app/cumulative-cognition.html</loc>
+    <lastmod>2026-03-17</lastmod>
+  </url>
+  <url>
     <loc>https://auditedstate.app/eu-ai-act/eu-ai-act-audit-and-repair.html</loc>
     <lastmod>2026-03-09</lastmod>
   </url>
@@ -288,6 +340,10 @@
   <url>
     <loc>https://auditedstate.app/eu-ai-act/eu-ai-act-structural-alignment.html</loc>
     <lastmod>2026-03-09</lastmod>
+  </url>
+  <url>
+    <loc>https://auditedstate.app/pifr.html</loc>
+    <lastmod>2026-03-17</lastmod>
   </url>
 
 </urlset>
