@@ -61,16 +61,23 @@ It is structural loss.
 
 <h2>Shared Example</h2>
 
+<div class="mermaid">
+graph TD
+A[Experience] --> B[Intention]
+B --> C[Artifact]
+C --> D[Network]
+D --> E[Continuity]
+
+C -->|time without structure| F[Fragmentation]
+F --> A
+
+E -->|time with structure| G[Accumulation]
+G --> A
+</div>
+
 <p>
-Perspective<br/>
-↓<br/>
-Statement<br/>
-↓<br/>
-Reinterpretation<br/>
-↓<br/>
-Amplification<br/>
-↓<br/>
-Impact
+Over time, reasoning follows one of two paths:
+fragmentation or accumulation.
 </p>
 
 <p>
@@ -154,6 +161,11 @@ To explore the structure behind continuity:
 document.querySelector('.mobile-toggle').addEventListener('click', function() {
 document.querySelector('nav').classList.toggle('active');
 });
+</script>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
 </script>
 
 </body>
