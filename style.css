@@ -164,6 +164,24 @@ blockquote {
   display: block;
   margin: 0 auto;
 }
+
+.cta-box {
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem;
+  border-left: 2px solid #ccc;
+  font-size: 0.95rem;
+}
+
+.cta-box a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.cta-inline {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
 /* Footer */
 
 footer {
