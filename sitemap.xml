@@ -7,11 +7,11 @@
   </url>
   <url>
     <loc>https://auditedstate.app/architecture.html</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-19</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/concept-map.html</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-19</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/governance.html</loc>
@@ -99,7 +99,7 @@
   </url>
   <url>
     <loc>https://auditedstate.app/concepts/lexicon.html</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-19</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/concepts/mutation-blast-radius.html</loc>
@@ -124,6 +124,10 @@
   <url>
     <loc>https://auditedstate.app/concepts/reasoning-acceleration.html</loc>
     <lastmod>2026-03-17</lastmod>
+  </url>
+  <url>
+    <loc>https://auditedstate.app/concepts/reasoning-as-signal.html</loc>
+    <lastmod>2026-03-19</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/concepts/reasoning-continuity.html</loc>
@@ -166,8 +170,12 @@
     <lastmod>2026-03-12</lastmod>
   </url>
   <url>
+    <loc>https://auditedstate.app/concepts/traceable-state.html</loc>
+    <lastmod>2026-03-19</lastmod>
+  </url>
+  <url>
     <loc>https://auditedstate.app/research/</loc>
-    <lastmod>2026-03-12</lastmod>
+    <lastmod>2026-03-19</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/research/bibliography.html</loc>
@@ -242,8 +250,16 @@
     <lastmod>2026-03-12</lastmod>
   </url>
   <url>
+    <loc>https://auditedstate.app/research/publications/papers/dual-representation.html</loc>
+    <lastmod>2026-03-19</lastmod>
+  </url>
+  <url>
     <loc>https://auditedstate.app/research/publications/papers/pss-working-paper.html</loc>
     <lastmod>2026-03-10</lastmod>
+  </url>
+  <url>
+    <loc>https://auditedstate.app/research/publications/papers/traceable-state.html</loc>
+    <lastmod>2026-03-19</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/research/publications/pss-working-paper.html</loc>
@@ -275,7 +291,7 @@
   </url>
   <url>
     <loc>https://auditedstate.app/about/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-17</lastmod>
   </url>
   <url>
     <loc>https://auditedstate.app/about/charter.html</loc>
