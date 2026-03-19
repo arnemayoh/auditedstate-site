@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Traceable State | Audited State</title>
+<link rel="stylesheet" href="../style.css" />
+<link rel="canonical" href="https://auditedstate.app/concepts/traceable-state.html" />
+</head>
+
+<body>
+
+<header>
+<div class="nav-container">
+<a href="/" class="logo">Audited State</a>
+<nav>
+<a href="/problem.html">Problem</a>
+<a href="/concepts/">Concepts</a>
+<a href="/concept-map.html">Concept Map</a>
+<a href="/architecture.html">Architecture</a>
+<a href="/research/">Research</a>
+<a href="/about/">About</a>
+</nav>
+</div>
+</header>
+
+<main>
+
+<h1>Traceable State</h1>
+
+<p class="lead">
+No state should exist without a trace of the reasoning that produced it.
+</p>
+
+<hr>
+
+<p>
+In most systems, outputs and decisions are stored without preserving
+the reasoning that led to them.
+</p>
+
+<p>
+This creates a gap between result and understanding.
+</p>
+
+<hr>
+
+<h2>From records to lineage</h2>
+
+<p>
+A traceable state is not just a stored result.
+</p>
+
+<p>
+It carries a reference to the reasoning artifact
+(<strong>PIFR</strong>) from which it originated.
+</p>
+
+<p>
+This creates lineage.
+</p>
+
+<hr>
+
+<h2>Trace inheritance</h2>
+
+<p>
+Every state inherits a minimal trace from its originating PIFR:
+</p>
+
+<ul>
+<li>timestamp</li>
+<li>intention</li>
+<li>justification</li>
+<li>reference to originating reasoning</li>
+</ul>
+
+<p>
+This allows each state to be understood in context,
+rather than as an isolated outcome.
+</p>
+
+<div class="mermaid">
+graph TD;
+
+P["PIFR"]
+
+A["State A"]
+B["State B"]
+C["State C"]
+
+P --> A;
+P --> B;
+P --> C;
+</div>
+
+<hr>
+
+<h2>Blast radius</h2>
+
+<p>
+A single reasoning artifact can affect multiple domains:
+</p>
+
+<ul>
+<li>terminology and meaning</li>
+<li>decisions and governance</li>
+<li>actions and execution</li>
+<li>compliance and constraints</li>
+</ul>
+
+<p>
+Traceable state makes it possible to understand how changes propagate.
+</p>
+
+<p><strong>
+This propagation defines the system’s blast radius.
+</strong></p>
+
+<hr>
+
+<h2>Why it matters</h2>
+
+<p>
+Without traceability, systems accumulate outputs but lose understanding.
+</p>
+
+<p>
+Explanations become reconstructions without grounding.
+</p>
+
+<p>
+With traceable state, reasoning remains:
+</p>
+
+<ul>
+<li>reconstructable</li>
+<li>inspectable</li>
+<li>attributable</li>
+</ul>
+
+<p><strong>
+No state without lineage.
+</strong></p>
+
+</main>
+
+<footer>
+© 2026 Audited State
+</footer>
+
+<script>
+    document.querySelector('.mobile-toggle').addEventListener('click', function() {
+    document.querySelector('nav').classList.toggle('active');
+    });
+</script>
+    
+<script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Reasoning as Signal | Audited State</title>
+<link rel="stylesheet" href="../style.css" />
+<link rel="canonical" href="https://auditedstate.app/concepts/reasoning-as-signal.html" />
+</head>
+
+<body>
+
+<header>
+<div class="nav-container">
+<a href="/" class="logo">Audited State</a>
+<nav>
+<a href="/problem.html">Problem</a>
+<a href="/concepts/">Concepts</a>
+<a href="/concept-map.html">Concept Map</a>
+<a href="/architecture.html">Architecture</a>
+<a href="/research/">Research</a>
+<a href="/about/">About</a>
+</nav>
+</div>
+</header>
+
+<main>
+
+<h1>Reasoning as Signal</h1>
+
+<p class="lead">
+Reasoning does not only produce outputs.
+It moves — across contexts, domains, and decisions.
+</p>
+
+<hr>
+
+<p>
+In many systems, reasoning is treated as something that happens internally,
+with only the final output preserved.
+</p>
+
+<p>
+This makes reasoning difficult to inspect, reconstruct, or challenge.
+</p>
+
+<p>
+An alternative view is to treat reasoning as something that travels.
+</p>
+
+<hr>
+
+<h2>Signals, not outputs</h2>
+
+<p>
+In this view, reasoning is carried forward through
+<strong>PIFRs (Pay-It-Forward Records)</strong>.
+</p>
+
+<p>
+Each PIFR acts as a signal:
+it contains not just a result, but the assumptions, intentions,
+and intermediate understanding that led to it.
+</p>
+
+<p>
+These signals move between different contexts of the system.
+</p>
+
+<hr>
+
+<h2>Across domains</h2>
+
+<p>
+Reasoning does not exist in a single layer.
+</p>
+
+<p>
+It moves across domains such as:
+</p>
+
+<ul>
+<li>intention (what is being sought)</li>
+<li>computation (how it is processed)</li>
+<li>action (what is done)</li>
+<li>constraint (what is allowed or limited)</li>
+</ul>
+
+<p>
+A reasoning signal connects these domains.
+</p>
+
+<div class="mermaid">
+graph TD;
+
+M["Mind (Intent)"] -->|PIFR| C["Conjecture"];
+L["Logic (Computation)"] -->|PIFR| C;
+
+C -->|PIFR| H["HuLoo"];
+H -->|PIFR| B["Body (Action)"];
+
+B -->|PIFR| S["Constraint"];
+S -->|PIFR| C;
+</div>
+
+<hr>
+
+<h2>Continuity</h2>
+
+<p>
+When reasoning is treated as a signal,
+it becomes possible to preserve its movement over time.
+</p>
+
+<p>
+The <a href="/concepts/persistent-semantic-scaffold.html">Persistent Semantic Scaffold (PSS)</a>
+stores these signals, allowing reasoning to accumulate rather than reset.
+</p>
+
+<hr>
+
+<h2>Why it matters</h2>
+
+<p>
+If reasoning is only visible at the level of outputs,
+accountability becomes post-hoc interpretation.
+</p>
+
+<p>
+If reasoning is preserved as signals,
+it becomes possible to reconstruct how decisions emerged,
+and to question them meaningfully.
+</p>
+
+<p><strong>
+Reasoning must not only be produced — it must remain in motion.
+</strong></p>
+
+</main>
+
+<footer>
+© 2026 Audited State
+</footer>
+
+<script>
+    document.querySelector('.mobile-toggle').addEventListener('click', function() {
+    document.querySelector('nav').classList.toggle('active');
+    });
+</script>
+    
+<script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+</script>
+
+</body>
+</html>
