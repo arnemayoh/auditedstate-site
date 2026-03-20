@@ -40,13 +40,17 @@ nav {
   font-size: 1.1rem;
   text-decoration: none;
   color: inherit;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  flex-wrap: nowrap;
 }
 
 .logo .tagline {
   font-weight: 300;
   font-size: 0.75rem;
   opacity: 0.6;
-  margin-left: 6px;
+  margin-left: 0;
   letter-spacing: 0.02em;
   white-space: nowrap;
 }
