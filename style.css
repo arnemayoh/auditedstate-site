@@ -23,25 +23,39 @@ header {
 }
 
 .nav-container {
-  max-width: var(--max-width);
-  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+nav {
+  margin-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .logo {
   font-weight: 600;
+  font-size: 1.1rem;
   text-decoration: none;
-  color: var(--text-color);
+  color: inherit;
+}
+
+.logo .tagline {
+  font-weight: 300;
+  font-size: 0.75rem;
+  opacity: 0.6;
+  margin-left: 6px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 
 nav a {
-  margin-left: 1.2rem;
   text-decoration: none;
   color: var(--muted);
-  font-size: 0.95rem;
+  opacity: 0.85;
+  font-size: 0.9rem;
 }
 
 nav a:hover {
