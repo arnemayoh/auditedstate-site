@@ -283,6 +283,10 @@ footer {
 }
 
 @media (max-width: 640px) {
+  
+  .hero {
+    height: 50vh;
+  }
 
   .mobile-toggle {
     display: block;
