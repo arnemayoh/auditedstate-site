@@ -19,13 +19,11 @@ body {
 
 .hero {
   width: 100%;
-  overflow: hidden;
-}
-
-.hero img {
-  width: 100%;
-  height: auto;
-  display: block;
+  height: 60vh; /* adjust: 50–80vh depending on taste */
+  background-image: url('assets/pkos-in-acceleration.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 header {
