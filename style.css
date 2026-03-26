@@ -343,6 +343,46 @@ footer {
   color: var(--text-color);
 }
 
+/* ---------------------- */
+/* System Dynamics Colors */
+/* ---------------------- */
+
+:root {
+  --pressure: #c0392b;     /* muted red */
+  --recovery: #2e7d32;     /* muted green */
+}
+
+/* Section headers */
+
+.pressure h2,
+.pressure h3 {
+  color: var(--pressure);
+}
+
+.recovery h2,
+.recovery h3 {
+  color: var(--recovery);
+}
+
+/* Lists */
+
+.pressure a {
+  color: var(--pressure);
+}
+
+.recovery a {
+  color: var(--recovery);
+}
+
+/* subtle emphasis */
+.pressure strong {
+  color: var(--pressure);
+}
+
+.recovery strong {
+  color: var(--recovery);
+}
+
 @media (max-width: 640px) {
   
   .hero {
