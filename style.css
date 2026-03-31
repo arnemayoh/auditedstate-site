@@ -117,6 +117,12 @@ a:hover {
   color: var(--text-color);
 }
 
+.full-image {
+  width: 100%;
+  margin: 2rem 0;
+  border-radius: 6px;
+}
+
 /* Concept preview */
 
 .concept-preview {
