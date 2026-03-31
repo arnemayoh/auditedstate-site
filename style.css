@@ -330,6 +330,17 @@ footer {
   margin: 0.35rem 0;
 }
 
+.concept-meta {
+  margin-top: 2rem;
+  padding: 1rem 1.5rem;
+  border-left: 3px solid var(--recovery);
+  background: rgba(255,255,255,0.02);
+}
+
+.closing {
+  font-style: italic;
+  opacity: 0.8;
+}
 /* ---------------------- */
 /* Mobile Navigation */
 /* ---------------------- */
