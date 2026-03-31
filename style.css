@@ -209,6 +209,23 @@ blockquote {
   font-size: 0.95rem;
 }
 
+.semantic-spine {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.spine-image {
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem 0;
+  border-radius: 6px;
+}
+
+.caption {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
 /* Footer */
 
 footer {
