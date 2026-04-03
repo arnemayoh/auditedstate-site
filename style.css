@@ -123,6 +123,15 @@ a:hover {
   border-radius: 6px;
 }
 
+.lexicon-intro {
+  margin-bottom: 3rem;
+}
+
+.lexicon-intro hr {
+  margin: 2rem 0;
+  opacity: 0.2;
+}
+
 /* Concept preview */
 
 .concept-preview {
