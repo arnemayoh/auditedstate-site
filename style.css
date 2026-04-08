@@ -66,13 +66,20 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: var(--muted);
-  opacity: 0.85;
+  color: var(--text-color);
+  opacity: 0.9;
   font-size: 0.9rem;
 }
 
-nav a:hover {
-  color: var(--text-color);
+@media (hover: hover) {
+  nav a {
+    color: var(--muted);
+    opacity: 0.85;
+  }
+
+  nav a:hover {
+    color: var(--text-color);
+  }
 }
 
 main {
