@@ -31,304 +31,408 @@
 
 <main>
 
-<h1>Architecture</h1>
-
-<p class="lead">
-The PKOS architecture describes how reasoning systems preserve continuity
-under accelerating human–AI collaboration.
-</p>
-
-<p>
-Rather than focusing on outputs alone, the architecture connects reasoning,
-decisions, and institutional memory through a structured semantic infrastructure.
-</p>
-
-<p>
-At its core, PKOS operates as a
-<strong>
-<a href="/concepts/lexicon.html#persistent-semantic-scaffold">
-Persistent Semantic Scaffold (PSS)
-</a>
-</strong>:
-a substrate that continuously preserves reasoning, decisions, and system state.
-</p>
-
-<hr>
-
-<h2>The Continuity Condition</h2>
-
-<p>
-As knowledge production accelerates, systems face increasing difficulty maintaining continuity of reasoning across time.
-</p>
-
-<p>
-The <a href="/concepts/continuity-threshold.html"><strong>Continuity Threshold</strong></a>
-describes the point at which systems can no longer sustain this continuity,
-and must instead rely on reconstruction.
-</p>
-
-<p>
-Beyond this threshold, understanding fragments and
-<a href="/concepts/lexicon.html#reconstruction-cost">reconstruction cost</a> increases,
-leading to drift in meaning and responsibility.
-</p>
-
-<p>
-The PKOS architecture can be understood as a response to this condition:
-a structure designed to preserve reasoning continuity before systems cross this threshold.
-</p>
-
-<p>
-  This dynamic can be visualized as a divergence in understanding over time,
-  where systems either maintain continuity or increasingly depend on fragmented reconstruction.
-</p>
-
-<hr>
-
-<h2>From Flow to Structure</h2>
-
-<p>
-The <a href="/concept-map.html">Concept Map</a> describes the flow of reasoning.
-Architecture describes how that flow becomes durable.
-</p>
-
-<p>
-The same reasoning loop is implemented structurally within PKOS.
-</p>
-
-<div class="mermaid">
-graph TD;
-
-A["Collaborative Conjecture"] --> B["PIFR"];
-B --> C["Responsibility Boundary (HuLoo)"];
-C --> D["Inspectable Accumulation"];
-D --> E["Audit and Repair"];
-E --> F["New Exploration"];
-F --> A;
-
-subgraph "Persistent Semantic Scaffold (PSS)"
-direction TB;
-B;
-D;
-E;
-end;
-</div>
-
-<p>
-Reasoning flows continuously.
-The scaffold ensures that each step remains preserved and reconstructable.
-</p>
-
-<p>
-Human-in-the-loop (HuLoo) checkpoints occur both at promotion
-and during audit and repair, ensuring that responsibility remains visible
-whenever system state is created or revised.
-</p>
-
-<hr>
-
-<h2>Reasoning as Signal</h2>
-
-<p>
-Reasoning within PKOS is not only preserved as state.
-It is carried forward as movement.
-</p>
-
-<p>
-Each transition in the system is mediated by a
-<strong><a href="/concepts/pifr.html">PIFR</a></strong> —
-a structured reasoning artifact that functions as a signal,
-carrying intention, assumptions, and justification across states.
-</p>
-
-<p>
-This perspective is developed further in
-<a href="/concepts/reasoning-as-signal.html"><strong>Reasoning as Signal</strong></a>,
-where reasoning is understood as propagation across domains,
-rather than isolated outputs.
-</p>
-
-<hr>
-
-<h2>Traceable State</h2>
-
-<p>
-For reasoning to remain reconstructable,
-system states must retain a trace of the reasoning that produced them.
-</p>
-
-<p>
-In PKOS, no state exists without lineage.
-Each state inherits a minimal trace from its originating PIFR:
-intention, justification, and reference to prior reasoning.
-</p>
-
-<p>
-This principle is formalized in
-<a href="/concepts/traceable-state.html"><strong>Traceable State</strong></a>,
-and further developed in the working paper
-<a href="/research/publications/papers/traceable-state.html">Traceable State and Reasoning Lineage</a>.
-</p>
-
-<h2>Architectural Layers</h2>
-
-<p>
-The architecture distinguishes between layers of system operation:
-</p>
-
-<ul>
-
-<li>
-<strong>Exploration Layer</strong> —
-human–AI reasoning through conjecture and analysis
-</li>
-
-<li>
-<strong>
-<a href="/concepts/lexicon.html#authority-membrane">
-Authority Membrane
-</a>
-</strong> —
-the boundary where reasoning becomes accountable
-</li>
-
-<li>
-<strong>Commitment Layer</strong> —
-durable decisions that alter shared system state
-</li>
-
-<li>
-<strong>Semantic Layer (PSS)</strong> —
-persistent storage of reasoning, decisions, and lineage
-</li>
-
-<li>
-<strong>Audit Layer</strong> —
-review, comparison, and repair of system state over time
-</li>
-
-</ul>
-
-<p>
-These layers separate exploration from commitment while preserving continuity across both.
-</p>
-
-<hr>
-
-<h2>From Output to Lineage</h2>
-
-<p>
-AI systems expand the
-<strong><a href="/concepts/lexicon.html#semantic-surface-area">semantic surface area</a></strong>
-of institutions.
-</p>
-
-<p>
-  The critical question is not output volume,
-  but whether reasoning remains continuously connected to intention and justification across time.
-</p>
-
-<p>
-Without continuity infrastructure,
-<strong><a href="/concepts/lexicon.html#reconstruction-cost">reconstruction cost</a></strong>
-rises until systems drift into
-<strong><a href="/concepts/lexicon.html#interpretive-entropy">interpretive entropy</a></strong>.
-</p>
-
-<hr>
-
-<h2>The Decision Path</h2>
-
-<p>
-When reasoning crosses the authority membrane,
-it becomes a durable decision.
-</p>
-
-<ul>
-<li>Declared intention</li>
-<li>Explicit justification</li>
-<li>Structured validation</li>
-<li>Execution</li>
-<li>Recorded state</li>
-</ul>
-
-<p>
-This path ensures that decisions remain reconstructable across time.
-</p>
-
-<hr>
-
-<h2>Inspectable Accumulation</h2>
-
-<p>
-Complex systems must be able to grow without losing interpretability.
-</p>
-
-<p>
-PKOS achieves this through
-<strong>
-<a href="/concepts/lexicon.html#inspectable-accumulation">
-Inspectable Accumulation
-</a>
-</strong>.
-</p>
-
-<p>
-Each decision anchors a system state that can later be examined through
-<a href="/concepts/lexicon.html#traceability">traceable reasoning lineage</a>.
-</p>
-
-<p>
-Audit does not weaken the system.
-It strengthens it by preserving continuity through revision.
-</p>
-
-<hr>
-
-<h2>Architectural Outcome</h2>
-
-<p>
-The architectural goal is
-<strong>
-<a href="/concepts/lexicon.html#cumulative-reasoning">
-Cumulative Reasoning
-</a>
-</strong>:
-</p>
-
-<p>
-a system in which reasoning extends across time,
-rather than repeatedly reconstructing from fragments.
-</p>
-
-<p>
-As AI accelerates knowledge production,
-this capability becomes essential.
-</p>
-
-<hr>
-
-<h2>Relationship to the System</h2>
-
-<p>
-PKOS does not exist in isolation.
-</p>
-
-<p>
-It operates within a broader system of human intention,
-AI computation, institutional action, and ethical constraint —
-a <strong>cybernetic ecology</strong>.
-</p>
-
-<p>
-Within this ecology, PKOS provides the structure
-that preserves reasoning continuity across domains.
-</p>
-
-</main>
+  <h1>Architecture</h1>
+  
+  <p class="lead">
+  If the problem is loss of continuity of understanding,  
+  the solution must be infrastructure.
+  </p>
+  
+  <p>
+  The architecture described here is not centered on outputs,
+  but on preserving reasoning, meaning, and responsibility across time.
+  </p>
+  
+  <p class="context">
+  From: <a href="/problem.html">Problem</a> · 
+  See: <a href="/core/infrastructure-of-understanding.html">Infrastructure</a>
+  </p>
+  
+  <hr>
+  
+  <h2>Layer 1 — What Must Be Built</h2>
+  
+  <p>
+  A system where understanding can:
+  </p>
+  
+  <ul>
+  <li>persist across time</li>
+  <li>move across participants</li>
+  <li>remain connected to its reasoning</li>
+  </ul>
+  
+  <p>
+  Without this, systems rely on reconstruction instead of continuity.
+  </p>
+  
+  <hr>
+  
+  <h2>Layer 2 — Structure and Flow</h2>
+  
+  <p>
+  All reasoning systems operate through:
+  </p>
+  
+  <ul>
+  <li><strong>Flow</strong> — how reasoning progresses</li>
+  <li><strong>Structure</strong> — how meaning persists</li>
+  </ul>
+  
+  <p>
+  Flow enables progress.  
+  Structure enables stability.
+  </p>
+  
+  <p class="context">
+  See: <a href="/concepts/structure-and-flow.html">Structure and Flow</a>
+  </p>
+  
+  <hr>
+  
+  <h2>Layer 3 — The Reasoning Loop</h2>
+  
+  <p>
+  Reasoning operates as a continuous loop:
+  </p>
+  
+  <div class="mermaid">
+  graph TD;
+  
+  A["System Pressures"] --> B["Collaborative Conjecture"];
+  B --> C["PIFR"];
+  C --> D["Responsibility Boundary (HuLoo)"];
+  D --> E["Inspectable Accumulation"];
+  E --> F["Audit and Repair"];
+  F --> G["New Exploration"];
+  G --> B;
+  
+  subgraph "Persistent Semantic Scaffold (PSS)"
+  C;
+  E;
+  F;
+  end;
+  </div>
+  
+  <p>
+  This loop transforms pressure into learning.
+  Each cycle extends reasoning rather than restarting it.
+  </p>
+  
+  <p class="context">
+  See: <a href="/concept-map.html">Concept Map</a>
+  </p>
+  
+  <hr>
+  
+  <h2>Layer 4 — Structural Persistence</h2>
+  
+  <p>
+  For reasoning to persist, it must exist within a stable structure.
+  </p>
+  
+  <p>
+  This is achieved through the 
+  <strong>
+  <a href="/concepts/lexicon.html#persistent-semantic-scaffold">
+  Persistent Semantic Scaffold (PSS)
+  </a>
+  </strong>.
+  </p>
+  
+  <p>
+  The scaffold is not a step in the process.
+  It is the substrate that stores:
+  </p>
+  
+  <ul>
+  <li>reasoning artifacts</li>
+  <li>system state</li>
+  <li>audit history</li>
+  </ul>
+  
+  <p>
+  Without this structure, continuity cannot exist.
+  </p>
+  
+  <hr>
+  
+  <h2>Layer 5 — Reasoning as Signal</h2>
+  
+  <p>
+  Reasoning must not only be stored —
+  it must be carried forward.
+  </p>
+  <h3>The Reasoning Vehicle</h3>
+
+  <p>
+  Reasoning does not move as raw information.
+  It moves as structured units that preserve meaning across domains.
+  </p>
+
+  <p>
+  A <strong>reasoning vehicle</strong> is the minimal unit of reasoning that can cross domains while remaining coherent.
+  </p>
+
+  <p>
+  Each reasoning vehicle carries:
+  </p>
+
+  <ul>
+  <li><strong>Intent</strong> — what is being attempted</li>
+  <li><strong>Justification</strong> — why this step exists</li>
+  <li><strong>Criteria</strong> — under what conditions it is valid</li>
+  <li><strong>Ownership</strong> — who is responsible for it</li>
+  </ul>
+
+  <p>
+  As reasoning moves between domains (mind, logic, execution, ethics),
+  its form changes — but these elements must persist.
+  </p>
+
+  <p>
+  This is what allows reasoning to cross domains without being reconstructed.
+  </p>
+  
+  <p>
+    Each transition is mediated by a reasoning vehicle  
+  <strong><a href="/concepts/pifr.html">PIFR</a></strong>:
+  a structured reasoning artifact that carries:
+  </p>
+  
+  <ul>
+  <li>intention</li>
+  <li>justification</li>
+  <li>references to prior reasoning</li>
+  <li>Ownership</li>
+  </ul>
+  
+  <p>
+  This enables reasoning to move across contexts without reconstruction.
+  </p>
+  
+  <p class="context">
+  See: <a href="/concepts/reasoning-as-signal.html">Reasoning as Signal</a>
+  </p>
+  
+  <hr>
+  
+  <h2>Layer 6 — Architectural Layers</h2>
+  
+  <p>
+  The system separates reasoning into layers:
+  </p>
+  
+  <ul>
+  
+  <li>
+  <strong>Exploration Layer</strong> —
+  human–AI reasoning and conjecture
+  </li>
+  
+  <li>
+  <strong>
+  <a href="/concepts/lexicon.html#authority-membrane">
+  Authority Membrane
+  </a>
+  </strong> —
+  where reasoning becomes accountable
+  </li>
+  
+  <li>
+  <strong>Commitment Layer</strong> —
+  decisions that alter shared state
+  </li>
+  
+  <li>
+  <strong>Semantic Layer (PSS)</strong> —
+  persistent storage of reasoning and lineage
+  </li>
+  
+  <li>
+  <strong>Audit Layer</strong> —
+  review and repair across time
+  </li>
+  
+  </ul>
+  
+  <p>
+  These layers separate exploration from commitment,
+  while preserving continuity across both.
+  </p>
+  
+  <hr>
+  
+  <h2>Layer 7 — From Output to Lineage</h2>
+  
+  <p>
+  Traditional systems optimize outputs.
+  </p>
+  
+  <p>
+  This architecture shifts focus to lineage:
+  </p>
+  
+  <ul>
+  <li>every decision retains its origin</li>
+  <li>every state remains traceable</li>
+  <li>every change can be audited</li>
+  </ul>
+  
+  <p>
+  Without this, systems drift into
+  <strong><a href="/concepts/lexicon.html#interpretive-entropy">interpretive entropy</a></strong>.
+  </p>
+  
+  <hr>
+  
+  <h2>Architectural Outcome</h2>
+  
+  <p>
+  The goal is 
+  <strong>
+  <a href="/concepts/lexicon.html#cumulative-reasoning">
+  Cumulative Reasoning
+  </a>
+  </strong>:
+  </p>
+  
+  <p>
+  a system where reasoning extends across time,
+  rather than being repeatedly reconstructed.
+  </p>
+  
+  <p>
+  This is the minimal condition for stable progress under acceleration.
+  </p>
+  
+  <hr>
+
+  <h2>From Model to Practice</h2>
+
+  <p>
+  Concepts define structure.
+  Architecture defines possibility.
+  </p>
+
+  <p>
+  But systems only become real through practice.
+  </p>
+
+  <p>
+  Understanding does not emerge from description alone —
+  it emerges through iteration:
+  </p>
+
+  <ul>
+  <li>exploration</li>
+  <li>application</li>
+  <li>feedback</li>
+  <li>refinement</li>
+  </ul>
+
+  <h3>The Role of Labs</h3>
+
+  <p class="lead">
+  Understanding does not emerge within a single domain.
+  It emerges through movement across domains — and is stabilized through feedback.
+  </p>
+
+  <figure class="diagram">
+    <img src="/assets/pkos-reasoning-ecology.webp" alt="PKOS Four Realms showing flow across domains">
+    <figcaption>
+      Reasoning moves across domains (Mind, Logic, Body, Soul) and is stabilized through iterative feedback in Labs.
+    </figcaption>
+  </figure>
+
+  <p>
+  Each domain represents a different form of meaning:
+  </p>
+
+  <ul>
+  <li><strong>Mind</strong> — intention, dialogue, interpretation</li>
+  <li><strong>Logic</strong> — formal structure and computation</li>
+  <li><strong>Body</strong> — execution, agents, real-world impact</li>
+  <li><strong>Soul</strong> — ethics, law, memory, responsibility</li>
+  </ul>
+
+  <p>
+  Reasoning does not stay within one domain.
+  It moves between them.
+  </p>
+
+  <p>
+  Each transition introduces transformation:
+  </p>
+
+  <ul>
+  <li>intent becomes structure</li>
+  <li>structure becomes action</li>
+  <li>action creates consequences</li>
+  <li>consequences reshape understanding</li>
+  </ul>
+
+  <p>
+  These transitions are carried by structured reasoning artifacts (PIFRs),
+  which preserve intention and justification across domains.
+  </p>
+
+  <p>
+  At the center, Labs provide the environment where this flow is tested:
+  </p>
+
+  <ul>
+  <li>scenarios are explored</li>
+  <li>outcomes are observed</li>
+  <li>reasoning is refined</li>
+  </ul>
+
+  <p>
+  Without this loop:
+  </p>
+
+  <ul>
+  <li>structure cannot be validated</li>
+  <li>flow cannot be stabilized</li>
+  <li>continuity cannot emerge</li>
+  </ul>
+
+  <p>
+  This is why PKOS emerged —
+  not as a fixed solution,
+  but as a system capable of learning across domains.
+  </p>
+
+  <p class="closing">
+  Structure spans domains.  
+  Flow moves between them.  
+  Labs make the system learn.
+  </p>
+  
+  <p class="context">
+  See: <a href="/labs/">Labs</a>
+  </p>
+
+  <hr>
+
+  <p class="closing">
+  Infrastructure does not dictate behavior.  
+  It enables understanding.
+  </p>
+  
+  <p class="closing">
+  Understanding enables continuity.  
+  Continuity enables progress.
+  </p>
+  
+  </main>
 
 <footer>
-© 2026 Audited State · AI & the Continuity of Human Understanding
+© 2026 Audited State · AI & the Continuity of Human Understanding  
+<br>
+<span class="affiliation">
+– a contributor to <a href="https://cognitivesuperhighway.org" target="_blank" rel="noopener">CognitiveSuperHighway.org</a>
+</span>
 </footer>
 
 <script>
