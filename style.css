@@ -224,11 +224,21 @@ blockquote {
   text-align: center;
 }
 
+/* style.css - Section: Diagrams */
 .essay-diagram img {
   max-width: 100%;
   height: auto;
   display: block;
-  margin: 0 auto;
+  margin: 2rem auto; /* Added vertical breathing room */
+  border-radius: 8px; /* Softens the integration into the white scaffold */
+}
+
+.essay-diagram figcaption {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
 }
 
 .cta-box {
