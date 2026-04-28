@@ -197,6 +197,49 @@ blockquote {
   padding: 2rem 1rem;
 }
 
+/* ---------------------- */
+/* Essay Mode (Longform) */
+/* ---------------------- */
+
+.essay-mode {
+  background: #f7f4ef;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 19px;
+  line-height: 1.62;
+}
+
+.essay-mode main {
+  max-width: 760px;
+  padding: 72px 22px 96px;
+}
+
+.essay-mode .kicker {
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: 12px;
+  color: #8b1e1e;
+  font-weight: 700;
+}
+
+.essay-mode h1 {
+  font-size: clamp(42px, 7vw, 72px);
+  letter-spacing: -0.045em;
+}
+
+.essay-mode .punch {
+  font-size: clamp(28px, 5vw, 46px);
+  color: #8b1e1e;
+  font-weight: 700;
+}
+
+.essay-mode .note {
+  background: #fffaf3;
+  border-left: 4px solid #8b1e1e;
+  padding: 18px 20px;
+  margin: 42px 0;
+  font-size: 16px;
+}
+
 .essay-attribution {
   font-size: 0.9rem;
   color: #666;
