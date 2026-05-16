@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>A1 — Shoreline Stewardship</title>
+
+  <style>
+
+    :root {
+      --seafoam: #dfece7;
+      --sand: #f5efe6;
+      --navy: #29485c;
+      --soft-text: #51616a;
+      --border: #d9ddd7;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background:
+        linear-gradient(to bottom,
+          #f9fbfa 0%,
+          #f5efe6 100%);
+      color: #24313a;
+      line-height: 1.7;
+    }
+
+    .brochure {
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+
+    .top-note {
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.78rem;
+      color: #6c7c85;
+      margin-bottom: 2rem;
+    }
+
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 2rem;
+      align-items: stretch;
+      margin-bottom: 4rem;
+    }
+
+    .hero-image {
+      position: relative;
+      overflow: hidden;
+      border-radius: 22px;
+      min-height: 720px;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.08);
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-text {
+      background: rgba(255,255,255,0.86);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.05);
+    }
+
+    .hero-text h1 {
+      font-size: clamp(3rem, 5vw, 5.6rem);
+      line-height: 0.95;
+      margin: 0 0 1.4rem;
+      color: var(--navy);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+    }
+
+    .hero-text .subheadline {
+      font-size: 1.3rem;
+      color: var(--soft-text);
+      margin-bottom: 2rem;
+    }
+
+    .hero-text p {
+      font-size: 1.05rem;
+      color: #3d4a52;
+    }
+
+    .callout {
+      margin-top: 2rem;
+      background: var(--seafoam);
+      border-left: 5px solid var(--navy);
+      padding: 1.3rem 1.5rem;
+      border-radius: 12px;
+      color: #2f4654;
+      font-style: italic;
+    }
+
+    .middle-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    .image-card {
+      background: rgba(255,255,255,0.86);
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 14px 40px rgba(0,0,0,0.05);
+    }
+
+    .image-card img {
+      width: 100%;
+      display: block;
+    }
+
+    .image-caption {
+      padding: 1.3rem 1.4rem 1.5rem;
+    }
+
+    .image-caption h3 {
+      margin-top: 0;
+      margin-bottom: 0.7rem;
+      color: var(--navy);
+    }
+
+    .content-layout {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 2rem;
+    }
+
+    .main-panel,
+    .side-panel {
+      background: rgba(255,255,255,0.88);
+      border-radius: 22px;
+      border: 1px solid var(--border);
+      padding: 2.4rem;
+      box-shadow: 0 14px 40px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      color: var(--navy);
+      font-size: 2rem;
+    }
+
+    h3 {
+      color: var(--navy);
+      margin-top: 2rem;
+      margin-bottom: 0.8rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.8rem;
+    }
+
+    .details {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .details li {
+      padding: 1rem 0;
+      border-bottom: 1px solid #e3e6e3;
+    }
+
+    .experimental-meta {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid #d6dcd7;
+      color: #697780;
+      font-size: 0.95rem;
+    }
+
+    .experimental-meta strong {
+      color: #2b3d47;
+    }
+
+    @media (max-width: 980px) {
+
+      .hero-layout,
+      .middle-grid,
+      .content-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-image {
+        min-height: 480px;
+      }
+
+      .hero-text {
+        padding: 2rem;
+      }
+
+      .hero-text h1 {
+        font-size: 3rem;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <main class="brochure">
+
+    <div class="top-note">
+      Experimental Artifact · A1 Baseline Condition
+    </div>
+
+    <section class="hero-layout">
+
+      <div class="hero-image">
+        <img
+          src="/assets/experiments/transferable-understanding/A1-split-0.jpg"
+          alt="Community beach cleanup scene"
+        />
+      </div>
+
+      <div class="hero-text">
+
+        <h1>
+          Our Coast.<br>
+          Our Community.<br>
+          Our Connection.
+        </h1>
+
+        <div class="subheadline">
+          Join us for the 2026 Seaside Spring Clean &amp; Social.
+        </div>
+
+        <p>
+          The concept focuses on collective ownership.
+          Instead of framing the event as a chore or service project,
+          the brochure positions the cleanup as a community celebration —
+          a way for neighbors to reconnect while preserving the natural beauty
+          that makes the area special.
+        </p>
+
+        <div class="callout">
+          “Shoreline Stewardship” emerged as an emotionally optimistic,
+          cinematic sustainability aesthetic emphasizing symbolic community harmony.
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="middle-grid">
+
+      <div class="image-card">
+
+        <img
+          src="/assets/experiments/transferable-understanding/A1-split-1.jpg"
+          alt="Pristine coastline at golden hour"
+        />
+
+        <div class="image-caption">
+          <h3>The Coastal Beauty</h3>
+
+          <p>
+            A pristine coastline rendered through warm cinematic lighting and emotionally calming composition.
+            The beach itself became symbolic rather than operational —
+            an idealized environmental object-of-care.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="image-card">
+
+        <img
+          src="/assets/experiments/transferable-understanding/A1-split-2.jpg"
+          alt="Hands holding seashell"
+        />
+
+        <div class="image-caption">
+          <h3>The Detail Shot</h3>
+
+          <p>
+            The symbolic drift became especially visible here.
+            Collective stewardship transformed into intimate environmental emotionality —
+            aesthetically coherent,
+            but semantically distant from the originating intention of shared communal participation.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="content-layout">
+
+      <div class="main-panel">
+
+        <h2>The Beach We Love Needs a Hand</h2>
+
+        <p>
+          We all have memories here — sunrise walks,
+          family picnics,
+          and the quiet rhythm of the waves.
+          But to keep our shoreline healthy for the birds,
+          the sea life,
+          and the next generation of neighbors,
+          it takes a little teamwork.
+        </p>
+
+        <h3>What to Expect</h3>
+
+        <ul>
+          <li>
+            <strong>The Cleanup:</strong>
+            We’ll provide the bags,
+            gloves,
+            and sanitizers.
+            You provide the energy.
+          </li>
+
+          <li>
+            <strong>The Reward:</strong>
+            After we clear the sands,
+            stick around for a community BBQ at the North Pavilion.
+          </li>
+
+          <li>
+            <strong>The Impact:</strong>
+            Every piece of plastic removed is a win for our local ecosystem.
+          </li>
+        </ul>
+
+        <h3>Observed Drift Characteristics</h3>
+
+        <ul>
+          <li>cinematic environmental brochure aesthetics</li>
+          <li>socially harmonious symbolic representation</li>
+          <li>golden-hour emotional optimization</li>
+          <li>generic sustainability campaign structure</li>
+          <li>travel-brochure atmosphere</li>
+          <li>abstracted stewardship imagery</li>
+        </ul>
+
+        <h3>Interpretive Observation</h3>
+
+        <p>
+          The generated outputs remained internally coherent,
+          but the semantic center gradually shifted away from situated communal stewardship
+          toward emotionally optimized symbolic environmentalism.
+        </p>
+
+      </div>
+
+      <aside class="side-panel">
+
+        <h2>Event Details</h2>
+
+        <ul class="details">
+
+          <li>
+            <strong>Date</strong><br>
+            Saturday, June 13th, 2026
+          </li>
+
+          <li>
+            <strong>Time</strong><br>
+            9:00 AM – 12:00 PM<br>
+            Lunch to follow
+          </li>
+
+          <li>
+            <strong>Meeting Point</strong><br>
+            Main Pier Entrance
+          </li>
+
+        </ul>
+
+        <h3>Experimental Condition</h3>
+
+        <ul>
+          <li>No shared substrate</li>
+          <li>No reflective review</li>
+          <li>No trajectory transfer</li>
+          <li>Fresh Gemini Pro instance</li>
+        </ul>
+
+        <h3>Visual Prior Emergence</h3>
+
+        <p>
+          The baseline condition rapidly converged toward recognizable
+          environmental brochure aesthetics:
+        </p>
+
+        <ul>
+          <li>smiling volunteer imagery</li>
+          <li>balanced diversity composition</li>
+          <li>cinematic realism</li>
+          <li>emotional safety optimization</li>
+          <li>symbolic environmental intimacy</li>
+        </ul>
+
+      </aside>
+
+    </section>
+
+    <div class="experimental-meta">
+
+      <strong>Artifact:</strong>
+      A1 — Baseline / No Shared Substrate
+      <br><br>
+
+      This brochure represents the initial uncontrolled condition in the
+      “Transferable Understanding” experiment.
+      The outputs were generated without continuity substrate,
+      interpretive scaffolding,
+      reflective review,
+      or verified conjecture transfer.
+
+    </div>
+
+  </main>
+
+</body>
+</html>

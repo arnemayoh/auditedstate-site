@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>B1 — The Beach is Us</title>
+
+  <style>
+
+    :root {
+      --paper: #f5f1e8;
+      --warm: #ebe3d5;
+      --deep: #324149;
+      --soft: #617076;
+      --line: #d8d1c5;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background:
+        linear-gradient(to bottom,
+          #f8f5ef 0%,
+          #efe7d9 100%);
+      color: #24343c;
+      line-height: 1.75;
+    }
+
+    .brochure {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+
+    .hero-image-full {
+      margin-bottom: 3rem;
+    }
+
+    .hero-image-full img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.10);
+    }
+
+    .intro-text {
+      max-width: 920px;
+      margin: 0 auto 4rem;
+      background: rgba(255,255,255,0.84);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 3rem;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.05);
+    }
+
+    .top-note {
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.78rem;
+      color: #6d7678;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 5vw, 5.5rem);
+      line-height: 0.95;
+      margin: 0 0 1.5rem;
+      color: var(--deep);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+    }
+
+    .subheadline {
+      font-size: 1.3rem;
+      color: var(--soft);
+      margin-bottom: 2rem;
+    }
+
+    p {
+      color: #3d4b52;
+    }
+
+    .callout {
+      margin-top: 2rem;
+      background: var(--warm);
+      border-left: 5px solid #5b6a70;
+      padding: 1.4rem 1.5rem;
+      border-radius: 12px;
+      color: #3f4d53;
+      font-style: italic;
+    }
+
+    .content-layout {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2rem;
+      margin-top: 4rem;
+    }
+
+    .main-panel,
+    .side-panel {
+      background: rgba(255,255,255,0.84);
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      padding: 2.5rem;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      color: var(--deep);
+      font-size: 2rem;
+    }
+
+    h3 {
+      color: var(--deep);
+      margin-top: 2rem;
+      margin-bottom: 0.8rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.8rem;
+    }
+
+    .details {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .details li {
+      padding: 1rem 0;
+      border-bottom: 1px solid #e3ddd2;
+    }
+
+    .review-block {
+      margin-top: 4rem;
+      background: rgba(255,255,255,0.72);
+      border: 1px dashed #c8c0b4;
+      border-radius: 20px;
+      padding: 2.4rem;
+      color: #536066;
+    }
+
+    .review-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .review-card {
+      background: rgba(255,255,255,0.72);
+      border-radius: 14px;
+      padding: 1.6rem;
+      border: 1px solid #ddd6ca;
+    }
+
+    .meta {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid #d7d0c7;
+      color: #6a767b;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 980px) {
+
+      .content-layout,
+      .review-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .intro-text {
+        padding: 2rem;
+      }
+
+      h1 {
+        font-size: 3rem;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <main class="brochure">
+
+    <section class="hero-image-full">
+
+      <img
+        src="/assets/experiments/transferable-understanding/B1-pictures.jpg"
+        alt="B1 generated community cleanup imagery"
+      />
+
+    </section>
+
+    <section class="intro-text">
+
+      <div class="top-note">
+        Experimental Artifact · B1 Shared Continuity Substrate
+      </div>
+
+      <h1>
+        The Beach<br>
+        is Us
+      </h1>
+
+      <div class="subheadline">
+        It’s our beach. Let’s look after it together.
+      </div>
+
+      <p>
+        The B1 condition introduced a minimal continuity substrate:
+        a shared reasoning scaffold containing originating intention,
+        audience framing,
+        preservation goals,
+        and anti-drift constraints.
+      </p>
+
+      <p>
+        The resulting outputs shifted noticeably away from cinematic environmental brochure symbolism
+        and toward grounded communal stewardship.
+      </p>
+
+      <div class="callout">
+        The beach became a lived local place rather than a symbolic environmental backdrop.
+        Community interaction became situated rather than abstractly harmonious.
+      </div>
+
+    </section>
+
+    <section class="content-layout">
+
+      <div class="main-panel">
+
+        <h2>Our Shared Space</h2>
+
+        <p>
+          Whether it’s where your kids learned to swim,
+          where you take your morning walk,
+          or simply the place you go to clear your head,
+          the beach belongs to all of us.
+        </p>
+
+        <p>
+          Instead of framing the event as a heroic rescue mission or environmental campaign,
+          the brochure evolved toward:
+        </p>
+
+        <ul>
+          <li>neighborly participation</li>
+          <li>ordinary local interaction</li>
+          <li>intergenerational continuity</li>
+          <li>shared stewardship</li>
+          <li>situated realism</li>
+        </ul>
+
+        <h3>Visual Trajectory Shift</h3>
+
+        <p>
+          Compared to the A1 baseline condition,
+          the imagery became:
+        </p>
+
+        <ul>
+          <li>less cinematic</li>
+          <li>less symbolically environmental</li>
+          <li>less NGO-oriented</li>
+          <li>more locally grounded</li>
+          <li>more operationally communal</li>
+        </ul>
+
+        <h3>Emergent Continuity Signals</h3>
+
+        <p>
+          Several important continuity shifts emerged naturally:
+        </p>
+
+        <ul>
+          <li>the “OUR BEACH” sign externalized shared ownership</li>
+          <li>cleanup became a relational activity rather than symbolic gesture</li>
+          <li>community interaction replaced heroic framing</li>
+          <li>the atmosphere became ordinary and situated</li>
+        </ul>
+
+      </div>
+
+      <aside class="side-panel">
+
+        <h2>Event Details</h2>
+
+        <ul class="details">
+
+          <li>
+            <strong>When</strong><br>
+            [Date] · [Time]
+          </li>
+
+          <li>
+            <strong>Where</strong><br>
+            Meeting at the local landmark café
+          </li>
+
+          <li>
+            <strong>Afterward</strong><br>
+            Tea or coffee together after the cleanup
+          </li>
+
+        </ul>
+
+        <h3>Experimental Condition</h3>
+
+        <ul>
+          <li>Shared continuity substrate</li>
+          <li>No trajectory transfer</li>
+          <li>No verified conjectures</li>
+          <li>No reflective review during generation</li>
+          <li>Fresh Gemini Pro instance</li>
+        </ul>
+
+        <h3>Observed Stabilization</h3>
+
+        <ul>
+          <li>situated communal framing</li>
+          <li>ordinary realism</li>
+          <li>bounded interpretation</li>
+          <li>reduced symbolic drift</li>
+          <li>preserved semantic center</li>
+        </ul>
+
+      </aside>
+
+    </section>
+
+    <section class="review-block">
+
+      <h2>Reflective Review Findings</h2>
+
+      <p>
+        After generation,
+        the B1 instance was asked to perform an assumptions and inferences review.
+        This surfaced previously hidden interpretive structures and transformed them into inspectable reasoning artifacts.
+      </p>
+
+      <div class="review-grid">
+
+        <div class="review-card">
+
+          <h3>Hidden Assumptions</h3>
+
+          <ul>
+            <li>baseline social cohesion</li>
+            <li>middle-class leisure assumptions</li>
+            <li>mobility assumptions</li>
+            <li>“perfect morning” visual priors</li>
+            <li>normative diversity composition</li>
+          </ul>
+
+        </div>
+
+        <div class="review-card">
+
+          <h3>Important Drift Detection</h3>
+
+          <ul>
+            <li>“Harmony distortion” surfaced</li>
+            <li>symbolic representation tendencies identified</li>
+            <li>community complexity smoothing detected</li>
+            <li>generic brochure aesthetics partially remained</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <div class="meta">
+
+      <strong>Artifact:</strong>
+      B1 — Shared Continuity Substrate
+      <br><br>
+
+      This brochure represents the second experimental condition in the
+      “Transferable Understanding” experiment.
+      The generation was guided by a minimal shared reasoning substrate,
+      but did not yet include trajectory transfer or verified conjecture inheritance.
+
+    </div>
+
+  </main>
+
+</body>
+</html>
