@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Substrate | Audited State</title>
+<link rel="stylesheet" href="../style.css" />
+<link rel="canonical" href="https://auditedstate.app/concepts/substrate.html" />
+</head>
+
+<body>
+
+<header>
+<div class="nav-container">
+<a href="/" class="logo">
+  Audited State
+  <span class="tagline">— preserving human agency</span>
+</a>
+<button class="mobile-toggle" aria-label="Toggle navigation">☰</button>
+<nav>
+<a href="/problem.html">Problem</a>
+<a href="/concepts/lexicon.html">Lexicon</a>
+<a href="/concept-map.html">Concept Map</a>
+<a href="/architecture.html">Architecture</a>
+<a href="/labs/">Labs</a>
+<a href="/research/">Research</a>
+<a href="/about/">About</a>
+</nav>
+</div>
+</header>
+
+<main>
+
+<h1>🟢 Substrate</h1>
+<p class="lead">
+A substrate is not what understanding produces. It is what understanding grows from.
+</p>
+
+<p>
+A substrate is a persistent developmental topology: enough preserved
+exploratory and relational structure — observations, questions, tensions,
+discarded routes, reasons a relationship formed in the first place — for
+understanding to re-emerge, mature, repair itself, and continue across
+interruption, individuals, generations, or reasoning vehicles.
+</p>
+
+<hr>
+
+<h2>Not what it sounds like</h2>
+
+<p>
+The word invites a storage metaphor. Resist it. A substrate is not:
+</p>
+
+<ul>
+<li>a summary</li>
+<li>a database of facts</li>
+<li>a transcript</li>
+<li>a static knowledge graph</li>
+<li>a copy of a previous mind</li>
+<li>a finished theory</li>
+</ul>
+
+<p>
+Each of these preserves a conclusion. A substrate preserves the conditions
+that made a conclusion reachable — which is a different, and harder,
+thing to keep.
+</p>
+
+<hr>
+
+<h2>Trunk and root</h2>
+
+<p>
+A published result, a settled definition, a shipped decision — these are
+the visible trunk. They are real, and they matter. But a trunk is not the
+whole organism, and it is not the part that lets growth continue once the
+trunk itself is cut back, superseded, or lost.
+</p>
+
+<p>
+What a substrate preserves is closer to the root system: the structure
+that made the trunk possible, and that can support a new one without
+starting from bare ground.
+</p>
+
+<div class="mermaid">
+graph TD;
+
+S["Substrate<br/>(developmental topology)"]
+
+O["Observations"]
+Q["Open questions"]
+T["Live tensions"]
+D["Discarded routes"]
+
+S --> O;
+S --> Q;
+S --> T;
+S --> D;
+
+S -.->|"stabilizes into"| TR["Trunk<br/>(a PSS state)"]
+TR -.->|"reasoning carried forward as"| PI["PIFR"]
+</div>
+
+<hr>
+
+<h2>What must survive</h2>
+
+<p>
+For a substrate to do its job, it has to keep more than the answer:
+</p>
+
+<ul>
+<li>provenance of each observation</li>
+<li>the reasons a relationship was formed, not just the relationship itself</li>
+<li>degrees of confidence and strain</li>
+<li>open tensions, held open rather than prematurely resolved</li>
+<li>discarded or dormant alternatives, where still relevant</li>
+<li>the conditions under which a prior conclusion made sense</li>
+<li>capacity for revision and new branching</li>
+</ul>
+
+<p>
+Drop any of these and what remains is a trunk without roots — stable
+until it isn't, and unable to regrow when it falls.
+</p>
+
+<hr>
+
+<h2>How this relates to PSS, PIFR, and PKOS</h2>
+
+<p>
+A substrate is the ground; <a href="./pss.html">PSS</a> is its current
+coherent shape. A <a href="./pifr.html">PIFR</a> is how reasoning moves
+across the substrate without severing its roots — a durable record that
+functions as feedforward when it participates in succession. PKOS is the
+operating system built to keep all of this alive on purpose, rather than
+by accident.
+</p>
+
+<p>
+None of the three is optional. A substrate without PIFRs has structure
+but no motion. PIFRs without a substrate have motion but nothing to
+stay rooted to.
+</p>
+
+<hr>
+
+<h2>The test</h2>
+
+<p>
+A substrate has done its job when a new instance, a new hire, or a new
+generation can do more than repeat the trunk. It should be able to:
+</p>
+
+<ul>
+<li>distinguish trunk from root</li>
+<li>recognize why a relationship was formed, not only that it exists</li>
+<li>identify which branches remain genuinely open</li>
+<li>produce a plausible next branch, still connected to the original intention</li>
+<li>revise inherited structure without breaking continuity with it</li>
+</ul>
+
+<p><strong>
+The substrate does not transfer the finished tree. It transfers enough
+of the living root architecture for another tree to grow.
+</strong></p>
+
+</main>
+
+<footer>
+© 2026 Audited State · AI & the Continuity of Human Understanding  
+<br>
+<span class="affiliation">
+– a contributor to <a href="https://cognitivesuperhighway.org" target="_blank" rel="noopener">CognitiveSuperHighway.org</a>
+</span>
+</footer>
+
+<script>
+    document.querySelector('.mobile-toggle').addEventListener('click', function() {
+    document.querySelector('nav').classList.toggle('active');
+    });
+</script>
+    
+<script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+</script>
+
+
+</body>
+</html>
