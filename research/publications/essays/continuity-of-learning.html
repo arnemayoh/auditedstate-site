@@ -3,109 +3,160 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Continuity of Learning: Compounding Wisdom | Audited State</title>
-<link rel="stylesheet" href="../../../style.css">
+<title>The Continuity of Learning | Audited State</title>
 <link rel="canonical" href="https://auditedstate.app/research/publications/essays/continuity-of-learning.html">
-</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F7F4ED; --paper-raised: #FBF9F4; --ink: #1B2430; --ink-soft: #3D4757;
+    --ink-faint: #6B7484; --route: #B8863B; --route-soft: #E4D3B0; --rule: #DAD3C2; --measure: 40em;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 17px; line-height: 1.7; }
+  a { color: var(--ink); text-decoration-color: var(--route); text-underline-offset: 3px; }
+  a:hover { color: var(--route); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--route); outline-offset: 2px; }
 
+  header.site-nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--rule); background: var(--paper-raised); }
+  .site-nav .brand { font-weight: 600; font-size: 0.95rem; text-decoration: none; letter-spacing: 0.01em; }
+  .site-nav nav { display: flex; flex-wrap: wrap; font-size: 0.85rem; }
+  .site-nav nav a { text-decoration: none; color: var(--ink-soft); margin-left: 1.25rem; }
+  .site-nav nav a:first-child { margin-left: 0; }
+  .site-nav nav a:hover { color: var(--route); }
+
+  main { max-width: 46em; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+
+  .eyebrow { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--route); margin-bottom: 1rem; }
+  h1.title { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(2rem, 4.5vw, 2.75rem); line-height: 1.15; margin: 0 0 0.5rem; letter-spacing: -0.01em; }
+  p.subtitle { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.25rem; color: var(--ink-soft); margin: 0 0 2rem; }
+
+  .sequence-box { background: var(--paper-raised); border-left: 3px solid var(--route); border-radius: 2px; padding: 1.1rem 1.4rem; margin: 0 0 2.5rem; }
+  .sequence-box .waypoints-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--route); display: block; margin-bottom: 0.7rem; }
+  .sequence-box ol { margin: 0; padding-left: 1.4rem; }
+  .sequence-box li { margin-bottom: 0.35rem; font-size: 0.95rem; }
+  .sequence-box li:last-child { margin-bottom: 0; }
+  .sequence-box li.current { font-weight: 600; color: var(--ink); list-style: none; margin-left: -1.4rem; padding-left: 0; }
+  .sequence-box li.current::before { content: "→ "; color: var(--route); }
+
+  hr.divider { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+  main p { margin: 0 0 1.3rem; max-width: var(--measure); }
+  h2 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 1.45rem; margin: 2.6rem 0 1.1rem; letter-spacing: -0.005em; }
+  ul.plain { margin: 0 0 1.3rem; padding-left: 1.3rem; max-width: var(--measure); }
+  ul.plain li { margin-bottom: 0.6rem; }
+
+  figure.essay-figure { margin: 2rem 0; max-width: var(--measure); }
+  figure.essay-figure img { width: 100%; max-height: 26rem; object-fit: cover; height: auto; border-radius: 4px; display: block; }
+  figure.essay-figure figcaption { font-size: 0.85rem; color: var(--ink-faint); margin-top: 0.6rem; font-style: italic; }
+
+  .marker-plaque { margin: 3.5rem 0 3rem; padding: 2rem 0; border-top: 2px solid var(--route-soft); border-bottom: 2px solid var(--route-soft); text-align: center; }
+  .marker-plaque p { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 1.35rem; line-height: 1.5; color: var(--ink); max-width: 34em; margin: 0 auto 1rem; }
+  .marker-plaque cite { font-family: 'Inter', sans-serif; font-style: normal; font-size: 0.85rem; font-weight: 600; color: var(--route); letter-spacing: 0.04em; }
+
+  .essay-declarations { margin: 2.5rem 0; font-size: 0.9rem; color: var(--ink-soft); }
+  .essay-declarations h3 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); margin: 1.4rem 0 0.4rem; }
+  .essay-declarations p { margin: 0 0 0.8rem; max-width: var(--measure); }
+
+  .series-close { margin: 2.5rem 0; padding: 1.25rem 1.4rem; background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 4px; font-size: 0.92rem; color: var(--ink-soft); }
+  .series-close strong { color: var(--ink); }
+
+  footer.site-footer { max-width: 46em; margin: 0 auto; padding: 0 1.5rem 3rem; font-size: 0.85rem; color: var(--ink-faint); }
+  footer.site-footer a { color: var(--ink-faint); }
+  footer.site-footer a:hover { color: var(--route); }
+  footer.site-footer p { margin: 0.3rem 0; }
+
+  @media (max-width: 600px) { .site-nav { padding: 1rem; } main { padding: 2rem 1.25rem 3.5rem; } }
+</style>
+</head>
 <body>
 
-<header>
-<div class="nav-container">
-<a href="/" class="logo">
-  Audited State
-  <span class="tagline">— preserving human agency</span>
-</a>
-<button class="mobile-toggle">☰</button>
-<nav>
-<a href="/problem.html">Problem</a>
-<a href="/concepts/lexicon.html">Lexicon</a>
-<a href="/concept-map.html">Concept Map</a>
-<a href="/architecture.html">Architecture</a>
-<a href="/labs/">Labs</a>
-<a href="/research/">Research</a>
-<a href="/about/">About</a>
-</nav>
-</div>
+<header class="site-nav">
+  <a class="brand" href="https://auditedstate.app/">Audited State — preserving human agency</a>
+  <nav>
+    <a href="https://auditedstate.app/problem.html">Problem</a>
+    <a href="https://auditedstate.app/concepts/lexicon.html">Lexicon</a>
+    <a href="https://auditedstate.app/concept-map.html">Concept Map</a>
+    <a href="https://auditedstate.app/architecture.html">Architecture</a>
+    <a href="https://auditedstate.app/labs/">Labs</a>
+    <a href="https://auditedstate.app/research/">Research</a>
+    <a href="https://auditedstate.app/about/">About</a>
+  </nav>
 </header>
 
-<main class="essay">
+<main>
 
-<header class="essay-header">
-<h1>The Continuity of Learning</h1>
-<p class="essay-subtitle">
-Why Wisdom Now Compounds Instead of Resets
-</p>
-</header>
+  <span class="eyebrow">Backbone Narrative — Essay 8 of 11</span>
+  <h1 class="title">The Continuity of Learning</h1>
+  <p class="subtitle">Why wisdom now compounds instead of resetting</p>
 
-<nav class="recommended-essays">
-    <strong>A Guided Path through the Backbone Narrative</strong>
-    <ul>
-    <li><a href="/research/publications/essays/the-collapse-of-agency.html">1. The Collapse of Agency</a></li>
-    <li><a href="/research/publications/essays/the-end-of-monday-morning.html">1. The End of Monday Morning</a></li>
-    <li><a href="/research/publications/essays/the-erosion-of-intent.html">2. The Erosion of Intent</a></li>
-    <li><a href="/research/publications/essays/the-reasoning-artifact.html">3. The Reasoning Artifact</a></li>
-    <li><a href="/research/publications/essays/the-honest-agent.html">4. The Honest Agent</a></li>
-    <li><a href="/research/publications/essays/the-great-accumulation-human-agency.html">5. The Great Accumulation</a></li>
-    <li><a href="/research/publications/essays/the-road-ahead.html">6. The Road Ahead</a></li>
-    <li><strong>7. The Continuity of Learning (Current)</strong></li>
-    </ul>
-</nav>
+  <div class="sequence-box">
+    <span class="waypoints-label">Reading Sequence</span>
+    <ol>
+      <li><a href="https://auditedstate.app/research/publications/essays/the-collapse-of-agency.html">1. The Collapse of Agency</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/the-end-of-monday-morning.html">2. The End of Monday Morning</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/the-erosion-of-intent.html">3. The Erosion of Intent</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/the-reasoning-artifact.html">4. The Reasoning Artifact</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/the-honest-agent.html">5. The Honest Agent</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/the-great-accumulation-human-agency.html">6. The Great Compounding</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/the-road-ahead.html">7. The Road Ahead</a></li>
+      <li class="current">8. The Continuity of Learning</li>
+      <li><a href="https://auditedstate.app/research/publications/essays/wealth-of-understanding-invisible-opportunity-cost.html">9. Civilisational Decay and the Invisible Opportunity Cost</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/data-representation-of-truth.html">10. Data as Representation of Truth</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/reconstruction-bankruptcy.html">11. The Horizon of Reconstruction Bankruptcy</a></li>
+    </ol>
+  </div>
 
+  <hr class="divider">
 
-<section>
-<p>
-The greatest "Tax" on human progress is not a lack of data, but the <strong>Reconstruction Cost</strong> of forgotten intent. We spend our lives relearning what we once knew because we failed to capture the <em>Why</em> behind the <em>What</em>.
-</p>
-</section>
+  <p>The greatest tax on human progress isn't a shortage of data. It's the <a href="https://auditedstate.app/concepts/reconstruction-cost.html">reconstruction cost</a> of forgotten intent — the amount of a life spent relearning things once already understood, because the why behind the what was never actually captured.</p>
 
-<section>
-<h2>Beyond the Linear Machine</h2>
-<p>
-In the old model, learning was a dead-end. We processed a thought, reached a conclusion, and discarded the reasoning. In the <strong>Audited State</strong>, we recognize that learning is a biological ecology. It is not just about moving from A to B; it is about the "loops" that allow today’s effort to strengthen tomorrow’s start.
-</p>
-</section>
+  <h2>Beyond the Linear Model</h2>
 
-<figure class="essay-diagram">
-  <img src="/assets/pkos-semantic-flow.webp" alt="PKOS Semantic Flow: The Continuity of Learning">
-  <figcaption>The PKOS Semantic Flow: Visualizing the cycle of internal understanding and across-cycle learning.</figcaption>
-</figure>
+  <p>In the older model, learning was a dead end: a thought gets processed, a conclusion is reached, and the reasoning behind it is discarded. What this research programme argues instead is that learning behaves more like an ecology than a straight line — not simply movement from one point to the next, but a set of loops where today's effort actually strengthens tomorrow's starting position.</p>
 
+  <figure class="essay-figure">
+    <img src="https://auditedstate.app/assets/pkos-semantic-flow.webp" alt="A diagram illustrating a semantic flow cycle, showing how understanding accumulates within and across reasoning cycles.">
+    <figcaption>The semantic flow cycle: how understanding compounds within a single reasoning session, and across many of them over time.</figcaption>
+  </figure>
 
+  <h2>Two Kinds of Growth</h2>
 
-<section>
-<h2>The Proof of Concept</h2>
-<p>
-As the diagram illustrates, true <strong>Trust</strong> is only the final output of a repeatable cycle. By making <strong>Alternatives</strong> and <strong>Justification</strong> explicit, we enable two distinct types of growth:
-</p>
-<ul>
-  <li><strong>Understanding (Within Cycle):</strong> The pilot's ability to adjust course in real-time within the <strong>Exploration Layer</strong>.</li>
-  <li><strong>Learning (Across Cycles):</strong> The promotion of <strong>Reasoning Artifacts</strong> into the <strong>Persistent Semantic Scaffold</strong>, ensuring that the "Memory" of the system becomes a tool for future pilots.</li>
-</ul>
-</section>
+  <p>As the diagram shows, trust is really the output of a cycle that can be repeated reliably. Making alternatives and justification explicit — rather than leaving them implicit — enables two distinct kinds of growth:</p>
 
-<section>
-<h2>Conclusion: The Great Accumulation</h2>
-<p>
-When we apply this flow, we stop "vibrating in place." We move from the <strong>Jungle of Systems</strong> into a state where every decision is a data point for growth, rather than a crime to be hidden. This is the final result of the <strong>Cognitive Super Highway</strong>: a civilization where human wisdom finally compounds.
-</p>
-</section>
+  <ul class="plain">
+    <li><strong>Understanding, within a cycle:</strong> the ability to adjust course in real time, while still in the middle of working something out.</li>
+    <li><strong>Learning, across cycles:</strong> promoting a <a href="https://auditedstate.app/research/publications/essays/the-reasoning-artifact.html">Reasoning Artifact</a> into a <a href="https://auditedstate.app/concepts/persistent-semantic-scaffold.html">Persistent Semantic Scaffold</a>, so the system's memory becomes something the next person can actually build on.</li>
+  </ul>
+
+  <h2>Compounding, Not Resetting</h2>
+
+  <p>Applying this consistently means no longer running in place. Work shifts from an uncoordinated tangle of disconnected efforts toward something where every decision becomes a data point for future growth, rather than something to quietly bury and move past.</p>
+
+  <p>That's the practical outcome this whole backbone narrative has been building toward: a way of working — for people and AI systems together — in which human understanding actually compounds, instead of resetting every time a session ends.</p>
+
+  <div class="marker-plaque">
+    <p>Wisdom doesn't require more memory. It requires memory that can be built on.</p>
+    <cite>— Arne Mayoh</cite>
+  </div>
+
+  <div class="essay-declarations">
+    <h3>Declaration of Generative AI and AI-Assisted Technologies</h3>
+    <p>This essay was developed with the assistance of AI systems as a research and editorial tool, for drafting support and structural revision. The argument and conclusions are the author's own.</p>
+  </div>
+
+  <div class="series-close">
+    <strong>The Backbone Narrative continues.</strong> These first eight essays trace one continuous argument — from the everyday cost of reconstructing lost reasoning, through the case for honest, traceable AI collaboration, to the shared infrastructure that would let human understanding compound rather than reset. Three further essays complete the sequence: <a href="https://auditedstate.app/research/publications/essays/wealth-of-understanding-invisible-opportunity-cost.html">Civilisational Decay and the Invisible Opportunity Cost</a>, <a href="https://auditedstate.app/research/publications/essays/data-representation-of-truth.html">Data as Representation of Truth</a>, and <a href="https://auditedstate.app/research/publications/essays/reconstruction-bankruptcy.html">The Horizon of Reconstruction Bankruptcy</a>. The formal research behind these ideas continues in the programme's published papers, available at the <a href="https://auditedstate.app/research/publications/">Audited State Research</a> index.
+  </div>
 
 </main>
 
-<footer>
-    © 2026 Audited State · AI & the Continuity of Human Understanding  
-    <br>
-    <span class="affiliation">
-    – a contributor to <a href="https://cognitivesuperhighway.org" target="_blank" rel="noopener">CognitiveSuperHighway.org</a>
-    </span>
+<footer class="site-footer">
+  <p>Essay 8 of the <a href="https://auditedstate.app/research/publications/">Audited State Backbone Narrative</a>.</p>
+  <p>© 2026 Audited State · AI &amp; the Continuity of Human Understanding</p>
+  <p>— a contributor to <a href="https://cognitivesuperhighway.org">CognitiveSuperHighway.org</a></p>
 </footer>
-    
-    <script>
-    document.querySelector('.mobile-toggle').addEventListener('click',function(){
-    document.querySelector('nav').classList.toggle('active');
-    });
-    </script>
-    
+
 </body>
 </html>

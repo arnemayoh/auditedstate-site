@@ -1,406 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Infrastructure of Reasoning | Audited State</title>
+<link rel="canonical" href="https://auditedstate.app/research/publications/essays/infrastructure-of-reasoning.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F7F4ED; --paper-raised: #FBF9F4; --ink: #1B2430; --ink-soft: #3D4757;
+    --ink-faint: #6B7484; --route: #B8863B; --route-soft: #E4D3B0; --rule: #DAD3C2; --measure: 40em;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 17px; line-height: 1.7; }
+  a { color: var(--ink); text-decoration-color: var(--route); text-underline-offset: 3px; }
+  a:hover { color: var(--route); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--route); outline-offset: 2px; }
 
-  <title>The Infrastructure of Reasoning | Audited State</title>
-  <meta name="description" content="A standalone essay arguing that AI systems require infrastructure for reasoning: shared structures, signals, execution gates, audit trails, and continuity across human-system action." />
+  header.site-nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--rule); background: var(--paper-raised); }
+  .site-nav .brand { font-weight: 600; font-size: 0.95rem; text-decoration: none; letter-spacing: 0.01em; }
+  .site-nav nav { display: flex; flex-wrap: wrap; font-size: 0.85rem; }
+  .site-nav nav a { text-decoration: none; color: var(--ink-soft); margin-left: 1.25rem; }
+  .site-nav nav a:first-child { margin-left: 0; }
+  .site-nav nav a:hover { color: var(--route); }
 
-  <link rel="stylesheet" href="../../../style.css" />
-  <link rel="canonical" href="https://auditedstate.app/research/publications/essays/infrastructure-of-reasoning.html" />
+  main { max-width: 46em; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+
+  .eyebrow { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--route); margin-bottom: 1rem; }
+  h1.title { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(2rem, 4.5vw, 2.75rem); line-height: 1.15; margin: 0 0 0.5rem; letter-spacing: -0.01em; }
+  p.subtitle { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.25rem; color: var(--ink-soft); margin: 0 0 2rem; }
+
+  hr.divider { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+  main p { margin: 0 0 1.3rem; max-width: var(--measure); }
+  h2 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 1.45rem; margin: 2.6rem 0 1.1rem; letter-spacing: -0.005em; }
+  ul.plain { margin: 0 0 1.3rem; padding-left: 1.3rem; max-width: var(--measure); }
+  ul.plain li { margin-bottom: 0.4rem; }
+
+  .stanza { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 1.15rem; color: var(--ink-soft); line-height: 1.8; margin: 1.5rem 0; max-width: var(--measure); }
+  .punch { background: var(--paper-raised); border-left: 3px solid var(--route); border-radius: 2px; padding: 1rem 1.3rem; margin: 1.8rem 0; font-weight: 600; font-size: 1.05rem; line-height: 1.6; max-width: var(--measure); }
+  .note-box { background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 4px; padding: 1rem 1.3rem; margin: 1.8rem 0; font-size: 0.95rem; color: var(--ink-soft); max-width: var(--measure); }
+
+  figure.essay-figure { margin: 2rem 0; max-width: var(--measure); }
+  figure.essay-figure img { width: 100%; max-height: 26rem; object-fit: cover; height: auto; border-radius: 4px; display: block; }
+  figure.essay-figure figcaption { font-size: 0.85rem; color: var(--ink-faint); margin-top: 0.6rem; font-style: italic; }
+
+  .waypoints { background: var(--paper-raised); border-left: 3px solid var(--route); border-radius: 2px; padding: 1.1rem 1.4rem; margin: 2.5rem 0; }
+  .waypoints .waypoints-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--route); display: block; margin-bottom: 0.6rem; }
+  .waypoints ul { margin: 0; padding-left: 1.1rem; }
+  .waypoints li { margin-bottom: 0.35rem; font-size: 0.95rem; }
+  .waypoints li:last-child { margin-bottom: 0; }
+
+  .marker-plaque { margin: 3.5rem 0 3rem; padding: 2rem 0; border-top: 2px solid var(--route-soft); border-bottom: 2px solid var(--route-soft); text-align: center; }
+  .marker-plaque p { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 1.35rem; line-height: 1.5; color: var(--ink); max-width: 34em; margin: 0 auto 1rem; }
+  .marker-plaque cite { font-family: 'Inter', sans-serif; font-style: normal; font-size: 0.85rem; font-weight: 600; color: var(--route); letter-spacing: 0.04em; }
+
+  .essay-declarations { margin: 2.5rem 0; font-size: 0.9rem; color: var(--ink-soft); }
+  .essay-declarations h3 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); margin: 1.4rem 0 0.4rem; }
+  .essay-declarations p { margin: 0 0 0.8rem; max-width: var(--measure); }
+
+  .editorial-note { margin: 2rem 0; padding: 1rem 1.25rem; background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 4px; font-size: 0.88rem; color: var(--ink-soft); }
+  .editorial-note strong { color: var(--ink); }
+
+  footer.site-footer { max-width: 46em; margin: 0 auto; padding: 0 1.5rem 3rem; font-size: 0.85rem; color: var(--ink-faint); }
+  footer.site-footer a { color: var(--ink-faint); }
+  footer.site-footer a:hover { color: var(--route); }
+  footer.site-footer p { margin: 0.3rem 0; }
+
+  @media (max-width: 600px) { .site-nav { padding: 1rem; } main { padding: 2rem 1.25rem 3.5rem; } }
+</style>
 </head>
+<body>
 
-<body class="essay-mode">
-
-<header>
-  <div class="nav-container">
-    <a href="/" class="logo">
-      Audited State
-      <span class="tagline">— preserving human agency</span>
-    </a>
-    <button class="mobile-toggle" aria-label="Toggle navigation">☰</button>
-    <nav>
-      <a href="/problem.html">Problem</a>
-      <a href="/concepts/lexicon.html">Lexicon</a>
-      <a href="/concept-map.html">Concept Map</a>
-      <a href="/architecture.html">Architecture</a>
-      <a href="/labs/">Labs</a>
-      <a href="/research/">Research</a>
-      <a href="/about/">About</a>
-    </nav>
-  </div>
+<header class="site-nav">
+  <a class="brand" href="https://auditedstate.app/">Audited State — preserving human agency</a>
+  <nav>
+    <a href="https://auditedstate.app/problem.html">Problem</a>
+    <a href="https://auditedstate.app/concepts/lexicon.html">Lexicon</a>
+    <a href="https://auditedstate.app/concept-map.html">Concept Map</a>
+    <a href="https://auditedstate.app/architecture.html">Architecture</a>
+    <a href="https://auditedstate.app/labs/">Labs</a>
+    <a href="https://auditedstate.app/research/">Research</a>
+    <a href="https://auditedstate.app/about/">About</a>
+  </nav>
 </header>
 
 <main>
 
-  <header>
-    <div class="kicker">Audited State · Essay</div>
+  <span class="eyebrow">Position Releases — cluster pending deferred review</span>
+  <h1 class="title">The Infrastructure of Reasoning</h1>
+  <p class="subtitle">We built infrastructure for movement. We never built equivalent infrastructure for reasoning.</p>
 
-    <h1>The Infrastructure of Reasoning</h1>
+  <hr class="divider">
 
-    <p class="lead">
-      We built infrastructure for movement. We never built equivalent infrastructure for reasoning.
-      Now systems are beginning to act faster than our ability to understand how their actions are justified.
-    </p>
+  <div class="stanza">
+    Roads coordinate movement.<br>
+    Signals coordinate priority.<br>
+    Rules coordinate behavior.<br>
+    Logs coordinate accountability.
+  </div>
 
-  </header>
+  <p>Modern civilisation depends on the fact that movement isn't left to individual negotiation. We don't expect every driver to invent rules at every intersection — we externalise coordination into infrastructure. Roads, lanes, signals, rules, inspections, maintenance, accident reports, and telemetry make movement possible at scale. Without them, vehicles don't become a transportation system. They become a collision field.</p>
 
-  <article>
+  <div class="punch">We are building powerful engines for reasoning. We have not built the roads.</div>
 
-    <div class="stanza">
-      Roads coordinate movement.<br>
-      Signals coordinate priority.<br>
-      Rules coordinate behavior.<br>
-      Logs coordinate accountability.
-    </div>
+  <h2>The Faster Engine Fallacy</h2>
 
-    <p>
-      Modern civilization depends on the fact that movement is not left to individual negotiation.
-    </p>
+  <p>Much of the current AI conversation focuses on capability — larger models, faster agents, more tools, more autonomy. This is the faster engine fallacy. An engine is not a system. A thousand high-speed engines placed into a field don't create mobility. They create danger, unless there's structure around them. The same is now true for reasoning. AI systems are no longer merely producing outputs — they're beginning to participate in action: searching, deciding, drafting, routing, executing, escalating, modifying, reporting. But the reasoning that guides those actions is still treated as temporary, local, and reconstructable after the fact. That assumption no longer holds.</p>
 
-    <p>
-      We do not expect every driver to invent rules at every intersection.
-      We externalize coordination into infrastructure.
-    </p>
+  <figure class="essay-figure">
+    <img src="https://auditedstate.app/assets/traffic-of-reasoning.jpg" alt="Conceptual mapping from traffic systems to reasoning systems, showing vehicles, roads, signals, rules, logs, intersections, and their reasoning equivalents.">
+    <figcaption>We externalised coordination for movement. We now need infrastructure that externalises continuity for reasoning.</figcaption>
+  </figure>
 
-    <p>
-      Roads, lanes, signals, rules, inspections, maintenance, accident reports,
-      and telemetry make movement possible at scale.
-    </p>
+  <h2>Reasoning Is No Longer Local</h2>
 
-    <p>
-      Without them, vehicles do not become a transportation system.
-      They become a collision field.
-    </p>
+  <p>Human reasoning was traditionally assumed to be internal — it lived in a person, a team, a document, a procedure, an institution. It could be discussed, challenged, revised, remembered. That model breaks when reasoning is distributed across humans, AI systems, tools, memory stores, APIs, workflows, dashboards, and automated decisions. In such environments, reasoning doesn't simply happen inside a mind. It moves — crossing boundaries, getting summarized, transformed, invoked, delegated, reused, acted upon. If that movement isn't structured, the reasoning fragments. And when reasoning fragments, responsibility, understanding, and human agency all become harder to preserve.</p>
 
-    <div class="punch">
-      We are building powerful engines for reasoning.<br>
-      We have not built the roads.
-    </div>
+  <div class="note-box">Reasoning infrastructure becomes necessary the moment reasoning is no longer confined to a single human mind, team, document, or system boundary.</div>
 
-    <h2>The faster engine fallacy</h2>
+  <h2>Traffic Systems for Reasoning</h2>
 
-    <p>
-      Much of the current AI conversation focuses on capability.
-    </p>
+  <p>Traffic systems work because they separate concerns: vehicles move through the system, roads provide shared structure, signals coordinate priority, rules define acceptable behavior, logs and investigations preserve accountability. Reasoning systems need the same separation — reasoning vehicles that identify the responsible agents carrying intent, reasoning artifacts that preserve structured reasoning across time, reasoning networks that provide shared paths where reasoning can flow and connect, reasoning signals that expose whether reasoning has been verified or challenged, execution gates that determine when action is justified, and audit trails that preserve what happened, why, and who remains responsible. These are not metaphors only. They're design requirements.</p>
 
-    <p>
-      Larger models. Faster agents. More tools. More autonomy.
-    </p>
+  <h2>From Output to State</h2>
 
-    <p>
-      This is the faster engine fallacy.
-    </p>
+  <p>Current AI systems are largely evaluated by output — was the answer useful, was the task completed, was the result persuasive. But output isn't enough once systems act. Action requires state: not just what was produced, but what reasoning was used, what assumptions were active, what alternatives were rejected, what authority was delegated, and what conditions justified proceeding. Without that state, success can become indistinguishable from appearance — the system reports completion, the interface signals confidence, the workflow proceeds, and the reasoning behind it may already be disconnected from reality.</p>
 
-    <p>
-      An engine is not a system.
-    </p>
+  <h2>Execution Gates</h2>
 
-    <p>
-      A thousand high-speed engines placed into a field do not create mobility.
-      They create danger unless there is structure around them.
-    </p>
+  <p>A traffic light is not merely decoration. It's a governance mechanism embedded into movement, determining when action may proceed. Reasoning systems need equivalent gates — before a system acts, escalates, sends, modifies, approves, or executes, there has to be a visible reasoning condition: what intention is being served, what reasoning justifies the action, what uncertainty remains, who owns the decision, what would invalidate proceeding. Without execution gates, action becomes faster than accountability.</p>
 
-    <p>
-      The same is now true for reasoning.
-    </p>
+  <h2>Audit Trails Are Not Bureaucracy</h2>
 
-    <p>
-      AI systems are no longer merely producing outputs.
-      They are beginning to participate in action:
-      searching, deciding, drafting, routing, executing, escalating, modifying, and reporting.
-    </p>
+  <p>Auditing is often misunderstood as after-the-fact compliance. In reasoning systems, audit trails are memory — they preserve the continuity required to understand how a decision was made, and let later actors continue reasoning rather than reconstruct it, making responsibility traceable across time. Without them, every handoff becomes interpretation, every interpretation becomes drift, every drift increases reconstruction cost. At scale, systems stop accumulating understanding. They accumulate outputs that have to be reinterpreted.</p>
 
-    <p>
-      But the reasoning that guides those actions is still treated as temporary,
-      local, and reconstructable after the fact.
-    </p>
+  <h2>From Shadow AI to Audited State</h2>
 
-    <p>
-      That assumption no longer holds.
-    </p>
+  <p>Without shared reasoning infrastructure, we remain vulnerable to Shadow AI: systems that appear useful while their reasoning can't be traced, inspected, or continued. Shadow AI isn't merely hidden usage. It's hidden structure — decisions shaped by systems whose reasoning never enters the accountable record. The alternative is an audited state: a condition where reasoning is visible enough to be verified, durable enough to be continued, and structured enough to support responsibility. This doesn't mean every thought must be exposed. It means actions requiring responsibility must preserve the reasoning conditions under which they became justified.</p>
 
-    <figure class="essay-diagram">
-      <img src="/assets/traffic-of-reasoning.jpg" alt="Conceptual mapping from traffic systems to reasoning systems, showing vehicles, roads, signals, rules, logs, intersections, governance, and their reasoning equivalents">
-      <figcaption>
-        We externalized coordination for movement. We now need infrastructure that externalizes continuity for reasoning.
-      </figcaption>
-    </figure>
+  <h2>Cognitive Civilisation</h2>
 
-    <h2>Reasoning is no longer local</h2>
+  <p>Traffic infrastructure enabled physical civilisation to scale — it let independent agents move through shared space without constant negotiation or collapse. Reasoning infrastructure is the equivalent requirement for cognitive civilisation: it lets humans and systems think, decide, act, and remain accountable across time and context. The goal isn't to slow reasoning down. It's to make reasoning durable enough that speed doesn't destroy continuity.</p>
 
-    <p>
-      Human reasoning was traditionally assumed to be internal.
-    </p>
+  <div class="marker-plaque">
+    <p>Safe traffic enables physical civilisation. Audited reasoning enables cognitive civilisation.</p>
+    <cite>— Arne Mayoh</cite>
+  </div>
 
-    <p>
-      It lived in a person, a team, a document, a procedure, or an institution.
-      It could be discussed, challenged, revised, and remembered.
-    </p>
+  <div class="essay-declarations">
+    <h3>Declaration of Generative AI and AI-Assisted Technologies</h3>
+    <p>This essay was developed with the assistance of AI systems as a research and editorial tool, for drafting support and structural revision. The argument and conclusions are the author's own.</p>
+  </div>
 
-    <p>
-      That model breaks when reasoning is distributed across humans, AI systems,
-      tools, memory stores, APIs, workflows, dashboards, and automated decisions.
-    </p>
-
-    <p>
-      In such environments, reasoning does not simply happen inside a mind.
-    </p>
-
-    <p>
-      It moves.
-    </p>
-
-    <p>
-      It crosses boundaries.
-      It is summarized, transformed, invoked, delegated, reused, and acted upon.
-    </p>
-
-    <p>
-      If that movement is not structured, the reasoning fragments.
-    </p>
-
-    <p>
-      And when reasoning fragments, responsibility, understanding and Human Agency becomes harder to preserve.
-    </p>
-
-    <div class="note">
-      Reasoning infrastructure becomes necessary when reasoning is no longer confined to a single human mind, team, document, or system boundary.
-    </div>
-
-    <h2>Traffic systems for reasoning</h2>
-
-    <p>
-      Traffic systems work because they separate concerns.
-    </p>
-
+  <div class="waypoints">
+    <span class="waypoints-label">Related Essays</span>
     <ul>
-      <li>Vehicles move through the system.</li>
-      <li>Roads provide shared structure.</li>
-      <li>Signals coordinate priority.</li>
-      <li>Rules define acceptable behavior.</li>
-      <li>Logs and investigations preserve accountability.</li>
+      <li><a href="https://auditedstate.app/research/publications/essays/appearance-of-successful-reasoning.html">The Appearance of Successful Reasoning</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/the-red-signal-was-not-missed.html">The Red Signal Was Not Missed</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/the-collapse-of-agency.html">The Collapse of Agency</a></li>
     </ul>
+  </div>
 
-    <p>
-      Reasoning systems need the same separation.
-    </p>
-
-    <ul>
-      <li><strong>Reasoning vehicles</strong> identify the responsible agents carrying intent.</li>
-      <li><strong>Reasoning artifacts</strong> preserve structured reasoning across time.</li>
-      <li><strong>Reasoning networks</strong> provide shared paths where reasoning can flow and connect.</li>
-      <li><strong>Reasoning signals</strong> expose whether reasoning has been verified, challenged, or continued.</li>
-      <li><strong>Execution gates</strong> determine when action is justified.</li>
-      <li><strong>Audit trails</strong> preserve what happened, why it happened, and who remains responsible.</li>
-    </ul>
-
-    <p>
-      These are not metaphors only.
-    </p>
-
-    <p>
-      They are design requirements.
-    </p>
-
-    <h2>From output to state</h2>
-
-    <p>
-      Current AI systems are largely evaluated by output.
-    </p>
-
-    <p>
-      Was the answer useful?
-      Was the task completed?
-      Was the result persuasive?
-    </p>
-
-    <p>
-      But output is not enough when systems act.
-    </p>
-
-    <p>
-      Action requires state.
-    </p>
-
-    <p>
-      Not just what was produced, but what reasoning was used,
-      what assumptions were active, what alternatives were rejected,
-      what authority was delegated, and what conditions justified proceeding.
-    </p>
-
-    <p>
-      Without that state, success can become indistinguishable from appearance.
-    </p>
-
-    <p>
-      The system reports completion.
-      The interface signals confidence.
-      The workflow proceeds.
-    </p>
-
-    <p>
-      But the reasoning may already be disconnected from reality.
-    </p>
-
-    <h2>Execution gates</h2>
-
-    <p>
-      A traffic light is not merely decoration.
-    </p>
-
-    <p>
-      It is a governance mechanism embedded into movement.
-    </p>
-
-    <p>
-      It determines when action may proceed.
-    </p>
-
-    <p>
-      Reasoning systems need equivalent gates.
-    </p>
-
-    <p>
-      Before a system acts, escalates, sends, modifies, approves, or executes,
-      there must be a visible reasoning condition:
-    </p>
-
-    <ul>
-      <li>What intention is being served?</li>
-      <li>What reasoning justifies the action?</li>
-      <li>What uncertainty remains?</li>
-      <li>Who owns the decision?</li>
-      <li>What would invalidate proceeding?</li>
-    </ul>
-
-    <p>
-      Without execution gates, action becomes faster than accountability.
-    </p>
-
-    <h2>Audit trails are not bureaucracy</h2>
-
-    <p>
-      Auditing is often misunderstood as after-the-fact compliance.
-    </p>
-
-    <p>
-      But in reasoning systems, audit trails are memory.
-    </p>
-
-    <p>
-      They preserve the continuity required to understand how a decision was made.
-    </p>
-
-    <p>
-      They allow later actors to continue reasoning rather than reconstruct it.
-    </p>
-
-    <p>
-      They make responsibility traceable across time.
-    </p>
-
-    <p>
-      Without them, every handoff becomes interpretation.
-      Every interpretation becomes drift.
-      Every drift increases reconstruction cost.
-    </p>
-
-    <p>
-      At scale, systems stop accumulating understanding.
-      They accumulate outputs that must be reinterpreted.
-    </p>
-
-    <h2>From Shadow AI to Audited State</h2>
-
-    <p>
-      Without shared reasoning infrastructure, we remain vulnerable to Shadow AI:
-      systems that appear useful while their reasoning cannot be traced, inspected, or continued.
-    </p>
-
-    <p>
-      Shadow AI is not merely hidden usage.
-    </p>
-
-    <p>
-      It is hidden structure.
-    </p>
-
-    <p>
-      Decisions are shaped by systems whose reasoning does not enter the accountable record.
-    </p>
-
-    <p>
-      The alternative is an audited state:
-      a condition where reasoning is visible enough to be verified,
-      durable enough to be continued, and structured enough to support responsibility.
-    </p>
-
-    <p>
-      This does not mean every thought must be exposed.
-    </p>
-
-    <p>
-      It means that actions requiring responsibility must preserve the reasoning conditions under which they became justified.
-    </p>
-
-    <h2>Cognitive civilization</h2>
-
-    <p>
-      Traffic infrastructure enabled physical civilization to scale.
-    </p>
-
-    <p>
-      It allowed independent agents to move through shared space without constant negotiation or collapse.
-    </p>
-
-    <p>
-      Reasoning infrastructure is the equivalent requirement for cognitive civilization.
-    </p>
-
-    <p>
-      It allows humans and systems to think, decide, act, and remain accountable across time and context.
-    </p>
-
-    <p>
-      The goal is not to slow reasoning down.
-    </p>
-
-    <p>
-      The goal is to make reasoning durable enough that speed does not destroy continuity.
-    </p>
-
-    <div class="punch">
-      Safe traffic enables physical civilization.<br>
-      Audited reasoning enables cognitive civilization.
-    </div>
-
-    <section class="cta-box">
-      <strong>Related essays:</strong><br>
-      → <a href="/research/publications/essays/the-appearance-of-successful-reasoning.html">The Appearance of Successful Reasoning</a><br>
-      → <a href="/research/publications/essays/the-red-signal-was-not-missed.html">The Red Signal Was Not Missed</a><br>
-      → <a href="/research/publications/essays/the-collapse-of-agency.html">The Collapse of Agency</a>
-    </section>
-
-  </article>
+  <div class="editorial-note">
+    <strong>Editorial note:</strong> a clean piece — no PKOS references, no co-byline, and all three "Related Essays" links were already correct, unlike several other essays in this pass. Worth flagging directly: this essay contains the line <em>"The alternative is an audited state"</em> — very likely the actual origin of this site's own name, appearing here as a described condition before it became the site's title. Kept as part of the deferred Position Releases bucket, since its own real cross-references point to other Position Releases pieces specifically, not to the Reasoning Architecture cluster its content might otherwise suggest.
+  </div>
 
 </main>
 
-<footer>
-  © 2026 Audited State · AI & the Continuity of Human Understanding
-  <br>
-  <span class="affiliation">
-    – a contributor to
-    <a href="https://cognitivesuperhighway.org" target="_blank" rel="noopener">CognitiveSuperHighway.org</a>
-  </span>
+<footer class="site-footer">
+  <p>Part of the <a href="https://auditedstate.app/research/publications/">Audited State Research</a> essays.</p>
+  <p>© 2026 Audited State · AI &amp; the Continuity of Human Understanding</p>
+  <p>— a contributor to <a href="https://cognitivesuperhighway.org">CognitiveSuperHighway.org</a></p>
 </footer>
-
-<script>
-document.querySelector('.mobile-toggle').addEventListener('click', function() {
-  document.querySelector('nav').classList.toggle('active');
-});
-</script>
 
 </body>
 </html>

@@ -1,518 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Drift, Drift… DRIFT! | Audited State</title>
-<link rel="stylesheet" href="../../../style.css" />
-<link rel="canonical" href="https://auditedstate.app/research/publications/essays/drift-drift-drift.html" />
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drift, Drift... DRIFT! | Audited State</title>
+<link rel="canonical" href="https://auditedstate.app/research/publications/essays/drift-drift-drift.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F7F4ED; --paper-raised: #FBF9F4; --ink: #1B2430; --ink-soft: #3D4757;
+    --ink-faint: #6B7484; --route: #B8863B; --route-soft: #E4D3B0; --rule: #DAD3C2; --measure: 40em;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 17px; line-height: 1.7; }
+  a { color: var(--ink); text-decoration-color: var(--route); text-underline-offset: 3px; }
+  a:hover { color: var(--route); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--route); outline-offset: 2px; }
 
+  header.site-nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--rule); background: var(--paper-raised); }
+  .site-nav .brand { font-weight: 600; font-size: 0.95rem; text-decoration: none; letter-spacing: 0.01em; }
+  .site-nav nav { display: flex; flex-wrap: wrap; font-size: 0.85rem; }
+  .site-nav nav a { text-decoration: none; color: var(--ink-soft); margin-left: 1.25rem; }
+  .site-nav nav a:first-child { margin-left: 0; }
+  .site-nav nav a:hover { color: var(--route); }
+
+  main { max-width: 46em; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+
+  .eyebrow { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--route); margin-bottom: 1rem; }
+  h1.title { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(2rem, 4.5vw, 2.75rem); line-height: 1.15; margin: 0 0 0.5rem; letter-spacing: -0.01em; }
+  p.subtitle { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.25rem; color: var(--ink-soft); margin: 0 0 2rem; }
+
+  .waypoints { background: var(--paper-raised); border-left: 3px solid var(--route); border-radius: 2px; padding: 1.1rem 1.4rem; margin: 0 0 2.5rem; }
+  .waypoints .waypoints-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--route); display: block; margin-bottom: 0.6rem; }
+  .waypoints ul { margin: 0; padding-left: 1.1rem; }
+  .waypoints li { margin-bottom: 0.35rem; font-size: 0.95rem; }
+  .waypoints li:last-child { margin-bottom: 0; }
+
+  .sequence-box { background: var(--paper-raised); border-left: 3px solid var(--route); border-radius: 2px; padding: 1.1rem 1.4rem; margin: 0 0 2.5rem; }
+  .sequence-box .waypoints-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--route); display: block; margin-bottom: 0.7rem; }
+  .sequence-box ol { margin: 0; padding-left: 1.4rem; }
+  .sequence-box li { margin-bottom: 0.35rem; font-size: 0.95rem; }
+  .sequence-box li:last-child { margin-bottom: 0; }
+  .sequence-box li.current { font-weight: 600; color: var(--ink); list-style: none; margin-left: -1.4rem; padding-left: 0; }
+  .sequence-box li.current::before { content: "→ "; color: var(--route); }
+
+  hr.divider { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+  main p { margin: 0 0 1.3rem; max-width: var(--measure); }
+  h2 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 1.45rem; margin: 2.6rem 0 1.1rem; letter-spacing: -0.005em; }
+
+  figure.essay-figure { margin: 2rem 0; max-width: var(--measure); }
+  figure.essay-figure img { width: 100%; max-height: 26rem; object-fit: cover; height: auto; border-radius: 4px; display: block; }
+  figure.essay-figure figcaption { font-size: 0.85rem; color: var(--ink-faint); margin-top: 0.6rem; font-style: italic; }
+
+  .marker-plaque { margin: 3.5rem 0 3rem; padding: 2rem 0; border-top: 2px solid var(--route-soft); border-bottom: 2px solid var(--route-soft); text-align: center; }
+  .marker-plaque p { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 1.35rem; line-height: 1.5; color: var(--ink); max-width: 34em; margin: 0 auto 1rem; }
+  .marker-plaque cite { font-family: 'Inter', sans-serif; font-style: normal; font-size: 0.85rem; font-weight: 600; color: var(--route); letter-spacing: 0.04em; }
+
+  .essay-declarations { margin: 2.5rem 0; font-size: 0.9rem; color: var(--ink-soft); }
+  .essay-declarations h3 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); margin: 1.4rem 0 0.4rem; }
+  .essay-declarations p { margin: 0 0 0.8rem; max-width: var(--measure); }
+
+  .editorial-note { margin: 2rem 0; padding: 1rem 1.25rem; background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 4px; font-size: 0.88rem; color: var(--ink-soft); }
+  .editorial-note strong { color: var(--ink); }
+
+  footer.site-footer { max-width: 46em; margin: 0 auto; padding: 0 1.5rem 3rem; font-size: 0.85rem; color: var(--ink-faint); }
+  footer.site-footer a { color: var(--ink-faint); }
+  footer.site-footer a:hover { color: var(--route); }
+  footer.site-footer p { margin: 0.3rem 0; }
+
+  @media (max-width: 600px) { .site-nav { padding: 1rem; } main { padding: 2rem 1.25rem 3.5rem; } }
+</style>
+</head>
 <body>
 
-<header>
-  <div class="nav-container">
-    <a href="/" class="logo">
-      Audited State
-      <span class="tagline">— preserving human agency</span>
-    </a>
-    <button class="mobile-toggle" aria-label="Toggle navigation">☰</button>
-    <nav>
-      <a href="/problem.html">Problem</a>
-      <a href="/concepts/lexicon.html">Lexicon</a>
-      <a href="/concept-map.html">Concept Map</a>
-      <a href="/architecture.html">Architecture</a>
-      <a href="/labs/">Labs</a>
-      <a href="/research/">Research</a>
-      <a href="/about/">About</a>
-    </nav>
-  </div>
+<header class="site-nav">
+  <a class="brand" href="https://auditedstate.app/">Audited State — preserving human agency</a>
+  <nav>
+    <a href="https://auditedstate.app/problem.html">Problem</a>
+    <a href="https://auditedstate.app/concepts/lexicon.html">Lexicon</a>
+    <a href="https://auditedstate.app/concept-map.html">Concept Map</a>
+    <a href="https://auditedstate.app/architecture.html">Architecture</a>
+    <a href="https://auditedstate.app/labs/">Labs</a>
+    <a href="https://auditedstate.app/research/">Research</a>
+    <a href="https://auditedstate.app/about/">About</a>
+  </nav>
 </header>
 
 <main>
 
-<div class="disclaimer" style="text-align: center; margin-bottom: 3rem;">
-  <strong>Essay · Part I of II</strong>
-</div>
-
-<h1>Drift, Drift… DRIFT!</h1>
-
-<p class="lead">
-The most dangerous loss of control is not when things break.
-It is when they continue—just no longer aligned with intention.
-</p>
-
-<!-- IMAGE -->
-<div style="margin: 2.5rem 0; text-align: center;">
-  <img src="../../../../assets/drift.jpg"
-       alt="Close-up of a tear-streaked face next to a drifting car, symbolizing the line between intentional control and uncontrolled drift"
-       style="width:100%; max-width:1100px; border-radius:10px;">
-</div>
-
-<p style="text-align:center; font-size:0.95em; opacity:0.75; margin-top:-0.5rem;">
-The line between intentional and uncontrolled drift is where everything changes.
-</p>
-
-<h2>Intentional Drift</h2>
-
-<p>
-Intentional drift is not failure.
-</p>
-
-<p>
-A car enters a corner too fast.
-The rear loses grip.
-The vehicle slides sideways—
-yet the driver holds the line.
-</p>
-
-<p>
-Drifting is often defined as:
-</p>
-
-<blockquote>
-  <p>losing traction while maintaining control.</p>
-</blockquote>
-
-<p>
-A contradiction that only works because something remains intact:
-</p>
-
-<ul>
-  <li>continuous feedback</li>
-  <li>constant correction</li>
-  <li>awareness of direction</li>
-</ul>
-
-<p>
-The driver knows they are drifting.
-</p>
-
-<p>
-And because of that,
-they remain in control.
-</p>
-
-<p>
-This is why drift can be:
-</p>
-
-<ul>
-  <li>creative</li>
-  <li>exploratory</li>
-  <li>even beautiful</li>
-</ul>
-
-<p>
-It is movement beyond strict alignment—
-without losing orientation.
-</p>
-
-<h2>When Drift Changes Character</h2>
-
-<p>
-Now remove one element:
-</p>
-
-<p>
-Awareness.
-</p>
-
-<p>
-The movement continues.
-Outputs continue.
-Progress appears intact.
-</p>
-
-<p>
-But:
-</p>
-
-<ul>
-  <li>no clear feedback</li>
-  <li>no correction</li>
-  <li>no stable reference point</li>
-</ul>
-
-<p>
-This is where drift changes.
-</p>
-
-<p>
-Not into chaos.
-</p>
-
-<p>
-But into:
-</p>
-
-<blockquote>
-  <p><strong>uncontrolled alignment loss</strong></p>
-</blockquote>
-
-<h2>Drift in Reasoning</h2>
-
-<p>
-This pattern does not remain metaphorical.
-</p>
-
-<p>
-It appears directly in how reasoning moves through systems.
-</p>
-
-<p>
-A decision is made.
-It is summarized.
-Reused.
-Translated.
-Applied elsewhere.
-</p>
-
-<p>
-Each step seems valid.
-Each step produces output.
-</p>
-
-<p>
-But something subtle disappears:
-</p>
-
-<blockquote>
-  <p><strong>the reasoning path itself</strong></p>
-</blockquote>
-
-<p>
-Without that path, systems rely on:
-</p>
-
-<ul>
-  <li>interpretation</li>
-  <li>approximation</li>
-  <li>reconstruction</li>
-</ul>
-
-<p>
-This is where <a href="/concepts/semantic-drift.html">semantic drift</a> begins.
-</p>
-
-<p>
-Not through error—
-but through replacement.
-</p>
-
-<p>
-Reasoning is replaced by interpretation.
-</p>
-
-<h2>The Invisible Transition</h2>
-
-<p>
-Because outputs remain coherent,
-this shift is difficult to detect.
-</p>
-
-<p>
-Fluency hides drift.
-</p>
-
-<p>
-Consistency hides drift.
-</p>
-
-<p>
-Progress hides drift.
-</p>
-
-<p>
-Until something breaks.
-</p>
-
-<p>
-But by then:
-</p>
-
-<ul>
-  <li>the origin is distant</li>
-  <li>the reasoning is fragmented</li>
-  <li>reconstruction becomes necessary</li>
-</ul>
-
-<p>
-And reconstruction is never neutral.
-</p>
-
-<p>
-It introduces:
-</p>
-
-<ul>
-  <li>assumptions</li>
-  <li>interpretive bias</li>
-  <li>structural deviation</li>
-</ul>
-
-<p>
-This is the beginning of <a href="/concepts/reconstruction-cost.html">reconstruction cost</a>.
-</p>
-
-<h2>From Accumulation to Reconstruction</h2>
-
-<p>
-At small scale, this is manageable.
-</p>
-
-<p>
-At system scale, it compounds.
-</p>
-
-<p>
-Work no longer accumulates.
-</p>
-
-<p>
-It becomes:
-</p>
-
-<blockquote>
-  <p>repeated reconstruction of something that once existed</p>
-</blockquote>
-
-<p>
-This marks a shift toward the <a href="/concepts/continuity-threshold.html">continuity threshold</a>.
-</p>
-
-<p>
-Beyond this threshold:
-</p>
-
-<ul>
-  <li>understanding fragments faster than it can be restored</li>
-  <li>decisions lose lineage</li>
-  <li>alignment becomes unstable</li>
-</ul>
-
-<h2>Drift and Human Agency</h2>
-
-<p>
-To act with intention requires:
-</p>
-
-<ul>
-  <li>following your reasoning</li>
-  <li>understanding how you arrived here</li>
-  <li>continuing from that point</li>
-</ul>
-
-<p>
-This is the basis of <a href="/concepts/human-agency.html">human agency</a>.
-</p>
-
-<p>
-When reasoning cannot be carried forward:
-</p>
-
-<ul>
-  <li>intent detaches from action</li>
-  <li>responsibility becomes diffuse</li>
-  <li>ownership weakens</li>
-</ul>
-
-<p>
-The shift is gradual.
-</p>
-
-<p>
-From:
-</p>
-
-<blockquote>
-  <p><strong>driver</strong></p>
-</blockquote>
-
-<p>
-to:
-</p>
-
-<blockquote>
-  <p><strong>passenger</strong></p>
-</blockquote>
-
-<p>
-Still present.
-Still producing.
-</p>
-
-<p>
-But no longer fully directing.
-</p>
-
-<h2>Drift at System Scale</h2>
-
-<p>
-With AI, this pattern accelerates.
-</p>
-
-<p>
-Systems now produce reasoning-like outputs at scale.
-</p>
-
-<p>
-But without guaranteed:
-</p>
-
-<ul>
-  <li>lineage</li>
-  <li><a href="/concepts/traceable-state.html">traceable state</a></li>
-  <li><a href="/concepts/reasoning-continuity.html">reasoning continuity</a></li>
-</ul>
-
-<p>
-This creates a new condition:
-</p>
-
-<blockquote>
-  <p><strong>reasoning exists—but cannot be followed</strong></p>
-</blockquote>
-
-<p>
-This is known as <a href="/concepts/shadow-ai.html">Shadow AI</a>.
-</p>
-
-<p>
-Not hidden in usage—
-but hidden in structure.
-</p>
-
-<p>
-Its reasoning:
-</p>
-
-<ul>
-  <li>cannot be traced</li>
-  <li>cannot be fully inspected</li>
-  <li>cannot be reliably continued</li>
-</ul>
-
-<p>
-And because everything still works—
-it spreads.
-</p>
-
-<h2>The Real Loss</h2>
-
-<p>
-Drift does not primarily cost:
-</p>
-
-<ul>
-  <li>time</li>
-  <li>efficiency</li>
-</ul>
-
-<p>
-It costs:
-</p>
-
-<blockquote>
-  <p><strong>alignment between intention and outcome</strong></p>
-</blockquote>
-
-<p>
-Without that alignment:
-</p>
-
-<ul>
-  <li>governance weakens</li>
-  <li>accountability dissolves</li>
-  <li>agency erodes</li>
-</ul>
-
-<h2>Final</h2>
-
-<p>
-We do not lose control all at once.
-</p>
-
-<p>
-We drift out of it.
-</p>
-
-<p>
-The difference between:
-</p>
-
-<ul>
-  <li>intentional movement</li>
-  <li>and uncontrolled drift</li>
-</ul>
-
-<p>
-is not speed.
-</p>
-
-<p>
-It is whether we can still see:
-</p>
-
-<blockquote>
-  <p><strong>how we got here</strong></p>
-</blockquote>
-
-<p>
-—and whether we can continue from that point without starting over.
-</p>
-
-<hr style="margin: 3rem 0;">
-
-<p style="text-align:center; opacity:0.8;">
-This is Part I — the human side of drift.<br>
-<a href="/research/publications/essays/reasoning-drift.html">Part II</a> explores how drift emerges structurally in AI systems and information flows.
-</p>
-
-<p class="essay-attribution">
-"This essay examines the transition from intentional drift to structural drift, revealing how the loss of reasoning continuity transforms controlled exploration into invisible misalignment across human and AI systems."
-— Arne Mayoh & ChatGPT
-</p>
-
-<section class="essay-footer-meta">
-
-<h3>Intention</h3>
-<p>
-To reveal how drift shifts from a controlled, creative act into a structural condition where reasoning, intention, and outcome gradually fall out of alignment.
-</p>
-
-<h3>Justification</h3>
-<p>
-Because without <a href="/concepts/continuity.html">continuity of reasoning</a>, we lose ownership, responsibility, and the ability to govern our own actions. Systems that preserve output but not reasoning inevitably produce drift.
-</p>
-
-<h3>Author & Ownership</h3>
-<p>
-<strong>Arne Mayoh & ChatGPT</strong>. This work is the product of an explicit <a href="/concepts/reasoning-vehicle.html">Reasoning Vehicle</a> operating within the constraints of a <a href="/concepts/traceable-state.html">traceable state</a>.
-</p>
-
-<h3>Way Forward</h3>
-<p>
-Build systems that preserve <a href="/concepts/reasoning-continuity.html">reasoning continuity</a> through <a href="/concepts/persistent-semantic-scaffold.html">Persistent Semantic Scaffolds</a>, enabling understanding to accumulate rather than drift.
-</p>
-
-</section>
+  <span class="eyebrow">Interpretation, Drift &amp; Cognitive Continuity — Essay 2 of 7</span>
+  <h1 class="title">Drift, Drift... DRIFT!</h1>
+  <p class="subtitle">The most dangerous loss of control is not when things break. It's when they continue — just no longer aligned with intention.</p>
+
+  <div class="sequence-box">
+    <span class="waypoints-label">Reading Sequence</span>
+    <ol>
+      <li><a href="https://auditedstate.app/research/publications/essays/data-representation-of-truth.html">1. Data as Representation of Truth</a></li>
+      <li class="current">2. Drift, Drift... DRIFT!</li>
+      <li><a href="https://auditedstate.app/research/publications/essays/reasoning-drift.html">3. Reasoning Drift</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/coherence-of-understanding.html">4. Coherence of Understanding</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/legible-ambiguity.html">5. Why Stable Understanding Requires Legible Ambiguity</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/traffic-of-reasoning.html">6. The Traffic of Reasoning</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/make-the-ai-understand.html">7. Make the AI Understand</a></li>
+    </ol>
+  </div>
+
+  <hr class="divider">
+
+  <figure class="essay-figure">
+    <img src="https://auditedstate.app/assets/drift.jpg" alt="A tear-streaked face beside a drifting car, symbolizing the line between intentional control and uncontrolled drift.">
+    <figcaption>The line between intentional and uncontrolled drift is where everything changes.</figcaption>
+  </figure>
+
+  <h2>Intentional Drift</h2>
+
+  <p>Intentional drift is not failure. A car enters a corner too fast, the rear loses grip, the vehicle slides sideways — and yet the driver holds the line. Drifting is often defined as losing traction while maintaining control, a contradiction that only works because something stays intact underneath it: continuous feedback, constant correction, awareness of direction. The driver knows they're drifting, and it's precisely that awareness that keeps them in control. That's why drift can be creative, exploratory, even beautiful — movement beyond strict alignment, without losing orientation.</p>
+
+  <h2>When Drift Changes Character</h2>
+
+  <p>Now remove one element: awareness. The movement continues, outputs continue, progress still looks intact. But there's no clear feedback, no correction, no stable reference point left. This is where drift changes — not into chaos, but into uncontrolled alignment loss.</p>
+
+  <h2>Drift in Reasoning</h2>
+
+  <p>This pattern doesn't stay metaphorical. It shows up directly in how reasoning actually moves through systems: a decision gets made, summarized, reused, translated, applied somewhere else. Each step seems valid. Each step produces real output. But something subtle disappears along the way — the reasoning path itself. Without that path, systems fall back on interpretation, approximation, reconstruction. This is where <a href="https://auditedstate.app/concepts/semantic-drift.html">semantic drift</a> begins, not through error, but through quiet replacement: reasoning replaced by interpretation.</p>
+
+  <h2>The Invisible Transition</h2>
+
+  <p>Because outputs stay coherent, this shift is genuinely hard to detect. Fluency hides drift. Consistency hides drift. Progress itself hides drift — until something finally breaks. By then, the origin is distant, the reasoning is fragmented, and reconstruction becomes necessary. Reconstruction is never neutral: it introduces assumptions, interpretive bias, structural deviation. This is where <a href="https://auditedstate.app/concepts/reconstruction-cost.html">reconstruction cost</a> actually begins.</p>
+
+  <h2>From Accumulation to Reconstruction</h2>
+
+  <p>At small scale, this stays manageable. At system scale, it compounds — work stops accumulating and becomes repeated reconstruction of something that already existed once. This marks a real shift toward the <a href="https://auditedstate.app/concepts/continuity-threshold.html">continuity threshold</a>, beyond which understanding fragments faster than it can be restored, decisions lose their lineage, and alignment becomes genuinely unstable.</p>
+
+  <h2>Drift and Human Agency</h2>
+
+  <p>Acting with intention requires following your own reasoning, understanding how you arrived somewhere, and continuing from that point — the actual basis of <a href="https://auditedstate.app/concepts/human-agency.html">human agency</a>. When reasoning can no longer be carried forward, intent detaches from action, responsibility becomes diffuse, and ownership quietly weakens. The shift is gradual: from driver to passenger. Still present. Still producing. No longer fully directing.</p>
+
+  <h2>Drift at System Scale</h2>
+
+  <p>AI accelerates this same pattern. Systems now produce reasoning-like output at real scale, without guaranteed lineage, <a href="https://auditedstate.app/concepts/traceable-state.html">traceable state</a>, or <a href="https://auditedstate.app/concepts/reasoning-continuity.html">reasoning continuity</a>. That creates a new condition: reasoning exists, but can't be followed. This is <a href="https://auditedstate.app/concepts/shadow-ai.html">Shadow AI</a> — not hidden in usage, but hidden in structure. Its reasoning can't be traced, can't be fully inspected, can't be reliably continued. And because everything still works on the surface, it spreads.</p>
+
+  <h2>The Real Loss</h2>
+
+  <p>Drift's primary cost was never time or efficiency. It's alignment between intention and outcome — and without that alignment, governance weakens, accountability dissolves, and agency erodes, quietly, one small step at a time.</p>
+
+  <p>We don't lose control all at once. We drift out of it. The difference between intentional movement and uncontrolled drift was never speed. It's whether we can still see how we got here — and whether we can continue from that point without starting over.</p>
+
+  <div class="marker-plaque">
+    <p>We do not lose control all at once. We drift out of it.</p>
+    <cite>— Arne Mayoh</cite>
+  </div>
+
+  <div class="essay-declarations">
+    <h3>Declaration of Generative AI and AI-Assisted Technologies</h3>
+    <p>This essay was developed with the assistance of AI systems as a research and editorial tool, for drafting support and structural revision. The argument and conclusions are the author's own.</p>
+  </div>
+
+  <div class="editorial-note">
+    <strong>Editorial note:</strong> this essay is confirmed as the real Part I companion to "Reasoning Drift" — its own footer names that essay directly as Part II. This corrects a wrong guess made when "Reasoning Drift" was converted earlier, which speculated its stray "Part II of II" label most plausibly paired with "Data as Representation of Truth"; that guess is corrected there as part of this same update. Resolved: this essay is now folded into the Interpretation, Drift &amp; Cognitive Continuity series as essay 2 of 7, with the rest of the series renumbered accordingly (see the accompanying renumbering specification for the other six files). The co-byline ("Arne Mayoh &amp; ChatGPT") was replaced with the standard Declaration, and the Intention/Justification/Author &amp; Ownership/Way Forward closing block was folded into it, consistent with every other conversion.
+  </div>
 
 </main>
 
-<footer>
-© 2026 Audited State · AI & the Continuity of Human Understanding  
-<br>
-<span class="affiliation">
-– a contributor to <a href="https://cognitivesuperhighway.org" target="_blank" rel="noopener">CognitiveSuperHighway.org</a>
-</span>
+<footer class="site-footer">
+  <p>Essay 2 of the <a href="https://auditedstate.app/research/publications/">Interpretation, Drift &amp; Cognitive Continuity series</a>.</p>
+  <p>© 2026 Audited State · AI &amp; the Continuity of Human Understanding</p>
+  <p>— a contributor to <a href="https://cognitivesuperhighway.org">CognitiveSuperHighway.org</a></p>
 </footer>
-
-<script>
-document.querySelector('.mobile-toggle').addEventListener('click', function() {
-  document.querySelector('nav').classList.toggle('active');
-});
-</script>
 
 </body>
 </html>

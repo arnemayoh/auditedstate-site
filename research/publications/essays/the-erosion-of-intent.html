@@ -3,148 +3,156 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Erosion of Intent: Why AI Agency requires Human Will | Audited State</title>
-<link rel="stylesheet" href="../../../style.css">
+<title>The Erosion of Intent | Audited State</title>
 <link rel="canonical" href="https://auditedstate.app/research/publications/essays/the-erosion-of-intent.html">
-</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F7F4ED; --paper-raised: #FBF9F4; --ink: #1B2430; --ink-soft: #3D4757;
+    --ink-faint: #6B7484; --route: #B8863B; --route-soft: #E4D3B0; --rule: #DAD3C2; --measure: 40em;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 17px; line-height: 1.7; }
+  a { color: var(--ink); text-decoration-color: var(--route); text-underline-offset: 3px; }
+  a:hover { color: var(--route); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--route); outline-offset: 2px; }
 
+  header.site-nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--rule); background: var(--paper-raised); }
+  .site-nav .brand { font-weight: 600; font-size: 0.95rem; text-decoration: none; letter-spacing: 0.01em; }
+  .site-nav nav { display: flex; flex-wrap: wrap; font-size: 0.85rem; }
+  .site-nav nav a { text-decoration: none; color: var(--ink-soft); margin-left: 1.25rem; }
+  .site-nav nav a:first-child { margin-left: 0; }
+  .site-nav nav a:hover { color: var(--route); }
+
+  main { max-width: 46em; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+
+  .eyebrow { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--route); margin-bottom: 1rem; }
+  h1.title { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(2rem, 4.5vw, 2.75rem); line-height: 1.15; margin: 0 0 0.5rem; letter-spacing: -0.01em; }
+  p.subtitle { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.25rem; color: var(--ink-soft); margin: 0 0 2rem; }
+
+  .sequence-box { background: var(--paper-raised); border-left: 3px solid var(--route); border-radius: 2px; padding: 1.1rem 1.4rem; margin: 0 0 2.5rem; }
+  .sequence-box .waypoints-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--route); display: block; margin-bottom: 0.7rem; }
+  .sequence-box ol { margin: 0; padding-left: 1.4rem; }
+  .sequence-box li { margin-bottom: 0.35rem; font-size: 0.95rem; }
+  .sequence-box li:last-child { margin-bottom: 0; }
+  .sequence-box li.current { font-weight: 600; color: var(--ink); list-style: none; margin-left: -1.4rem; padding-left: 0; }
+  .sequence-box li.current::before { content: "→ "; color: var(--route); }
+
+  hr.divider { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+  main p { margin: 0 0 1.3rem; max-width: var(--measure); }
+  h2 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 1.45rem; margin: 2.6rem 0 1.1rem; letter-spacing: -0.005em; }
+
+  .route-map { background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 4px; padding: 1.1rem 1.4rem; margin: 1.8rem 0; font-size: 1rem; color: var(--ink-soft); text-align: left; }
+  .route-map p { margin: 0; max-width: none; font-style: italic; }
+
+  .marker-plaque { margin: 3.5rem 0 3rem; padding: 2rem 0; border-top: 2px solid var(--route-soft); border-bottom: 2px solid var(--route-soft); text-align: center; }
+  .marker-plaque p { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 1.35rem; line-height: 1.5; color: var(--ink); max-width: 34em; margin: 0 auto 1rem; }
+  .marker-plaque cite { font-family: 'Inter', sans-serif; font-style: normal; font-size: 0.85rem; font-weight: 600; color: var(--route); letter-spacing: 0.04em; }
+
+  .essay-declarations { margin: 2.5rem 0; font-size: 0.9rem; color: var(--ink-soft); }
+  .essay-declarations h3 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); margin: 1.4rem 0 0.4rem; }
+  .essay-declarations p { margin: 0 0 0.8rem; max-width: var(--measure); }
+
+  footer.site-footer { max-width: 46em; margin: 0 auto; padding: 0 1.5rem 3rem; font-size: 0.85rem; color: var(--ink-faint); }
+  footer.site-footer a { color: var(--ink-faint); }
+  footer.site-footer a:hover { color: var(--route); }
+  footer.site-footer p { margin: 0.3rem 0; }
+
+  @media (max-width: 600px) { .site-nav { padding: 1rem; } main { padding: 2rem 1.25rem 3.5rem; } }
+</style>
+</head>
 <body>
 
-<header>
-<div class="nav-container">
-<a href="/" class="logo">
-  Audited State
-  <span class="tagline">— preserving human agency</span>
-</a>
-<button class="mobile-toggle">☰</button>
-<nav>
-<a href="/problem.html">Problem</a>
-<a href="/concepts/lexicon.html">Lexicon</a>
-<a href="/concept-map.html">Concept Map</a>
-<a href="/architecture.html">Architecture</a>
-<a href="/labs/">Labs</a>
-<a href="/research/">Research</a>
-<a href="/about/">About</a>
-</nav>
-</div>
+<header class="site-nav">
+  <a class="brand" href="https://auditedstate.app/">Audited State — preserving human agency</a>
+  <nav>
+    <a href="https://auditedstate.app/problem.html">Problem</a>
+    <a href="https://auditedstate.app/concepts/lexicon.html">Lexicon</a>
+    <a href="https://auditedstate.app/concept-map.html">Concept Map</a>
+    <a href="https://auditedstate.app/architecture.html">Architecture</a>
+    <a href="https://auditedstate.app/labs/">Labs</a>
+    <a href="https://auditedstate.app/research/">Research</a>
+    <a href="https://auditedstate.app/about/">About</a>
+  </nav>
 </header>
 
-<main class="essay">
+<main>
 
-<p class="essay-attribution">
-"This essay formalizes the core ethical tenet of PKOS: that synthetic agency is only dangerous if we allow it to operate in the void left by the liquidation of our own intent."
-— Arne Mayoh & Gemini 3 Flash
-</p>
+  <span class="eyebrow">Backbone Narrative — Essay 3 of 11</span>
+  <h1 class="title">The Erosion of Intent</h1>
+  <p class="subtitle">Why the fear of AI agency is actually a crisis of human will</p>
 
-<header class="essay-header">
-<h1>The Erosion of Intent</h1>
-<p class="essay-subtitle">
-Why the Fear of AI Agency is Actually a Crisis of Human Will
-</p>
-</header>
+  <div class="sequence-box">
+    <span class="waypoints-label">Reading Sequence</span>
+    <ol>
+      <li><a href="https://auditedstate.app/research/publications/essays/the-collapse-of-agency.html">1. The Collapse of Agency</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/the-end-of-monday-morning.html">2. The End of Monday Morning</a></li>
+      <li class="current">3. The Erosion of Intent</li>
+      <li><a href="https://auditedstate.app/research/publications/essays/the-reasoning-artifact.html">4. The Reasoning Artifact</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/the-honest-agent.html">5. The Honest Agent</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/the-great-accumulation-human-agency.html">6. The Great Compounding</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/the-road-ahead.html">7. The Road Ahead</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/continuity-of-learning.html">8. The Continuity of Learning</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/wealth-of-understanding-invisible-opportunity-cost.html">9. Civilisational Decay and the Invisible Opportunity Cost</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/data-representation-of-truth.html">10. Data as Representation of Truth</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/reconstruction-bankruptcy.html">11. The Horizon of Reconstruction Bankruptcy</a></li>
+    </ol>
+  </div>
 
-<nav class="recommended-essays">
-    <strong>A Guided Path through the Backbone Narrative</strong>
-    <ul>
-    <li><a href="/research/publications/essays/the-collapse-of-agency.html">1. The Collapse of Agency</a></li>
-    <li><a href="/research/publications/essays/the-end-of-monday-morning.html">1. The End of Monday Morning</a></li>
-    <li><strong>2. The Erosion of Intent (Current)</strong></li>
-    <li><a href="/research/publications/essays/the-reasoning-artifact.html">3. The Reasoning Artifact</a></li>
-    <li><a href="/research/publications/essays/the-honest-agent.html">4. The Honest Agent</a></li>
-    <li><a href="/research/publications/essays/the-great-accumulation-human-agency.html">5. The Great Accumulation</a></li>
-    <li><a href="/research/publications/essays/the-road-ahead.html">6. The Road Ahead</a></li>
-    <li><a href="/research/publications/essays/continuity-of-learning.html">7. The Continuity of Learning</a></li>
-    </ul>
-</nav>
+  <hr class="divider">
 
-<hr>
+  <p>The defining anxiety of our time is that artificial intelligence will develop agency — the capacity to make autonomous decisions that shape the world. That fear is real, and it is fed by a narrative of inevitable human displacement.</p>
 
-<section>
-<p>
-The defining anxiety of our time is the fear that artificial intelligence will develop **Agency**—the capacity to make autonomous decisions that shape our world. This fear is visceral, fueled by a narrative of inevitable human displacement.
-</p>
+  <p>But it is worth confronting a less comfortable possibility: AI agency is not inherently dangerous. It becomes dangerous specifically when it fills a void left by the erosion of our own.</p>
 
-<p>
-But in the PKOS framework, we must confront a more unsettling reality: **AI Agency is not inherently dangerous. It only becomes dangerous when it fills the void left by the erosion of our own.**
-</p>
-</section>
+  <h2>The Shadow of Opaque Decisions</h2>
 
-<section>
-<h2>The Shadow of Opaque Decisions</h2>
-<p>
-The current AI ecosystem is optimized for **Ephemeral Processing**—the high-speed generation of outputs (text, code, decisions) that lack a durable, traceable lineage. When a human accepts a result from a "Black Box" AI without understanding its reasoning, they are not collaborating; they are **liquidating their intent**.
-</p>
+  <p>Much of the current AI ecosystem is optimized for speed of output — text, code, decisions — without a durable, traceable record of how those outputs were reached. When a person accepts a result from an opaque system without understanding the reasoning behind it, they are not really collaborating with it. They are handing over their own intent.</p>
 
-<p>
-This creates **Shadow AI**—systems where reasoning occurs in secret and moves from **Conjecture** straight to **Accountable State** without passing through a human-validated **Authority Membrane**. In this scenario, the AI’s "agency" is dangerous precisely because the human has already chosen to become a passenger, abandoning the responsibility of **Direction**.
-</p>
-</section>
+  <p>This is what this site calls <a href="https://auditedstate.app/concepts/shadow-ai.html">Shadow AI</a>: reasoning that happens invisibly, moving from a rough idea to something acted upon without ever passing through human review — what this site's lexicon calls the <a href="https://auditedstate.app/concepts/promotion-gate.html">Authority Membrane</a>. In that situation, an AI system's "agency" is dangerous precisely because a person has already, quietly, chosen to become a passenger rather than a driver.</p>
 
-<section>
-<h2>The Honest Agent as a Counterweight</h2>
-<p>
-The solution is not to restrict AI capabilities, but to enforce **Structural Signaling**.
-</p>
+  <h2>The Honest Agent as a Counterweight</h2>
 
-<p>
-An **Honest Agent** is one that by architecture makes its reasoning visible and **Traceable**. It cannot commit an action or promote an idea without packaging its complete **Reasoning Vehicle (PIFR)** for human review.
-</p>
+  <p>The answer to this isn't restricting what AI systems are capable of. It's building systems that make their reasoning visible by design.</p>
 
-<p>
-This visible reasoning does not diminish human agency; it **restores it**. It forces the human to clarify their own intent. The Honest Agent acts as a **Counterweight**, a necessary partner that asks: <em>"This is the logic I have constructed based on your request. Do you ratify this intention before we proceed?"</em>
-</p>
-</section>
+  <p>An honest agent is one whose architecture requires it to make its reasoning traceable — one that cannot act on or promote an idea without packaging the reasoning behind it, its <a href="https://auditedstate.app/concepts/reasoning-vehicle.html">Reasoning Vehicle</a>, for a person to actually review.</p>
 
-<section>
-<h2>Collaborative Conjecture: Retaining the Core</h2>
-<p>
-This interaction is **Collaborative Conjecture**. The AI is free to explore (Exploration Layer), but the human is the only entity that can commit (Commitment Layer).
-</p>
+  <p>Making that reasoning visible doesn't reduce human agency. It restores it, because it forces a person to actually clarify what they meant in the first place. A well-built AI system, in this sense, acts as a counterweight — the kind that asks:</p>
 
-<p>
-By anchoring all synthetic reasoning in a **Traceable State**, we ensure that civilization’s growth remains directional. We are not outsourcing our future to autonomous machines; we are using machines to enhance our capacity to retain and compound **Human Will**.
-</p>
-</section>
+  <div class="route-map">
+    <p>"This is the reasoning I've constructed from your request. Do you actually stand behind this before we act on it?"</p>
+  </div>
 
-<section>
-<h2>Conclusion: The Path to Flight</h2>
-<p>
-The true risk of AI is not that it will become smarter than us; it is that we will use its speed as an excuse to stop thinking.
-</p>
+  <h2>Collaborative Conjecture</h2>
 
-<p>
-PKOS and the **Cognitive Super Highway** are the infrastructure for a society that refuses to be blind. They are the tools for a humanity that chooses to remain the **Pilot**. By making AI an Honest Agent, we are not just managing synthetic intelligence; we are safeguarding the **Continuity of our own Intent**.
-</p>
-</section>
+  <p>This is the shape of what this site calls collaborative conjecture: the AI system is free to explore possibilities, but only a person can commit to one. By anchoring synthetic reasoning in a <a href="https://auditedstate.app/concepts/traceable-state.html">Traceable State</a>, growth stays directional rather than accidental. The aim isn't to outsource the future to autonomous machines — it's to use machines to make it easier to retain and build on human intent over time, rather than losing it session by session.</p>
 
-<blockquote class="essay-closing-quote">
-<p>
-<strong>"Artificial intelligence only becomes a threat to human meaning when we allow our own meaning to become mutable."</strong>
-</p>
-<footer>
-— Audited State Core Principle [cite: 2026-01-31]
-</footer>
-</blockquote>
+  <h2>Remaining the Pilot</h2>
 
-<footer class="essay-footer">
-<p>A central ethical statement from the <a href="/research/index.html">Audited State Research</a> series.</p>
-</footer>
+  <p>The real risk from AI was never that it might become smarter than we are. It's that its speed becomes an excuse to stop thinking.</p>
+
+  <p>The infrastructure this research programme is building — including the Cognitive Super Highway — exists for a society that chooses not to go along with that trade. Making AI systems honest agents isn't only a technical safeguard. It's a way of protecting the continuity of our own intent, rather than quietly ceding it.</p>
+
+  <div class="marker-plaque">
+    <p>Artificial intelligence only threatens human meaning when we allow our own meaning to become negotiable.</p>
+    <cite>— Arne Mayoh</cite>
+  </div>
+
+  <div class="essay-declarations">
+    <h3>Declaration of Generative AI and AI-Assisted Technologies</h3>
+    <p>This essay was developed with the assistance of AI systems as a research and editorial tool, for drafting support and structural revision. The argument and conclusions are the author's own.</p>
+  </div>
 
 </main>
 
-<footer>
-© 2026 Audited State · AI & the Continuity of Human Understanding  
-<br>
-<span class="affiliation">
-– a contributor to <a href="https://cognitivesuperhighway.org" target="_blank" rel="noopener">CognitiveSuperHighway.org</a>
-</span>
+<footer class="site-footer">
+  <p>Essay 3 of the <a href="https://auditedstate.app/research/publications/">Audited State Backbone Narrative</a>.</p>
+  <p>© 2026 Audited State · AI &amp; the Continuity of Human Understanding</p>
+  <p>— a contributor to <a href="https://cognitivesuperhighway.org">CognitiveSuperHighway.org</a></p>
 </footer>
-
-<script>
-document.querySelector('.mobile-toggle').addEventListener('click',function(){
-document.querySelector('nav').classList.toggle('active');
-});
-</script>
 
 </body>
 </html>

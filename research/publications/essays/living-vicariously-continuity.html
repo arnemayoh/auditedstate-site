@@ -1,329 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Living Vicariously: Proxy Experience and the Loss of Continuity | Audited State</title>
+<link rel="canonical" href="https://auditedstate.app/research/publications/essays/living-vicariously-continuity.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F7F4ED; --paper-raised: #FBF9F4; --ink: #1B2430; --ink-soft: #3D4757;
+    --ink-faint: #6B7484; --route: #B8863B; --route-soft: #E4D3B0; --rule: #DAD3C2; --measure: 40em;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 17px; line-height: 1.7; }
+  a { color: var(--ink); text-decoration-color: var(--route); text-underline-offset: 3px; }
+  a:hover { color: var(--route); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--route); outline-offset: 2px; }
 
-<link rel="stylesheet" href="../../../style.css" />
-<link rel="canonical" href="https://auditedstate.app/research/publications/essays/living-vicariously-continuity.html" />
+  header.site-nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--rule); background: var(--paper-raised); }
+  .site-nav .brand { font-weight: 600; font-size: 0.95rem; text-decoration: none; letter-spacing: 0.01em; }
+  .site-nav nav { display: flex; flex-wrap: wrap; font-size: 0.85rem; }
+  .site-nav nav a { text-decoration: none; color: var(--ink-soft); margin-left: 1.25rem; }
+  .site-nav nav a:first-child { margin-left: 0; }
+  .site-nav nav a:hover { color: var(--route); }
 
+  main { max-width: 46em; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+
+  .eyebrow { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--route); margin-bottom: 1rem; }
+  h1.title { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(2rem, 4.5vw, 2.75rem); line-height: 1.15; margin: 0 0 0.5rem; letter-spacing: -0.01em; }
+  p.subtitle { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.25rem; color: var(--ink-soft); margin: 0 0 2rem; }
+
+  hr.divider { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+  main p { margin: 0 0 1.3rem; max-width: var(--measure); }
+  h2 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 1.45rem; margin: 2.6rem 0 1.1rem; letter-spacing: -0.005em; }
+
+  figure.essay-figure { margin: 2rem 0; max-width: var(--measure); }
+  figure.essay-figure img { width: 100%; max-height: 26rem; object-fit: cover; height: auto; border-radius: 4px; display: block; }
+  figure.essay-figure figcaption { font-size: 0.85rem; color: var(--ink-faint); margin-top: 0.6rem; font-style: italic; }
+
+  .marker-plaque { margin: 3.5rem 0 3rem; padding: 2rem 0; border-top: 2px solid var(--route-soft); border-bottom: 2px solid var(--route-soft); text-align: center; }
+  .marker-plaque p { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 1.35rem; line-height: 1.5; color: var(--ink); max-width: 34em; margin: 0 auto 1rem; }
+  .marker-plaque cite { font-family: 'Inter', sans-serif; font-style: normal; font-size: 0.85rem; font-weight: 600; color: var(--route); letter-spacing: 0.04em; }
+
+  .waypoints { background: var(--paper-raised); border-left: 3px solid var(--route); border-radius: 2px; padding: 1.1rem 1.4rem; margin: 2.5rem 0; }
+  .waypoints .waypoints-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--route); display: block; margin-bottom: 0.6rem; }
+  .waypoints ul { margin: 0; padding-left: 1.1rem; }
+  .waypoints li { margin-bottom: 0.35rem; font-size: 0.95rem; }
+  .waypoints li:last-child { margin-bottom: 0; }
+
+  .essay-declarations { margin: 2.5rem 0; font-size: 0.9rem; color: var(--ink-soft); }
+  .essay-declarations h3 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); margin: 1.4rem 0 0.4rem; }
+  .essay-declarations p { margin: 0 0 0.8rem; max-width: var(--measure); }
+
+  .editorial-note { margin: 2rem 0; padding: 1rem 1.25rem; background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 4px; font-size: 0.88rem; color: var(--ink-soft); }
+  .editorial-note strong { color: var(--ink); }
+
+  footer.site-footer { max-width: 46em; margin: 0 auto; padding: 0 1.5rem 3rem; font-size: 0.85rem; color: var(--ink-faint); }
+  footer.site-footer a { color: var(--ink-faint); }
+  footer.site-footer a:hover { color: var(--route); }
+  footer.site-footer p { margin: 0.3rem 0; }
+
+  @media (max-width: 600px) { .site-nav { padding: 1rem; } main { padding: 2rem 1.25rem 3.5rem; } }
+</style>
 </head>
-
 <body>
 
-<header>
-<div class="nav-container">
-<a href="/" class="logo">
-  Audited State
-  <span class="tagline">— preserving human agency</span>
-</a>
-<button class="mobile-toggle">☰</button>
-<nav>
-<a href="/problem.html">Problem</a>
-<a href="/concepts/lexicon.html">Lexicon</a>
-<a href="/concept-map.html">Concept Map</a>
-<a href="/architecture.html">Architecture</a>
-<a href="/labs/">Labs</a>
-<a href="/research/" style="font-weight:600;">Research</a>
-<a href="/about/">About</a>
-</nav>
-</div>
+<header class="site-nav">
+  <a class="brand" href="https://auditedstate.app/">Audited State — preserving human agency</a>
+  <nav>
+    <a href="https://auditedstate.app/problem.html">Problem</a>
+    <a href="https://auditedstate.app/concepts/lexicon.html">Lexicon</a>
+    <a href="https://auditedstate.app/concept-map.html">Concept Map</a>
+    <a href="https://auditedstate.app/architecture.html">Architecture</a>
+    <a href="https://auditedstate.app/labs/">Labs</a>
+    <a href="https://auditedstate.app/research/">Research</a>
+    <a href="https://auditedstate.app/about/">About</a>
+  </nav>
 </header>
 
 <main>
 
-<h1>Living Vicariously</h1>
+  <span class="eyebrow">Learning &amp; Understanding — cluster pending final grouping</span>
+  <h1 class="title">Living Vicariously</h1>
+  <p class="subtitle">We have become very good at experiencing things we haven't lived — and far less capable of carrying that experience forward as understanding.</p>
 
-<p class="lead">
-We have become very good at experiencing things we have not lived — but far less capable of carrying that experience forward as understanding.
-</p>
+  <hr class="divider">
 
-<hr>
+  <figure class="essay-figure">
+    <img src="https://auditedstate.app/assets/vicarious-legos.webp" alt="A child watching LEGO instructions on a screen, trying to follow fragmented steps without retaining the full reasoning.">
+  </figure>
 
-<div style="margin: 2rem 0; text-align: center;">
-  <img src="../../../../assets/vicarious-legos.webp"
-       alt="A child watching LEGO instructions on a screen, trying to follow fragmented steps without retaining the full reasoning"
-       style="width:100%; max-width:700px; border-radius:8px;">
-</div>
+  <h2>The Familiar Experience</h2>
 
-<h2>The Familiar Experience</h2>
+  <p>A child watches a set of LEGO instructions on a screen. Step by step, pieces are assembled, the structure becomes visible, the logic of the build is there — but only as it unfolds. The child tries to follow, tries to remember, tries to reconstruct. What actually gets retained is fragments: this piece goes here, that connects there, something like this was done before. What's missing is the full reasoning that would make the structure continuable on its own. This isn't a failure of attention. It's a structural condition.</p>
 
-<p>
-A child watches a set of LEGO instructions on a screen.
-</p>
+  <h2>Vicarious Continuity</h2>
 
-<p>
-Step by step, pieces are assembled. The structure becomes visible. The logic of the build is there — but only as it unfolds.
-</p>
+  <p>In that moment, something specific happens: the child experiences a form of <a href="https://auditedstate.app/concepts/vicarious-continuity.html">vicarious continuity</a> — following a reasoning process that appears coherent, connected, and complete. For a brief moment, understanding feels present. But it isn't yet owned. Once the sequence ends, the reasoning doesn't remain available in a form that can be continued without reconstructing it from scratch.</p>
 
-<p>
-The child tries to follow. Tries to remember. Tries to reconstruct.
-</p>
+  <h2>From Experience to Reconstruction</h2>
 
-<p>
-But what is retained are fragments:
-</p>
+  <p>This pattern reaches far beyond a child and a screen. Across modern systems, we increasingly rely on video explanations, summaries, AI-generated answers, constant exposure to other people's conclusions — and we can follow reasoning more easily now than at any point before. But following was never the same thing as carrying forward. What's left after the experience is usually recognition without structure, familiarity without continuity, confidence without any of the reasoning actually retained. So we reconstruct. Again and again, every time.</p>
 
-<ul>
-<li>this piece goes here</li>
-<li>that connects there</li>
-<li>something like this was done before</li>
-</ul>
+  <h2>The Hidden Cost</h2>
 
-<p>
-What is missing is the full reasoning that makes the structure continuable.
-</p>
+  <p>Reconstruction isn't neutral. Every time reasoning gets rebuilt, details get lost, assumptions shift, and meaning gets approximated rather than recovered exactly. Over time this produces <a href="https://auditedstate.app/concepts/interpretive-entropy.html">interpretive entropy</a> — understanding drifting even while effort stays high. Systems can look productive the entire time this is happening. Progress just becomes unreliable underneath it.</p>
 
-<p>
-This is not a failure of attention. It is a structural condition.
-</p>
+  <h2>Continuity as Leverage</h2>
 
-<hr>
+  <p>There's a different condition available. When reasoning can actually be carried forward without reconstruction, understanding stops resetting and starts accumulating — one thought leading to the next, structures extending, meaning staying intact across time. That's <a href="https://auditedstate.app/concepts/continuity.html">continuity</a>, and it changes what progress actually looks like: less rework, less reinterpretation, more reliable outcomes. Not more output. More dependable accumulation.</p>
 
-<h2>Vicarious Continuity</h2>
+  <h2>From Exposure to Continuation</h2>
 
-<p>
-In that moment, something important happens.
-</p>
+  <p>Vicarious experience isn't the problem here — it's often the entry point to real understanding in the first place. But without structures that preserve the reasoning behind it, it stays incomplete. The transition that actually matters is moving from experiencing understanding to continuing it.</p>
 
-<p>
-The child experiences a form of <a href="/concepts/vicarious-continuity.html">vicarious continuity</a> — following a reasoning process that appears coherent, connected, and complete.
-</p>
+  <p>If understanding can't be carried forward, learning repeats instead of accumulating, decisions have to be re-derived instead of extended, and governance turns interpretive rather than grounded. Systems gradually lose the ability to build on what they already knew — not because they stopped producing, but because they kept starting over.</p>
 
-<p>
-For a brief time, understanding feels present.
-</p>
+  <div class="marker-plaque">
+    <p>Understanding is not the experience of clarity. It is the ability to continue it.</p>
+    <cite>— Arne Mayoh</cite>
+  </div>
 
-<p>
-But it is not yet owned.
-</p>
+  <div class="essay-declarations">
+    <h3>Declaration of Generative AI and AI-Assisted Technologies</h3>
+    <p>This essay was developed with the assistance of AI systems as a research and editorial tool, for drafting support and structural revision. The argument and conclusions are the author's own.</p>
+  </div>
 
-<p>
-Once the sequence ends, the reasoning does not remain available in a form that can be continued without reconstruction.
-</p>
+  <div class="waypoints">
+    <span class="waypoints-label">Related</span>
+    <ul>
+      <li><a href="https://auditedstate.app/research/publications/releases/learning-continuity-threshold.html">A New Risk in AI: When Learning Stops Accumulating</a></li>
+    </ul>
+  </div>
 
-<hr>
-
-<h2>From Experience to Reconstruction</h2>
-
-<p>
-This pattern extends far beyond a child and a screen.
-</p>
-
-<p>
-Across modern systems, we increasingly rely on:
-</p>
-
-<ul>
-<li>video explanations</li>
-<li>summaries</li>
-<li>AI-generated answers</li>
-<li>constant exposure to other people’s conclusions</li>
-</ul>
-
-<p>
-We can follow reasoning more easily than ever before.
-</p>
-
-<p>
-But following is not the same as carrying forward.
-</p>
-
-<p>
-What remains after the experience is often:
-</p>
-
-<ul>
-<li>recognition without structure</li>
-<li>familiarity without continuity</li>
-<li>confidence without retained reasoning</li>
-</ul>
-
-<p>
-So we reconstruct.
-</p>
-
-<p>
-Again and again.
-</p>
-
-<hr>
-
-<h2>The Hidden Cost</h2>
-
-<p>
-Reconstruction is not neutral.
-</p>
-
-<p>
-Each time reasoning is rebuilt:
-</p>
-
-<ul>
-<li>details are lost</li>
-<li>assumptions shift</li>
-<li>meaning is approximated</li>
-</ul>
-
-<p>
-Over time, this leads to <a href="/concepts/interpretive-entropy.html">interpretive entropy</a> — where understanding drifts even when effort remains high.
-</p>
-
-<p>
-Systems may appear productive.
-</p>
-
-<p>
-But progress becomes unreliable.
-</p>
-
-<hr>
-
-<h2>What Is Missing</h2>
-
-<p>
-The issue is not that we lack access to knowledge.
-</p>
-
-<p>
-It is that we lack the ability to preserve reasoning in a form that can be continued.
-</p>
-
-<p>
-Without that, even the most powerful explanations remain temporary.
-</p>
-
-<p>
-They must be revisited, reinterpreted, or reconstructed.
-</p>
-
-<hr>
-
-<h2>Continuity as Leverage</h2>
-
-<p>
-There is a different condition.
-</p>
-
-<p>
-When reasoning can be carried forward without reconstruction, something changes.
-</p>
-
-<p>
-Understanding does not reset.
-</p>
-
-<p>
-It accumulates.
-</p>
-
-<p>
-One thought leads to another. Structures extend. Meaning remains intact across time.
-</p>
-
-<p>
-This is <a href="/concepts/continuity.html">continuity</a>.
-</p>
-
-<p>
-And it transforms progress:
-</p>
-
-<ul>
-<li>less rework</li>
-<li>less reinterpretation</li>
-<li>greater clarity</li>
-<li>more reliable outcomes</li>
-</ul>
-
-<p>
-Not more output.
-</p>
-
-<p>
-But more dependable accumulation.
-</p>
-
-<hr>
-
-<h2>From Exposure to Continuation</h2>
-
-<p>
-Vicarious experience is not the problem.
-</p>
-
-<p>
-It is often the entry point to understanding.
-</p>
-
-<p>
-But without structures that preserve reasoning, it remains incomplete.
-</p>
-
-<p>
-The transition that matters is this:
-</p>
-
-<p>
-From experiencing understanding → to continuing it.
-</p>
-
-<hr>
-
-<h2>Why It Matters</h2>
-
-<p>
-If understanding cannot be carried forward:
-</p>
-
-<ul>
-<li>learning repeats instead of accumulating</li>
-<li>decisions must be re-derived</li>
-<li>governance becomes interpretive</li>
-</ul>
-
-<p>
-And systems gradually lose the ability to build on what was already known.
-</p>
-
-<p>
-We do not lose progress because we stop producing.
-</p>
-
-<p>
-We lose it because we keep starting over.
-</p>
-
-<hr>
-
-<p class="closing">
-Understanding is not the experience of clarity.  
-It is the ability to continue it.
-</p>
-
-<p>
-    Related: <a href="/research/publications/releases/learning-beyond-the-continuity-threshold.html">
-    A New Risk in AI: When Learning Stops Accumulating
-    </a>
-</p>
+  <div class="editorial-note">
+    <strong>Editorial note:</strong> the site index links to this piece under the truncated label "Living Vicariously Continuity" — the essay's own real title is "Living Vicariously: Proxy Experience and the Loss of Continuity," restored here. Its "Related" link was also broken, combining the release's title with the essay's own URL slug and the wrong path prefix ("releases/learning-beyond-the-continuity-threshold.html," which matches neither the real release nor the real essay); corrected to point to the actual release the link text names. A strong, distinct fit for the pending "Learning &amp; Understanding" cluster — this is the personal/experiential angle, where the other two confirmed pieces are more systems-level.
+  </div>
 
 </main>
 
-<footer>
-© 2026 Audited State · AI & the Continuity of Human Understanding  
-<br>
-<span class="affiliation">
-– a contributor to <a href="https://cognitivesuperhighway.org" target="_blank" rel="noopener">CognitiveSuperHighway.org</a>
-</span>
+<footer class="site-footer">
+  <p>Part of the <a href="https://auditedstate.app/research/publications/">Audited State Research</a> essays.</p>
+  <p>© 2026 Audited State · AI &amp; the Continuity of Human Understanding</p>
+  <p>— a contributor to <a href="https://cognitivesuperhighway.org">CognitiveSuperHighway.org</a></p>
 </footer>
-
-<script>
-document.querySelector('.mobile-toggle').addEventListener('click', function(){
-document.querySelector('nav').classList.toggle('active');
-});
-</script>
 
 </body>
 </html>

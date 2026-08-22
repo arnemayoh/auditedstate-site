@@ -1,347 +1,353 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Why Courts Reconstruct Thinking | Audited State</title>
-
-<link rel="stylesheet" href="../../../style.css">
-
 <link rel="canonical" href="https://auditedstate.app/research/publications/essays/why-courts-reconstruct-thinking-collective-reasoning.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F7F4ED;
+    --paper-raised: #FBF9F4;
+    --ink: #1B2430;
+    --ink-soft: #3D4757;
+    --ink-faint: #6B7484;
+    --route: #B8863B;
+    --route-soft: #E4D3B0;
+    --rule: #DAD3C2;
+    --measure: 40em;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  a { color: var(--ink); text-decoration-color: var(--route); text-underline-offset: 3px; }
+  a:hover { color: var(--route); }
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--route);
+    outline-offset: 2px;
+  }
+
+  /* --- Top nav --- */
+  header.site-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--rule);
+    background: var(--paper-raised);
+  }
+  .site-nav .brand {
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+  }
+  .site-nav nav {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.85rem;
+  }
+  .site-nav nav a {
+    text-decoration: none;
+    color: var(--ink-soft);
+    margin-left: 1.25rem;
+  }
+  .site-nav nav a:first-child { margin-left: 0; }
+  .site-nav nav a:hover { color: var(--route); }
+
+  /* --- Main layout --- */
+  main {
+    max-width: 46em;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 5rem;
+  }
+
+  .eyebrow {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--route);
+    margin-bottom: 1rem;
+  }
+
+  h1.title {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 4.5vw, 2.75rem);
+    line-height: 1.15;
+    margin: 0 0 0.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  p.subtitle {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.25rem;
+    color: var(--ink-soft);
+    margin: 0 0 2rem;
+  }
+
+  /* --- Waypoint box (Recommended Essays) --- */
+  .waypoints {
+    background: var(--paper-raised);
+    border-left: 3px solid var(--route);
+    border-radius: 2px;
+    padding: 1.1rem 1.4rem;
+    margin: 0 0 2.5rem;
+  }
+  .waypoints .waypoints-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--route);
+    display: block;
+    margin-bottom: 0.6rem;
+  }
+  .waypoints ul {
+    margin: 0;
+    padding-left: 1.1rem;
+  }
+  .waypoints li { margin-bottom: 0.35rem; font-size: 0.95rem; }
+  .waypoints li:last-child { margin-bottom: 0; }
+
+  hr.divider {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 2.5rem 0;
+  }
+
+  /* --- Body typography --- */
+  main p { margin: 0 0 1.3rem; max-width: var(--measure); }
+
+  h2 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 600;
+    font-size: 1.45rem;
+    margin: 2.6rem 0 1.1rem;
+    letter-spacing: -0.005em;
+  }
+
+  ul.plain, ol.plain { margin: 0 0 1.3rem; padding-left: 1.3rem; }
+  ul.plain li, ol.plain li { margin-bottom: 0.4rem; }
+
+  /* --- Structural device: route/flow diagram --- */
+  .route-map {
+    background: var(--paper-raised);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    margin: 1.8rem 0;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--ink-soft);
+    text-align: center;
+    letter-spacing: 0.01em;
+  }
+  .route-map .arrow { color: var(--route); margin: 0 0.4em; }
+
+  /* --- Signature element: closing marker plaque --- */
+  .marker-plaque {
+    margin: 3.5rem 0 3rem;
+    padding: 2rem 0;
+    border-top: 2px solid var(--route-soft);
+    border-bottom: 2px solid var(--route-soft);
+    text-align: center;
+  }
+  .marker-plaque p {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-style: italic;
+    font-size: 1.35rem;
+    line-height: 1.5;
+    color: var(--ink);
+    max-width: 34em;
+    margin: 0 auto 1rem;
+  }
+  .marker-plaque cite {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--route);
+    letter-spacing: 0.04em;
+  }
+
+  /* --- Footer --- */
+  footer.site-footer {
+    max-width: 46em;
+    margin: 0 auto;
+    padding: 0 1.5rem 3rem;
+    font-size: 0.85rem;
+    color: var(--ink-faint);
+  }
+  footer.site-footer a { color: var(--ink-faint); }
+  footer.site-footer a:hover { color: var(--route); }
+  footer.site-footer p { margin: 0.3rem 0; }
+
+  @media (max-width: 600px) {
+    .site-nav { padding: 1rem; }
+    main { padding: 2rem 1.25rem 3.5rem; }
+  }
+</style>
 </head>
-
 <body>
 
-<header>
-<div class="nav-container">
-
-<a href="/" class="logo">
-
-  Audited State
-
-  <span class="tagline">— preserving human agency</span>
-
-</a>
-<button class="mobile-toggle">☰</button>
-
-<nav>
-<a href="/problem.html">Problem</a>
-<a href="/concepts/lexicon.html">Lexicon</a>
-<a href="/concept-map.html">Concept Map</a>
-<a href="/architecture.html">Architecture</a>
-<a href="/labs/">Labs</a>
-<a href="/research/">Research</a>
-<a href="/about/">About</a>
-</nav>
-
-</div>
+<header class="site-nav">
+  <a class="brand" href="https://auditedstate.app/">Audited State — preserving human agency</a>
+  <nav>
+    <a href="https://auditedstate.app/problem.html">Problem</a>
+    <a href="https://auditedstate.app/concepts/lexicon.html">Lexicon</a>
+    <a href="https://auditedstate.app/concept-map.html">Concept Map</a>
+    <a href="https://auditedstate.app/architecture.html">Architecture</a>
+    <a href="https://auditedstate.app/labs/">Labs</a>
+    <a href="https://auditedstate.app/research/">Research</a>
+    <a href="https://auditedstate.app/about/">About</a>
+  </nav>
 </header>
 
+<main>
 
+  <h1 class="title">Why Courts Reconstruct Thinking</h1>
+  <p class="subtitle">And why collective reasoning requires it</p>
 
-<body>
-
-<main class="essay">
-
-    
-
-        <p class="essay-attribution">
-        "Below is a <strong>coherent long-form essay draft</strong> following the structure you outlined. 
-        I kept the tone <strong>philosophical but grounded</strong>, consistent with your other essays, 
-        and gently introduced PKOS concepts without turning it into a technical document."
-        — ChatGPT 5.3
-        </p>
-    
-
-<header class="essay-header">
-
-<h1>Why Courts Reconstruct Thinking</h1>
-
-<p class="essay-subtitle">
-And Why Collective Reasoning Requires It
-</p>
-
-</header>
-
-<nav class="recommended-essays">
-
-    <strong>Recommended Essays</strong>
-    
+  <div class="waypoints">
+    <span class="waypoints-label">Recommended Essays</span>
     <ul>
-    
-    <li>
-    <a href="/research/publications/essays/cybernetic-ecology-human-ai-systems.html">
-    A Cybernetic Ecology for Human–AI Systems
-    </a>
-    </li>
-    
-    <li>
-    <a href="/research/publications/essays/human-reasoning-expands-meaning-ai-reasoning-narrows-possibilities.html">
-    Human Reasoning Expands Meaning; AI Reasoning Narrows Possibilities
-    </a>
-    </li>
-    
-    <li>
-    <a href="/research/publications/essays/why-courts-reconstruct-thinking-collective-reasoning.html">
-    Why Courts Reconstruct Thinking
-    </a>
-    </li>
-    
+      <li><a href="https://auditedstate.app/research/publications/essays/cybernetic-ecology-human-ai-systems.html">A Cybernetic Ecology for Human–AI Systems</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/human-reasoning-expands-meaning-ai-reasoning-narrows-possibilities.html">Human Reasoning Expands Meaning; AI Reasoning Narrows Possibilities</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/why-ai-accountability-reconstructable-reasoning.html">Why AI Accountability Requires Reconstructable Reasoning</a></li>
     </ul>
-    
-</nav>
-<hr>
-<section>
+  </div>
 
-<p>
-Modern societies rely on institutions to make decisions that affect large numbers of people. Governments enact policies, organizations allocate resources, and courts interpret laws. Each of these decisions emerges from a reasoning process that unfolds across time.
-</p>
+  <hr class="divider">
 
-<p>
-Yet most institutional systems record only outcomes. They document what was decided, not how the reasoning that produced the decision developed.
-</p>
+  <p>Modern societies rely on institutions to make decisions that affect large numbers of people. Governments enact policies, organizations allocate resources, and courts interpret laws. Each of these decisions emerges from a reasoning process that unfolds across time.</p>
 
-<p>
-Courts represent an important exception to this pattern. Judicial processes routinely attempt to reconstruct the reasoning that led to actions, policies, and disputes. This practice reveals something fundamental about collective reasoning.
-</p>
+  <p>Yet most institutional systems record only outcomes. They document what was decided, not how the reasoning that produced the decision developed.</p>
 
-<p>
-To understand decisions, societies must often reconstruct the thinking behind them.
-</p>
+  <p>Courts represent an important exception to this pattern. Judicial processes routinely attempt to reconstruct the reasoning that led to actions, policies, and disputes. This practice reveals something fundamental about collective reasoning.</p>
 
-</section>
+  <p>To understand decisions, societies must often reconstruct the thinking behind them.</p>
 
+  <h2>The Necessity of Reconstruction</h2>
 
+  <p>When a dispute reaches a court, the immediate question is rarely limited to observable events. Judges and juries must also examine the reasoning that produced those events.</p>
 
-<section>
+  <p>Why was a particular action taken?<br>
+  What assumptions guided the decision?<br>
+  What intentions shaped the behavior in question?</p>
 
-<h2>The Necessity of Reconstruction</h2>
+  <p>These questions require reconstructing a trajectory of thought.</p>
 
-<p>
-When a dispute reaches a court, the immediate question is rarely limited to observable events. Judges and juries must also examine the reasoning that produced those events.
-</p>
+  <p>Evidence, testimony, documents, and expert interpretation become tools through which fragments of reasoning are assembled into a coherent narrative.</p>
 
-<p>
-Why was a particular action taken?<br>
-What assumptions guided the decision?<br>
-What intentions shaped the behavior in question?
-</p>
+  <p>This reconstruction does not recreate the original reasoning perfectly. It builds a plausible model of how decisions may have emerged from intentions, interpretations, and actions.</p>
 
-<p>
-These questions require reconstructing a trajectory of thought.
-</p>
+  <h2>Reasoning Beyond Events</h2>
 
-<p>
-Evidence, testimony, documents, and expert interpretation become tools through which fragments of reasoning are assembled into a coherent narrative.
-</p>
+  <p>Traditional information systems tend to focus on events.</p>
 
-<p>
-This reconstruction does not recreate the original reasoning perfectly. It builds a plausible model of how decisions may have emerged from intentions, interpretations, and actions.
-</p>
+  <ul class="plain">
+    <li>a transaction occurred</li>
+    <li>a document was created</li>
+    <li>a decision was recorded</li>
+  </ul>
 
-</section>
+  <p>These records capture what happened but often omit the interpretive steps that produced those events.</p>
 
+  <p>Reasoning, however, unfolds as a sequence that connects intentions, interpretations, analyses, and decisions.</p>
 
+  <div class="route-map">intent <span class="arrow">→</span> interpretation <span class="arrow">→</span> analysis <span class="arrow">→</span> decision <span class="arrow">→</span> action</div>
 
-<section>
+  <p>When only the final events remain visible, later observers must reconstruct the missing trajectory of thought.</p>
 
-<h2>Reasoning Beyond Events</h2>
+  <p>Courts therefore act as institutional mechanisms for reconstructing reasoning trajectories that were not preserved at the time decisions were made.</p>
 
-<p>
-Traditional information systems tend to focus on events.
-</p>
+  <h2>Institutional Memory and Accountability</h2>
 
-<ul>
-<li>a transaction occurred</li>
-<li>a document was created</li>
-<li>a decision was recorded</li>
-</ul>
+  <p>The ability to reconstruct reasoning is closely connected to accountability.</p>
 
-<p>
-These records capture what happened but often omit the interpretive steps that produced those events.
-</p>
+  <p>If the reasoning behind a decision can be examined, the decision itself can be evaluated. Observers can determine whether assumptions were reasonable, whether interpretations were justified, and whether the resulting actions were appropriate.</p>
 
-<p>
-Reasoning, however, unfolds as a sequence that connects intentions, interpretations, analyses, and decisions.
-</p>
+  <p>Without access to reasoning trajectories, evaluation becomes far more difficult. Observers see outcomes but cannot easily assess the thinking that produced them.</p>
 
-<pre>
-intent → interpretation → analysis → decision → action
-</pre>
+  <p>Courts attempt to bridge this gap by reconstructing reasoning after the fact. In doing so, they create a form of institutional memory that connects actions to the thinking that preceded them.</p>
 
-<p>
-When only the final events remain visible, later observers must reconstruct the missing trajectory of thought.
-</p>
+  <h2>The Limits of Reconstruction</h2>
 
-<p>
-Courts therefore act as institutional mechanisms for reconstructing reasoning trajectories that were not preserved at the time decisions were made.
-</p>
+  <p>Reconstructing reasoning after the fact is inherently imperfect.</p>
 
-</section>
+  <p>Memories fade. Documents capture only fragments of thought. Interpretations evolve as new perspectives emerge.</p>
 
+  <p>As a result, reconstructed reasoning may differ significantly from the original reasoning process.</p>
 
+  <p>Courts therefore operate under conditions of uncertainty. They assemble narratives of reasoning that are sufficiently coherent to support judgment, even though the original trajectory of thought may never be fully recoverable.</p>
 
-<section>
+  <h2>Preserving Reasoning Trajectories</h2>
 
-<h2>Institutional Memory and Accountability</h2>
+  <p>The challenges faced by courts highlight a broader issue within modern knowledge systems.</p>
 
-<p>
-The ability to reconstruct reasoning is closely connected to accountability.
-</p>
+  <p>If reasoning trajectories were preserved as they unfolded, later reconstruction would become far easier. Decisions could be understood within the context of the thinking that produced them.</p>
 
-<p>
-If the reasoning behind a decision can be examined, the decision itself can be evaluated. Observers can determine whether assumptions were reasonable, whether interpretations were justified, and whether the resulting actions were appropriate.
-</p>
+  <p>Within the Navigational Coherence framework, such trajectories can be preserved through <strong>Pay-It-Forward Records (PIFRs)</strong>.</p>
 
-<p>
-Without access to reasoning trajectories, evaluation becomes far more difficult. Observers see outcomes but cannot easily assess the thinking that produced them.
-</p>
+  <p>A PIFR captures the evolving reasoning behind an idea: the intent that initiated it, the assumptions guiding interpretation, the analyses performed, and the criteria that future participants may use to continue the reasoning process.</p>
 
-<p>
-Courts attempt to bridge this gap by reconstructing reasoning after the fact. In doing so, they create a form of institutional memory that connects actions to the thinking that preceded them.
-</p>
+  <p>Rather than reconstructing reasoning after the fact, systems that preserve these trajectories make reasoning itself part of the institutional record.</p>
 
-</section>
+  <h2>Collective Reasoning Systems</h2>
 
+  <p>Seen from a broader perspective, courts are only one component of a larger system through which societies think and decide.</p>
 
+  <p>Institutions generate interpretations, policies, and actions. Disputes arise when different interpretations collide. Judicial processes then reconstruct reasoning in order to determine whether decisions align with legal and ethical principles.</p>
 
-<section>
+  <p>In this sense, courts function as mechanisms for examining the reasoning processes of society itself.</p>
 
-<h2>The Limits of Reconstruction</h2>
+  <p>They evaluate how ideas moved from intention to action and whether that movement respected the constraints established by law and collective norms.</p>
 
-<p>
-Reconstructing reasoning after the fact is inherently imperfect.
-</p>
+  <h2>Toward Transparent Collective Reasoning</h2>
 
-<p>
-Memories fade. Documents capture only fragments of thought. Interpretations evolve as new perspectives emerge.
-</p>
+  <p>As societies increasingly rely on complex technological systems and distributed decision processes, the visibility of reasoning trajectories becomes more important.</p>
 
-<p>
-As a result, reconstructed reasoning may differ significantly from the original reasoning process.
-</p>
+  <p>Decisions made within organizations, governments, and collaborative networks often emerge from extended chains of interpretation, analysis, and negotiation.</p>
 
-<p>
-Courts therefore operate under conditions of uncertainty. They assemble narratives of reasoning that are sufficiently coherent to support judgment, even though the original trajectory of thought may never be fully recoverable.
-</p>
+  <p>If these reasoning trajectories remain invisible, accountability depends on reconstructing them later under imperfect conditions.</p>
 
-</section>
+  <p>Preserving reasoning as it unfolds may therefore become a central requirement for future knowledge infrastructures.</p>
 
+  <p>Systems that record not only actions but also the reasoning that produced them allow collective intelligence to remain visible, interpretable, and extendable across time.</p>
 
-
-<section>
-
-<h2>Preserving Reasoning Trajectories</h2>
-
-<p>
-The challenges faced by courts highlight a broader issue within modern knowledge systems.
-</p>
-
-<p>
-If reasoning trajectories were preserved as they unfolded, later reconstruction would become far easier. Decisions could be understood within the context of the thinking that produced them.
-</p>
-
-<p>
-Within the PKOS framework, such trajectories can be preserved through <strong>Pay-It-Forward Records (PIFRs)</strong>.
-</p>
-
-<p>
-A PIFR captures the evolving reasoning behind an idea: the intent that initiated it, the assumptions guiding interpretation, the analyses performed, and the criteria that future participants may use to continue the reasoning process.
-</p>
-
-<p>
-Rather than reconstructing reasoning after the fact, systems that preserve these trajectories make reasoning itself part of the institutional record.
-</p>
-
-</section>
-
-
-
-<section>
-
-<h2>Collective Reasoning Systems</h2>
-
-<p>
-Seen from a broader perspective, courts are only one component of a larger system through which societies think and decide.
-</p>
-
-<p>
-Institutions generate interpretations, policies, and actions. Disputes arise when different interpretations collide. Judicial processes then reconstruct reasoning in order to determine whether decisions align with legal and ethical principles.
-</p>
-
-<p>
-In this sense, courts function as mechanisms for examining the reasoning processes of society itself.
-</p>
-
-<p>
-They evaluate how ideas moved from intention to action and whether that movement respected the constraints established by law and collective norms.
-</p>
-
-</section>
-
-
-
-<section>
-
-<h2>Toward Transparent Collective Reasoning</h2>
-
-<p>
-As societies increasingly rely on complex technological systems and distributed decision processes, the visibility of reasoning trajectories becomes more important.
-</p>
-
-<p>
-Decisions made within organizations, governments, and collaborative networks often emerge from extended chains of interpretation, analysis, and negotiation.
-</p>
-
-<p>
-If these reasoning trajectories remain invisible, accountability depends on reconstructing them later under imperfect conditions.
-</p>
-
-<p>
-Preserving reasoning as it unfolds may therefore become a central requirement for future knowledge infrastructures.
-</p>
-
-<p>
-Systems that record not only actions but also the reasoning that produced them allow collective intelligence to remain visible, interpretable, and extendable across time.
-</p>
-
-</section>
-
-<blockquote class="essay-closing-quote">
-<p>
-<strong>Civilization advances not only through ideas, but through the visible paths of reasoning that allow ideas to be continued.</strong>
-</p>
-<footer>
-— Arne Mayoh
-</footer>
-</blockquote>
-
-<footer class="essay-footer">
-
-<p>
-Part of the <a href="/research/index.html">Audited State Research</a> essays.
-</p>
-
-</footer>
-
+  <div class="marker-plaque">
+    <p>Civilization advances not only through ideas, but through the visible paths of reasoning that allow ideas to be continued.</p>
+    <cite>— Arne Mayoh</cite>
+  </div>
 
 </main>
 
-<footer>
-© 2026 Audited State · AI & the Continuity of Human Understanding  
-<br>
-<span class="affiliation">
-– a contributor to <a href="https://cognitivesuperhighway.org" target="_blank" rel="noopener">CognitiveSuperHighway.org</a>
-</span>
+<footer class="site-footer">
+  <p>Part of the <a href="https://auditedstate.app/research/publications/">Audited State Research</a> essays.</p>
+  <p>© 2026 Audited State · AI &amp; the Continuity of Human Understanding</p>
+  <p>— a contributor to <a href="https://cognitivesuperhighway.org">CognitiveSuperHighway.org</a></p>
 </footer>
-    
-    
-    <script>
-    document.querySelector('.mobile-toggle').addEventListener('click',function(){
-    document.querySelector('nav').classList.toggle('active');
-    });
-    </script>
+
 </body>
 </html>

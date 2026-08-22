@@ -3,174 +3,141 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trust in the Age of Collaborative Conjecture | PKOS Essay</title>
-<link rel="stylesheet" href="../../../style.css">
+<title>Trust in the Age of Collaborative Conjecture | Audited State</title>
 <link rel="canonical" href="https://auditedstate.app/research/publications/essays/trust-in-the-age-of-collaborative-conjecture.html">
-</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F7F4ED; --paper-raised: #FBF9F4; --ink: #1B2430; --ink-soft: #3D4757;
+    --ink-faint: #6B7484; --route: #B8863B; --route-soft: #E4D3B0; --rule: #DAD3C2; --measure: 40em;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 17px; line-height: 1.7; }
+  a { color: var(--ink); text-decoration-color: var(--route); text-underline-offset: 3px; }
+  a:hover { color: var(--route); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--route); outline-offset: 2px; }
 
+  header.site-nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--rule); background: var(--paper-raised); }
+  .site-nav .brand { font-weight: 600; font-size: 0.95rem; text-decoration: none; letter-spacing: 0.01em; }
+  .site-nav nav { display: flex; flex-wrap: wrap; font-size: 0.85rem; }
+  .site-nav nav a { text-decoration: none; color: var(--ink-soft); margin-left: 1.25rem; }
+  .site-nav nav a:first-child { margin-left: 0; }
+  .site-nav nav a:hover { color: var(--route); }
+
+  main { max-width: 46em; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+
+  .eyebrow { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--route); margin-bottom: 1rem; }
+  h1.title { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(2rem, 4.5vw, 2.75rem); line-height: 1.15; margin: 0 0 0.5rem; letter-spacing: -0.01em; }
+  p.subtitle { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.25rem; color: var(--ink-soft); margin: 0 0 2rem; }
+
+  hr.divider { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+  main p { margin: 0 0 1.3rem; max-width: var(--measure); }
+  h2 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 1.45rem; margin: 2.6rem 0 1.1rem; letter-spacing: -0.005em; }
+
+  .route-map { background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 4px; padding: 1.1rem 1.4rem; margin: 1.8rem 0; font-size: 0.95rem; color: var(--ink-soft); }
+  .route-map ul { margin: 0; padding-left: 1.2rem; }
+  .route-map li { margin-bottom: 0.4rem; }
+  .route-map li:last-child { margin-bottom: 0; }
+
+  .marker-plaque { margin: 3.5rem 0 3rem; padding: 2rem 0; border-top: 2px solid var(--route-soft); border-bottom: 2px solid var(--route-soft); text-align: center; }
+  .marker-plaque p { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 1.35rem; line-height: 1.5; color: var(--ink); max-width: 34em; margin: 0 auto 1rem; }
+  .marker-plaque cite { font-family: 'Inter', sans-serif; font-style: normal; font-size: 0.85rem; font-weight: 600; color: var(--route); letter-spacing: 0.04em; }
+
+  .essay-declarations { margin: 2.5rem 0; font-size: 0.9rem; color: var(--ink-soft); }
+  .essay-declarations h3 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); margin: 1.4rem 0 0.4rem; }
+  .essay-declarations p { margin: 0 0 0.8rem; max-width: var(--measure); }
+
+  .editorial-note { margin: 2rem 0; padding: 1rem 1.25rem; background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 4px; font-size: 0.88rem; color: var(--ink-soft); }
+  .editorial-note strong { color: var(--ink); }
+
+  footer.site-footer { max-width: 46em; margin: 0 auto; padding: 0 1.5rem 3rem; font-size: 0.85rem; color: var(--ink-faint); }
+  footer.site-footer a { color: var(--ink-faint); }
+  footer.site-footer a:hover { color: var(--route); }
+  footer.site-footer p { margin: 0.3rem 0; }
+
+  @media (max-width: 600px) { .site-nav { padding: 1rem; } main { padding: 2rem 1.25rem 3.5rem; } }
+</style>
+</head>
 <body>
 
-<header>
-<div class="nav-container">
-<a href="/" class="logo">
-  Audited State
-  <span class="tagline">— preserving human agency</span>
-</a>
-<button class="mobile-toggle">☰</button>
-<nav>
-<a href="/problem.html">Problem</a>
-<a href="/concepts/lexicon.html">Lexicon</a>
-<a href="/concept-map.html">Concept Map</a>
-<a href="/architecture.html">Architecture</a>
-<a href="/labs/">Labs</a>
-<a href="/research/">Research</a>
-<a href="/about/">About</a>
-</nav>
-</div>
+<header class="site-nav">
+  <a class="brand" href="https://auditedstate.app/">Audited State — preserving human agency</a>
+  <nav>
+    <a href="https://auditedstate.app/problem.html">Problem</a>
+    <a href="https://auditedstate.app/concepts/lexicon.html">Lexicon</a>
+    <a href="https://auditedstate.app/concept-map.html">Concept Map</a>
+    <a href="https://auditedstate.app/architecture.html">Architecture</a>
+    <a href="https://auditedstate.app/labs/">Labs</a>
+    <a href="https://auditedstate.app/research/">Research</a>
+    <a href="https://auditedstate.app/about/">About</a>
+  </nav>
 </header>
 
 <main>
 
-<h1>Trust in the Age of Collaborative Conjecture</h1>
+  <span class="eyebrow">AI Accountability &amp; Governance — cluster pending final grouping</span>
+  <h1 class="title">Trust in the Age of Collaborative Conjecture</h1>
+  <p class="subtitle">Reasoning with AI instead of delegating to it</p>
 
-<p class="lead">
-Reasoning with AI Instead of Delegating to It
-</p>
+  <hr class="divider">
 
-<blockquote>
-“The most valuable role of artificial intelligence may not be answering questions for us.<br>
-It may be helping us ask better ones.”<br>
-— Arne Mayoh & AI
-</blockquote>
+  <p>Artificial intelligence is often described as a system that produces answers. In practice, its most valuable role may lie somewhere else entirely: assisting the human process of reasoning itself. Rather than delivering finished conclusions, AI systems can participate in exploratory dialogue — where ideas get proposed, challenged, and refined rather than simply handed over. This is what this research programme calls <a href="https://auditedstate.app/concepts/collaborative-conjecture.html">Collaborative Conjecture</a>: a human–AI dialogue where hypotheses evolve through iterative exploration rather than arriving pre-finished.</p>
 
-<p>
-Artificial intelligence is often described as a system that produces answers.
-In practice, however, its most valuable role may lie elsewhere:
-assisting the human process of reasoning itself.
-</p>
+  <h2>Reasoning as Exploration</h2>
 
-<p>
-Rather than delivering finished conclusions,
-AI systems can participate in exploratory dialogue where ideas are proposed,
-challenged, and refined.
-</p>
+  <p>Most knowledge actually emerges through tentative proposals rather than final answers — scientists formulate hypotheses, engineers test possible designs, policy analysts explore competing interpretations before settling on one. AI systems can genuinely accelerate this exploratory phase by generating perspectives, counterexamples, and alternative explanations. Their real value lies less in delivering conclusions than in expanding the actual space of possible conjectures worth considering in the first place.</p>
 
-<p>
-This reasoning practice can be described as
-<a href="/concepts/lexicon.html#collaborative-conjecture">Collaborative Conjecture</a> —
-a human–AI dialogue in which hypotheses evolve through iterative exploration.
-</p>
+  <h2>Dialogue Rather Than Delegation</h2>
 
-<h2>Reasoning as Exploration</h2>
+  <p>Collaborative conjecture is fundamentally different from simple delegation. Delegation treats AI as a tool that produces a finished output. Collaborative conjecture treats the interaction as an evolving reasoning dialogue, where human and AI alternate roles:</p>
 
-<p>
-Many forms of knowledge emerge through tentative proposals rather than final answers.
-Scientists formulate hypotheses.
-Engineers test possible designs.
-Policy analysts explore competing interpretations.
-</p>
+  <div class="route-map">
+    <ul>
+      <li>The human proposes an idea</li>
+      <li>The AI expands the space of possibilities</li>
+      <li>The human critiques the interpretation</li>
+      <li>The AI surfaces implications the human hadn't considered yet</li>
+    </ul>
+  </div>
 
-<p>
-AI systems can accelerate this exploratory phase by generating perspectives,
-counterexamples, and alternative explanations.
-</p>
+  <p>Each exchange clarifies the reasoning structure itself, rather than just producing another draft to react to.</p>
 
-<p>
-Their value lies less in delivering conclusions than in expanding the space of
-possible conjectures.
-</p>
+  <h2>The Problem of Ephemeral Insight</h2>
 
-<h2>Dialogue Rather Than Delegation</h2>
+  <p>Dialogue alone doesn't preserve reasoning across time — insight produced during a conversation can simply disappear once the session ends, and without structured records, reasoning stays ephemeral no matter how good the exchange felt in the moment. That gap only gets more significant as AI accelerates how fast intellectual exploration can happen in the first place.</p>
 
-<p>
-Collaborative conjecture differs fundamentally from simple AI delegation.
-Delegation treats AI as a tool that produces finished outputs.
-Collaborative conjecture treats AI interaction as an evolving reasoning dialogue.
-</p>
+  <h2>From Dialogue to Record</h2>
 
-<p>
-Human and AI alternate roles:
-</p>
+  <p>Preserving reasoning continuity means exploratory dialogue has to produce durable reasoning artifacts, not just a transcript. This research programme captures that as structured <a href="https://auditedstate.app/concepts/pifr.html">Pay-It-Forward Records</a>, documenting the actual trajectory of reasoning behind a conclusion as it emerges — not just the conclusion itself once it's finished.</p>
 
-<ul>
-<li>the human proposes an idea</li>
-<li>the AI expands possibilities</li>
-<li>the human critiques the interpretation</li>
-<li>the AI surfaces implications</li>
-</ul>
+  <h2>Trust Through Visibility</h2>
 
-<p>
-Each exchange clarifies the reasoning structure itself.
-</p>
+  <p>Trust in human–AI reasoning doesn't come from believing the machine. It comes from the reasoning process itself staying visible and inspectable — where assumptions can actually be examined, interpretations challenged, and errors corrected before they compound into something harder to fix. Seen this way, collaborative conjecture doesn't undermine institutions. Done properly, it strengthens them, because it makes the reasoning behind a conclusion something other people can actually stand behind rather than just accept on faith.</p>
 
-<h2>The Problem of Ephemeral Insight</h2>
+  <div class="marker-plaque">
+    <p>The most valuable role of artificial intelligence may not be answering questions for us. It may be helping us ask better ones.</p>
+    <cite>— Arne Mayoh</cite>
+  </div>
 
-<p>
-Dialogue alone does not preserve reasoning across time.
-Insights produced during conversations may disappear once the session ends.
-</p>
+  <div class="essay-declarations">
+    <h3>Declaration of Generative AI and AI-Assisted Technologies</h3>
+    <p>This essay was developed with the assistance of AI systems as a research and editorial tool, for drafting support and structural revision. The argument and conclusions are the author's own.</p>
+  </div>
 
-<p>
-Without structured records, reasoning becomes ephemeral.
-</p>
-
-<p>
-This challenge becomes more significant as AI accelerates intellectual exploration.
-</p>
-
-<h2>From Dialogue to Record</h2>
-
-<p>
-To preserve reasoning continuity, exploratory dialogue must produce durable
-<a href="/concepts/lexicon.html#reasoning-artifact">reasoning artifacts</a>.
-</p>
-
-<p>
-Within the <a href="/concepts/lexicon.html#pkos">PKOS</a> framework,
-these artifacts may take the form of
-<a href="/concepts/lexicon.html#pifr">Pay-It-Forward Records (PIFRs)</a>,
-which document the trajectory of reasoning behind emerging conclusions.
-</p>
-
-<h2>Trust Through Visibility</h2>
-
-<p>
-Trust in human–AI reasoning does not emerge from believing the machine.
-Trust emerges when the reasoning process itself remains visible and inspectable.
-</p>
-
-<p>
-When reasoning artifacts remain available,
-assumptions can be examined,
-interpretations challenged,
-and errors corrected.
-</p>
-
-<p>
-In this way, collaborative conjecture may strengthen institutions rather than undermine them.
-</p>
-
-<p class="essay-meta">
-Author: Arne Mayoh<br>
-Project: PKOS — Personal Knowledge OS<br>
-Date: March 2026
-</p>
+  <div class="editorial-note">
+    <strong>Editorial note:</strong> same recurring fixes — PKOS title-tag branding and "Project: PKOS" byline removed, co-byline replaced with the standard Declaration, and two lexicon-anchor links upgraded to dedicated pages now confirmed real (Collaborative Conjecture, PIFR). "Reasoning artifact" was left as a lexicon anchor since no dedicated page has been confirmed for that specific term. Third confirmed member of the "AI Accountability &amp; Governance" cluster — genuinely distinct from the other two: this one is about the practice of reasoning with AI and how trust actually forms through visibility, not institutional Shadow AI or the explainability-versus-reconstructability argument. Worth noting its real, legitimate adjacency to "Hybrid Intelligence Needs Memory" (Learning &amp; Understanding cluster) — both use Collaborative Conjecture and PIFR, but from different angles (memory/accumulation there, trust/institutions here), so this reads as a genuine cross-reference point rather than overlap needing consolidation.
+  </div>
 
 </main>
 
-<footer>
-© 2026 Audited State · AI & the Continuity of Human Understanding  
-<br>
-<span class="affiliation">
-– a contributor to <a href="https://cognitivesuperhighway.org" target="_blank" rel="noopener">CognitiveSuperHighway.org</a>
-</span>
+<footer class="site-footer">
+  <p>Part of the <a href="https://auditedstate.app/research/publications/">Audited State Research</a> essays.</p>
+  <p>© 2026 Audited State · AI &amp; the Continuity of Human Understanding</p>
+  <p>— a contributor to <a href="https://cognitivesuperhighway.org">CognitiveSuperHighway.org</a></p>
 </footer>
-
-<script>
-document.querySelector('.mobile-toggle').addEventListener('click',function(){
-document.querySelector('nav').classList.toggle('active');
-});
-</script>
 
 </body>
 </html>

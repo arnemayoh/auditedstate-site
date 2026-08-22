@@ -3,136 +3,131 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Interpretive Entropy and the Loss of Orientation | PKOS Essay</title>
-<link rel="stylesheet" href="../../../style.css">
+<title>Interpretive Entropy: Orientation Lost, Fatigue Felt | Audited State</title>
 <link rel="canonical" href="https://auditedstate.app/research/publications/essays/interpretive-entropy-loss-of-orientation.html">
-</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F7F4ED; --paper-raised: #FBF9F4; --ink: #1B2430; --ink-soft: #3D4757;
+    --ink-faint: #6B7484; --route: #B8863B; --route-soft: #E4D3B0; --rule: #DAD3C2; --measure: 40em;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 17px; line-height: 1.7; }
+  a { color: var(--ink); text-decoration-color: var(--route); text-underline-offset: 3px; }
+  a:hover { color: var(--route); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--route); outline-offset: 2px; }
 
+  header.site-nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--rule); background: var(--paper-raised); }
+  .site-nav .brand { font-weight: 600; font-size: 0.95rem; text-decoration: none; letter-spacing: 0.01em; }
+  .site-nav nav { display: flex; flex-wrap: wrap; font-size: 0.85rem; }
+  .site-nav nav a { text-decoration: none; color: var(--ink-soft); margin-left: 1.25rem; }
+  .site-nav nav a:first-child { margin-left: 0; }
+  .site-nav nav a:hover { color: var(--route); }
+
+  main { max-width: 46em; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+
+  .eyebrow { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--route); margin-bottom: 1rem; }
+  h1.title { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(2rem, 4.5vw, 2.75rem); line-height: 1.15; margin: 0 0 0.5rem; letter-spacing: -0.01em; }
+  p.subtitle { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.25rem; color: var(--ink-soft); margin: 0 0 2rem; }
+
+  hr.divider { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+  main p { margin: 0 0 1.3rem; max-width: var(--measure); }
+  h2 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 1.45rem; margin: 2.6rem 0 1.1rem; letter-spacing: -0.005em; }
+
+  .opening-quote { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 1.15rem; color: var(--ink-soft); border-left: 3px solid var(--route); padding-left: 1.2rem; margin: 0 0 2rem; max-width: var(--measure); }
+  .opening-quote cite { display: block; font-family: 'Inter', sans-serif; font-style: normal; font-size: 0.8rem; font-weight: 600; color: var(--route); margin-top: 0.5rem; }
+
+  .marker-plaque { margin: 3.5rem 0 3rem; padding: 2rem 0; border-top: 2px solid var(--route-soft); border-bottom: 2px solid var(--route-soft); text-align: center; }
+  .marker-plaque p { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 1.35rem; line-height: 1.5; color: var(--ink); max-width: 34em; margin: 0 auto 1rem; }
+  .marker-plaque cite { font-family: 'Inter', sans-serif; font-style: normal; font-size: 0.85rem; font-weight: 600; color: var(--route); letter-spacing: 0.04em; }
+
+  .essay-declarations { margin: 2.5rem 0; font-size: 0.9rem; color: var(--ink-soft); }
+  .essay-declarations h3 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); margin: 1.4rem 0 0.4rem; }
+  .essay-declarations p { margin: 0 0 0.8rem; max-width: var(--measure); }
+
+  .editorial-note { margin: 2rem 0; padding: 1rem 1.25rem; background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 4px; font-size: 0.88rem; color: var(--ink-soft); }
+  .editorial-note strong { color: var(--ink); }
+
+  footer.site-footer { max-width: 46em; margin: 0 auto; padding: 0 1.5rem 3rem; font-size: 0.85rem; color: var(--ink-faint); }
+  footer.site-footer a { color: var(--ink-faint); }
+  footer.site-footer a:hover { color: var(--route); }
+  footer.site-footer p { margin: 0.3rem 0; }
+
+  @media (max-width: 600px) { .site-nav { padding: 1rem; } main { padding: 2rem 1.25rem 3.5rem; } }
+</style>
+</head>
 <body>
 
-<header>
-<div class="nav-container">
-<a href="/" class="logo">
-  Audited State
-  <span class="tagline">— preserving human agency</span>
-</a>
-<button class="mobile-toggle">☰</button>
-<nav>
-<a href="/problem.html">Problem</a>
-<a href="/concepts/lexicon.html">Lexicon</a>
-<a href="/concept-map.html">Concept Map</a>
-<a href="/architecture.html">Architecture</a>
-<a href="/labs/">Labs</a>
-<a href="/research/">Research</a>
-<a href="/about/">About</a>
-</nav>
-</div>
+<header class="site-nav">
+  <a class="brand" href="https://auditedstate.app/">Audited State — preserving human agency</a>
+  <nav>
+    <a href="https://auditedstate.app/problem.html">Problem</a>
+    <a href="https://auditedstate.app/concepts/lexicon.html">Lexicon</a>
+    <a href="https://auditedstate.app/concept-map.html">Concept Map</a>
+    <a href="https://auditedstate.app/architecture.html">Architecture</a>
+    <a href="https://auditedstate.app/labs/">Labs</a>
+    <a href="https://auditedstate.app/research/">Research</a>
+    <a href="https://auditedstate.app/about/">About</a>
+  </nav>
 </header>
 
 <main>
 
-<h1>Interpretive Entropy and the Loss of Orientation</h1>
+  <span class="eyebrow">Learning &amp; Understanding — cluster pending final grouping</span>
+  <h1 class="title">Interpretive Entropy: Orientation Lost, Fatigue Felt</h1>
+  <p class="subtitle">Why knowledge systems need reasoning memory</p>
 
-<p class="lead">
-Why Knowledge Systems Need Reasoning Memory
-</p>
+  <hr class="divider">
 
-<blockquote>
-“Orientation requires memory.<br>
-When reasoning loses memory, understanding loses direction.”<br>
-— Arne Mayoh & AI
-</blockquote>
+  <blockquote class="opening-quote">
+    A civilization becomes tired when understanding no longer accumulates.
+    <cite>— Arne Mayoh</cite>
+  </blockquote>
 
-<p>
-Orientation is the ability to locate oneself within a landscape of ideas.
-Understanding a field requires more than information;
-it requires access to the reasoning that produced that information.
-</p>
+  <p>Across many societies, a subtle exhaustion has taken hold. Information flows continuously, conversations multiply, and yet more people report feeling less oriented than before — not less informed, less <em>oriented</em>. That's a specific, different complaint, and it points at something more precise than ordinary information overload.</p>
 
-<p>
-Historically this orientation was supported by durable reasoning artifacts:
-scientific literature, legal archives, and institutional records.
-</p>
+  <p>Orientation is the ability to locate yourself within a landscape of ideas. Understanding a field takes more than access to information — it takes access to the reasoning that actually produced that information. Historically, durable reasoning artifacts held this up: scientific literature, legal archives, institutional records, all of it preserving reasoning trajectories well enough that knowledge could genuinely accumulate rather than just pile up. The fatigue many people feel now and the orientation many people have lost are not two separate problems. They're the felt and the structural sides of the same one: <a href="https://auditedstate.app/concepts/interpretive-entropy.html">interpretive entropy</a> — the divergence between an idea's original meaning and how it gets interpreted later, as it moves through systems never built to preserve that meaning.</p>
 
-<p>
-These systems preserved reasoning trajectories,
-allowing knowledge to accumulate.
-</p>
+  <h2>Noise Without Trajectory</h2>
 
-<h2>Fragmented Discourse</h2>
+  <p>Modern communication environments generate continuous discourse — ideas circulate fast through posts, threads, and commentary streams, but most of it leaves little durable reasoning structure behind. Arguments restart rather than continue. Interpretations drift. The same debates repeat, not because anyone's being obstinate, but because nothing carried the previous round's actual reasoning forward to build on. Reasoning becomes fast and, in the same motion, forgetful. That fragmentation is exactly what raises <a href="https://auditedstate.app/concepts/reconstruction-cost.html">reconstruction cost</a> — participants keep having to rebuild arguments from fragments instead of just continuing them.</p>
 
-<p>
-Modern communication environments often operate differently.
-Reasoning occurs through conversational streams that rarely preserve the
-structure of arguments.
-</p>
+  <h2>Why This Produces Fatigue, Not Just Confusion</h2>
 
-<p>
-Ideas circulate quickly but their reasoning lineage disappears.
-</p>
+  <p>When reasoning keeps restarting instead of continuing, people encounter the same debates again and again — and the fatigue that produces is not simple information overload. It's the specific exhaustion of discourse that never stabilizes into anything you could call continuing understanding. Confusion is what you feel when you don't have enough information. This is different: it's what you feel when you have plenty of information and still can't locate where you actually stand relative to it, over and over, with no sense that the ground is holding still long enough to build on.</p>
 
-<p>
-This fragmentation increases
-<a href="/concepts/lexicon.html#reconstruction-cost">reconstruction cost</a>,
-forcing participants to repeatedly reconstruct arguments from fragments.
-</p>
+  <h2>Cumulative Reasoning as the Alternative</h2>
 
-<h2>The Role of Cumulative Reasoning</h2>
+  <p><a href="https://auditedstate.app/concepts/lexicon.html#cumulative-reasoning">Cumulative reasoning</a> treats reasoning as a trajectory across time rather than a series of disconnected outputs. Each step produces something the next person can actually examine, criticize, and extend — which is precisely what restores orientation: not more information, but a structure that lets someone follow how an idea actually evolved, rather than only ever meeting it as a finished conclusion with no visible history.</p>
 
-<p>
-<a href="/concepts/lexicon.html#cumulative-reasoning">Cumulative reasoning</a>
-treats reasoning not as isolated outputs but as trajectories across time.
-</p>
+  <h2>Restoring Reasoning Continuity</h2>
 
-<p>
-Each step of reasoning produces artifacts that can be examined,
-corrected, and extended.
-</p>
+  <p>If interpretive entropy is really behind both the lost orientation and the fatigue it produces, the fix has to be structural, not just more effort or more attention. Infrastructure that preserves <a href="https://auditedstate.app/concepts/lexicon.html#reasoning-traceability">reasoning traceability</a> lets ideas accumulate across time instead of resetting with every new conversation. That doesn't mean eliminating disagreement — disagreement is fine, even useful. It means making sure the reasoning behind an idea stays visible for whoever encounters it next, so the next debate can actually start from where the last one left off rather than from zero.</p>
 
-<p>
-Such systems restore orientation by allowing participants to follow
-the evolution of ideas.
-</p>
+  <div class="marker-plaque">
+    <p>Orientation requires memory. When reasoning loses memory, understanding loses direction.</p>
+    <cite>— Arne Mayoh</cite>
+  </div>
 
-<h2>Why Orientation Matters</h2>
+  <div class="essay-declarations">
+    <h3>Declaration of Generative AI and AI-Assisted Technologies</h3>
+    <p>This essay was developed with the assistance of AI systems as a research and editorial tool, for drafting support and structural revision. The argument and conclusions are the author's own.</p>
+  </div>
 
-<p>
-Without orientation:
-</p>
-
-<ul>
-<li>debates repeat</li>
-<li>concepts drift</li>
-<li>learning slows</li>
-<li>institutional memory weakens</li>
-</ul>
-
-<p>
-Preserving reasoning continuity reduces interpretive entropy
-and allows knowledge systems to remain understandable across time.
-</p>
-
-<p class="essay-meta">
-Author: Arne Mayoh<br>
-Project: PKOS — Personal Knowledge OS<br>
-Date: March 2026
-</p>
+  <div class="editorial-note">
+    <strong>Editorial note:</strong> this essay merges two originals — "Interpretive Entropy and the Loss of Orientation" and "Existential Fatigue and Interpretive Entropy" — which were near-duplicates of each other in structure, length, and argument, differing mainly in framing (the capacity lost, versus the experience of losing it). Rather than publish two thin, overlapping pieces, they're combined here into one, with the fatigue framing opening the piece and the orientation framing closing it. "Existential Fatigue and Interpretive Entropy" now redirects here. Standard fixes applied to both source pieces: PKOS title-tag branding and "Project: PKOS" bylines removed, co-bylines replaced with the standard Declaration, and the reconstruction-cost link upgraded to its dedicated page.
+  </div>
 
 </main>
 
-<footer>
-© 2026 Audited State · AI & the Continuity of Human Understanding  
-<br>
-<span class="affiliation">
-– a contributor to <a href="https://cognitivesuperhighway.org" target="_blank" rel="noopener">CognitiveSuperHighway.org</a>
-</span>
+<footer class="site-footer">
+  <p>Part of the <a href="https://auditedstate.app/research/publications/">Audited State Research</a> essays.</p>
+  <p>© 2026 Audited State · AI &amp; the Continuity of Human Understanding</p>
+  <p>— a contributor to <a href="https://cognitivesuperhighway.org">CognitiveSuperHighway.org</a></p>
 </footer>
-
-<script>
-document.querySelector('.mobile-toggle').addEventListener('click',function(){
-document.querySelector('nav').classList.toggle('active');
-});
-</script>
 
 </body>
 </html>

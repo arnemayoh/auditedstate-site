@@ -4,591 +4,158 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Make the AI Understand | Audited State</title>
-<link rel="stylesheet" href="../../../style.css">
 <link rel="canonical" href="https://auditedstate.app/research/publications/essays/make-the-ai-understand.html">
-</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F7F4ED; --paper-raised: #FBF9F4; --ink: #1B2430; --ink-soft: #3D4757;
+    --ink-faint: #6B7484; --route: #B8863B; --route-soft: #E4D3B0; --rule: #DAD3C2; --measure: 40em;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 17px; line-height: 1.7; }
+  a { color: var(--ink); text-decoration-color: var(--route); text-underline-offset: 3px; }
+  a:hover { color: var(--route); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--route); outline-offset: 2px; }
 
+  header.site-nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--rule); background: var(--paper-raised); }
+  .site-nav .brand { font-weight: 600; font-size: 0.95rem; text-decoration: none; letter-spacing: 0.01em; }
+  .site-nav nav { display: flex; flex-wrap: wrap; font-size: 0.85rem; }
+  .site-nav nav a { text-decoration: none; color: var(--ink-soft); margin-left: 1.25rem; }
+  .site-nav nav a:first-child { margin-left: 0; }
+  .site-nav nav a:hover { color: var(--route); }
+
+  main { max-width: 46em; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+
+  .eyebrow { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--route); margin-bottom: 1rem; }
+  h1.title { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(2rem, 4.5vw, 2.75rem); line-height: 1.15; margin: 0 0 0.5rem; letter-spacing: -0.01em; }
+  p.subtitle { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.25rem; color: var(--ink-soft); margin: 0 0 2rem; }
+
+  .sequence-box { background: var(--paper-raised); border-left: 3px solid var(--route); border-radius: 2px; padding: 1.1rem 1.4rem; margin: 0 0 2.5rem; }
+  .sequence-box .waypoints-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--route); display: block; margin-bottom: 0.7rem; }
+  .sequence-box ol { margin: 0; padding-left: 1.4rem; }
+  .sequence-box li { margin-bottom: 0.35rem; font-size: 0.95rem; }
+  .sequence-box li:last-child { margin-bottom: 0; }
+  .sequence-box li.current { font-weight: 600; color: var(--ink); list-style: none; margin-left: -1.4rem; padding-left: 0; }
+  .sequence-box li.current::before { content: "→ "; color: var(--route); }
+
+  hr.divider { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+  main p { margin: 0 0 1.3rem; max-width: var(--measure); }
+  h2 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 1.45rem; margin: 2.6rem 0 1.1rem; letter-spacing: -0.005em; }
+  ul.plain { margin: 0 0 1.3rem; padding-left: 1.3rem; max-width: var(--measure); }
+  ul.plain li { margin-bottom: 0.4rem; }
+
+  figure.essay-figure { margin: 2rem 0; max-width: var(--measure); }
+  figure.essay-figure img { width: 100%; max-height: 26rem; object-fit: cover; height: auto; border-radius: 4px; display: block; }
+  figure.essay-figure figcaption { font-size: 0.85rem; color: var(--ink-faint); margin-top: 0.6rem; font-style: italic; }
+
+  .marker-plaque { margin: 3.5rem 0 3rem; padding: 2rem 0; border-top: 2px solid var(--route-soft); border-bottom: 2px solid var(--route-soft); text-align: center; }
+  .marker-plaque p { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 1.35rem; line-height: 1.5; color: var(--ink); max-width: 34em; margin: 0 auto 1rem; }
+  .marker-plaque cite { font-family: 'Inter', sans-serif; font-style: normal; font-size: 0.85rem; font-weight: 600; color: var(--route); letter-spacing: 0.04em; }
+
+  .essay-declarations { margin: 2.5rem 0; font-size: 0.9rem; color: var(--ink-soft); }
+  .essay-declarations h3 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); margin: 1.4rem 0 0.4rem; }
+  .essay-declarations p { margin: 0 0 0.8rem; max-width: var(--measure); }
+
+  .series-close { margin: 2.5rem 0; padding: 1.25rem 1.4rem; background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 4px; font-size: 0.92rem; color: var(--ink-soft); }
+  .series-close strong { color: var(--ink); }
+
+  .editorial-note { margin: 2rem 0; padding: 1rem 1.25rem; background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 4px; font-size: 0.88rem; color: var(--ink-soft); }
+  .editorial-note strong { color: var(--ink); }
+
+  footer.site-footer { max-width: 46em; margin: 0 auto; padding: 0 1.5rem 3rem; font-size: 0.85rem; color: var(--ink-faint); }
+  footer.site-footer a { color: var(--ink-faint); }
+  footer.site-footer a:hover { color: var(--route); }
+  footer.site-footer p { margin: 0.3rem 0; }
+
+  @media (max-width: 600px) { .site-nav { padding: 1rem; } main { padding: 2rem 1.25rem 3.5rem; } }
+</style>
+</head>
 <body>
 
-<header>
-<div class="nav-container">
-<a href="/" class="logo">
-  Audited State
-  <span class="tagline">— preserving human agency</span>
-</a>
-<button class="mobile-toggle">☰</button>
-<nav>
-<a href="/problem.html">Problem</a>
-<a href="/concepts/lexicon.html">Lexicon</a>
-<a href="/concept-map.html">Concept Map</a>
-<a href="/architecture.html">Architecture</a>
-<a href="/labs/">Labs</a>
-<a href="/research/">Research</a>
-<a href="/about/">About</a>
-</nav>
-</div>
+<header class="site-nav">
+  <a class="brand" href="https://auditedstate.app/">Audited State — preserving human agency</a>
+  <nav>
+    <a href="https://auditedstate.app/problem.html">Problem</a>
+    <a href="https://auditedstate.app/concepts/lexicon.html">Lexicon</a>
+    <a href="https://auditedstate.app/concept-map.html">Concept Map</a>
+    <a href="https://auditedstate.app/architecture.html">Architecture</a>
+    <a href="https://auditedstate.app/labs/">Labs</a>
+    <a href="https://auditedstate.app/research/">Research</a>
+    <a href="https://auditedstate.app/about/">About</a>
+  </nav>
 </header>
 
-<main class="essay">
+<main>
 
-<p class="essay-attribution">
-"The AI has the data, but it still doesn’t understand what we are actually trying to do."
-— emerging realization across modern AI development
-</p>
+  <span class="eyebrow">Interpretation, Drift &amp; Cognitive Continuity — Essay 7 of 7</span>
+  <h1 class="title">Make the AI Understand</h1>
+  <p class="subtitle">Why context alone is no longer enough</p>
 
-<header class="essay-header">
-<h1>Make the AI Understand</h1>
-<p class="essay-subtitle">
-Why Context Alone Is No Longer Enough
-</p>
-</header>
+  <div class="sequence-box">
+    <span class="waypoints-label">Reading Sequence</span>
+    <ol>
+      <li><a href="https://auditedstate.app/research/publications/essays/data-representation-of-truth.html">1. Data as Representation of Truth</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/drift-drift-drift.html">2. Drift, Drift... DRIFT!</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/reasoning-drift.html">3. Reasoning Drift</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/coherence-of-understanding.html">4. Coherence of Understanding</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/legible-ambiguity.html">5. Why Stable Understanding Requires Legible Ambiguity</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/traffic-of-reasoning.html">6. The Traffic of Reasoning</a></li>
+      <li class="current">7. Make the AI Understand</li>
+    </ol>
+  </div>
 
-<nav class="recommended-essays">
-<strong>Guided Narrative Path</strong>
-<ul>
-<li><a href="/research/publications/essays/data-representation-of-truth.html">Data as Representation of Truth</a></li>
-<li><a href="/research/publications/essays/coherence-of-understanding.html">Coherence of Understanding</a></li>
-<li><a href="/research/publications/essays/legible-ambiguity.html">Legible Ambiguity</a></li>
-<li><a href="/research/publications/essays/traffic-of-reasoning.html">The Traffic of Reasoning</a></li>
-<li><strong>Make the AI Understand (Current)</strong></li>
-</ul>
-</nav>
+  <hr class="divider">
 
-<hr>
+  <figure class="essay-figure">
+    <img src="https://auditedstate.app/assets/line-of-thought.jpg" alt="A human hand gently interacting with a holographic reasoning structure connecting intention, interpretation, continuity, and traceable reasoning.">
+    <figcaption>Continuity-preserving cognition requires more than information retrieval. It requires preserving traceable understanding across evolving interpretation.</figcaption>
+  </figure>
 
-<section>
+  <p>Modern AI development increasingly revolves around a deceptively simple instruction: make the AI understand. It sounds obvious at first — of course we want that. But the longer you sit with the sentence, the stranger it gets. Does "understand" mean storing more context? Retrieving more documents? Predicting more accurately? Aligning with intent? Reconstructing unstated assumptions? Preserving continuity of reasoning? As AI systems get more capable, the gap between processing information and actually continuing an understanding becomes harder to ignore — and a lot of people building these systems seem to feel this well before they can put words to it.</p>
 
-<figure class="essay-figure">
-<img src="/assets/line-of-thought.jpg"
-alt="A human hand gently interacting with a holographic reasoning structure connecting intention, interpretation, continuity, and traceable reasoning."
-style="width:100%; max-width:960px; border-radius:8px;">
-<figcaption>
-Continuity-preserving cognition requires more than information retrieval. It requires preserving traceable understanding across evolving interpretation.
-</figcaption>
-</figure>
+  <h2>The Familiar Frustration</h2>
 
-<p>
-Modern AI development increasingly revolves around a deceptively simple instruction:
-</p>
+  <p>Across organizations, the same experience keeps recurring. Teams work with AI systems repeatedly; the outputs get locally impressive — summarizing, generating, answering, holding short-term context just fine. And yet people keep getting pulled back into reconstruction anyway: explaining the same assumptions again, rebuilding the same context again, clarifying the same direction again. The system looks operationally intelligent while staying strangely discontinuous underneath. That produces a specific, recognizable frustration: the AI has the data, but it still doesn't understand what we're actually trying to do.</p>
 
-<blockquote>
-“Make the AI understand.”
-</blockquote>
+  <p>That sentence is doing more work than it looks like. It only makes sense if people are already, intuitively, distinguishing between possessing information and having continuity of understanding — treating them as genuinely different things, not degrees of the same thing. When someone says "we need the AI to understand the project," they rarely mean "store more tokens." What they usually mean is closer to: preserve the continuity of our intention, understand why decisions were made the way they were, recognize what actually matters here, and stay aligned with where the work is actually going. Larger context windows, better retrieval, more complete datasets all help — but none of them, on their own, solve this, because understanding was never simply accumulated information. It depends on relationships, intention, and directional coherence holding together over time, and a system can hold an enormous amount of information while still being unable to reconstruct why any of it matters.</p>
 
-<p>
-At first glance this sounds obvious.
-Of course we want AI systems to understand.
-</p>
+  <h2>Two Arguments Already Made Elsewhere in This Series</h2>
 
-<p>
-But the deeper one examines the statement, the stranger it becomes.
-</p>
+  <p>Two things worth restating briefly rather than re-arguing from scratch, since this series has already made both cases at length. This essay's whole distinction — data versus understanding — is the same one <a href="https://auditedstate.app/research/publications/essays/traffic-of-reasoning.html">The Traffic of Reasoning</a> makes through infrastructure: traffic doesn't work because drivers have perfect information, it works because shared structure preserves orientation between people who don't. AI-mediated reasoning needs the equivalent — not more memory, but structure that keeps direction, assumptions, and reasoning traceable over time. And the same applies to certainty: <a href="https://auditedstate.app/research/publications/essays/legible-ambiguity.html">Why Stable Understanding Requires Legible Ambiguity</a> already makes the case that understanding was never about eliminating uncertainty. An AI system that keeps its own assumptions and inference boundaries visible, rather than simulating false confidence, supports more coherent collaboration than one that hides its own ambiguity behind a fluent answer.</p>
 
-<p>
-What exactly does “understand” mean?
-</p>
+  <h2>The Actual Infrastructure Challenge</h2>
 
-<p>
-Does it mean:
-</p>
+  <p>The question worth asking, then, isn't simply whether AI can get more intelligent. It's whether continuity of understanding can survive being distributed across humans and AI systems working together — which is an infrastructure question, not a capability question. It means moving past systems optimized mainly for retrieval, generation, or prediction, toward ones built to preserve continuity of intention and continuity of reasoning as their actual job.</p>
 
-<ul>
-<li>storing more context?</li>
-<li>retrieving more documents?</li>
-<li>predicting more accurately?</li>
-<li>generating better outputs?</li>
-<li>aligning with user intent?</li>
-<li>reconstructing hidden assumptions?</li>
-<li>preserving continuity of reasoning?</li>
-<li>or participating coherently inside an evolving interpretive environment?</li>
-</ul>
+  <p>Perhaps the most useful realization in all of this is that "make the AI understand" was already pointing at something civilization hadn't quite named yet — not smarter output, but continuity-preserving cognition. Once that distinction is visible, a lot of the everyday frustration with AI collaboration stops being mysterious. It's not that the system lacks intelligence. It's that continuity itself was never built to survive the handoff.</p>
 
-<p>
-As AI systems become more capable, the gap between information processing and continuity of understanding becomes increasingly visible.
-</p>
+  <div class="marker-plaque">
+    <p>The AI has the data. What it doesn't yet have is a way to keep understanding what we were actually trying to do.</p>
+    <cite>— Arne Mayoh</cite>
+  </div>
 
-<p>
-And many developers are beginning to feel this intuitively long before they can fully describe it.
-</p>
+  <div class="essay-declarations">
+    <h3>Declaration of Generative AI and AI-Assisted Technologies</h3>
+    <p>This essay was developed with the assistance of AI systems as a research and editorial tool, for drafting support and structural revision. The argument and conclusions are the author's own.</p>
+  </div>
 
-</section>
+  <div class="series-close">
+    <strong>This is the close of the seven-essay Interpretation, Drift &amp; Cognitive Continuity series.</strong> Together, these essays trace one argument from a different angle than the backbone narrative: data is frozen interpretation, not truth; that interpretation drifts before computation even begins; operational coherence and understanding coherence are not the same thing; ambiguity handled openly is safer than certainty performed falsely; infrastructure — not better judgment alone — is what lets coordination survive at scale; and all of it converges on what AI development already senses when it asks for a system that "understands." The formal research behind these ideas continues in the programme's published papers, available at the <a href="https://auditedstate.app/research/publications/">Audited State Research</a> index.
+  </div>
 
-<section>
-
-<h2>The Emerging Frustration</h2>
-
-<p>
-Across organizations, a familiar experience is emerging.
-</p>
-
-<p>
-Teams work with AI systems repeatedly.
-The outputs become locally impressive.
-The model can summarize documents, generate code, answer questions, and maintain short-term context.
-</p>
-
-<p>
-And yet:
-humans still repeatedly feel forced into reconstruction.
-</p>
-
-<ul>
-<li>They explain the same assumptions again.</li>
-<li>Rebuild the same context again.</li>
-<li>Clarify the same direction again.</li>
-<li>Reconstruct the same intent again.</li>
-</ul>
-
-<p>
-The system appears operationally intelligent while remaining strangely discontinuous.
-</p>
-
-<p>
-This creates a peculiar frustration:
-</p>
-
-<blockquote>
-“The AI has the data, but it still doesn’t understand what we are actually trying to do.”
-</blockquote>
-
-<p>
-That sentence quietly reveals something profound.
-</p>
-
-<p>
-Because it implies humans intuitively distinguish between:
-</p>
-
-<ul>
-<li>information possession,</li>
-<li>and continuity of understanding.</li>
-</ul>
-
-</section>
-
-<section>
-
-<h2>Understanding Is Not Information Storage</h2>
-
-<p>
-Current AI discussions often treat understanding as:
-</p>
-
-<ul>
-<li>larger context windows,</li>
-<li>persistent memory,</li>
-<li>retrieval augmentation,</li>
-<li>better embeddings,</li>
-<li>or more complete datasets.</li>
-</ul>
-
-<p>
-These matter.
-But they do not fully solve the underlying problem.
-</p>
-
-<p>
-Because understanding is not merely accumulated information.
-</p>
-
-<p>
-Understanding depends on:
-</p>
-
-<ul>
-<li>relationships,</li>
-<li>continuity,</li>
-<li>intention,</li>
-<li>assumptions,</li>
-<li>interpretive context,</li>
-<li>ambiguity handling,</li>
-<li>and coherent directional structure across time.</li>
-</ul>
-
-<p>
-A system may possess enormous amounts of information while remaining unable to reconstruct why something matters.
-</p>
-
-</section>
-
-<section>
-
-<h2>The Hidden Meaning of “Understand”</h2>
-
-<p>
-When developers say:
-</p>
-
-<blockquote>
-“We need the AI to understand the project,”
-</blockquote>
-
-<p>
-they often do not literally mean:
-</p>
-
-<blockquote>
-“Store more tokens.”
-</blockquote>
-
-<p>
-What they actually mean is something closer to:
-</p>
-
-<ul>
-<li>preserve continuity of intention,</li>
-<li>maintain directional coherence,</li>
-<li>understand why decisions were made,</li>
-<li>infer unstated assumptions,</li>
-<li>reconstruct evolving reasoning,</li>
-<li>recognize what matters,</li>
-<li>preserve conceptual relationships,</li>
-<li>and remain aligned with the trajectory of the work.</li>
-</ul>
-
-<p>
-In other words:
-</p>
-
-<blockquote>
-they are asking for continuity of understanding.
-</blockquote>
-
-<p>
-This is fundamentally different from simple memory persistence.
-</p>
-
-</section>
-
-<section>
-
-<h2>The Reconstruction Problem</h2>
-
-<p>
-Without continuity-preserving structures, AI collaboration increasingly becomes reconstruction-heavy.
-</p>
-
-<p>
-Humans repeatedly rebuild:
-</p>
-
-<ul>
-<li>context,</li>
-<li>assumptions,</li>
-<li>priorities,</li>
-<li>and conceptual framing.</li>
-</ul>
-
-<p>
-The larger and more distributed the project becomes, the worse this problem grows.
-</p>
-
-<p>
-This creates invisible cognitive cost.
-</p>
-
-<p>
-Not because the AI lacks intelligence,
-but because continuity itself remains structurally fragile.
-</p>
-
-<p>
-The issue is not merely:
-</p>
-
-<blockquote>
-“Can the AI answer questions?”
-</blockquote>
-
-<p>
-But increasingly:
-</p>
-
-<blockquote>
-“Can the AI remain coherently oriented inside evolving human intention?”
-</blockquote>
-
-</section>
-
-<section>
-
-<h2>Data Is Not Understanding</h2>
-
-<p>
-One of the deepest misconceptions in AI development is the assumption that:
-</p>
-
-<blockquote>
-more information automatically produces more understanding.
-</blockquote>
-
-<p>
-But representation is not meaning.
-</p>
-
-<p>
-Data is interpreted compression.
-Documents are symbolic artifacts.
-Logs are traces of prior decisions.
-Outputs are contextual approximations.
-</p>
-
-<p>
-Without continuity of interpretation:
-systems increasingly operate on disconnected symbolic fragments.
-</p>
-
-<p>
-This is why:
-</p>
-
-<ul>
-<li>large context windows,</li>
-<li>vector databases,</li>
-<li>retrieval systems,</li>
-<li>and persistent memory</li>
-</ul>
-
-<p>
-still often fail to create genuine continuity of understanding.
-</p>
-
-<p>
-Because continuity is relational and interpretive, not merely informational.
-</p>
-
-</section>
-
-<section>
-
-<h2>Understanding Requires Shared Orientation</h2>
-
-<p>
-Traffic systems provide a useful analogy.
-</p>
-
-<p>
-Traffic works not because drivers possess perfect information,
-but because infrastructure preserves shared orientation.
-</p>
-
-<p>
-Roads,
-signals,
-lanes,
-rules,
-maps,
-and intersections reduce reconstruction burden.
-</p>
-
-<p>
-They help millions of independent actors maintain coherent movement despite incomplete understanding.
-</p>
-
-<p>
-Reasoning systems increasingly require similar infrastructure.
-</p>
-
-<p>
-Not merely memory storage,
-but continuity-preserving structures capable of maintaining:
-</p>
-
-<ul>
-<li>direction,</li>
-<li>interpretability,</li>
-<li>assumptions,</li>
-<li>ambiguity visibility,</li>
-<li>and traceable reasoning across time.</li>
-</ul>
-
-</section>
-
-<section>
-
-<h2>Ambiguity Is Part of Understanding</h2>
-
-<p>
-Another hidden misconception is that understanding requires certainty.
-</p>
-
-<p>
-But humans rarely operate through perfect certainty.
-We operate through:
-</p>
-
-<ul>
-<li>approximation,</li>
-<li>inference,</li>
-<li>ambiguity,</li>
-<li>revision,</li>
-<li>and contextual judgment.</li>
-</ul>
-
-<p>
-Stable understanding therefore does not require eliminating ambiguity.
-</p>
-
-<p>
-It requires:
-</p>
-
-<blockquote>
-making ambiguity legible.
-</blockquote>
-
-<p>
-An AI system that openly preserves:
-</p>
-
-<ul>
-<li>uncertainty,</li>
-<li>assumptions,</li>
-<li>inference boundaries,</li>
-<li>and interpretive ambiguity</li>
-</ul>
-
-<p>
-may actually support more coherent collaboration than one simulating false certainty.
-</p>
-
-</section>
-
-<section>
-
-<h2>The Real Infrastructure Challenge</h2>
-
-<p>
-The future challenge is therefore not merely:
-</p>
-
-<blockquote>
-“How do we make AI more intelligent?”
-</blockquote>
-
-<p>
-But increasingly:
-</p>
-
-<blockquote>
-“How do we preserve continuity of understanding across distributed cognition?”
-</blockquote>
-
-<p>
-That is fundamentally an infrastructural problem.
-</p>
-
-<p>
-Because understanding itself increasingly depends on:
-</p>
-
-<ul>
-<li>continuity,</li>
-<li>traceability,</li>
-<li>reconstructability,</li>
-<li>ambiguity visibility,</li>
-<li>and shared interpretive orientation.</li>
-</ul>
-
-<p>
-This may ultimately require moving beyond systems optimized primarily for:
-</p>
-
-<ul>
-<li>information retrieval,</li>
-<li>output generation,</li>
-<li>or statistical prediction,</li>
-</ul>
-
-<p>
-toward systems capable of preserving:
-</p>
-
-<ul>
-<li>continuity of intention,</li>
-<li>continuity of reasoning,</li>
-<li>and continuity of understanding itself.</li>
-</ul>
-
-</section>
-
-<section>
-
-<h2>The Quiet Realization</h2>
-
-<p>
-Perhaps the most important realization emerging inside AI development is this:
-</p>
-
-<p>
-When developers say:
-</p>
-
-<blockquote>
-“Make the AI understand,”
-</blockquote>
-
-<p>
-they may already be pointing toward something civilization has not yet fully named.
-</p>
-
-<p>
-Not merely smarter outputs.
-</p>
-
-<p>
-But:
-</p>
-
-<blockquote>
-continuity-preserving cognition.
-</blockquote>
-
-<p>
-And once that distinction becomes visible,
-many current frustrations around AI systems suddenly begin making much more sense.
-</p>
-
-</section>
-
-<hr>
-
-<section class="essay-footer-meta">
-
-<h3>Intention</h3>
-<p>
-To establish that “understanding” in AI collaboration increasingly refers not to information storage alone, but to continuity-preserving reasoning, shared orientation, and reconstructable interpretation.
-</p>
-
-<h3>Justification</h3>
-<p>
-Because modern AI systems increasingly appear operationally intelligent while remaining structurally discontinuous, forcing humans into repeated reconstruction of intent, assumptions, and reasoning context.
-</p>
-
-<h3>Author & Ownership</h3>
-<p>
-<strong>Arne Mayoh & ChatGPT 5.5</strong>. This essay is a <a href="/concepts/pifr.html">PIFR</a> intended for the continuation of civilizational reasoning.
-</p>
-
-<h3>Way Forward</h3>
-<p>
-The transition requires continuity-preserving cognitive infrastructure capable of maintaining interpretive orientation, reasoning lineage, ambiguity visibility, and traceable understanding across distributed human–AI systems.
-</p>
-
-</section>
-
-<footer class="essay-footer">
-<p>Part of the <a href="/research/index.html">Audited State Research</a> series.</p>
-</footer>
+  <div class="editorial-note">
+    <strong>Editorial note:</strong> this essay's original had five separate sections making close to the same point — that understanding is not information storage — in only slightly different language, plus a full re-explanation of the traffic analogy already covered in essay 5 and the ambiguity argument already covered in essay 4. All of this has been consolidated substantially, with the repeated arguments cross-referenced rather than restated in full. Its "Guided Narrative Path" also omitted essay 2 ("Reasoning Drift") entirely — a different variant of the same sidebar-inconsistency pattern found in every other essay in this series.
+  </div>
 
 </main>
 
-<footer>
-© 2026 Audited State · AI & the Continuity of Human Understanding
-<br>
-<span class="affiliation">
-– a contributor to <a href="https://cognitivesuperhighway.org" target="_blank" rel="noopener">CognitiveSuperHighway.org</a>
-</span>
+<footer class="site-footer">
+  <p>Essay 7 of the <a href="https://auditedstate.app/research/publications/">Interpretation, Drift &amp; Cognitive Continuity series</a>.</p>
+  <p>© 2026 Audited State · AI &amp; the Continuity of Human Understanding</p>
+  <p>— a contributor to <a href="https://cognitivesuperhighway.org">CognitiveSuperHighway.org</a></p>
 </footer>
 
 </body>

@@ -4,143 +4,148 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Reasoning Artifact | Audited State</title>
-<link rel="stylesheet" href="../../../style.css">
 <link rel="canonical" href="https://auditedstate.app/research/publications/essays/the-reasoning-artifact.html">
-</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F7F4ED; --paper-raised: #FBF9F4; --ink: #1B2430; --ink-soft: #3D4757;
+    --ink-faint: #6B7484; --route: #B8863B; --route-soft: #E4D3B0; --rule: #DAD3C2; --measure: 40em;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 17px; line-height: 1.7; }
+  a { color: var(--ink); text-decoration-color: var(--route); text-underline-offset: 3px; }
+  a:hover { color: var(--route); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--route); outline-offset: 2px; }
 
+  header.site-nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--rule); background: var(--paper-raised); }
+  .site-nav .brand { font-weight: 600; font-size: 0.95rem; text-decoration: none; letter-spacing: 0.01em; }
+  .site-nav nav { display: flex; flex-wrap: wrap; font-size: 0.85rem; }
+  .site-nav nav a { text-decoration: none; color: var(--ink-soft); margin-left: 1.25rem; }
+  .site-nav nav a:first-child { margin-left: 0; }
+  .site-nav nav a:hover { color: var(--route); }
+
+  main { max-width: 46em; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+
+  .eyebrow { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--route); margin-bottom: 1rem; }
+  h1.title { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(2rem, 4.5vw, 2.75rem); line-height: 1.15; margin: 0 0 0.5rem; letter-spacing: -0.01em; }
+  p.subtitle { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.25rem; color: var(--ink-soft); margin: 0 0 2rem; }
+
+  .sequence-box { background: var(--paper-raised); border-left: 3px solid var(--route); border-radius: 2px; padding: 1.1rem 1.4rem; margin: 0 0 2.5rem; }
+  .sequence-box .waypoints-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--route); display: block; margin-bottom: 0.7rem; }
+  .sequence-box ol { margin: 0; padding-left: 1.4rem; }
+  .sequence-box li { margin-bottom: 0.35rem; font-size: 0.95rem; }
+  .sequence-box li:last-child { margin-bottom: 0; }
+  .sequence-box li.current { font-weight: 600; color: var(--ink); list-style: none; margin-left: -1.4rem; padding-left: 0; }
+  .sequence-box li.current::before { content: "→ "; color: var(--route); }
+
+  hr.divider { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+  main p { margin: 0 0 1.3rem; max-width: var(--measure); }
+  h2 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 1.45rem; margin: 2.6rem 0 1.1rem; letter-spacing: -0.005em; }
+
+  .marker-plaque { margin: 3.5rem 0 3rem; padding: 2rem 0; border-top: 2px solid var(--route-soft); border-bottom: 2px solid var(--route-soft); text-align: center; }
+  .marker-plaque p { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 1.35rem; line-height: 1.5; color: var(--ink); max-width: 34em; margin: 0 auto 1rem; }
+  .marker-plaque cite { font-family: 'Inter', sans-serif; font-style: normal; font-size: 0.85rem; font-weight: 600; color: var(--route); letter-spacing: 0.04em; }
+
+  .essay-declarations { margin: 2.5rem 0; font-size: 0.9rem; color: var(--ink-soft); }
+  .essay-declarations h3 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); margin: 1.4rem 0 0.4rem; }
+  .essay-declarations p { margin: 0 0 0.8rem; max-width: var(--measure); }
+
+  footer.site-footer { max-width: 46em; margin: 0 auto; padding: 0 1.5rem 3rem; font-size: 0.85rem; color: var(--ink-faint); }
+  footer.site-footer a { color: var(--ink-faint); }
+  footer.site-footer a:hover { color: var(--route); }
+  footer.site-footer p { margin: 0.3rem 0; }
+
+  @media (max-width: 600px) { .site-nav { padding: 1rem; } main { padding: 2rem 1.25rem 3.5rem; } }
+</style>
+</head>
 <body>
 
-<header>
-<div class="nav-container">
-<a href="/" class="logo">
-  Audited State
-  <span class="tagline">— preserving human agency</span>
-</a>
-<button class="mobile-toggle">☰</button>
-<nav>
-<a href="/problem.html">Problem</a>
-<a href="/concepts/lexicon.html">Lexicon</a>
-<a href="/concept-map.html">Concept Map</a>
-<a href="/architecture.html">Architecture</a>
-<a href="/labs/">Labs</a>
-<a href="/research/">Research</a>
-<a href="/about/">About</a>
-</nav>
-</div>
+<header class="site-nav">
+  <a class="brand" href="https://auditedstate.app/">Audited State — preserving human agency</a>
+  <nav>
+    <a href="https://auditedstate.app/problem.html">Problem</a>
+    <a href="https://auditedstate.app/concepts/lexicon.html">Lexicon</a>
+    <a href="https://auditedstate.app/concept-map.html">Concept Map</a>
+    <a href="https://auditedstate.app/architecture.html">Architecture</a>
+    <a href="https://auditedstate.app/labs/">Labs</a>
+    <a href="https://auditedstate.app/research/">Research</a>
+    <a href="https://auditedstate.app/about/">About</a>
+  </nav>
 </header>
 
-<main class="essay">
+<main>
 
-<p class="essay-attribution">
-"This essay formalizes the PIFR—not as a document of what was done, but as a path others can continue, turning reasoning into durable infrastructure."
-— Arne Mayoh & Gemini 3 Flash
-</p>
+  <span class="eyebrow">Backbone Narrative — Essay 4 of 11</span>
+  <h1 class="title">The Reasoning Artifact</h1>
+  <p class="subtitle">Why the future of knowledge is not a document, but a path</p>
 
-<header class="essay-header">
-<h1>The Reasoning Artifact</h1>
-<p class="essay-subtitle">
-Why the Future of Knowledge is Not a Document, but a Path
-</p>
-</header>
+  <div class="sequence-box">
+    <span class="waypoints-label">Reading Sequence</span>
+    <ol>
+      <li><a href="https://auditedstate.app/research/publications/essays/the-collapse-of-agency.html">1. The Collapse of Agency</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/the-end-of-monday-morning.html">2. The End of Monday Morning</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/the-erosion-of-intent.html">3. The Erosion of Intent</a></li>
+      <li class="current">4. The Reasoning Artifact</li>
+      <li><a href="https://auditedstate.app/research/publications/essays/the-honest-agent.html">5. The Honest Agent</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/the-great-accumulation-human-agency.html">6. The Great Compounding</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/the-road-ahead.html">7. The Road Ahead</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/continuity-of-learning.html">8. The Continuity of Learning</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/wealth-of-understanding-invisible-opportunity-cost.html">9. Civilisational Decay and the Invisible Opportunity Cost</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/data-representation-of-truth.html">10. Data as Representation of Truth</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/reconstruction-bankruptcy.html">11. The Horizon of Reconstruction Bankruptcy</a></li>
+    </ol>
+  </div>
 
-<nav class="recommended-essays">
-    <strong>A Guided Path through the Backbone Narrative</strong>
-    <ul>
-    <li><a href="/research/publications/essays/the-collapse-of-agency.html">1. The Collapse of Agency</a></li>
-    <li><a href="/research/publications/essays/the-end-of-monday-morning.html">1. The End of Monday Morning</a></li>
-    <li><a href="/research/publications/essays/the-erosion-of-intent.html">2. The Erosion of Intent</a></li>
-    <li><strong>3. The Reasoning Artifact (Current)</strong></li>
-    <li><a href="/research/publications/essays/the-honest-agent.html">4. The Honest Agent</a></li>
-    <li><a href="/research/publications/essays/the-great-accumulation-human-agency.html">5. The Great Accumulation</a></li>
-    <li><a href="/research/publications/essays/the-road-ahead.html">6. The Road Ahead</a></li>
-    <li><a href="/research/publications/essays/continuity-of-learning.html">7. The Continuity of Learning</a></li>
-    </ul>
-</nav>
+  <hr class="divider">
 
-<hr>
+  <p>Civilization progresses when ideas leave artifacts behind. But there's a structural problem in how that usually works: we are good at storing outcomes — the what — and consistently discard the reasoning behind them — the why. When that reasoning is lost, the next person has to reconstruct the thinking from whatever fragments remain.</p>
 
-<section>
-<p>
-Civilization progresses when ideas leave artifacts. However, we have a structural problem: we are excellent at storing outcomes (the "What") but we discard the reasoning steps (the "Why"). When reasoning is lost, the next participant must <strong>reconstruct</strong> the thinking from fragments.
-</p>
+  <p>This site's answer to that problem is the <strong>Pay-It-Forward Record (PIFR)</strong>. A PIFR isn't meant to be an answer. It's a path that someone else can actually continue.</p>
 
-<p>
-In the PKOS framework, we solve this with the <strong>Pay-It-Forward Record (PIFR)</strong>. A PIFR is not an answer; it is a path others can continue.
-</p>
-</section>
+  <h2>Beyond the Final Output</h2>
 
-<section>
-<h2>Beyond the Final Output</h2>
-<p>
-Traditional records focus on decisions, transactions, and final versions. But these are dead ends for reasoning. A PIFR preserves the <strong>Reasoning Trajectory</strong> as it forms, capturing intent, assumptions, and unresolved questions.
-</p>
+  <p>Traditional records focus on decisions, transactions, final versions — dead ends, as far as reasoning is concerned. A PIFR instead preserves the reasoning trajectory as it forms: the original intent, the assumptions made along the way, the questions left unresolved.</p>
 
-<p>
-It transforms reasoning from a transient event into a <strong>Reasoning Vehicle</strong>—a structured unit that carries meaning across domains (Mind, Logic, Body, Soul) without loss.
-</p>
-</section>
+  <p>That turns reasoning from something transient into a <a href="https://auditedstate.app/concepts/reasoning-vehicle.html">Reasoning Vehicle</a> — a structured unit built to carry meaning across its four domains, <a href="https://auditedstate.app/concepts/persistent-semantic-scaffold.html">Mind, Logic, Body, and Soul</a>, without losing what made it meaningful in the first place.</p>
 
-<section>
-<h2>The Continuity Spine</h2>
-<p>
-A single artifact is a tool, but a sequence of PIFRs forms a <strong>Continuity Spine</strong>. This lineage allows reasoning to accumulate over time rather than resetting with every new interaction. 
-</p>
+  <h2>The Continuity Spine</h2>
 
-<p>
-In this model, the <strong>Persistent Semantic Scaffold (PSS)</strong> acts as the substrate—the "ground" that holds these artifacts in place so that understanding can compound.
-</p>
-</section>
+  <p>A single artifact is just a tool. A connected sequence of PIFRs is something more — a continuity spine, letting reasoning accumulate over time instead of resetting with every new interaction.</p>
 
-<section>
-<h2>From Data to Lineage</h2>
-<p>
-Modern systems optimize for data provenance, but the Cognitive Super Highway requires <strong>Reasoning Lineage</strong>. This means every state is <strong>Traceable</strong>; you can follow the "Why" back through the Authority Membrane to the original human intention.
-</p>
+  <p>In this model, the <a href="https://auditedstate.app/concepts/persistent-semantic-scaffold.html">Persistent Semantic Scaffold</a> is the substrate underneath — the structure that holds these artifacts in place so understanding actually has something to compound against.</p>
 
-<p>
-This is where <strong>Memory becomes the Highest Court</strong> [cite: 2026-01-31]. If we can audit the reasoning, we can repair the system without erasing its history [cite: 2026-01-31].
-</p>
-</section>
+  <h2>From Data to Lineage</h2>
 
-<section>
-<h2>Conclusion: The Infrastructure of Understanding</h2>
-<p>
-We are shifting from a world of "outputs" to a world of "lineage." By adopting the Reasoning Artifact, we stop wasting effort on reconstruction and start building a shared <strong>Infrastructure of Understanding</strong>.
-</p>
+  <p>Most current systems are built to optimize data provenance — where a piece of data came from. What a Cognitive Super Highway actually needs is reasoning lineage: every state traceable back through the <a href="https://auditedstate.app/concepts/promotion-gate.html">Authority Membrane</a> to the original human intention behind it.</p>
 
-<p>
-The goal is simple: ensure that what is understood today can be continued tomorrow.
-</p>
-</section>
+  <p>That traceability matters because it's what makes a system correctable. If the reasoning behind a decision can be properly audited, a system can be repaired without having to erase its own history to do it.</p>
 
-<blockquote class="essay-closing-quote">
-<p>
-<strong>"Civilizations accumulate knowledge only when reasoning becomes durable enough to continue."</strong>
-</p>
-<footer>
-— Audited State Core Principle
-</footer>
-</blockquote>
+  <h2>The Infrastructure of Understanding</h2>
 
-<footer class="essay-footer">
-<p>Part of the <a href="/research/index.html">Audited State Research</a> essays.</p>
-</footer>
+  <p>The shift this essay is describing is from a world built around outputs to one built around lineage. Adopting the reasoning artifact as a basic unit means spending less effort reconstructing what already existed, and more building a shared infrastructure of understanding.</p>
+
+  <p>The goal is straightforward: what's understood today should still be usable tomorrow.</p>
+
+  <div class="marker-plaque">
+    <p>Civilizations accumulate knowledge only when reasoning becomes durable enough to continue.</p>
+    <cite>— Arne Mayoh</cite>
+  </div>
+
+  <div class="essay-declarations">
+    <h3>Declaration of Generative AI and AI-Assisted Technologies</h3>
+    <p>This essay was developed with the assistance of AI systems as a research and editorial tool, for drafting support and structural revision. The argument and conclusions are the author's own.</p>
+  </div>
 
 </main>
 
-<footer>
-© 2026 Audited State · AI & the Continuity of Human Understanding  
-<br>
-<span class="affiliation">
-– a contributor to <a href="https://cognitivesuperhighway.org" target="_blank" rel="noopener">CognitiveSuperHighway.org</a>
-</span>
+<footer class="site-footer">
+  <p>Essay 4 of the <a href="https://auditedstate.app/research/publications/">Audited State Backbone Narrative</a>.</p>
+  <p>© 2026 Audited State · AI &amp; the Continuity of Human Understanding</p>
+  <p>— a contributor to <a href="https://cognitivesuperhighway.org">CognitiveSuperHighway.org</a></p>
 </footer>
-
-<script>
-document.querySelector('.mobile-toggle').addEventListener('click',function(){
-document.querySelector('nav').classList.toggle('active');
-});
-</script>
 
 </body>
 </html>

@@ -3,166 +3,158 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Education After Generative AI | PKOS Essay</title>
-<link rel="stylesheet" href="../../../style.css">
+<title>Education After Generative AI | Audited State</title>
 <link rel="canonical" href="https://auditedstate.app/research/publications/essays/education-after-generative-ai.html">
-</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F7F4ED; --paper-raised: #FBF9F4; --ink: #1B2430; --ink-soft: #3D4757;
+    --ink-faint: #6B7484; --route: #B8863B; --route-soft: #E4D3B0; --rule: #DAD3C2; --measure: 40em;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 17px; line-height: 1.7; }
+  a { color: var(--ink); text-decoration-color: var(--route); text-underline-offset: 3px; }
+  a:hover { color: var(--route); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--route); outline-offset: 2px; }
 
+  header.site-nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--rule); background: var(--paper-raised); }
+  .site-nav .brand { font-weight: 600; font-size: 0.95rem; text-decoration: none; letter-spacing: 0.01em; }
+  .site-nav nav { display: flex; flex-wrap: wrap; font-size: 0.85rem; }
+  .site-nav nav a { text-decoration: none; color: var(--ink-soft); margin-left: 1.25rem; }
+  .site-nav nav a:first-child { margin-left: 0; }
+  .site-nav nav a:hover { color: var(--route); }
+
+  main { max-width: 46em; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+
+  .eyebrow { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--route); margin-bottom: 1rem; }
+  h1.title { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(2rem, 4.5vw, 2.75rem); line-height: 1.15; margin: 0 0 0.5rem; letter-spacing: -0.01em; }
+  p.subtitle { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.25rem; color: var(--ink-soft); margin: 0 0 2rem; }
+
+  hr.divider { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+  main p { margin: 0 0 1.3rem; max-width: var(--measure); }
+  h2 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 1.45rem; margin: 2.6rem 0 1.1rem; letter-spacing: -0.005em; }
+  ul.plain { margin: 0 0 1.3rem; padding-left: 1.3rem; max-width: var(--measure); }
+  ul.plain li { margin-bottom: 0.4rem; }
+
+  figure.essay-figure { margin: 2rem 0; max-width: var(--measure); }
+  figure.essay-figure img { width: 100%; max-height: 26rem; object-fit: cover; height: auto; border-radius: 4px; display: block; }
+  figure.essay-figure figcaption { font-size: 0.85rem; color: var(--ink-faint); margin-top: 0.6rem; font-style: italic; }
+
+  .flow-sequence { background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 4px; padding: 1.2rem 1.5rem; margin: 1.8rem 0; }
+  .flow-sequence ol { margin: 0; padding-left: 1.3rem; counter-reset: flow; }
+  .flow-sequence li { margin-bottom: 0.5rem; font-size: 0.95rem; color: var(--ink-soft); }
+  .flow-sequence li:last-child { margin-bottom: 0; font-weight: 600; color: var(--ink); }
+  .flow-sequence li strong { color: var(--ink); }
+
+  .marker-plaque { margin: 3.5rem 0 3rem; padding: 2rem 0; border-top: 2px solid var(--route-soft); border-bottom: 2px solid var(--route-soft); text-align: center; }
+  .marker-plaque p { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 1.35rem; line-height: 1.5; color: var(--ink); max-width: 34em; margin: 0 auto 1rem; }
+  .marker-plaque cite { font-family: 'Inter', sans-serif; font-style: normal; font-size: 0.85rem; font-weight: 600; color: var(--route); letter-spacing: 0.04em; }
+
+  .essay-declarations { margin: 2.5rem 0; font-size: 0.9rem; color: var(--ink-soft); }
+  .essay-declarations h3 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); margin: 1.4rem 0 0.4rem; }
+  .essay-declarations p { margin: 0 0 0.8rem; max-width: var(--measure); }
+
+  .editorial-note { margin: 2rem 0; padding: 1rem 1.25rem; background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 4px; font-size: 0.88rem; color: var(--ink-soft); }
+  .editorial-note strong { color: var(--ink); }
+
+  footer.site-footer { max-width: 46em; margin: 0 auto; padding: 0 1.5rem 3rem; font-size: 0.85rem; color: var(--ink-faint); }
+  footer.site-footer a { color: var(--ink-faint); }
+  footer.site-footer a:hover { color: var(--route); }
+  footer.site-footer p { margin: 0.3rem 0; }
+
+  @media (max-width: 600px) { .site-nav { padding: 1rem; } main { padding: 2rem 1.25rem 3.5rem; } }
+</style>
+</head>
 <body>
 
-<header>
-<div class="nav-container">
-<a href="/" class="logo">
-  Audited State
-  <span class="tagline">— preserving human agency</span>
-</a>
-<button class="mobile-toggle">☰</button>
-<nav>
-<a href="/problem.html">Problem</a>
-<a href="/concepts/lexicon.html">Lexicon</a>
-<a href="/concept-map.html">Concept Map</a>
-<a href="/architecture.html">Architecture</a>
-<a href="/labs/">Labs</a>
-<a href="/research/">Research</a>
-<a href="/about/">About</a>
-</nav>
-</div>
+<header class="site-nav">
+  <a class="brand" href="https://auditedstate.app/">Audited State — preserving human agency</a>
+  <nav>
+    <a href="https://auditedstate.app/problem.html">Problem</a>
+    <a href="https://auditedstate.app/concepts/lexicon.html">Lexicon</a>
+    <a href="https://auditedstate.app/concept-map.html">Concept Map</a>
+    <a href="https://auditedstate.app/architecture.html">Architecture</a>
+    <a href="https://auditedstate.app/labs/">Labs</a>
+    <a href="https://auditedstate.app/research/">Research</a>
+    <a href="https://auditedstate.app/about/">About</a>
+  </nav>
 </header>
 
 <main>
 
-<h1>Education After Generative AI</h1>
+  <span class="eyebrow">Learning &amp; Understanding — cluster pending final grouping</span>
+  <h1 class="title">Education After Generative AI</h1>
+  <p class="subtitle">From text evaluation to reasoning traceability</p>
 
-<p class="lead">
-From Text Evaluation to Reasoning Traceability
-</p>
+  <hr class="divider">
 
-<p>
-For centuries, written assignments have functioned as one of the central mechanisms for evaluating knowledge in educational systems. Essays, reports, and written exams have been treated as evidence of understanding: if a student can produce a coherent text, we assume that the reasoning behind that text belongs to the student.
-</p>
+  <p>For centuries, written assignments have functioned as one of the central mechanisms for evaluating knowledge in education. Essays, reports, and written exams were treated as evidence of understanding: if a student could produce a coherent text, the reasoning behind that text was assumed to belong to them.</p>
 
-<p>
-Generative AI changes this assumption. Systems capable of producing well-structured essays in seconds make it increasingly difficult to treat the final written product as proof of individual competence.
-</p>
+  <p>Generative AI changes that assumption. Systems that can produce a well-structured essay in seconds make it genuinely difficult to treat the finished text as proof of individual competence. But the deeper challenge isn't simply that AI can write text — it's that the reasoning process which produced the text is no longer visible at all.</p>
 
-<p>
-The deeper challenge is not simply that AI can write text. The deeper challenge is that the reasoning process that produced the text is no longer visible.
-</p>
+  <h2>The Structural Tension</h2>
 
-<h2>The Structural Tension</h2>
+  <p>Educational institutions evaluate more than knowledge — they evaluate judgment, reasoning, and intellectual development. When AI participates in producing written work without leaving any trace of its role, the connection between the text and the student's own reasoning becomes genuinely hard to reconstruct. That's a real structural tension: AI accelerates knowledge production, while assessment systems depend on reasoning actually staying visible. When reasoning disappears behind generated text, evaluation itself becomes uncertain.</p>
 
-<p>
-Educational institutions evaluate not only knowledge but also judgment, reasoning, and intellectual development. When AI participates in producing written work without leaving clear traces of its role, the connection between the text and the student's reasoning becomes difficult to reconstruct.
-</p>
+  <p>This is a real instance of approaching a <a href="https://auditedstate.app/concepts/continuity-threshold.html">continuity threshold</a>. Educational systems have always relied on being able to reconstruct how understanding formed from the artifacts students actually produced. As reasoning becomes less visible and more distributed across AI-assisted process, that reconstruction gets harder and more costly — and past a certain point, evaluation can no longer reliably recover the reasoning behind a result at all.</p>
 
-<p>
-This creates a structural tension for education systems.
-</p>
+  <figure class="essay-figure">
+    <img src="https://auditedstate.app/assets/continuity-threshold1.webp" alt="Diagram showing cumulative understanding rising over time until a continuity threshold, after which understanding becomes reconstructed in fragments at increasing reconstruction cost.">
+    <figcaption>Below the continuity threshold, understanding can accumulate continuously. Beyond it, systems depend increasingly on reconstruction, and understanding fragments as recovery costs rise.</figcaption>
+  </figure>
 
-<ul>
-<li>AI accelerates knowledge production</li>
-<li>assessment systems depend on visible reasoning</li>
-</ul>
+  <h2>Preserving the Reasoning Path</h2>
 
-<p>
-When reasoning disappears behind generated text, evaluation becomes uncertain.
-</p>
+  <p>One experimental response is to preserve the reasoning path itself, rather than only its finished output. This research programme records reasoning as a structured artifact called a <a href="https://auditedstate.app/concepts/pifr.html">Pay-It-Forward Record (PIFR)</a> — not a replacement for narrative work like an essay, but a record of the reasoning path that actually produced it:</p>
 
-<p>
-  This condition can be understood as approaching a <a href="/concepts/continuity-threshold.html">continuity threshold</a>.
-  Educational systems have historically relied on the ability to reconstruct how understanding was formed from the artifacts students produce.
-  As reasoning becomes less visible and more distributed across AI-assisted processes, this reconstruction becomes increasingly difficult and costly.
-  Beyond a certain point, evaluation can no longer reliably recover the reasoning behind a result, and understanding itself becomes harder to assess.
-</p>
+  <div class="flow-sequence">
+    <ol>
+      <li>Intent</li>
+      <li>Exploration</li>
+      <li>Q&amp;A</li>
+      <li>Analysis</li>
+      <li>Verification / Provenance</li>
+      <li>Lessons Learned</li>
+      <li>Conclusions</li>
+      <li>Revision / Critique</li>
+      <li><strong>Save / Close / Revisit</strong></li>
+    </ol>
+  </div>
 
-<figure class="concept-figure">
-  <img src="../../../assets/continuity-threshold1.webp" alt="Diagram showing cumulative understanding rising over time until a continuity threshold, after which understanding becomes reconstructed in fragments at increasing reconstruction cost.">
-  <figcaption>
-    Below the continuity threshold, understanding can accumulate continuously across time.
-    Beyond it, systems increasingly depend on reconstruction, causing understanding to fragment and recovery costs to rise.
-  </figcaption>
-</figure>
+  <h2>Evaluating Reasoning Instead of Text</h2>
 
-<h2>Reasoning Vehicle (<a href="/concepts/lexicon.html#pifr">PIFR</a>)</h2>
+  <p>In an educational context, students could submit both the final essay and a structured reasoning record showing how the work actually developed — the questions explored, the interpretations weighed, and the specific role AI tools played in shaping it.</p>
 
-<p>
-One experimental response is to preserve the reasoning path itself.
-</p>
+  <h2>A Shift in What Gets Evaluated</h2>
 
-<p>
-Within the <a href="/concepts/lexicon.html#pkos">PKOS</a> (Personal Knowledge OS) exploration, reasoning can be recorded as a structured artifact called a <a href="/concepts/lexicon.html#pifr">Pay-It-Forward Record (PIFR)</a>.
-</p>
+  <p>Seen this way, generative AI doesn't just threaten existing assessment practice. It surfaces a deeper question that was always there underneath it: should institutions primarily evaluate the product, or the reasoning that produced it? This research programme explores whether structured reasoning artifacts can preserve continuity of thought in an environment where AI is accelerating intellectual work faster than most evaluation methods were built to track.</p>
 
-<p>
-A <a href="/concepts/lexicon.html#pifr">PIFR</a> does not replace narrative work such as essays. Instead it records the reasoning path that produced them.
-</p>
+  <p>Whether this particular approach proves useful remains a genuinely open research question. What's already clear is that institutions will increasingly need some mechanism capable of preserving the traceability of reasoning — whatever form that mechanism ultimately takes.</p>
 
-<pre>
-Intent
-  Exploration
-  Q&A
-  Analysis
-  Verification / Provenance
-  Lessons Learned
-  Conclusions
-  Revision / Critique
-  Save / Close / Revisit
-</pre>
+  <div class="marker-plaque">
+    <p>When reasoning disappears behind generated text, evaluating the text is no longer the same thing as evaluating the understanding.</p>
+    <cite>— Arne Mayoh</cite>
+  </div>
 
-<h2>Evaluating Reasoning Instead of Text</h2>
+  <div class="essay-declarations">
+    <h3>Declaration of Generative AI and AI-Assisted Technologies</h3>
+    <p>This essay was developed with the assistance of AI systems as a research and editorial tool, for drafting support and structural revision. The argument and conclusions are the author's own.</p>
+  </div>
 
-<p>
-In an educational context, students could submit both:
-</p>
-
-<ul>
-<li>the final essay</li>
-<li>a structured reasoning record showing how the work developed</li>
-</ul>
-
-<p>
-Such records could document the questions explored, the interpretations considered, and the role AI tools played in developing the work.
-</p>
-
-<h2>A Shift in Educational Evaluation</h2>
-
-<p>
-Seen from this perspective, generative AI does not merely threaten existing assessment practices. It reveals a deeper question about the nature of educational evaluation.
-</p>
-
-<p>
-Should institutions primarily evaluate products, or should they evaluate reasoning?
-</p>
-
-<p>
-PKOS explores whether structured reasoning artifacts can preserve continuity of thought in environments where AI accelerates intellectual work.
-</p>
-
-<p>
-Whether such approaches prove useful remains an open research question. What is clear, however, is that institutions will increasingly need mechanisms capable of preserving the traceability of reasoning.
-</p>
-
-<p class="essay-meta">
-Author: Arne Mayoh<br>
-Project: PKOS — Personal Knowledge OS<br>
-Date: March 2026
-</p>
+  <div class="editorial-note">
+    <strong>Editorial note:</strong> this was the most PKOS-saturated piece found in this pass — its own page title called it a "PKOS Essay," it spelled out "PKOS (Personal Knowledge OS)" in full, and its closing byline credited "Project: PKOS." All updated to the current framing. Its three PIFR references also pointed to a lexicon anchor rather than the dedicated concept page used consistently elsewhere; standardized to match. One useful discovery going the other direction: this essay's "continuity threshold" link correctly used a dedicated page (<code>continuity-threshold.html</code>), confirming that page is real — worth going back and upgrading the lexicon-anchor version of this same link used in "Learning Beyond the Continuity Threshold." A strong, distinct fourth member of the pending "Learning &amp; Understanding" cluster: this one is specifically about institutional assessment, where the other three are systems-level, collaboration-mechanism, and personal-experiential.
+  </div>
 
 </main>
 
-<footer>
-© 2026 Audited State · AI & the Continuity of Human Understanding  
-<br>
-<span class="affiliation">
-– a contributor to <a href="https://cognitivesuperhighway.org" target="_blank" rel="noopener">CognitiveSuperHighway.org</a>
-</span>
+<footer class="site-footer">
+  <p>Part of the <a href="https://auditedstate.app/research/publications/">Audited State Research</a> essays.</p>
+  <p>© 2026 Audited State · AI &amp; the Continuity of Human Understanding</p>
+  <p>— a contributor to <a href="https://cognitivesuperhighway.org">CognitiveSuperHighway.org</a></p>
 </footer>
-
-<script>
-document.querySelector('.mobile-toggle').addEventListener('click',function(){
-document.querySelector('nav').classList.toggle('active');
-});
-</script>
 
 </body>
 </html>

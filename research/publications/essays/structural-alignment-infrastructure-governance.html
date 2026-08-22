@@ -1,90 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Structural Alignment | Audited State</title>
+<link rel="canonical" href="https://auditedstate.app/research/publications/essays/structural-alignment-infrastructure-governance.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F7F4ED; --paper-raised: #FBF9F4; --ink: #1B2430; --ink-soft: #3D4757;
+    --ink-faint: #6B7484; --route: #B8863B; --route-soft: #E4D3B0; --rule: #DAD3C2; --measure: 40em;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 17px; line-height: 1.7; }
+  a { color: var(--ink); text-decoration-color: var(--route); text-underline-offset: 3px; }
+  a:hover { color: var(--route); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--route); outline-offset: 2px; }
 
-  <title>Why Intention Matters for Judgement | Audited State</title>
-  <meta name="description" content="A claim essay arguing that judgement depends on intention, and that modern systems fail when they do not preserve the originating intention across time and systems." />
+  header.site-nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--rule); background: var(--paper-raised); }
+  .site-nav .brand { font-weight: 600; font-size: 0.95rem; text-decoration: none; letter-spacing: 0.01em; }
+  .site-nav nav { display: flex; flex-wrap: wrap; font-size: 0.85rem; }
+  .site-nav nav a { text-decoration: none; color: var(--ink-soft); margin-left: 1.25rem; }
+  .site-nav nav a:first-child { margin-left: 0; }
+  .site-nav nav a:hover { color: var(--route); }
 
-  <link rel="stylesheet" href="../../../style.css" />
-  <link rel="canonical" href="https://auditedstate.app/research/publications/essays/why-intention-matters-for-judgement.html" />
+  main { max-width: 46em; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+
+  .eyebrow { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--route); margin-bottom: 1rem; }
+  h1.title { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(2rem, 4.5vw, 2.75rem); line-height: 1.15; margin: 0 0 0.5rem; letter-spacing: -0.01em; }
+  p.subtitle { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.25rem; color: var(--ink-soft); margin: 0 0 2rem; }
+
+  hr.divider { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+  main p { margin: 0 0 1.3rem; max-width: var(--measure); }
+  h2 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 1.45rem; margin: 2.6rem 0 1.1rem; letter-spacing: -0.005em; }
+
+  .pillars-list { margin: 1.5rem 0 2rem; padding: 0; list-style: none; }
+  .pillars-list li { background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 4px; padding: 0.9rem 1.2rem; margin-bottom: 0.7rem; }
+  .pillars-list li strong { color: var(--ink); }
+
+  .marker-plaque { margin: 3.5rem 0 3rem; padding: 2rem 0; border-top: 2px solid var(--route-soft); border-bottom: 2px solid var(--route-soft); text-align: center; }
+  .marker-plaque p { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 1.35rem; line-height: 1.5; color: var(--ink); max-width: 34em; margin: 0 auto 1rem; }
+  .marker-plaque cite { font-family: 'Inter', sans-serif; font-style: normal; font-size: 0.85rem; font-weight: 600; color: var(--route); letter-spacing: 0.04em; }
+
+  .essay-declarations { margin: 2.5rem 0; font-size: 0.9rem; color: var(--ink-soft); }
+  .essay-declarations h3 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); margin: 1.4rem 0 0.4rem; }
+  .essay-declarations p { margin: 0 0 0.8rem; max-width: var(--measure); }
+
+  .editorial-note { margin: 2rem 0; padding: 1rem 1.25rem; background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 4px; font-size: 0.88rem; color: var(--ink-soft); }
+  .editorial-note strong { color: var(--ink); }
+
+  footer.site-footer { max-width: 46em; margin: 0 auto; padding: 0 1.5rem 3rem; font-size: 0.85rem; color: var(--ink-faint); }
+  footer.site-footer a { color: var(--ink-faint); }
+  footer.site-footer a:hover { color: var(--route); }
+  footer.site-footer p { margin: 0.3rem 0; }
+
+  @media (max-width: 600px) { .site-nav { padding: 1rem; } main { padding: 2rem 1.25rem 3.5rem; } }
+</style>
 </head>
+<body>
 
-<body class="essay-mode">
-
-<header>
-  <div class="nav-container">
-    <a href="/" class="logo">
-      Audited State
-      <span class="tagline">— preserving human agency</span>
-    </a>
-    <button class="mobile-toggle" aria-label="Toggle navigation">☰</button>
-    <nav>
-      <a href="/problem.html">Problem</a>
-      <a href="/concepts/lexicon.html">Lexicon</a>
-      <a href="/concept-map.html">Concept Map</a>
-      <a href="/architecture.html">Architecture</a>
-      <a href="/labs/">Labs</a>
-      <a href="/research/">Research</a>
-      <a href="/about/">About</a>
-    </nav>
-  </div>
+<header class="site-nav">
+  <a class="brand" href="https://auditedstate.app/">Audited State — preserving human agency</a>
+  <nav>
+    <a href="https://auditedstate.app/problem.html">Problem</a>
+    <a href="https://auditedstate.app/concepts/lexicon.html">Lexicon</a>
+    <a href="https://auditedstate.app/concept-map.html">Concept Map</a>
+    <a href="https://auditedstate.app/architecture.html">Architecture</a>
+    <a href="https://auditedstate.app/labs/">Labs</a>
+    <a href="https://auditedstate.app/research/">Research</a>
+    <a href="https://auditedstate.app/about/">About</a>
+  </nav>
 </header>
 
-<main class="essay">
-    <p class="essay-attribution">
-    "Alignment is no longer a model property. It is becoming a systems property. You cannot govern systems whose reasoning continuity is structurally broken."
-    — Arne Mayoh & Gemini 3 Flash
-    </p>
-    
-    <header class="essay-header">
-    <h1>Structural Alignment</h1>
-    <p class="essay-subtitle">Why AI Governance is Becoming an Infrastructure Problem</p>
-    </header>
-    
-    <hr>
-    
-    <section>
-    <p>The EU AI Act is often interpreted as a regulatory framework for AI models. But as AI systems distribute reasoning across agents, workflows, and memory layers, the deeper shift is structural. We are moving from a world of <strong>Output Governance</strong> to one of <strong>Continuity Governance</strong>.</p>
-    
-    <h2>The Gap in Modern Governance</h2>
-    <p>Modern AI systems increasingly fail through <a href="/concepts/semantic-drift.html">Semantic Drift</a> and fragmented responsibility. Governance assumes reasoning can be reconstructed after the fact, but distributed systems rarely preserve the continuity required for a reliable audit. This produces <strong>Shadow AI</strong>: systems that appear operationally successful while the reasoning behind them has already collapsed.</p>
-    </section>
-    
-    <section>
-    <h2>The Six Pillars of Structural Alignment</h2>
-    <p>To meet the demands of lifecycle governance and accountability, we must implement a new infrastructure stack:</p>
-    <ul>
-        <li><strong>Structural Alignment:</strong> Making alignment a property of the system's operational structure, not just its outputs.</li>
-        <li><strong>Decision Lineage:</strong> Preserving the traceable link between intention and outcome.</li>
-        <li><strong>Continuity of Agency:</strong> Ensuring humans carry a continuous understanding of the system's state.</li>
-        <li><strong>Audit and Repair:</strong> Actively restoring continuity when drift is detected.</li>
-        <li><strong>Stewardship of Structure:</strong> Shifting the focus to the custodianship of reasoning infrastructure.</li>
-        <li><strong>Visibility:</strong> Eliminating untraceable determination in autonomous execution.</li>
-    </ul>
-    </section>
-    
-    <section>
-    <h2>Governance as Infrastructure</h2>
-    <p>The EU AI Act signals that the trajectory is clear: governance is moving from static compliance to <strong>operational continuity infrastructure</strong>. We do not lose responsibility to AI; we lose the continuity required to exercise it. Structural Alignment is the answer to that loss.</p>
-    </section>
+<main>
+
+  <span class="eyebrow">AI Accountability &amp; Governance</span>
+  <h1 class="title">Structural Alignment</h1>
+  <p class="subtitle">Why AI governance is becoming an infrastructure problem</p>
+
+  <hr class="divider">
+
+  <p>The EU AI Act is often read as a regulatory framework for AI models. But as AI systems distribute reasoning across agents, workflows, and memory layers, the deeper shift is structural. We're moving from a world of output governance to one of continuity governance.</p>
+
+  <h2>The Gap in Modern Governance</h2>
+
+  <p>Modern AI systems increasingly fail through <a href="https://auditedstate.app/concepts/semantic-drift.html">semantic drift</a> and fragmented responsibility. Governance assumes reasoning can be reconstructed after the fact, but distributed systems rarely preserve the continuity a reliable audit actually requires. This produces Shadow AI: systems that appear operationally successful while the reasoning behind them has already collapsed.</p>
+
+  <h2>The Six Pillars of Structural Alignment</h2>
+
+  <p>Meeting the demands of lifecycle governance and accountability means implementing a new infrastructure stack:</p>
+
+  <ul class="pillars-list">
+    <li><strong>Structural Alignment</strong> — making alignment a property of the system's operational structure, not just its outputs.</li>
+    <li><strong>Decision Lineage</strong> — preserving the traceable link between intention and outcome.</li>
+    <li><strong>Continuity of Agency</strong> — ensuring humans carry a continuous understanding of the system's state.</li>
+    <li><strong>Audit and Repair</strong> — actively restoring continuity when drift is detected.</li>
+    <li><strong>Stewardship of Structure</strong> — shifting the focus toward custodianship of reasoning infrastructure.</li>
+    <li><strong>Visibility</strong> — eliminating untraceable determination in autonomous execution.</li>
+  </ul>
+
+  <h2>Governance as Infrastructure</h2>
+
+  <p>The EU AI Act signals a clear trajectory: governance is moving from static compliance to operational continuity infrastructure. We don't lose responsibility to AI. We lose the continuity required to exercise it. Structural alignment is the answer to that loss.</p>
+
+  <div class="marker-plaque">
+    <p>Alignment is no longer a model property. It is becoming a systems property. You cannot govern systems whose reasoning continuity is structurally broken.</p>
+    <cite>— Arne Mayoh</cite>
+  </div>
+
+  <div class="essay-declarations">
+    <h3>Declaration of Generative AI and AI-Assisted Technologies</h3>
+    <p>This essay was developed with the assistance of AI systems as a research and editorial tool, for drafting support and structural revision. The argument and conclusions are the author's own.</p>
+  </div>
+
+  <div class="editorial-note">
+    <strong>Editorial note:</strong> this file's own <code>&lt;title&gt;</code> tag read "Why Intention Matters for Judgement | Audited State" — copy-pasted wholesale from a completely different essay, with no relationship to this piece's actual content. Corrected to match what the page is actually about. Co-byline replaced with the standard Declaration. This essay was never linked from the main publications index, but its "Six Pillars of Structural Alignment" framework and direct engagement with the EU AI Act mark it clearly as the fifth member of the "AI Accountability &amp; Governance" cluster — arguably its most natural anchor piece, given how specifically it addresses the same EU AI Act framework that "Why AI Accountability Requires Reconstructable Reasoning" only references in passing.
+  </div>
+
 </main>
 
-<footer>
-  © 2026 Audited State · AI & the Continuity of Human Understanding
-  <br>
-  <span class="affiliation">
-    – a contributor to
-    <a href="https://cognitivesuperhighway.org" target="_blank" rel="noopener">CognitiveSuperHighway.org</a>
-  </span>
+<footer class="site-footer">
+  <p>Part of the <a href="https://auditedstate.app/research/publications/">Audited State Research</a> essays.</p>
+  <p>© 2026 Audited State · AI &amp; the Continuity of Human Understanding</p>
+  <p>— a contributor to <a href="https://cognitivesuperhighway.org">CognitiveSuperHighway.org</a></p>
 </footer>
-
-<script>
-document.querySelector('.mobile-toggle').addEventListener('click', function() {
-  document.querySelector('nav').classList.toggle('active');
-});
-</script>
 
 </body>
 </html>

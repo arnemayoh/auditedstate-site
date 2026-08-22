@@ -4,579 +4,164 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Coherence of Understanding | Audited State</title>
-<link rel="stylesheet" href="../../../style.css">
 <link rel="canonical" href="https://auditedstate.app/research/publications/essays/coherence-of-understanding.html">
-</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F7F4ED; --paper-raised: #FBF9F4; --ink: #1B2430; --ink-soft: #3D4757;
+    --ink-faint: #6B7484; --route: #B8863B; --route-soft: #E4D3B0; --rule: #DAD3C2; --measure: 40em;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 17px; line-height: 1.7; }
+  a { color: var(--ink); text-decoration-color: var(--route); text-underline-offset: 3px; }
+  a:hover { color: var(--route); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--route); outline-offset: 2px; }
 
+  header.site-nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--rule); background: var(--paper-raised); }
+  .site-nav .brand { font-weight: 600; font-size: 0.95rem; text-decoration: none; letter-spacing: 0.01em; }
+  .site-nav nav { display: flex; flex-wrap: wrap; font-size: 0.85rem; }
+  .site-nav nav a { text-decoration: none; color: var(--ink-soft); margin-left: 1.25rem; }
+  .site-nav nav a:first-child { margin-left: 0; }
+  .site-nav nav a:hover { color: var(--route); }
+
+  main { max-width: 46em; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+
+  .eyebrow { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--route); margin-bottom: 1rem; }
+  h1.title { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(2rem, 4.5vw, 2.75rem); line-height: 1.15; margin: 0 0 0.5rem; letter-spacing: -0.01em; }
+  p.subtitle { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.25rem; color: var(--ink-soft); margin: 0 0 2rem; }
+
+  .sequence-box { background: var(--paper-raised); border-left: 3px solid var(--route); border-radius: 2px; padding: 1.1rem 1.4rem; margin: 0 0 2.5rem; }
+  .sequence-box .waypoints-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--route); display: block; margin-bottom: 0.7rem; }
+  .sequence-box ol { margin: 0; padding-left: 1.4rem; }
+  .sequence-box li { margin-bottom: 0.35rem; font-size: 0.95rem; }
+  .sequence-box li:last-child { margin-bottom: 0; }
+  .sequence-box li.current { font-weight: 600; color: var(--ink); list-style: none; margin-left: -1.4rem; padding-left: 0; }
+  .sequence-box li.current::before { content: "→ "; color: var(--route); }
+
+  hr.divider { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+  main p { margin: 0 0 1.3rem; max-width: var(--measure); }
+  h2 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 1.45rem; margin: 2.6rem 0 1.1rem; letter-spacing: -0.005em; }
+
+  figure.essay-figure { margin: 2rem 0; max-width: var(--measure); }
+  figure.essay-figure img { width: 100%; max-height: 26rem; object-fit: cover; height: auto; border-radius: 4px; display: block; }
+  figure.essay-figure figcaption { font-size: 0.85rem; color: var(--ink-faint); margin-top: 0.6rem; font-style: italic; }
+
+  .route-map { background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 4px; padding: 1rem 1.25rem; margin: 1.8rem 0; font-size: 0.95rem; color: var(--ink-soft); text-align: center; }
+  .route-map .arrow { color: var(--route); margin: 0 0.4em; }
+
+  .marker-plaque { margin: 3.5rem 0 3rem; padding: 2rem 0; border-top: 2px solid var(--route-soft); border-bottom: 2px solid var(--route-soft); text-align: center; }
+  .marker-plaque p { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 1.35rem; line-height: 1.5; color: var(--ink); max-width: 34em; margin: 0 auto 1rem; }
+  .marker-plaque cite { font-family: 'Inter', sans-serif; font-style: normal; font-size: 0.85rem; font-weight: 600; color: var(--route); letter-spacing: 0.04em; }
+
+  .essay-declarations { margin: 2.5rem 0; font-size: 0.9rem; color: var(--ink-soft); }
+  .essay-declarations h3 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); margin: 1.4rem 0 0.4rem; }
+  .essay-declarations p { margin: 0 0 0.8rem; max-width: var(--measure); }
+
+  .editorial-note { margin: 2rem 0; padding: 1rem 1.25rem; background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 4px; font-size: 0.88rem; color: var(--ink-soft); }
+  .editorial-note strong { color: var(--ink); }
+
+  footer.site-footer { max-width: 46em; margin: 0 auto; padding: 0 1.5rem 3rem; font-size: 0.85rem; color: var(--ink-faint); }
+  footer.site-footer a { color: var(--ink-faint); }
+  footer.site-footer a:hover { color: var(--route); }
+  footer.site-footer p { margin: 0.3rem 0; }
+
+  @media (max-width: 600px) { .site-nav { padding: 1rem; } main { padding: 2rem 1.25rem 3.5rem; } }
+</style>
+</head>
 <body>
 
-<header>
-<div class="nav-container">
-<a href="/" class="logo">
-  Audited State
-  <span class="tagline">— preserving human agency</span>
-</a>
-<button class="mobile-toggle">☰</button>
-<nav>
-<a href="/problem.html">Problem</a>
-<a href="/concepts/lexicon.html">Lexicon</a>
-<a href="/concept-map.html">Concept Map</a>
-<a href="/architecture.html">Architecture</a>
-<a href="/labs/">Labs</a>
-<a href="/research/">Research</a>
-<a href="/about/">About</a>
-</nav>
-</div>
+<header class="site-nav">
+  <a class="brand" href="https://auditedstate.app/">Audited State — preserving human agency</a>
+  <nav>
+    <a href="https://auditedstate.app/problem.html">Problem</a>
+    <a href="https://auditedstate.app/concepts/lexicon.html">Lexicon</a>
+    <a href="https://auditedstate.app/concept-map.html">Concept Map</a>
+    <a href="https://auditedstate.app/architecture.html">Architecture</a>
+    <a href="https://auditedstate.app/labs/">Labs</a>
+    <a href="https://auditedstate.app/research/">Research</a>
+    <a href="https://auditedstate.app/about/">About</a>
+  </nav>
 </header>
 
-<main class="essay">
+<main>
 
-<p class="essay-attribution">
-"Operational systems can continue functioning long after coherence of understanding begins to fail."
-— Arne Mayoh & ChatGPT 5.5
-</p>
+  <span class="eyebrow">Interpretation, Drift &amp; Cognitive Continuity — Essay 4 of 7</span>
+  <h1 class="title">Coherence of Understanding</h1>
+  <p class="subtitle">Why civilization increasingly struggles to preserve meaning across distributed systems</p>
 
-<header class="essay-header">
-<h1>Coherence of Understanding</h1>
-<p class="essay-subtitle">
-Why Civilization Increasingly Struggles to Preserve Meaning Across Distributed Systems
-</p>
-</header>
+  <div class="sequence-box">
+    <span class="waypoints-label">Reading Sequence</span>
+    <ol>
+      <li><a href="https://auditedstate.app/research/publications/essays/data-representation-of-truth.html">1. Data as Representation of Truth</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/drift-drift-drift.html">2. Drift, Drift... DRIFT!</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/reasoning-drift.html">3. Reasoning Drift</a></li>
+      <li class="current">4. Coherence of Understanding</li>
+      <li><a href="https://auditedstate.app/research/publications/essays/legible-ambiguity.html">5. Why Stable Understanding Requires Legible Ambiguity</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/traffic-of-reasoning.html">6. The Traffic of Reasoning</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/make-the-ai-understand.html">7. Make the AI Understand</a></li>
+    </ol>
+  </div>
 
-<nav class="recommended-essays">
-<strong>Guided Narrative Path</strong>
-<ul>
-<li><a href="/research/publications/essays/data-representation-of-truth.html">Data as Representation of Truth</a></li>
-<li><a href="/research/publications/essays/reasoning-drift.html">Reasoning Drift</a></li>
-<li><strong>Coherence of Understanding (Current)</strong></li>
-<li><a href="/research/publications/essays/the-reconstruction-bankruptcy.html">The Horizon of Reconstruction Bankruptcy</a></li>
-</ul>
-</nav>
+  <hr class="divider">
 
-<hr>
+  <figure class="essay-figure">
+    <img src="https://auditedstate.app/assets/sense-of-continuity1.jpg" alt="A symbolic visualization of continuity, reasoning artifacts, stable intent, and the Cognitive Super Highway.">
+    <figcaption>The transition from fragmented information systems toward continuity-preserving cognitive infrastructure.</figcaption>
+  </figure>
 
-<section>
+  <p>Civilization is increasingly optimizing for operational coherence while losing coherence of understanding. Modern systems are extraordinarily good at preserving operations — data flows, transactions complete, services stay online — and yet more and more people report a strange, hard-to-name condition: things still function, but fewer people actually understand what's happening while they do. Organizations keep operating while shared understanding fragments underneath them. AI systems generate coherent-looking output while the reasoning behind it quietly drifts. We usually reach for words like confusion, complexity, or misalignment to describe this. A more precise word might be incoherence.</p>
 
-<figure class="essay-figure">
-<img src="/assets/sense-of-continuity1.jpg"
-alt="A symbolic visualization of continuity, reasoning artifacts, stable intent, and the Cognitive Super Highway."
-style="width:100%; max-width:960px; border-radius:8px;">
-<figcaption>
-The transition from fragmented information systems toward continuity-preserving cognitive infrastructure.
-</figcaption>
-</figure>
+  <h2>What Coherence Originally Meant</h2>
 
-<p>
-Civilization increasingly optimizes for operational coherence while losing coherence of understanding.
-</p>
+  <p>Coherence gets used narrowly today — stable phase relationships in physics, synchronization in engineering, consistency across state transitions in computing. But its older, plainer meaning was simply that something holds together intelligibly: it can be followed, it stays understandable across transitions, its parts stay meaningfully related to each other. In linguistics, coherence is what makes sentences add up to meaning rather than random fragments. In organizations, it's whether people still share an interpretable sense of purpose and state. Across every domain it shows up in, the same pattern holds — coherence is the condition where relationships stay stable enough for understanding to persist, and incoherence is what happens when those relationships break down.</p>
 
-<p>
-Modern systems are extraordinarily good at preserving operations.
-Data flows.
-Transactions complete.
-Messages synchronize.
-Services remain online.
-Outputs continue to arrive.
-</p>
+  <h2>Drift Begins at Representation, Not Computation</h2>
 
-<p>
-And yet many people increasingly experience a strange and difficult-to-describe condition:
-</p>
+  <p>Even a phrase as simple as "one apple" turns out to be less precise than it looks the moment you actually press on it:</p>
 
-<blockquote>
-Things still function — but fewer people genuinely understand what is happening.
-</blockquote>
+  <div class="route-map">Is a bitten apple still one apple? A sliced one? A rotten one? An apple in a legal dispute, or a nutritional ledger, or an image classifier?</div>
 
-<p>
-Organizations continue operating while shared understanding fragments.
-AI systems generate coherent-looking outputs while reasoning drifts.
-Institutions preserve procedure while losing interpretability.
-Communication volume increases while mutual understanding declines.
-</p>
+  <p>The object itself never fully survives being turned into a symbol. "Apple" is a negotiated compression of whatever context it's being used in — which means drift doesn't begin during computation, the way most discussions of AI state transformation quietly assume. It begins during representation itself. "State" is already an interpreted approximation of understanding, not direct access to reality, so systems inherit interpretive drift before any computation even starts. The real challenge isn't preserving state transitions correctly. It's preserving coherence of understanding across interpretations that were already unstable on arrival.</p>
 
-<p>
-We often describe this condition using words like:
-confusion,
-misalignment,
-complexity,
-fragmentation,
-or drift.
-</p>
+  <h2>Local Accuracy, Global Incoherence</h2>
 
-<p>
-But another word may be more fundamental:
-</p>
+  <p>Once meaning has been compressed into data, systems have to reconstruct it later — and the original context that produced it is no longer fully present to draw on. What's left is inference: of intent, of assumptions, of relational significance that isn't deterministic to recover, only interpretive. That's why a system can be locally accurate and globally incoherent at the same time — each component operating correctly relative to its own narrow slice of representation, while the broader continuity of understanding quietly collapses around it. The practical result is more effort spent reconstructing understanding than accumulating it: <a href="https://auditedstate.app/concepts/reconstruction-cost.html">reconstruction cost</a>, showing up again from a different angle.</p>
 
-<blockquote>
-incoherence.
-</blockquote>
+  <h2>Two Different Kinds of Coherence</h2>
 
-</section>
+  <p>Modern infrastructure is excellent at operational coherence — packets arrive, databases synchronize, distributed systems maintain transactional integrity. None of that is the same thing as coherence of understanding, and AI-mediated systems make the gap between them sharper than ever: an AI system can be extraordinarily good at generating locally coherent output, while that output steadily detaches from the intention, context, and assumptions that were supposed to be behind it. The result is a genuinely dangerous illusion — the appearance of understanding, without the continuity that real understanding actually depends on.</p>
 
-<section>
+  <h2>Why This Keeps Recurring Across Every Field</h2>
 
-<h2>The Original Meaning of Coherence</h2>
+  <p>Physics encounters coherence in relational stability across fields and waves. Biology encounters it in living coordination. Organizations encounter it in shared operational understanding. Governance encounters it in responsibility and justification. Each field arrived at roughly the same underlying pattern independently: systems fail when relational continuity breaks, not when information runs out. Storage preserves symbols. Logs preserve events. None of that automatically preserves meaning, interpretation, or continuity of understanding — which is a different, harder thing to hold onto than any of them.</p>
 
-<p>
-Today, coherence is often used in highly specialized ways.
-In physics it may describe stable phase relationships.
-In engineering it may refer to synchronization.
-In computing it may describe consistency across state transitions.
-</p>
+  <h2>What Continuity of Understanding Actually Requires</h2>
 
-<p>
-But historically, the word coherence simply meant:
-</p>
+  <p>Continuity of understanding isn't just memory. It's the condition under which reasoning stays reconstructable, transferable, and actionable across time, systems, and people, without unacceptable loss of meaning or responsibility along the way. Break continuity, and coherence degrades. Break coherence, and agency becomes unstable. Break agency, and governance fragments. Civilization already has enormous infrastructure for preserving other kinds of continuity — roads, power grids, financial systems, legal institutions. What it hasn't yet learned to preserve structurally is continuity of understanding itself, and as reasoning spreads across humans, organizations, AI systems, and automated decision chains together, understanding can no longer be assumed to stay local or reconstructable on its own. That's the deeper argument behind moving from an Information Superhighway, built to move data, toward a Cognitive Super Highway, built to keep understanding coherent while it moves.</p>
 
-<blockquote>
-that something holds together intelligibly.
-</blockquote>
+  <div class="marker-plaque">
+    <p>A system can keep running long after the understanding behind it has quietly stopped holding together.</p>
+    <cite>— Arne Mayoh</cite>
+  </div>
 
-<p>
-Something coherent can be followed.
-It remains understandable across transitions.
-Its parts remain meaningfully related to one another.
-</p>
+  <div class="essay-declarations">
+    <h3>Declaration of Generative AI and AI-Assisted Technologies</h3>
+    <p>This essay was developed with the assistance of AI systems as a research and editorial tool, for drafting support and structural revision. The argument and conclusions are the author's own.</p>
+  </div>
 
-<p>
-In linguistics, coherence describes the condition under which sentences form understandable meaning rather than random fragments.
-In cognition, coherence describes stable mental models.
-In organizations, coherence describes whether people still share an interpretable understanding of purpose and state.
-</p>
-
-<p>
-Across domains, coherence repeatedly appears as a condition where:
-</p>
-
-<blockquote>
-relationships remain sufficiently stable for understanding to persist.
-</blockquote>
-
-<p>
-And incoherence emerges when those relationships break down.
-</p>
-
-</section>
-
-<section>
-
-<h2>Data Is Not Reality</h2>
-
-<p>
-One of the deepest assumptions embedded into modern systems is the idea that data represents reality directly.
-</p>
-
-<p>
-But data is never reality itself.
-</p>
-
-<p>
-Data is already interpreted representation.
-</p>
-
-<p>
-Before any computation occurs, reality has already passed through multiple transformations:
-</p>
-
-<blockquote>
-Reality → Interpretation → Representation → Data
-</blockquote>
-
-<p>
-A human perceives something.
-Meaning is extracted from experience.
-The experience is compressed into symbols.
-The symbols are externalized as data.
-</p>
-
-<p>
-Even simple objects reveal this instability.
-</p>
-
-<p>
-Consider the phrase:
-</p>
-
-<blockquote>
-“1 apple”
-</blockquote>
-
-<p>
-At first glance this appears precise.
-But the precision is largely symbolic.
-</p>
-
-<p>
-Is a bitten apple still one apple?
-A sliced apple?
-A rotten apple?
-An apple in a legal dispute?
-An apple in nutritional accounting?
-An apple in an image classifier?
-</p>
-
-<p>
-The object itself never fully survives representation.
-</p>
-
-<p>
-The symbol “apple” is a negotiated compression of contextual interpretation.
-</p>
-
-<p>
-This means something profound:
-</p>
-
-<blockquote>
-Drift does not begin during computation.
-Drift begins during representation itself.
-</blockquote>
-
-<p>
-Current discussions around AI state transformation often assume that drift emerges during processing, transmission, or optimization.
-But “state” itself is already interpreted representation — a compressed approximation of current understanding rather than direct access to reality.
-Systems therefore inherit interpretive drift before computation even begins.
-The challenge is not merely preserving state transitions correctly, but preserving coherence of understanding across evolving interpretations.
-</p>
-
-</section>
-
-<section>
-
-<h2>The Reconstruction Problem</h2>
-
-<p>
-Once interpretation has been externalized into symbols and data, systems later attempt to reconstruct meaning from those representations.
-</p>
-
-<p>
-But the original contextual field is no longer fully present.
-</p>
-
-<p>
-The system — whether human or AI — must infer:
-</p>
-
-<ul>
-<li>intent,</li>
-<li>context,</li>
-<li>assumptions,</li>
-<li>meaning,</li>
-<li>and relational significance.</li>
-</ul>
-
-<p>
-This reconstruction process is not deterministic.
-It is interpretive.
-</p>
-
-<p>
-And interpretation introduces divergence.
-</p>
-
-<p>
-This is why systems can appear locally accurate while globally incoherent.
-Each component may operate correctly relative to its limited representation while the broader continuity of understanding collapses.
-</p>
-
-<p>
-The result is increasing reconstruction cost:
-</p>
-
-<blockquote>
-more effort spent reconstructing understanding than accumulating it.
-</blockquote>
-
-</section>
-
-<section>
-
-<h2>Operational Coherence vs Understanding Coherence</h2>
-
-<p>
-Modern infrastructure is extremely good at preserving operational coherence.
-</p>
-
-<p>
-Packets arrive.
-Databases synchronize.
-Services replicate state.
-Distributed systems maintain transactional integrity.
-</p>
-
-<p>
-But preserving operational continuity is not the same as preserving coherence of understanding.
-</p>
-
-<p>
-A system may remain operationally stable while becoming semantically incoherent.
-</p>
-
-<p>
-This distinction matters increasingly under AI-mediated systems.
-</p>
-
-<p>
-AI systems are extraordinarily capable at generating locally coherent outputs.
-But local coherence does not guarantee continuity of meaning across time, actors, or systems.
-</p>
-
-<p>
-Outputs can appear semantically complete while becoming progressively detached from:
-</p>
-
-<ul>
-<li>originating intention,</li>
-<li>shared context,</li>
-<li>underlying assumptions,</li>
-<li>or present interpreted understanding of state.</li>
-</ul>
-
-<p>
-This produces a dangerous illusion:
-</p>
-
-<blockquote>
-the appearance of understanding without preserved continuity of understanding.
-</blockquote>
-
-</section>
-
-<section>
-
-<h2>Coherence as a Systems Requirement</h2>
-
-<p>
-Multiple fields increasingly rediscover coherence as a requirement for stable systems.
-</p>
-
-<p>
-Physics encounters coherence in relational stability across fields and waves.
-Biology encounters coherence in living coordination.
-Organizations encounter coherence in shared operational understanding.
-Governance encounters coherence in responsibility and justification.
-AI systems encounter coherence in interpretability and alignment.
-</p>
-
-<p>
-The domains differ.
-But the underlying pattern is remarkably similar:
-</p>
-
-<blockquote>
-systems fail when relational continuity breaks.
-</blockquote>
-
-<p>
-We preserved information.
-But information alone does not preserve coherence.
-</p>
-
-<p>
-Storage preserves symbols.
-Logs preserve events.
-Databases preserve state.
-</p>
-
-<p>
-None of these automatically preserve:
-</p>
-
-<ul>
-<li>meaning,</li>
-<li>interpretation,</li>
-<li>intent,</li>
-<li>or continuity of understanding.</li>
-</ul>
-
-</section>
-
-<section>
-
-<h2>Continuity of Understanding</h2>
-
-<p>
-Continuity of understanding is not merely memory.
-</p>
-
-<p>
-It is the condition under which reasoning remains reconstructable, transferable, and actionable across time, systems, and actors without unacceptable loss of meaning or responsibility.
-</p>
-
-<p>
-This is fundamentally a coherence problem.
-</p>
-
-<p>
-Because understanding depends on relationships remaining sufficiently stable for interpretation to persist.
-</p>
-
-<p>
-Break continuity, and coherence degrades.
-Break coherence, and agency becomes unstable.
-Break agency, and governance becomes fragmented.
-</p>
-
-<p>
-The challenge emerging under AI acceleration is therefore not simply:
-</p>
-
-<blockquote>
-Can systems compute correctly?
-</blockquote>
-
-<p>
-But increasingly:
-</p>
-
-<blockquote>
-Can systems preserve coherent understanding across distributed interpretation?
-</blockquote>
-
-</section>
-
-<section>
-
-<h2>The Hidden Infrastructure Problem</h2>
-
-<p>
-Civilization already contains enormous infrastructure dedicated to preserving continuity:
-</p>
-
-<ul>
-<li>roads preserve transportation continuity,</li>
-<li>power grids preserve electrical continuity,</li>
-<li>financial systems preserve transactional continuity,</li>
-<li>legal systems preserve institutional continuity.</li>
-</ul>
-
-<p>
-But modern systems increasingly depend on something we have not yet learned to preserve structurally:
-</p>
-
-<blockquote>
-continuity of understanding itself.
-</blockquote>
-
-<p>
-As reasoning becomes distributed across:
-</p>
-
-<ul>
-<li>humans,</li>
-<li>organizations,</li>
-<li>AI systems,</li>
-<li>interfaces,</li>
-<li>agents,</li>
-<li>and automated decision chains,</li>
-</ul>
-
-<p>
-understanding can no longer be assumed to remain local, stable, or reconstructable.
-</p>
-
-<p>
-And without continuity of understanding, coherence gradually collapses into reconstruction.
-</p>
-
-</section>
-
-<section>
-
-<h2>Beyond the Information Superhighway</h2>
-
-<p>
-The information superhighway solved the problem of transporting information across distance and systems.
-</p>
-
-<p>
-But distributed AI-mediated cognition introduces a different challenge:
-</p>
-
-<blockquote>
-preserving coherent understanding across distributed interpretation.
-</blockquote>
-
-<p>
-The problem-space increasingly crosses boundaries between computer science, linguistics, governance, cognition, systems engineering, organizational theory, philosophy, and AI research.
-Yet these disciplines often operate with incompatible assumptions about:
-</p>
-
-<ul>
-<li>meaning,</li>
-<li>state,</li>
-<li>truth,</li>
-<li>representation,</li>
-<li>continuity,</li>
-<li>interpretation,</li>
-<li>and responsibility.</li>
-</ul>
-
-<p>
-As AI-mediated systems become globally interconnected, continuity of understanding may require new forms of international and interdisciplinary coordination focused not only on computation or governance, but on preserving coherence across distributed systems of interpretation.
-</p>
-
-<p>
-The challenge is not to centralize thought or impose universal ontology, but to develop shared continuity infrastructure:
-</p>
-
-<ul>
-<li>interoperable frameworks,</li>
-<li>traceable reasoning continuity,</li>
-<li>ambiguity visibility,</li>
-<li>shared vocabularies,</li>
-<li>reasoning artifacts,</li>
-<li>and stewardship structures capable of preserving coherent understanding across accelerating systems and institutions.</li>
-</ul>
-
-<p>
-This may ultimately require an upgrade:
-</p>
-
-<blockquote>
-from the Information Superhighway to the Cognitive Super Highway.
-</blockquote>
-
-</section>
-
-<hr>
-
-<section class="essay-footer-meta">
-
-<h3>Intention</h3>
-<p>
-To establish coherence of understanding as a foundational infrastructure problem emerging under distributed AI-mediated cognition.
-</p>
-
-<h3>Justification</h3>
-<p>
-Because systems increasingly preserve operational continuity while losing continuity of understanding, producing reconstruction overload, semantic drift, and governance instability.
-</p>
-
-<h3>Author & Ownership</h3>
-<p>
-<strong>Arne Mayoh & ChatGPT 5.5</strong>. This essay is a <a href="/concepts/pifr.html">PIFR</a> intended for the continuation of civilizational reasoning.
-</p>
-
-<h3>Way Forward</h3>
-<p>
-The transition requires continuity-preserving infrastructure capable of supporting interpretable, governable, and agent-agnostic cognitive continuity under ambiguity, drift, and distributed reasoning conditions.
-</p>
-
-</section>
-
-<footer class="essay-footer">
-<p>Part of the <a href="/research/index.html">Audited State Research</a> series.</p>
-</footer>
+  <div class="editorial-note">
+    <strong>Editorial note:</strong> this essay's original "Guided Narrative Path" showed the same discrepancy already flagged in <em>Data as Representation of Truth</em> — a four-essay list that doesn't match this series' six-essay listing on the main publications index, and the same mismatched link to "The Horizon of Reconstruction Bankruptcy" (pointing to a "the-reconstruction-bankruptcy.html" URL rather than the site's actual "reconstruction-bankruptcy.html"). Since this is now the second essay with the identical discrepancy, it's worth checking whether every essay in this series carries the same stale sidebar rather than treating each one as a separate, one-off fix.
+  </div>
 
 </main>
 
-<footer>
-© 2026 Audited State · AI & the Continuity of Human Understanding
-<br>
-<span class="affiliation">
-– a contributor to <a href="https://cognitivesuperhighway.org" target="_blank" rel="noopener">CognitiveSuperHighway.org</a>
-</span>
+<footer class="site-footer">
+  <p>Essay 4 of the <a href="https://auditedstate.app/research/publications/">Interpretation, Drift &amp; Cognitive Continuity series</a>.</p>
+  <p>© 2026 Audited State · AI &amp; the Continuity of Human Understanding</p>
+  <p>— a contributor to <a href="https://cognitivesuperhighway.org">CognitiveSuperHighway.org</a></p>
 </footer>
 
 </body>

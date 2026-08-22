@@ -1,212 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hybrid Intelligence Needs Memory | Audited State</title>
-<link rel="stylesheet" href="../../../style.css" />
-<link rel="canonical" href="https://auditedstate.app/research/publications/essays/hybrid-intelligence-needs-memory.html" />
-</head>
+<link rel="canonical" href="https://auditedstate.app/research/publications/essays/hybrid-intelligence-needs-memory.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F7F4ED; --paper-raised: #FBF9F4; --ink: #1B2430; --ink-soft: #3D4757;
+    --ink-faint: #6B7484; --route: #B8863B; --route-soft: #E4D3B0; --rule: #DAD3C2; --measure: 40em;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 17px; line-height: 1.7; }
+  a { color: var(--ink); text-decoration-color: var(--route); text-underline-offset: 3px; }
+  a:hover { color: var(--route); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--route); outline-offset: 2px; }
 
+  header.site-nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--rule); background: var(--paper-raised); }
+  .site-nav .brand { font-weight: 600; font-size: 0.95rem; text-decoration: none; letter-spacing: 0.01em; }
+  .site-nav nav { display: flex; flex-wrap: wrap; font-size: 0.85rem; }
+  .site-nav nav a { text-decoration: none; color: var(--ink-soft); margin-left: 1.25rem; }
+  .site-nav nav a:first-child { margin-left: 0; }
+  .site-nav nav a:hover { color: var(--route); }
+
+  main { max-width: 46em; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+
+  .eyebrow { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--route); margin-bottom: 1rem; }
+  h1.title { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(2rem, 4.5vw, 2.75rem); line-height: 1.15; margin: 0 0 0.5rem; letter-spacing: -0.01em; }
+  p.subtitle { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.25rem; color: var(--ink-soft); margin: 0 0 2rem; }
+
+  hr.divider { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+  main p { margin: 0 0 1.3rem; max-width: var(--measure); }
+  h2 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 1.45rem; margin: 2.6rem 0 1.1rem; letter-spacing: -0.005em; }
+
+  .marker-plaque { margin: 3.5rem 0 3rem; padding: 2rem 0; border-top: 2px solid var(--route-soft); border-bottom: 2px solid var(--route-soft); text-align: center; }
+  .marker-plaque p { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 1.35rem; line-height: 1.5; color: var(--ink); max-width: 34em; margin: 0 auto 1rem; }
+  .marker-plaque cite { font-family: 'Inter', sans-serif; font-style: normal; font-size: 0.85rem; font-weight: 600; color: var(--route); letter-spacing: 0.04em; }
+
+  .essay-declarations { margin: 2.5rem 0; font-size: 0.9rem; color: var(--ink-soft); }
+  .essay-declarations h3 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); margin: 1.4rem 0 0.4rem; }
+  .essay-declarations p { margin: 0 0 0.8rem; max-width: var(--measure); }
+
+  .editorial-note { margin: 2rem 0; padding: 1rem 1.25rem; background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 4px; font-size: 0.88rem; color: var(--ink-soft); }
+  .editorial-note strong { color: var(--ink); }
+
+  footer.site-footer { max-width: 46em; margin: 0 auto; padding: 0 1.5rem 3rem; font-size: 0.85rem; color: var(--ink-faint); }
+  footer.site-footer a { color: var(--ink-faint); }
+  footer.site-footer a:hover { color: var(--route); }
+  footer.site-footer p { margin: 0.3rem 0; }
+
+  @media (max-width: 600px) { .site-nav { padding: 1rem; } main { padding: 2rem 1.25rem 3.5rem; } }
+</style>
+</head>
 <body>
 
-<header>
-<div class="nav-container">
-<a href="/" class="logo">
-  Audited State
-  <span class="tagline">— preserving human agency</span>
-</a>
-<button class="mobile-toggle" aria-label="Toggle navigation">☰</button>
-<nav>
-<a href="/problem.html">Problem</a>
-<a href="/concepts/lexicon.html">Lexicon</a>
-<a href="/concept-map.html">Concept Map</a>
-<a href="/architecture.html">Architecture</a>
-<a href="/research/">Research</a>
-<a href="/about/">About</a>
-</nav>
-</div>
+<header class="site-nav">
+  <a class="brand" href="https://auditedstate.app/">Audited State — preserving human agency</a>
+  <nav>
+    <a href="https://auditedstate.app/problem.html">Problem</a>
+    <a href="https://auditedstate.app/concepts/lexicon.html">Lexicon</a>
+    <a href="https://auditedstate.app/concept-map.html">Concept Map</a>
+    <a href="https://auditedstate.app/architecture.html">Architecture</a>
+    <a href="https://auditedstate.app/labs/">Labs</a>
+    <a href="https://auditedstate.app/research/">Research</a>
+    <a href="https://auditedstate.app/about/">About</a>
+  </nav>
 </header>
 
 <main>
 
-<h1>Hybrid Intelligence Needs Memory</h1>
+  <span class="eyebrow">Learning &amp; Understanding — cluster pending final grouping</span>
+  <h1 class="title">Hybrid Intelligence Needs Memory</h1>
+  <p class="subtitle">Human–AI collaboration produces reasoning. Most systems don't preserve it.</p>
 
-<p class="lead">
-Human–AI collaboration produces reasoning.  
-But most systems do not preserve it.
-</p>
+  <hr class="divider">
 
-<hr>
+  <p>The field of hybrid intelligence explores how humans and AI systems can work together, combining complementary strengths in reasoning, creativity, and decision-making. It's usually framed around interaction — how prompts are formed, how outputs are interpreted, how humans guide or correct the system. But something essential is missing from that frame.</p>
 
-<p>
-The field of <em>hybrid intelligence</em> explores how humans and artificial intelligence
-systems can work together — combining complementary strengths in reasoning,
-creativity, and decision-making.
-</p>
+  <h2>The Missing Layer</h2>
 
-<p>
-This collaboration is often framed in terms of interaction:
-how prompts are formed, how outputs are interpreted,
-and how humans guide or correct AI systems.
-</p>
+  <p>Hybrid intelligence produces reasoning, not just outputs. Every interaction carries assumptions about the problem, intentions behind the prompt, intermediate interpretations and adjustments, and implicit judgments made by both the human and the system. Almost none of that reasoning survives past the interaction itself. The system produces a result. The reasoning that actually led there is lost.</p>
 
-<p>
-But something essential is missing.
-</p>
+  <h2>From Interaction to Continuity</h2>
 
-<hr>
+  <p>For hybrid intelligence to support real collaboration over time, it has to move past interaction toward continuity — treating reasoning as something that can be preserved, not just performed. This research programme approaches that through <a href="https://auditedstate.app/concepts/collaborative-conjecture.html">Collaborative Conjecture</a>, where human–AI interaction produces structured reasoning artifacts instead of exchanges that vanish once the conversation ends. Those artifacts — <a href="https://auditedstate.app/concepts/pifr.html">PIFRs</a> — carry intention, assumptions, and justification forward rather than leaving them behind.</p>
 
-<h2>The missing layer</h2>
+  <h2>Why Memory Matters</h2>
 
-<p>
-Hybrid intelligence produces reasoning — not just outputs.
-</p>
+  <p>Without continuity, every interaction is effectively a reset. The system may still generate useful output, but it doesn't accumulate understanding — leading to the same repeated reconstruction of context, the same loss of prior reasoning, the same difficulty ever evaluating how a conclusion was actually reached. When reasoning is preserved instead, it becomes possible to revisit and refine earlier thinking, trace how an idea actually evolved, and build cumulative knowledge across interactions rather than starting fresh each time. This is exactly what the <a href="https://auditedstate.app/concepts/persistent-semantic-scaffold.html">Persistent Semantic Scaffold</a> is built to support — keeping reasoning artifacts genuinely available over time, not just logged somewhere unreachable.</p>
 
-<p>
-Each interaction involves:
-</p>
+  <h2>Beyond Collaboration Alone</h2>
 
-<ul>
-<li>assumptions about the problem</li>
-<li>intentions behind the prompt</li>
-<li>intermediate interpretations and adjustments</li>
-<li>implicit judgments made by both human and system</li>
-</ul>
+  <p>Hybrid intelligence, as a field, focuses on how humans and AI work together. But collaboration by itself isn't enough — if the reasoning produced in that collaboration can't be preserved and reconstructed, it stays fragile and hard to trust, no matter how good the interaction felt in the moment. For hybrid intelligence to become genuinely accountable and cumulative, it needs memory, not just better interaction.</p>
 
-<p>
-Yet this reasoning rarely persists beyond the interaction itself.
-</p>
+  <div class="marker-plaque">
+    <p>Without memory, collaboration stays ephemeral. With memory, it becomes a system capable of learning over time.</p>
+    <cite>— Arne Mayoh</cite>
+  </div>
 
-<p><strong>
-The system produces results, but the reasoning that led to them is lost.
-</strong></p>
+  <div class="essay-declarations">
+    <h3>Declaration of Generative AI and AI-Assisted Technologies</h3>
+    <p>This essay was developed with the assistance of AI systems as a research and editorial tool, for drafting support and structural revision. The argument and conclusions are the author's own.</p>
+  </div>
 
-<hr>
-
-<h2>From interaction to continuity</h2>
-
-<p>
-If hybrid intelligence is to support meaningful collaboration over time,
-it must move beyond interaction and toward continuity.
-</p>
-
-<p>
-This requires treating reasoning as something that can be preserved,
-not just performed.
-</p>
-
-<p>
-In PKOS, this is approached through
-<a href="/concepts/collaborative-conjecture.html"><strong>Collaborative Conjecture</strong></a>,
-where human–AI interaction produces structured reasoning artifacts,
-rather than transient exchanges.
-</p>
-
-<p>
-These artifacts — referred to as
-<a href="/concepts/pifr.html"><strong>PIFRs</strong></a> —
-carry forward intention, assumptions, and justification.
-</p>
-
-<hr>
-
-<h2>Why memory matters</h2>
-
-<p>
-Without continuity, each interaction becomes a reset.
-</p>
-
-<p>
-The system may generate useful outputs,
-but it does not accumulate understanding.
-</p>
-
-<p>
-This leads to:
-</p>
-
-<ul>
-<li>repeated reconstruction of context</li>
-<li>loss of prior reasoning</li>
-<li>difficulty in evaluating how conclusions were reached</li>
-</ul>
-
-<p>
-In contrast, when reasoning is preserved,
-it becomes possible to:
-</p>
-
-<ul>
-<li>revisit and refine earlier thinking</li>
-<li>trace how ideas evolved</li>
-<li>build cumulative knowledge across interactions</li>
-</ul>
-
-<p>
-This continuity is supported by the
-<a href="/concepts/persistent-semantic-scaffold.html"><strong>Persistent Semantic Scaffold (PSS)</strong></a>,
-which allows reasoning artifacts to remain available over time.
-</p>
-
-<hr>
-
-<h2>Beyond hybrid intelligence</h2>
-
-<p>
-Hybrid intelligence focuses on how humans and AI work together.
-</p>
-
-<p>
-But collaboration alone is not enough.
-</p>
-
-<p>
-If the reasoning produced in that collaboration cannot be preserved
-and reconstructed, it remains fragile and difficult to trust.
-</p>
-
-<p><strong>
-For hybrid intelligence to become accountable and cumulative,
-it must develop memory.
-</strong></p>
-
-<hr>
-
-<h2>Conclusion</h2>
-
-<p>
-The future of human–AI collaboration is not only about better interaction,
-but about preserving the reasoning that emerges from it.
-</p>
-
-<p>
-Without memory, collaboration remains ephemeral.
-</p>
-
-<p>
-With memory, it becomes a system capable of learning over time.
-</p>
-
-<p><strong>
-Hybrid intelligence needs memory — not just interaction.
-</strong></p>
+  <div class="editorial-note">
+    <strong>Editorial note:</strong> a strong, clean fit for the tentative "Learning &amp; Understanding" cluster — complements rather than repeats "Learning Beyond the Continuity Threshold" (that essay covers the threshold/regression dynamic; this one covers the underlying collaboration-and-memory mechanism). One fix applied: "In PKOS, this is approached through..." updated to reflect the current Navigational Coherence framing. No sequence box added yet, consistent with the same pending-cluster policy.
+  </div>
 
 </main>
 
-<footer>
-© 2026 Audited State · AI & the Continuity of Human Understanding  
-<br>
-<span class="affiliation">
-– a contributor to <a href="https://cognitivesuperhighway.org" target="_blank" rel="noopener">CognitiveSuperHighway.org</a>
-</span>
+<footer class="site-footer">
+  <p>Part of the <a href="https://auditedstate.app/research/publications/">Audited State Research</a> essays.</p>
+  <p>© 2026 Audited State · AI &amp; the Continuity of Human Understanding</p>
+  <p>— a contributor to <a href="https://cognitivesuperhighway.org">CognitiveSuperHighway.org</a></p>
 </footer>
-
-<script>
-    document.querySelector('.mobile-toggle').addEventListener('click', function() {
-      document.querySelector('nav').classList.toggle('active');
-    });
-</script>
 
 </body>
 </html>

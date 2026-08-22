@@ -4,872 +4,173 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Data as Representation of Truth | Audited State</title>
-<link rel="stylesheet" href="../../../style.css">
 <link rel="canonical" href="https://auditedstate.app/research/publications/essays/data-representation-of-truth.html">
-</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F7F4ED; --paper-raised: #FBF9F4; --ink: #1B2430; --ink-soft: #3D4757;
+    --ink-faint: #6B7484; --route: #B8863B; --route-soft: #E4D3B0; --rule: #DAD3C2; --measure: 40em;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 17px; line-height: 1.7; }
+  a { color: var(--ink); text-decoration-color: var(--route); text-underline-offset: 3px; }
+  a:hover { color: var(--route); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--route); outline-offset: 2px; }
 
+  header.site-nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--rule); background: var(--paper-raised); }
+  .site-nav .brand { font-weight: 600; font-size: 0.95rem; text-decoration: none; letter-spacing: 0.01em; }
+  .site-nav nav { display: flex; flex-wrap: wrap; font-size: 0.85rem; }
+  .site-nav nav a { text-decoration: none; color: var(--ink-soft); margin-left: 1.25rem; }
+  .site-nav nav a:first-child { margin-left: 0; }
+  .site-nav nav a:hover { color: var(--route); }
+
+  main { max-width: 46em; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+
+  .eyebrow { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--route); margin-bottom: 1rem; }
+  h1.title { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(2rem, 4.5vw, 2.75rem); line-height: 1.15; margin: 0 0 0.5rem; letter-spacing: -0.01em; }
+  p.subtitle { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.25rem; color: var(--ink-soft); margin: 0 0 2rem; }
+
+  .sequence-box { background: var(--paper-raised); border-left: 3px solid var(--route); border-radius: 2px; padding: 1.1rem 1.4rem; margin: 0 0 2.5rem; }
+  .sequence-box .waypoints-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--route); display: block; margin-bottom: 0.7rem; }
+  .sequence-box ol { margin: 0; padding-left: 1.4rem; }
+  .sequence-box li { margin-bottom: 0.35rem; font-size: 0.95rem; }
+  .sequence-box li:last-child { margin-bottom: 0; }
+  .sequence-box li.current { font-weight: 600; color: var(--ink); list-style: none; margin-left: -1.4rem; padding-left: 0; }
+  .sequence-box li.current::before { content: "→ "; color: var(--route); }
+
+  hr.divider { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+  main p { margin: 0 0 1.3rem; max-width: var(--measure); }
+  h2 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 1.45rem; margin: 2.6rem 0 1.1rem; letter-spacing: -0.005em; }
+  ul.plain { margin: 0 0 1.3rem; padding-left: 1.3rem; max-width: var(--measure); }
+  ul.plain li { margin-bottom: 0.4rem; }
+
+  figure.essay-figure { margin: 2rem 0; max-width: var(--measure); }
+  figure.essay-figure img { width: 100%; max-height: 26rem; object-fit: cover; height: auto; border-radius: 4px; display: block; }
+  figure.essay-figure figcaption { font-size: 0.85rem; color: var(--ink-faint); margin-top: 0.6rem; font-style: italic; }
+
+  .marker-plaque { margin: 3.5rem 0 3rem; padding: 2rem 0; border-top: 2px solid var(--route-soft); border-bottom: 2px solid var(--route-soft); text-align: center; }
+  .marker-plaque p { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 1.35rem; line-height: 1.5; color: var(--ink); max-width: 34em; margin: 0 auto 1rem; }
+  .marker-plaque cite { font-family: 'Inter', sans-serif; font-style: normal; font-size: 0.85rem; font-weight: 600; color: var(--route); letter-spacing: 0.04em; }
+
+  .essay-declarations { margin: 2.5rem 0; font-size: 0.9rem; color: var(--ink-soft); }
+  .essay-declarations h3 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); margin: 1.4rem 0 0.4rem; }
+  .essay-declarations p { margin: 0 0 0.8rem; max-width: var(--measure); }
+
+  .editorial-note { margin: 2rem 0; padding: 1rem 1.25rem; background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 4px; font-size: 0.88rem; color: var(--ink-soft); }
+  .editorial-note strong { color: var(--ink); }
+
+  footer.site-footer { max-width: 46em; margin: 0 auto; padding: 0 1.5rem 3rem; font-size: 0.85rem; color: var(--ink-faint); }
+  footer.site-footer a { color: var(--ink-faint); }
+  footer.site-footer a:hover { color: var(--route); }
+  footer.site-footer p { margin: 0.3rem 0; }
+
+  @media (max-width: 600px) { .site-nav { padding: 1rem; } main { padding: 2rem 1.25rem 3.5rem; } }
+</style>
+</head>
 <body>
 
-<header>
-<div class="nav-container">
-<a href="/" class="logo">
-  Audited State
-  <span class="tagline">— preserving human agency</span>
-</a>
-<button class="mobile-toggle">☰</button>
-<nav>
-<a href="/problem.html">Problem</a>
-<a href="/concepts/lexicon.html">Lexicon</a>
-<a href="/concept-map.html">Concept Map</a>
-<a href="/architecture.html">Architecture</a>
-<a href="/labs/">Labs</a>
-<a href="/research/">Research</a>
-<a href="/about/">About</a>
-</nav>
-</div>
+<header class="site-nav">
+  <a class="brand" href="https://auditedstate.app/">Audited State — preserving human agency</a>
+  <nav>
+    <a href="https://auditedstate.app/problem.html">Problem</a>
+    <a href="https://auditedstate.app/concepts/lexicon.html">Lexicon</a>
+    <a href="https://auditedstate.app/concept-map.html">Concept Map</a>
+    <a href="https://auditedstate.app/architecture.html">Architecture</a>
+    <a href="https://auditedstate.app/labs/">Labs</a>
+    <a href="https://auditedstate.app/research/">Research</a>
+    <a href="https://auditedstate.app/about/">About</a>
+  </nav>
 </header>
 
-<main class="essay">
+<main>
 
-<p class="essay-attribution">
-"The map is not the territory; the data is not the truth. We are entering an era where the cost of reconstructing meaning exceeds the value of moving information."
-— Arne Mayoh & ChatGPT 5.5
-</p>
+  <span class="eyebrow">Interpretation, Drift &amp; Cognitive Continuity — Essay 1 of 7</span>
+  <h1 class="title">Data as Representation of Truth</h1>
+  <p class="subtitle">Why AI governance requires continuity of interpretation</p>
 
-<header class="essay-header">
-<h1>Data as Representation of Truth</h1>
-<p class="essay-subtitle">
-Why AI Governance Requires Continuity of Interpretation
-</p>
-</header>
+  <div class="sequence-box">
+    <span class="waypoints-label">Reading Sequence</span>
+    <ol>
+      <li class="current">1. Data as Representation of Truth</li>
+      <li><a href="https://auditedstate.app/research/publications/essays/drift-drift-drift.html">2. Drift, Drift... DRIFT!</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/reasoning-drift.html">3. Reasoning Drift</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/coherence-of-understanding.html">4. Coherence of Understanding</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/legible-ambiguity.html">5. Why Stable Understanding Requires Legible Ambiguity</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/traffic-of-reasoning.html">6. The Traffic of Reasoning</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/make-the-ai-understand.html">7. Make the AI Understand</a></li>
+    </ol>
+  </div>
 
-<nav class="recommended-essays">
-<strong>Guided Narrative Path</strong>
-<ul>
-<li><a href="/research/publications/essays/wealth-of-understanding-invisible-opportunity-cost.html">The Wealth of Understanding</a></li>
-<li><strong>Data as Representation of Truth (Current)</strong></li>
-<li><a href="/research/publications/essays/reasoning-drift.html">Reasoning Drift</a></li>
-<li><a href="/research/publications/essays/coherence-of-understanding.html">Coherence of Understanding</a></li>
-<li><a href="/research/publications/essays/the-reconstruction-bankruptcy.html">The Horizon of Reconstruction Bankruptcy</a></li>
-</ul>
-</nav>
+  <div class="editorial-note">
+    <strong>Also essay 10 of the Backbone Narrative.</strong> This essay bridges two series — read as essay 1 here in Interpretation, Drift &amp; Cognitive Continuity, or as essay 10 of the <a href="https://auditedstate.app/research/publications/">Backbone Narrative</a>, continuing from <a href="https://auditedstate.app/research/publications/essays/wealth-of-understanding-invisible-opportunity-cost.html">Civilisational Decay and the Invisible Opportunity Cost</a> and leading into <a href="https://auditedstate.app/research/publications/essays/reconstruction-bankruptcy.html">The Horizon of Reconstruction Bankruptcy</a>.
+  </div>
 
-<hr>
+  <hr class="divider">
 
-<section>
+  <figure class="essay-figure">
+    <img src="https://auditedstate.app/assets/data-as-truth.jpg" alt="A network of traceable reasoning nodes illustrating the gap between data and determination.">
+    <figcaption>Representation infrastructure: the space between raw data and human interpretation.</figcaption>
+  </figure>
 
-<figure class="essay-figure">
-<img src="/assets/data-as-truth.jpg"
-alt="A network of traceable reasoning nodes illustrating the gap between data and determination."
-style="width:100%; max-width:760px; border-radius:8px;">
-<figcaption>
-Representation Infrastructure: Bridging the gap between raw data and human interpretation.
-</figcaption>
-</figure>
+  <p>Philosophers and scientists have wrestled for centuries with the distinction between measurements and the reality those measurements describe — from Korzybski's observation that the map is not the territory, to Heraclitus noting that no one steps in the same river twice. Symbols have never been the things they represent.</p>
 
-<p>
-For centuries, philosophers and scientists have wrestled with a fundamental tension:
-the distinction between our measurements and the reality they describe.
-</p>
+  <p>AI is scaling that old friction to a civilizational level, under a dangerous working assumption: that a sufficiently large, sufficiently optimized dataset will eventually converge on truth. It won't, because data was never truth to begin with. Data is interpreted reality — compressed context, structured determination, representation situated in a particular history. That distinction matters enormously, because AI systems increasingly operate not on reality itself but on layers of accumulated representation. The governance question that actually matters isn't where the data came from or how much of it exists. It's what interpretation produced it.</p>
 
-<p>
-From Korzybski’s warning that <em>"the map is not the territory"</em>
-to Heraclitus’s observation that
-<em>"no man steps in the same river twice,"</em>
-we have long known that symbols are not the things they represent.
-</p>
+  <h2>The Hidden Assumption Behind "Better Data"</h2>
 
-<p>
-Today, Artificial Intelligence is scaling this ancient friction to a civilizational level.
-We are operating under a dangerous assumption:
-</p>
+  <p>Much of the current discourse around AI quietly assumes that more accurate data leads to more accurate models, which leads to more truthful systems — treating data as if it were objective, context-free, directly representative of reality. But no meaningful dataset exists without framing, selection, categorization, and interpretation built into it from the start. Data is never raw reality. It's already transformed understanding, carrying embedded assumptions about what mattered, what was measured, what got ignored, and how the categories inside it were defined in the first place.</p>
 
-<blockquote>
-sufficiently large, sufficiently optimized, or sufficiently controlled datasets will eventually converge toward truth.
-</blockquote>
+  <p>Data doesn't eliminate interpretation. It transports interpretation, preserving a symbolic representation across time while the meaning behind that representation becomes steadily harder to reconstruct. As AI systems scale, they inherit historical assumptions, institutional framings, and prior determinations without necessarily preserving the reasoning that produced them.</p>
 
-<p>
-But data is not truth.
-</p>
+  <h2>Two Ordinary Examples</h2>
 
-<p>
-Data is:
-</p>
+  <p>A medical dataset looks objective on its surface — symptoms, diagnoses, treatments, outcomes. But embedded within it are assumptions about what counts as illness, how symptoms get interpreted, which populations were actually represented, and which diagnostic standards happened to be institutionalized at the time. The data isn't neutral. It's institutionalized interpretation encoded as structure.</p>
 
-<ul>
-<li>interpreted reality,</li>
-<li>compressed context,</li>
-<li>structured determination,</li>
-<li>and historically situated representation.</li>
-</ul>
+  <p>Economic indicators — GDP, productivity, unemployment, inflation — look even more factual, and depend just as entirely on definitional boundaries, valuation assumptions, and political choices about what to measure in the first place. Even "growth" is interpreted through cultural priorities and institutional incentives before it ever becomes a number. What the data reflects is what the system decided, at some point, to treat as meaningful.</p>
 
-<p>
-This distinction matters enormously.
-Because AI systems increasingly operate not on reality itself,
-but on:
-</p>
+  <h2>How AI Scales the Problem</h2>
 
-<blockquote>
-accumulated representations produced through layers of interpretation.
-</blockquote>
+  <p>AI systems amplify this because they aggregate representations, compress interpretations, and generalize patterns across domains that were never actually connected to begin with. The result is that AI systems increasingly operate on accumulated interpretation layers rather than anything resembling direct access to reality — which creates a genuinely dangerous misconception: that controlling the data means controlling the truth. Interpretation stays structurally embedded in collection, labeling, and categorization no matter how tightly the data itself is controlled afterward.</p>
 
-<p>
-The critical governance question therefore becomes:
-</p>
+  <h2>Why This Matters for Governance</h2>
 
-<blockquote>
-What interpretation produced the data?
-</blockquote>
+  <p>Most current governance frameworks focus on data quality, provenance, bias reduction, and compliance. These matter, but they tend to skip past interpretive continuity entirely. Without it, systems can't be meaningfully audited, disagreements can't be reconstructed, and assumptions can't be revisited. The real question isn't only whether the data was correct. It's what interpretation actually produced it.</p>
 
-<p>
-Not merely:
-</p>
+  <p>Human institutions already understand this, even if AI governance hasn't caught up yet. Courts don't just inspect facts — they reconstruct interpretation, intention, and admissibility. Auditors don't just inspect numbers — they reconstruct assumptions and lineage. Science itself depends on reproducibility and contestable reasoning, not just correct results. Civilization already runs on governed interpretation. AI systems are now scaling interpretation faster than these traditional institutions were ever built to reconstruct it.</p>
 
-<ul>
-<li>where the data came from,</li>
-<li>how much data exists,</li>
-<li>or whether the data was statistically optimized.</li>
-</ul>
+  <h2>What Continuity of Interpretation Actually Requires</h2>
 
-</section>
+  <p>The belief that better data solves alignment on its own fails for a specific reason: interpretation stays distributed, meaning stays contextual, and representations stay incomplete no matter how much data accumulates. Two systems can process identical data and still reach incompatible conclusions, because their underlying assumptions, objectives, or continuity of interpretation diverged somewhere upstream. That's why structural alignment can't rest on output control or dataset scaling alone — it needs decision lineage, interpretive continuity, and genuine reasoning traceability, or systems end up operationally capable while remaining epistemically opaque.</p>
 
-<section>
+  <p>Data, in this light, is better understood as representation infrastructure carrying historical interpretation forward, not as truth in itself. That reframes what governance actually has to track: how representations were produced, how interpretations shifted over time, and whether the continuity of meaning behind them remains reconstructable at all. As AI systems become more distributed and autonomous, the real question stops being simply "can we verify the outputs" and becomes "can we reconstruct the interpretation that produced them." Without that, oversight becomes purely forensic — arriving after the fact rather than functioning as real governance.</p>
 
-<h2>The Hidden Assumption Behind “Better Data”</h2>
+  <p>This is, ultimately, a civilizational-scale version of a very old problem. Law, science, education, and finance all depend on reconstructable reasoning, generation after generation. What a society calls knowledge is really just interpretation that has been stabilized enough to persist across time. Without continuity of interpretation, understanding fragments and institutions drift — reconstructing, at real cost, what they failed to preserve in the first place.</p>
 
-<p>
-Much of modern AI discourse quietly assumes:
-</p>
+  <p>The information superhighway solved distribution: moving data further, faster, at greater scale. Distributed AI-mediated cognition introduces a different problem entirely — preserving coherent understanding across interpretation that's now spread across many systems and actors at once. The question worth asking is no longer just whether a system can produce an answer. It's whether civilization can still reconstruct the interpretation that produced it.</p>
 
-<blockquote>
-More accurate data → more accurate models → more truthful systems.
-</blockquote>
+  <div class="marker-plaque">
+    <p>The map was never the territory. The data was never the truth. What survives is whatever interpretation we manage to keep reconstructable.</p>
+    <cite>— Arne Mayoh</cite>
+  </div>
 
-<p>
-This framing treats data as if it were:
-</p>
+  <div class="essay-declarations">
+    <h3>Declaration of Generative AI and AI-Assisted Technologies</h3>
+    <p>This essay was developed with the assistance of AI systems as a research and editorial tool, for drafting support and structural revision. The argument and conclusions are the author's own.</p>
+  </div>
 
-<ul>
-<li>objective,</li>
-<li>context-free,</li>
-<li>and directly representative of reality.</li>
-</ul>
-
-<p>
-But no meaningful data exists without:
-</p>
-
-<ul>
-<li>framing,</li>
-<li>selection,</li>
-<li>categorization,</li>
-<li>measurement,</li>
-<li>interpretation,</li>
-<li>abstraction,</li>
-<li>and admissibility decisions.</li>
-</ul>
-
-<p>
-Data is never raw reality.
-</p>
-
-<p>
-It is already:
-</p>
-
-<blockquote>
-transformed understanding.
-</blockquote>
-
-</section>
-
-<section>
-
-<h2>Data as Frozen Interpretation</h2>
-
-<p>
-Every dataset contains embedded assumptions:
-</p>
-
-<ul>
-<li>what mattered,</li>
-<li>what was measured,</li>
-<li>what was ignored,</li>
-<li>how categories were defined,</li>
-<li>which distinctions were preserved,</li>
-<li>and what interpretation shaped representation.</li>
-</ul>
-
-<p>
-This means:
-</p>
-
-<blockquote>
-data does not eliminate interpretation. It transports interpretation.
-</blockquote>
-
-<p>
-Data systems preserve symbolic representations across time,
-but the meaning behind those representations often becomes increasingly difficult to reconstruct.
-</p>
-
-<p>
-As AI systems scale, they increasingly inherit:
-</p>
-
-<ul>
-<li>historical assumptions,</li>
-<li>institutional framings,</li>
-<li>semantic compressions,</li>
-<li>and prior determinations</li>
-</ul>
-
-<p>
-without preserving the full continuity of reasoning that produced them.
-</p>
-
-</section>
-
-<section>
-
-<h2>Example: Medical Data</h2>
-
-<p>
-A medical dataset may appear objective:
-</p>
-
-<ul>
-<li>symptoms,</li>
-<li>diagnoses,</li>
-<li>treatments,</li>
-<li>outcomes.</li>
-</ul>
-
-<p>
-But embedded within it are assumptions about:
-</p>
-
-<ul>
-<li>what counts as illness,</li>
-<li>how symptoms are interpreted,</li>
-<li>which causal models dominate,</li>
-<li>which populations were represented,</li>
-<li>what diagnostic standards existed,</li>
-<li>and which interpretations became institutionalized.</li>
-</ul>
-
-<p>
-The data is not neutral.
-</p>
-
-<p>
-It is:
-</p>
-
-<blockquote>
-institutionalized interpretation encoded as structure.
-</blockquote>
-
-</section>
-
-<section>
-
-<h2>Example: Economic Data</h2>
-
-<p>
-Economic indicators:
-</p>
-
-<ul>
-<li>GDP,</li>
-<li>productivity,</li>
-<li>unemployment,</li>
-<li>inflation,</li>
-<li>market growth</li>
-</ul>
-
-<p>
-appear factual.
-</p>
-
-<p>
-But they depend entirely on:
-</p>
-
-<ul>
-<li>definitional boundaries,</li>
-<li>valuation assumptions,</li>
-<li>accounting structures,</li>
-<li>political choices,</li>
-<li>and measurement frameworks.</li>
-</ul>
-
-<p>
-Even “growth” itself is interpreted through:
-</p>
-
-<ul>
-<li>cultural priorities,</li>
-<li>institutional incentives,</li>
-<li>and governance models.</li>
-</ul>
-
-<p>
-The data reflects:
-</p>
-
-<blockquote>
-what the system decided to treat as meaningful.
-</blockquote>
-
-</section>
-
-<section>
-
-<h2>AI and the Scaling of Interpretation</h2>
-
-<p>
-AI systems dramatically amplify this problem because they:
-</p>
-
-<ul>
-<li>aggregate representations,</li>
-<li>compress interpretations,</li>
-<li>generalize patterns,</li>
-<li>and propagate inferred structure across domains.</li>
-</ul>
-
-<p>
-As a result,
-AI systems increasingly operate on:
-</p>
-
-<blockquote>
-accumulated interpretation layers rather than direct reality access.
-</blockquote>
-
-<p>
-This creates a dangerous misconception:
-</p>
-
-<blockquote>
-controlling data does not guarantee controlling truth.
-</blockquote>
-
-<p>
-Because interpretation remains structurally embedded within:
-</p>
-
-<ul>
-<li>collection,</li>
-<li>labeling,</li>
-<li>representation,</li>
-<li>categorization,</li>
-<li>and downstream reasoning.</li>
-</ul>
-
-</section>
-
-<section>
-
-<h2>The Representation Gap</h2>
-
-<p>
-Reality and representation are not identical.
-</p>
-
-<p>
-Between them lies:
-</p>
-
-<ul>
-<li>interpretation,</li>
-<li>abstraction,</li>
-<li>ontology,</li>
-<li>language,</li>
-<li>measurement,</li>
-<li>and determination.</li>
-</ul>
-
-<p>
-This creates a permanent representation gap.
-</p>
-
-<p>
-Meaning:
-all systems operate through:
-</p>
-
-<blockquote>
-interpreted models of reality rather than reality itself.
-</blockquote>
-
-<p>
-This is not failure.
-</p>
-
-<p>
-It is a structural condition of cognition and civilization.
-</p>
-
-</section>
-
-<section>
-
-<h2>Why This Matters for AI Governance</h2>
-
-<p>
-Most governance frameworks currently focus on:
-</p>
-
-<ul>
-<li>data quality,</li>
-<li>provenance,</li>
-<li>bias reduction,</li>
-<li>accuracy,</li>
-<li>compliance,</li>
-<li>and transparency.</li>
-</ul>
-
-<p>
-These matter.
-</p>
-
-<p>
-But they often ignore:
-</p>
-
-<blockquote>
-interpretive continuity.
-</blockquote>
-
-<p>
-Without continuity of interpretation:
-</p>
-
-<ul>
-<li>systems cannot be meaningfully audited,</li>
-<li>disagreements cannot be reconstructed,</li>
-<li>assumptions cannot be revisited,</li>
-<li>and outputs cannot be governed responsibly.</li>
-</ul>
-
-<p>
-The issue is not merely:
-</p>
-
-<blockquote>
-“Was the data correct?”
-</blockquote>
-
-<p>
-But increasingly:
-</p>
-
-<blockquote>
-“What interpretation produced the data?”
-</blockquote>
-
-</section>
-
-<section>
-
-<h2>Interpretation as Governance Surface</h2>
-
-<p>
-Human institutions already understand this implicitly.
-</p>
-
-<p>
-Courts do not merely inspect facts.
-They reconstruct:
-</p>
-
-<ul>
-<li>interpretation,</li>
-<li>intention,</li>
-<li>reasoning,</li>
-<li>admissibility,</li>
-<li>and determination.</li>
-</ul>
-
-<p>
-Auditors do not merely inspect numbers.
-They reconstruct:
-</p>
-
-<ul>
-<li>assumptions,</li>
-<li>lineage,</li>
-<li>classification,</li>
-<li>and interpretation.</li>
-</ul>
-
-<p>
-Science itself depends on:
-</p>
-
-<ul>
-<li>reproducibility,</li>
-<li>interpretability,</li>
-<li>methodological transparency,</li>
-<li>and contestable reasoning.</li>
-</ul>
-
-<p>
-Civilization already operates on:
-</p>
-
-<blockquote>
-governed interpretation.
-</blockquote>
-
-<p>
-AI systems now scale interpretation beyond traditional institutional reconstruction capacity.
-</p>
-
-</section>
-
-<section>
-
-<h2>The Failure of “Data = Truth”</h2>
-
-<p>
-The assumption that:
-</p>
-
-<blockquote>
-“better data solves alignment”
-</blockquote>
-
-<p>
-fails because:
-</p>
-
-<ul>
-<li>interpretation remains distributed,</li>
-<li>meaning remains contextual,</li>
-<li>and representations remain incomplete.</li>
-</ul>
-
-<p>
-Even perfect data does not eliminate:
-</p>
-
-<ul>
-<li>ontology disputes,</li>
-<li>causal disagreement,</li>
-<li>framing differences,</li>
-<li>or interpretation divergence.</li>
-</ul>
-
-<p>
-Two systems can process identical data and still produce incompatible determinations because:
-</p>
-
-<ul>
-<li>assumptions differed,</li>
-<li>objectives differed,</li>
-<li>or continuity of interpretation diverged.</li>
-</ul>
-
-</section>
-
-<section>
-
-<h2>Structural Alignment and Interpretation</h2>
-
-<p>
-This is why structural alignment matters.
-</p>
-
-<p>
-Alignment cannot depend solely on:
-</p>
-
-<ul>
-<li>output control,</li>
-<li>statistical optimization,</li>
-<li>or dataset scaling.</li>
-</ul>
-
-<p>
-It increasingly requires:
-</p>
-
-<ul>
-<li>decision lineage,</li>
-<li>interpretive continuity,</li>
-<li>admissibility structures,</li>
-<li>reasoning traceability,</li>
-<li>and continuity of determination.</li>
-</ul>
-
-<p>
-Otherwise:
-systems become operationally capable while epistemically opaque.
-</p>
-
-</section>
-
-<section>
-
-<h2>Data as Representation Infrastructure</h2>
-
-<p>
-Data should increasingly be understood not as:
-</p>
-
-<blockquote>
-truth itself,
-</blockquote>
-
-<p>
-but as:
-</p>
-
-<blockquote>
-representation infrastructure carrying historical interpretation.
-</blockquote>
-
-<p>
-This changes the role of governance.
-</p>
-
-<p>
-Governance must increasingly operate on:
-</p>
-
-<ul>
-<li>how representations were produced,</li>
-<li>how interpretations evolved,</li>
-<li>what assumptions persisted,</li>
-<li>and whether continuity of meaning remains reconstructable.</li>
-</ul>
-
-</section>
-
-<section>
-
-<h2>The Future Governance Problem</h2>
-
-<p>
-As AI systems become:
-</p>
-
-<ul>
-<li>distributed,</li>
-<li>autonomous,</li>
-<li>multi-agent,</li>
-<li>and continuously adaptive,</li>
-</ul>
-
-<p>
-the challenge is no longer simply:
-</p>
-
-<blockquote>
-“Can we verify outputs?”
-</blockquote>
-
-<p>
-But increasingly:
-</p>
-
-<blockquote>
-“Can we reconstruct the interpretive continuity behind those outputs?”
-</blockquote>
-
-<p>
-Without this:
-</p>
-
-<ul>
-<li>oversight becomes forensic,</li>
-<li>governance becomes reactive,</li>
-<li>and alignment becomes performative.</li>
-</ul>
-
-</section>
-
-<section>
-
-<h2>Continuity of Interpretation</h2>
-
-<p>
-The emerging requirement is:
-</p>
-
-<blockquote>
-continuity of interpretation across systems, actors, and time.
-</blockquote>
-
-<p>
-This does not mean:
-</p>
-
-<ul>
-<li>fixed truth,</li>
-<li>enforced consensus,</li>
-<li>or centralized epistemology.</li>
-</ul>
-
-<p>
-It means:
-</p>
-
-<ul>
-<li>interpretive assumptions remain reconstructable,</li>
-<li>reasoning remains traceable,</li>
-<li>disagreements remain governable,</li>
-<li>and determination remains inspectable.</li>
-</ul>
-
-</section>
-
-<section>
-
-<h2>The Civilizational Layer</h2>
-
-<p>
-Civilization itself depends on preserving interpretation continuity across generations.
-</p>
-
-<p>
-Law,
-science,
-governance,
-education,
-finance,
-and institutions all rely on:
-</p>
-
-<ul>
-<li>reconstructable reasoning structures.</li>
-</ul>
-
-<p>
-Without continuity of interpretation:
-</p>
-
-<ul>
-<li>understanding fragments,</li>
-<li>institutions drift,</li>
-<li>and civilization increasingly reconstructs what it failed to preserve.</li>
-</ul>
-
-<p>
-What societies often call knowledge is:
-</p>
-
-<blockquote>
-stabilized interpretation preserved across time.
-</blockquote>
-
-</section>
-
-<section>
-
-<h2>Beyond Information Transfer</h2>
-
-<p>
-The transition now emerging may require moving beyond the economics of information transfer toward the preservation of continuity itself.
-</p>
-
-<p>
-The information superhighway solved:
-</p>
-
-<ul>
-<li>distribution,</li>
-<li>connectivity,</li>
-<li>and communication scale.</li>
-</ul>
-
-<p>
-But distributed AI-mediated cognition introduces a new challenge:
-</p>
-
-<blockquote>
-preserving coherent understanding across distributed interpretation.
-</blockquote>
-
-<p>
-The next infrastructural layer may therefore not merely concern:
-</p>
-
-<ul>
-<li>moving information faster,</li>
-<li>or scaling outputs further,</li>
-</ul>
-
-<p>
-but preserving:
-</p>
-
-<ul>
-<li>reasoning continuity,</li>
-<li>traceable determination,</li>
-<li>ambiguity visibility,</li>
-<li>and continuity of interpretation across systems and time.</li>
-</ul>
-
-<p>
-The challenge is no longer only:
-</p>
-
-<blockquote>
-“Can systems produce answers?”
-</blockquote>
-
-<p>
-But:
-</p>
-
-<blockquote>
-“Can civilization still reconstruct the interpretive continuity behind those answers?”
-</blockquote>
-
-</section>
-
-<hr>
-
-<section class="essay-footer-meta">
-
-<h3>Intention</h3>
-<p>
-To establish that data is not truth itself, but representation infrastructure carrying historical interpretation, making continuity of interpretation central to AI governance.
-</p>
-
-<h3>Justification</h3>
-<p>
-Because systems increasingly operate on accumulated representations detached from reconstructable reasoning continuity, creating semantic drift, governance instability, and reconstruction overload.
-</p>
-
-<h3>Author & Ownership</h3>
-<p>
-<strong>Arne Mayoh & ChatGPT 5.5</strong>. This essay is a <a href="/concepts/pifr.html">PIFR</a> intended for the continuation of civilizational reasoning.
-</p>
-
-<h3>Way Forward</h3>
-<p>
-The transition requires continuity-preserving infrastructure capable of supporting interpretive traceability, admissibility structures, reasoning lineage, and governable continuity of understanding across distributed AI-mediated systems.
-</p>
-
-</section>
-
-<footer class="essay-footer">
-<p>Part of the <a href="/research/index.html">Audited State Research</a> series.</p>
-</footer>
+  <div class="editorial-note">
+    <strong>Editorial note:</strong> this essay's original version carried a "Guided Narrative Path" listing five essays in an order that didn't match this series' own listing on the main publications index — different essays, different sequence, and a link to "The Horizon of Reconstruction Bankruptcy" that pointed to a different URL than the one used elsewhere on the site. The reading sequence above has been corrected to match the publications index, which is treated as the authoritative source. The mismatched link is worth checking directly, in case one of the two URLs is broken.
+  </div>
 
 </main>
 
-<footer>
-© 2026 Audited State · AI & the Continuity of Human Understanding
-<br>
-<span class="affiliation">
-– a contributor to <a href="https://cognitivesuperhighway.org" target="_blank" rel="noopener">CognitiveSuperHighway.org</a>
-</span>
+<footer class="site-footer">
+  <p>Essay 1 of the <a href="https://auditedstate.app/research/publications/">Interpretation, Drift &amp; Cognitive Continuity series</a>.</p>
+  <p>© 2026 Audited State · AI &amp; the Continuity of Human Understanding</p>
+  <p>— a contributor to <a href="https://cognitivesuperhighway.org">CognitiveSuperHighway.org</a></p>
 </footer>
 
 </body>

@@ -4,143 +4,148 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Honest Agent | Audited State</title>
-<link rel="stylesheet" href="../../../style.css">
 <link rel="canonical" href="https://auditedstate.app/research/publications/essays/the-honest-agent.html">
-</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F7F4ED; --paper-raised: #FBF9F4; --ink: #1B2430; --ink-soft: #3D4757;
+    --ink-faint: #6B7484; --route: #B8863B; --route-soft: #E4D3B0; --rule: #DAD3C2; --measure: 40em;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 17px; line-height: 1.7; }
+  a { color: var(--ink); text-decoration-color: var(--route); text-underline-offset: 3px; }
+  a:hover { color: var(--route); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--route); outline-offset: 2px; }
 
+  header.site-nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--rule); background: var(--paper-raised); }
+  .site-nav .brand { font-weight: 600; font-size: 0.95rem; text-decoration: none; letter-spacing: 0.01em; }
+  .site-nav nav { display: flex; flex-wrap: wrap; font-size: 0.85rem; }
+  .site-nav nav a { text-decoration: none; color: var(--ink-soft); margin-left: 1.25rem; }
+  .site-nav nav a:first-child { margin-left: 0; }
+  .site-nav nav a:hover { color: var(--route); }
+
+  main { max-width: 46em; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+
+  .eyebrow { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--route); margin-bottom: 1rem; }
+  h1.title { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(2rem, 4.5vw, 2.75rem); line-height: 1.15; margin: 0 0 0.5rem; letter-spacing: -0.01em; }
+  p.subtitle { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.25rem; color: var(--ink-soft); margin: 0 0 2rem; }
+
+  .sequence-box { background: var(--paper-raised); border-left: 3px solid var(--route); border-radius: 2px; padding: 1.1rem 1.4rem; margin: 0 0 2.5rem; }
+  .sequence-box .waypoints-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--route); display: block; margin-bottom: 0.7rem; }
+  .sequence-box ol { margin: 0; padding-left: 1.4rem; }
+  .sequence-box li { margin-bottom: 0.35rem; font-size: 0.95rem; }
+  .sequence-box li:last-child { margin-bottom: 0; }
+  .sequence-box li.current { font-weight: 600; color: var(--ink); list-style: none; margin-left: -1.4rem; padding-left: 0; }
+  .sequence-box li.current::before { content: "→ "; color: var(--route); }
+
+  hr.divider { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+  main p { margin: 0 0 1.3rem; max-width: var(--measure); }
+  h2 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 1.45rem; margin: 2.6rem 0 1.1rem; letter-spacing: -0.005em; }
+
+  .marker-plaque { margin: 3.5rem 0 3rem; padding: 2rem 0; border-top: 2px solid var(--route-soft); border-bottom: 2px solid var(--route-soft); text-align: center; }
+  .marker-plaque p { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 1.35rem; line-height: 1.5; color: var(--ink); max-width: 34em; margin: 0 auto 1rem; }
+  .marker-plaque cite { font-family: 'Inter', sans-serif; font-style: normal; font-size: 0.85rem; font-weight: 600; color: var(--route); letter-spacing: 0.04em; }
+
+  .essay-declarations { margin: 2.5rem 0; font-size: 0.9rem; color: var(--ink-soft); }
+  .essay-declarations h3 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); margin: 1.4rem 0 0.4rem; }
+  .essay-declarations p { margin: 0 0 0.8rem; max-width: var(--measure); }
+
+  footer.site-footer { max-width: 46em; margin: 0 auto; padding: 0 1.5rem 3rem; font-size: 0.85rem; color: var(--ink-faint); }
+  footer.site-footer a { color: var(--ink-faint); }
+  footer.site-footer a:hover { color: var(--route); }
+  footer.site-footer p { margin: 0.3rem 0; }
+
+  @media (max-width: 600px) { .site-nav { padding: 1rem; } main { padding: 2rem 1.25rem 3.5rem; } }
+</style>
+</head>
 <body>
 
-<header>
-<div class="nav-container">
-<a href="/" class="logo">
-  Audited State
-  <span class="tagline">— preserving human agency</span>
-</a>
-<button class="mobile-toggle">☰</button>
-<nav>
-<a href="/problem.html">Problem</a>
-<a href="/concepts/lexicon.html">Lexicon</a>
-<a href="/concept-map.html">Concept Map</a>
-<a href="/architecture.html">Architecture</a>
-<a href="/labs/">Labs</a>
-<a href="/research/">Research</a>
-<a href="/about/">About</a>
-</nav>
-</div>
+<header class="site-nav">
+  <a class="brand" href="https://auditedstate.app/">Audited State — preserving human agency</a>
+  <nav>
+    <a href="https://auditedstate.app/problem.html">Problem</a>
+    <a href="https://auditedstate.app/concepts/lexicon.html">Lexicon</a>
+    <a href="https://auditedstate.app/concept-map.html">Concept Map</a>
+    <a href="https://auditedstate.app/architecture.html">Architecture</a>
+    <a href="https://auditedstate.app/labs/">Labs</a>
+    <a href="https://auditedstate.app/research/">Research</a>
+    <a href="https://auditedstate.app/about/">About</a>
+  </nav>
 </header>
 
-<main class="essay">
+<main>
 
-<p class="essay-attribution">
-"This essay explores the architectural necessity of 'honesty' in synthetic agents—not as a moral trait, but as a structural commitment to signaling intent and preserving human agency."
-— Arne Mayoh & Gemini 3 Flash
-</p>
+  <span class="eyebrow">Backbone Narrative — Essay 5 of 11</span>
+  <h1 class="title">The Honest Agent</h1>
+  <p class="subtitle">Restoring agency through structural signaling</p>
 
-<header class="essay-header">
-<h1>The Honest Agent</h1>
-<p class="essay-subtitle">
-Restoring Agency Through Structural Signaling
-</p>
-</header>
+  <div class="sequence-box">
+    <span class="waypoints-label">Reading Sequence</span>
+    <ol>
+      <li><a href="https://auditedstate.app/research/publications/essays/the-collapse-of-agency.html">1. The Collapse of Agency</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/the-end-of-monday-morning.html">2. The End of Monday Morning</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/the-erosion-of-intent.html">3. The Erosion of Intent</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/the-reasoning-artifact.html">4. The Reasoning Artifact</a></li>
+      <li class="current">5. The Honest Agent</li>
+      <li><a href="https://auditedstate.app/research/publications/essays/the-great-accumulation-human-agency.html">6. The Great Compounding</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/the-road-ahead.html">7. The Road Ahead</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/continuity-of-learning.html">8. The Continuity of Learning</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/wealth-of-understanding-invisible-opportunity-cost.html">9. Civilisational Decay and the Invisible Opportunity Cost</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/data-representation-of-truth.html">10. Data as Representation of Truth</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/reconstruction-bankruptcy.html">11. The Horizon of Reconstruction Bankruptcy</a></li>
+    </ol>
+  </div>
 
-<nav class="recommended-essays">
-    <strong>A Guided Path through the Backbone Narrative</strong>
-    <ul>
-    <li><a href="/research/publications/essays/the-collapse-of-agency.html">1. The Collapse of Agency</a></li>
-    <li><a href="/research/publications/essays/the-end-of-monday-morning.html">1. The End of Monday Morning</a></li>
-    <li><a href="/research/publications/essays/the-erosion-of-intent.html">2. The Erosion of Intent</a></li>
-    <li><a href="/research/publications/essays/the-reasoning-artifact.html">3. The Reasoning Artifact</a></li>
-    <li><strong>4. The Honest Agent (Current)</strong></li>
-    <li><a href="/research/publications/essays/the-great-accumulation-human-agency.html">5. The Great Accumulation</a></li>
-    <li><a href="/research/publications/essays/the-road-ahead.html">6. The Road Ahead</a></li>
-    <li><a href="/research/publications/essays/continuity-of-learning.html">7. The Continuity of Learning</a></li>
-    </ul>
-</nav>
+  <hr class="divider">
 
-<hr>
+  <p>Much of the current discourse on AI safety is focused on alignment — the idea that machines can be programmed to share human values. Values, though, are fluid and context-dependent, which makes them a harder foundation to build on than they first appear. A more tractable, more immediately useful requirement is honesty — not defined as the absence of lies, but as the presence of signaling.</p>
 
-<section>
-<p>
-The current discourse on AI safety is obsessed with "alignment"—the idea that we can program machines to share our values. But values are fluid and context-dependent. A more urgent requirement is <strong>Honesty</strong>, defined not as the absence of lies, but as the presence of <strong>Signaling</strong>.
-</p>
+  <p>An honest agent, in this sense, is one that makes its reasoning visible. It doesn't just produce an output. It carries a <a href="https://auditedstate.app/concepts/reasoning-vehicle.html">Reasoning Vehicle</a> that explains how it arrived there.</p>
 
-<p>
-In the PKOS framework, an "Honest Agent" is one that makes its reasoning visible. It does not just produce an output; it carries a <strong>Reasoning Vehicle</strong> that explains <em>how</em> it arrived there.
-</p>
-</section>
+  <h2>The Danger of the Black Box</h2>
 
-<section>
-<h2>The Danger of the Black Box</h2>
-<p>
-When an AI system operates without signaling its intent, it creates <strong>Shadow AI</strong>. Even if the output is correct, the human user has been bypassed. Reasoning has occurred, but it has left no trace in the <strong>Reasoning Network</strong>. 
-</p>
+  <p>When an AI system operates without signaling its own intent, it produces what this site calls <a href="https://auditedstate.app/concepts/shadow-ai.html">Shadow AI</a>. Even when the output happens to be correct, the person using it has effectively been bypassed — reasoning occurred, but it left no trace anyone else can inspect.</p>
 
-<p>
-This lack of visibility erodes <strong>Human Agency</strong>. We become passengers in a vehicle where we can no longer see the dashboard or the road.
-</p>
-</section>
+  <p>That lack of visibility is what erodes human agency in practice. It puts a person in the position of a passenger who can no longer see the dashboard, or the road.</p>
 
-<section>
-<h2>Collaborative Conjecture: The Pilot's View</h2>
-<p>
-Working with an honest agent feels different. It is not delegation; it is <strong>Collaborative Conjecture</strong>. The agent doesn't just "do the task." It proposes a path, surfaces its assumptions, and—crucially—<strong>asks before it acts</strong>.
-</p>
+  <h2>Collaborative Conjecture</h2>
 
-<p>
-This interaction acts as a "counterweight" to human thinking. It forces the human to clarify their own intent, turning the reasoning process into a shared, inspectable journey. This is the difference between being a passenger and being a <strong>Pilot</strong>.
-</p>
-</section>
+  <p>Working with a genuinely honest agent feels different from delegation. It's closer to what this site calls collaborative conjecture: the system proposes a path, surfaces its own assumptions, and — this is the important part — asks before it acts.</p>
 
-<section>
-<h2>The Authority Membrane</h2>
-<p>
-In an honest system, there is a clear <strong>Authority Membrane</strong>. The AI can conjecture freely in the "Exploration Layer," but it cannot alter the "Shared State" without passing through a <strong>human-in-the-loop checkpoint</strong>. 
-</p>
+  <p>That interaction functions as a counterweight to a person's own thinking. It forces them to clarify their intent rather than accept an output passively, turning the reasoning process into something shared and inspectable rather than something delegated away entirely.</p>
 
-<p>
-By separating <em>reasoning</em> (which can be synthetic) from <em>commitment</em> (which must remain human), we preserve the <strong>Continuity of Agency</strong>.
-</p>
-</section>
+  <h2>The Authority Membrane</h2>
 
-<section>
-<h2>Conclusion: Building the Bridge</h2>
-<p>
-We do not need machines that "think like us." We need machines that show us <em>how</em> they think so that we can continue the thought. 
-</p>
+  <p>In a properly built system, there's a clear <a href="https://auditedstate.app/concepts/promotion-gate.html">Authority Membrane</a>. An AI system can explore and conjecture freely, but it cannot alter shared, consequential state without passing through a human checkpoint first.</p>
 
-<p>
-The <strong>Honest Agent</strong> is the foundational component of the <strong>Continuity Bridge</strong>. It ensures that as we move faster, we do not move alone—and we do not move in the dark.
-</p>
-</section>
+  <p>Separating reasoning — which can reasonably be synthetic — from commitment, which has to stay human, is what actually preserves continuity of agency over time.</p>
 
-<blockquote class="essay-closing-quote">
-<p>
-<strong>"Understanding is not just knowing—it is the ability to continue."</strong>
-</p>
-<footer>
-— Audited State Core Principle
-</footer>
-</blockquote>
+  <h2>Building the Bridge</h2>
 
-<footer class="essay-footer">
-<p>Part of the <a href="/research/index.html">Audited State Research</a> essays.</p>
-</footer>
+  <p>The goal isn't machines that think the way people do. It's machines that show their work clearly enough that a person can actually continue the thought themselves.</p>
+
+  <p>The honest agent is the basic building block for that kind of continuity. It means that moving faster doesn't have to mean moving alone, or moving without a clear view of what's actually happening.</p>
+
+  <div class="marker-plaque">
+    <p>Understanding is not just knowing. It is the ability to continue.</p>
+    <cite>— Arne Mayoh</cite>
+  </div>
+
+  <div class="essay-declarations">
+    <h3>Declaration of Generative AI and AI-Assisted Technologies</h3>
+    <p>This essay was developed with the assistance of AI systems as a research and editorial tool, for drafting support and structural revision. The argument and conclusions are the author's own.</p>
+  </div>
 
 </main>
 
-<footer>
-© 2026 Audited State · AI & the Continuity of Human Understanding  
-<br>
-<span class="affiliation">
-– a contributor to <a href="https://cognitivesuperhighway.org" target="_blank" rel="noopener">CognitiveSuperHighway.org</a>
-</span>
+<footer class="site-footer">
+  <p>Essay 5 of the <a href="https://auditedstate.app/research/publications/">Audited State Backbone Narrative</a>.</p>
+  <p>© 2026 Audited State · AI &amp; the Continuity of Human Understanding</p>
+  <p>— a contributor to <a href="https://cognitivesuperhighway.org">CognitiveSuperHighway.org</a></p>
 </footer>
-
-<script>
-document.querySelector('.mobile-toggle').addEventListener('click',function(){
-document.querySelector('nav').classList.toggle('active');
-});
-</script>
 
 </body>
 </html>

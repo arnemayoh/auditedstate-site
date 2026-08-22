@@ -3,200 +3,138 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shadow AI and the Collapse of Institutional Visibility | PKOS Essay</title>
-<link rel="stylesheet" href="../../../style.css">
+<title>Shadow AI and the Collapse of Institutional Visibility | Audited State</title>
 <link rel="canonical" href="https://auditedstate.app/research/publications/essays/shadow-ai-collapse-of-institutional-visibility.html">
-</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F7F4ED; --paper-raised: #FBF9F4; --ink: #1B2430; --ink-soft: #3D4757;
+    --ink-faint: #6B7484; --route: #B8863B; --route-soft: #E4D3B0; --rule: #DAD3C2; --measure: 40em;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 17px; line-height: 1.7; }
+  a { color: var(--ink); text-decoration-color: var(--route); text-underline-offset: 3px; }
+  a:hover { color: var(--route); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--route); outline-offset: 2px; }
 
+  header.site-nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--rule); background: var(--paper-raised); }
+  .site-nav .brand { font-weight: 600; font-size: 0.95rem; text-decoration: none; letter-spacing: 0.01em; }
+  .site-nav nav { display: flex; flex-wrap: wrap; font-size: 0.85rem; }
+  .site-nav nav a { text-decoration: none; color: var(--ink-soft); margin-left: 1.25rem; }
+  .site-nav nav a:first-child { margin-left: 0; }
+  .site-nav nav a:hover { color: var(--route); }
+
+  main { max-width: 46em; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+
+  .eyebrow { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--route); margin-bottom: 1rem; }
+  h1.title { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(2rem, 4.5vw, 2.75rem); line-height: 1.15; margin: 0 0 0.5rem; letter-spacing: -0.01em; }
+  p.subtitle { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.25rem; color: var(--ink-soft); margin: 0 0 2rem; }
+
+  hr.divider { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+  main p { margin: 0 0 1.3rem; max-width: var(--measure); }
+  h2 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 1.45rem; margin: 2.6rem 0 1.1rem; letter-spacing: -0.005em; }
+  ul.plain { margin: 0 0 1.3rem; padding-left: 1.3rem; max-width: var(--measure); }
+  ul.plain li { margin-bottom: 0.4rem; }
+
+  .marker-plaque { margin: 3.5rem 0 3rem; padding: 2rem 0; border-top: 2px solid var(--route-soft); border-bottom: 2px solid var(--route-soft); text-align: center; }
+  .marker-plaque p { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 1.35rem; line-height: 1.5; color: var(--ink); max-width: 34em; margin: 0 auto 1rem; }
+  .marker-plaque cite { font-family: 'Inter', sans-serif; font-style: normal; font-size: 0.85rem; font-weight: 600; color: var(--route); letter-spacing: 0.04em; }
+
+  .essay-declarations { margin: 2.5rem 0; font-size: 0.9rem; color: var(--ink-soft); }
+  .essay-declarations h3 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); margin: 1.4rem 0 0.4rem; }
+  .essay-declarations p { margin: 0 0 0.8rem; max-width: var(--measure); }
+
+  .editorial-note { margin: 2rem 0; padding: 1rem 1.25rem; background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 4px; font-size: 0.88rem; color: var(--ink-soft); }
+  .editorial-note strong { color: var(--ink); }
+
+  footer.site-footer { max-width: 46em; margin: 0 auto; padding: 0 1.5rem 3rem; font-size: 0.85rem; color: var(--ink-faint); }
+  footer.site-footer a { color: var(--ink-faint); }
+  footer.site-footer a:hover { color: var(--route); }
+  footer.site-footer p { margin: 0.3rem 0; }
+
+  @media (max-width: 600px) { .site-nav { padding: 1rem; } main { padding: 2rem 1.25rem 3.5rem; } }
+</style>
+</head>
 <body>
 
-<header>
-<div class="nav-container">
-<a href="/" class="logo">
-  Audited State
-  <span class="tagline">— preserving human agency</span>
-</a>
-<button class="mobile-toggle">☰</button>
-<nav>
-<a href="/problem.html">Problem</a>
-<a href="/concepts/lexicon.html">Lexicon</a>
-<a href="/concept-map.html">Concept Map</a>
-<a href="/architecture.html">Architecture</a>
-<a href="/labs/">Labs</a>
-<a href="/research/">Research</a>
-<a href="/about/">About</a>
-</nav>
-</div>
+<header class="site-nav">
+  <a class="brand" href="https://auditedstate.app/">Audited State — preserving human agency</a>
+  <nav>
+    <a href="https://auditedstate.app/problem.html">Problem</a>
+    <a href="https://auditedstate.app/concepts/lexicon.html">Lexicon</a>
+    <a href="https://auditedstate.app/concept-map.html">Concept Map</a>
+    <a href="https://auditedstate.app/architecture.html">Architecture</a>
+    <a href="https://auditedstate.app/labs/">Labs</a>
+    <a href="https://auditedstate.app/research/">Research</a>
+    <a href="https://auditedstate.app/about/">About</a>
+  </nav>
 </header>
 
 <main>
 
-<h1>Shadow AI and the Collapse of Institutional Visibility</h1>
+  <span class="eyebrow">AI Accountability &amp; Governance — cluster pending final grouping</span>
+  <h1 class="title">Shadow AI and the Collapse of Institutional Visibility</h1>
+  <p class="subtitle">When reasoning leaves the institution</p>
 
-<p class="lead">
-When Reasoning Leaves the Institution
-</p>
+  <hr class="divider">
 
-<blockquote>
-“AI doesn’t become dangerous because it is intelligent.<br>
-It becomes dangerous when no one can explain who decided what — and why.”<br>
-— Arne Mayoh & AI
-</blockquote>
+  <p>Artificial intelligence is rapidly becoming embedded in everyday work. Employees draft reports with language models, analysts explore ideas with AI assistants, programmers generate code, managers use AI systems to evaluate decisions — and much of this happens quietly, often without formal approval or any real oversight.</p>
 
-<p>
-Artificial intelligence is rapidly becoming embedded in everyday work.
-Employees draft reports with language models, analysts explore ideas with AI assistants,
-programmers generate code, and managers use AI systems to evaluate decisions.
-Much of this activity happens quietly, often without formal approval or oversight.
-</p>
+  <p>This is increasingly described as <a href="https://auditedstate.app/concepts/shadow-ai.html">Shadow AI</a>: the use of AI systems without durable records of intention, reasoning lineage, or responsibility. Shadow AI isn't primarily a technological problem. It's an institutional one — modern organizations depend on a basic, rarely stated assumption that the tools used to produce decisions remain visible within the system responsible for those decisions.</p>
 
-<p>
-This phenomenon is increasingly described as
-<a href="/concepts/lexicon.html#shadow-ai">Shadow AI</a>:
-the use of artificial intelligence systems without durable records of intention,
-reasoning lineage, or responsibility.
-</p>
+  <h2>The Visibility Assumption</h2>
 
-<p>
-Shadow AI is not primarily a technological problem.
-It is an institutional one.
-Modern organizations depend on a basic assumption:
-that the tools used to produce decisions remain visible within the system
-that is responsible for those decisions.
-</p>
+  <p>Most institutions run on an assumption nobody has to say out loud: that the reasoning behind a decision stays visible within the organisation accountable for it. Reports have identifiable authors. Analyses come from accountable teams. Policy recommendations emerge from reasoning that's actually on the record somewhere. Oversight and compliance structures depend entirely on this visibility — they assume the reasoning behind an action can, in principle, be reconstructed. Shadow AI breaks that assumption at the root.</p>
 
-<h2>The Visibility Assumption</h2>
+  <h2>Invisible Cognition</h2>
 
-<p>
-Most institutions operate on a rarely stated assumption:
-that the reasoning behind decisions remains visible within the organization responsible for them.
-</p>
+  <p>When AI systems participate in producing reasoning without leaving any traceable artifact behind, institutions can still observe what the work produced, but lose the ability to observe the reasoning process that produced it. What follows is a gradual erosion of reasoning traceability: decisions get harder to reconstruct, accountability gets harder to assign, and institutional learning gets harder to accumulate — not because anyone decided to hide anything, but because nothing was ever recorded that could be found later.</p>
 
-<ul>
-<li>reports are written by identifiable authors</li>
-<li>analyses are produced by accountable teams</li>
-<li>policy recommendations emerge from documented reasoning</li>
-</ul>
+  <h2>The Institutional Consequences</h2>
 
-<p>
-Oversight structures depend on this visibility.
-Compliance systems assume that the reasoning behind actions can be reconstructed.
-</p>
+  <ul class="plain">
+    <li>Accountability for decisions becomes genuinely uncertain, not just hard to prove</li>
+    <li><a href="https://auditedstate.app/concepts/reconstruction-cost.html">Reconstruction cost</a> rises across the organisation</li>
+    <li>Institutional learning shrinks, since nothing durable is left to learn from</li>
+    <li><a href="https://auditedstate.app/concepts/interpretive-entropy.html">Interpretive entropy</a> increases as the gap between decisions and their reasoning widens</li>
+  </ul>
 
-<p>
-Shadow AI breaks this assumption.
-</p>
+  <p>When reasoning artifacts disappear into private AI interactions, institutions keep the outcomes and lose the cognitive lineage behind them — an asymmetry that only gets worse as more of the actual thinking happens somewhere nobody's watching.</p>
 
-<h2>Invisible Cognition</h2>
+  <h2>Beyond Prohibition</h2>
 
-<p>
-When AI systems participate in producing reasoning without leaving traceable artifacts,
-institutions may still observe the outcome of work but lose the ability to observe
-the reasoning process itself.
-</p>
+  <p>The common response is to ban external AI tools outright. In practice, this rarely works — the tools are too widely available and too genuinely useful for prohibition to hold. The deeper challenge was never really the presence of AI. It's the absence of any system capable of preserving reasoning visibility once AI is participating in the actual cognition, not just producing the final draft.</p>
 
-<p>
-The result is a gradual erosion of
-<a href="/concepts/lexicon.html#reasoning-traceability">reasoning traceability</a>.
-</p>
+  <h2>Toward Accountable Reasoning</h2>
 
-<p>
-Decisions become harder to reconstruct.
-Accountability becomes harder to assign.
-Learning becomes harder to accumulate.
-</p>
+  <p>One possible direction is reasoning infrastructure built specifically to preserve reasoning trajectories rather than only final outputs — systems that keep the lineage connecting a question, its interpretation, the evidence considered, and the conclusion actually reached. Within this research programme, that lineage takes the shape of structured <a href="https://auditedstate.app/concepts/pifr.html">Pay-It-Forward Records</a>, capturing the reasoning trajectory behind a decision rather than just its result.</p>
 
-<h2>Institutional Consequences</h2>
+  <p>The central challenge of the AI era may not turn out to be controlling artificial intelligence at all. It may be preserving institutional visibility into how decisions actually get produced in the first place. When reasoning becomes invisible, institutions lose the ability to govern their own outcomes — and Shadow AI is the first, earliest sign that this visibility is already starting to fade.</p>
 
-<p>
-Invisible reasoning introduces several structural challenges:
-</p>
+  <div class="marker-plaque">
+    <p>AI doesn't become dangerous because it is intelligent. It becomes dangerous when no one can explain who decided what — and why.</p>
+    <cite>— Arne Mayoh</cite>
+  </div>
 
-<ul>
-<li>uncertain accountability for decisions</li>
-<li>increased <a href="/concepts/lexicon.html#reconstruction-cost">reconstruction cost</a></li>
-<li>reduced institutional learning</li>
-<li>greater <a href="/concepts/lexicon.html#interpretive-entropy">interpretive entropy</a></li>
-</ul>
+  <div class="essay-declarations">
+    <h3>Declaration of Generative AI and AI-Assisted Technologies</h3>
+    <p>This essay was developed with the assistance of AI systems as a research and editorial tool, for drafting support and structural revision. The argument and conclusions are the author's own.</p>
+  </div>
 
-<p>
-When reasoning artifacts disappear into private AI interactions,
-institutions retain outcomes but lose the cognitive lineage behind them.
-</p>
-
-<h2>Beyond Prohibition</h2>
-
-<p>
-A common response is to ban external AI tools.
-In practice this approach rarely succeeds.
-AI systems are widely available and highly useful,
-making prohibition difficult to enforce.
-</p>
-
-<p>
-The deeper challenge is therefore not the presence of AI,
-but the absence of systems capable of preserving reasoning visibility
-when AI participates in cognition.
-</p>
-
-<h2>Toward Accountable Reasoning</h2>
-
-<p>
-One possible direction is the development of
-<a href="/concepts/lexicon.html#reasoning-infrastructure">reasoning infrastructure</a>
-capable of preserving reasoning trajectories.
-</p>
-
-<p>
-Instead of focusing only on final outputs,
-such systems preserve the lineage connecting questions,
-interpretations, evidence, and conclusions.
-</p>
-
-<p>
-Within the
-<a href="/concepts/lexicon.html#pkos">PKOS</a>
-framework this lineage may appear as
-structured <a href="/concepts/lexicon.html#pifr">Pay-It-Forward Records (PIFRs)</a>
-that capture the reasoning trajectory behind decisions.
-</p>
-
-<h2>Conclusion</h2>
-
-<p>
-The central challenge of the AI era may therefore not be controlling artificial intelligence.
-It may be preserving institutional visibility into how decisions are produced.
-</p>
-
-<p>
-When reasoning becomes invisible, institutions lose the ability to govern outcomes.
-</p>
-
-<p>
-Shadow AI is the first sign that this visibility is beginning to fade.
-</p>
-
-<p class="essay-meta">
-Author: Arne Mayoh<br>
-Project: PKOS — Personal Knowledge OS<br>
-Date: March 2026
-</p>
+  <div class="editorial-note">
+    <strong>Editorial note:</strong> same recurring pattern as several other pieces — PKOS title-tag branding and "Project: PKOS" byline removed, co-byline replaced with the standard Declaration. Four lexicon-anchor links upgraded to dedicated concept pages now confirmed to exist (Shadow AI, reconstruction cost, interpretive entropy, PIFR); two left as lexicon anchors ("reasoning traceability," "reasoning infrastructure") since no dedicated page has been confirmed for either. A genuinely distinct second member of the "AI Accountability &amp; Governance" cluster — this one is specifically about institutional visibility and Shadow AI as a phenomenon, not a duplicate of "Why AI Accountability Requires Reconstructable Reasoning," which argues the more general explainability-versus-reconstructability case.
+  </div>
 
 </main>
 
-<footer>
-© 2026 Audited State · AI & the Continuity of Human Understanding  
-<br>
-<span class="affiliation">
-– a contributor to <a href="https://cognitivesuperhighway.org" target="_blank" rel="noopener">CognitiveSuperHighway.org</a>
-</span>
+<footer class="site-footer">
+  <p>Part of the <a href="https://auditedstate.app/research/publications/">Audited State Research</a> essays.</p>
+  <p>© 2026 Audited State · AI &amp; the Continuity of Human Understanding</p>
+  <p>— a contributor to <a href="https://cognitivesuperhighway.org">CognitiveSuperHighway.org</a></p>
 </footer>
-
-<script>
-document.querySelector('.mobile-toggle').addEventListener('click',function(){
-document.querySelector('nav').classList.toggle('active');
-});
-</script>
 
 </body>
 </html>

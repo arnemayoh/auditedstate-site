@@ -1,267 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Why AI Accountability Requires Reconstructable Reasoning | Audited State</title>
-<link rel="stylesheet" href="../../../style.css" />
-<link rel="canonical" href="https://auditedstate.app/research/publications/essays/ai-accountability-reconstructable-reasoning.html" />
-</head>
+<link rel="canonical" href="https://auditedstate.app/research/publications/essays/ai-accountability-reconstructable-reasoning.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F7F4ED; --paper-raised: #FBF9F4; --ink: #1B2430; --ink-soft: #3D4757;
+    --ink-faint: #6B7484; --route: #B8863B; --route-soft: #E4D3B0; --rule: #DAD3C2; --measure: 40em;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 17px; line-height: 1.7; }
+  a { color: var(--ink); text-decoration-color: var(--route); text-underline-offset: 3px; }
+  a:hover { color: var(--route); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--route); outline-offset: 2px; }
 
+  header.site-nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--rule); background: var(--paper-raised); }
+  .site-nav .brand { font-weight: 600; font-size: 0.95rem; text-decoration: none; letter-spacing: 0.01em; }
+  .site-nav nav { display: flex; flex-wrap: wrap; font-size: 0.85rem; }
+  .site-nav nav a { text-decoration: none; color: var(--ink-soft); margin-left: 1.25rem; }
+  .site-nav nav a:first-child { margin-left: 0; }
+  .site-nav nav a:hover { color: var(--route); }
+
+  main { max-width: 46em; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+
+  .eyebrow { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--route); margin-bottom: 1rem; }
+  h1.title { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(2rem, 4.5vw, 2.75rem); line-height: 1.15; margin: 0 0 0.5rem; letter-spacing: -0.01em; }
+  p.subtitle { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.25rem; color: var(--ink-soft); margin: 0 0 2rem; }
+
+  hr.divider { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+  main p { margin: 0 0 1.3rem; max-width: var(--measure); }
+  h2 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 1.45rem; margin: 2.6rem 0 1.1rem; letter-spacing: -0.005em; }
+
+  .marker-plaque { margin: 3.5rem 0 3rem; padding: 2rem 0; border-top: 2px solid var(--route-soft); border-bottom: 2px solid var(--route-soft); text-align: center; }
+  .marker-plaque p { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 1.35rem; line-height: 1.5; color: var(--ink); max-width: 34em; margin: 0 auto 1rem; }
+  .marker-plaque cite { font-family: 'Inter', sans-serif; font-style: normal; font-size: 0.85rem; font-weight: 600; color: var(--route); letter-spacing: 0.04em; }
+
+  .essay-declarations { margin: 2.5rem 0; font-size: 0.9rem; color: var(--ink-soft); }
+  .essay-declarations h3 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); margin: 1.4rem 0 0.4rem; }
+  .essay-declarations p { margin: 0 0 0.8rem; max-width: var(--measure); }
+
+  .editorial-note { margin: 2rem 0; padding: 1rem 1.25rem; background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 4px; font-size: 0.88rem; color: var(--ink-soft); }
+  .editorial-note strong { color: var(--ink); }
+
+  footer.site-footer { max-width: 46em; margin: 0 auto; padding: 0 1.5rem 3rem; font-size: 0.85rem; color: var(--ink-faint); }
+  footer.site-footer a { color: var(--ink-faint); }
+  footer.site-footer a:hover { color: var(--route); }
+  footer.site-footer p { margin: 0.3rem 0; }
+
+  @media (max-width: 600px) { .site-nav { padding: 1rem; } main { padding: 2rem 1.25rem 3.5rem; } }
+</style>
+</head>
 <body>
 
-<header>
-<div class="nav-container">
-<a href="/" class="logo">
-  Audited State
-  <span class="tagline">— preserving human agency</span>
-</a>
-<button class="mobile-toggle" aria-label="Toggle navigation">☰</button>
-<nav>
-<a href="/problem.html">Problem</a>
-<a href="/concepts/lexicon.html">Lexicon</a>
-<a href="/concept-map.html">Concept Map</a>
-<a href="/architecture.html">Architecture</a>
-<a href="/research/">Research</a>
-<a href="/about/">About</a>
-</nav>
-</div>
+<header class="site-nav">
+  <a class="brand" href="https://auditedstate.app/">Audited State — preserving human agency</a>
+  <nav>
+    <a href="https://auditedstate.app/problem.html">Problem</a>
+    <a href="https://auditedstate.app/concepts/lexicon.html">Lexicon</a>
+    <a href="https://auditedstate.app/concept-map.html">Concept Map</a>
+    <a href="https://auditedstate.app/architecture.html">Architecture</a>
+    <a href="https://auditedstate.app/labs/">Labs</a>
+    <a href="https://auditedstate.app/research/">Research</a>
+    <a href="https://auditedstate.app/about/">About</a>
+  </nav>
 </header>
 
 <main>
 
-<h1>Why AI Accountability Requires Reconstructable Reasoning</h1>
+  <span class="eyebrow">AI Accountability &amp; Governance — cluster pending final grouping</span>
+  <h1 class="title">Why AI Accountability Requires Reconstructable Reasoning</h1>
+  <p class="subtitle">AI systems can often explain their outputs. Accountability requires more than explanation.</p>
 
-<p class="lead">
-AI systems can often explain their outputs.  
-But accountability requires more than explanation.
-</p>
+  <hr class="divider">
 
-<hr>
+  <p>As AI systems get deployed in public and institutional contexts, questions of accountability move to the center. Regulatory frameworks, including the EU AI Act, emphasize transparency, documentation, and explainability — all genuinely important steps. They may not, on their own, be sufficient.</p>
 
-<p>
-As artificial intelligence systems are deployed in public and institutional contexts,
-questions of accountability become central.
-</p>
+  <h2>The Limit of Explanation</h2>
 
-<p>
-Regulatory frameworks, including the EU AI Act,
-emphasize transparency, documentation, and explainability.
-</p>
+  <p>Most approaches to AI accountability rely on explaining outputs after they've already been produced — summarizing model behavior, highlighting influential inputs, generating human-readable justifications. But these explanations are typically generated without access to the full sequence of reasoning that actually led to the outcome. They describe results. They don't reconstruct how those results emerged.</p>
 
-<p>
-These are important steps.
-</p>
+  <h2>From Explanation to Reconstruction</h2>
 
-<p>
-But they may not be sufficient.
-</p>
+  <p>Real accountability requires more than describing an outcome — it requires being able to reconstruct the reasoning trajectory that produced it: the assumptions introduced, the interpretations made, the intermediate steps taken, the intentions that were actually guiding the process. Without that, explanations risk becoming post-hoc interpretations rather than genuine grounds for critique.</p>
 
-<hr>
+  <h2>Responsibility and Boundaries</h2>
 
-<h2>The limit of explanation</h2>
+  <p>In systems where humans and AI collaborate, responsibility is distributed across the interaction itself — decisions emerge through a sequence of contributions, from prompt to model response to human interpretation and refinement. Assigning responsibility means being able to trace that sequence. This research programme formalizes that through <a href="https://auditedstate.app/concepts/responsibility-boundary.html">Responsibility Boundary</a>: defined points at which reasoning can actually be inspected, evaluated, and attributed to whoever is accountable for it.</p>
 
-<p>
-Most approaches to AI accountability rely on explaining outputs after they are produced.
-</p>
+  <h2>Traceable State</h2>
 
-<p>
-This typically involves:
-</p>
+  <p>Reconstruction becomes possible once system states retain an actual trace of the reasoning that produced them — the principle behind <a href="https://auditedstate.app/concepts/traceable-state.html">Traceable State</a>. Each state carries intention, justification, and a reference back to the reasoning that came before it, carried forward through <a href="https://auditedstate.app/concepts/pifr.html">PIFRs</a>, which function as structured reasoning artifacts within the system rather than disposable byproducts of it.</p>
 
-<ul>
-<li>summarizing model behavior</li>
-<li>highlighting influential inputs</li>
-<li>providing human-readable justifications</li>
-</ul>
+  <h2>Accountability as Reconstruction</h2>
 
-<p>
-However, these explanations are often generated without access to the full sequence of reasoning that led to the outcome.
-</p>
+  <p>When reasoning can actually be reconstructed, accountability stops being aspirational and becomes grounded: it becomes possible to see how a decision emerged, identify exactly where an assumption entered, and challenge specific steps in the reasoning rather than only the final result. What matters isn't only what the system produced — it's whether the path to that result can actually be followed by someone else.</p>
 
-<p><strong>
-They describe results, but do not reconstruct how those results emerged.
-</strong></p>
+  <h2>Why It Matters Now</h2>
 
-<hr>
+  <p>As AI systems get folded into governance, healthcare, and economic decision-making, the cost of untraceable reasoning keeps rising. Without reconstructable reasoning, decisions can't be meaningfully audited, responsibility stays diffuse, and trust ends up resting on authority rather than actual understanding. With it, decisions become inspectable, responsibility becomes attributable to someone specific, and systems can genuinely improve over time rather than just iterate. This connects directly to the broader structural argument made in <a href="https://auditedstate.app/eu-ai-act/eu-ai-act-structural-alignment.html">EU AI Act: Structural Alignment</a>.</p>
 
-<h2>From explanation to reconstruction</h2>
+  <div class="marker-plaque">
+    <p>Explainability makes AI outputs interpretable. Reconstructability makes them accountable.</p>
+    <cite>— Arne Mayoh</cite>
+  </div>
 
-<p>
-Accountability requires the ability to do more than describe outcomes.
-</p>
+  <div class="essay-declarations">
+    <h3>Declaration of Generative AI and AI-Assisted Technologies</h3>
+    <p>This essay was developed with the assistance of AI systems as a research and editorial tool, for drafting support and structural revision. The argument and conclusions are the author's own.</p>
+  </div>
 
-<p>
-It requires the ability to reconstruct the reasoning trajectory that produced them.
-</p>
-
-<p>
-This includes:
-</p>
-
-<ul>
-<li>the assumptions introduced</li>
-<li>the interpretations made</li>
-<li>the intermediate steps taken</li>
-<li>the intentions guiding the process</li>
-</ul>
-
-<p>
-Without this, explanations risk becoming post-hoc interpretations
-rather than grounds for meaningful critique.
-</p>
-
-<hr>
-
-<h2>Responsibility and boundaries</h2>
-
-<p>
-In systems where humans and AI collaborate,
-responsibility is distributed across interactions.
-</p>
-
-<p>
-Decisions emerge through a sequence of contributions:
-from prompts, to model responses, to human interpretation and refinement.
-</p>
-
-<p>
-To assign responsibility, it must be possible to trace this sequence.
-</p>
-
-<p>
-In PKOS, this is formalized through
-<a href="/concepts/responsibility-boundary.html"><strong>Responsibility Boundary</strong></a>,
-which defines points at which reasoning can be inspected, evaluated, and attributed.
-</p>
-
-<hr>
-
-<h2>Traceable state</h2>
-
-<p>
-Reconstruction becomes possible when system states retain a trace of the reasoning that produced them.
-</p>
-
-<p>
-This is the principle of
-<a href="/concepts/traceable-state.html"><strong>Traceable State</strong></a>.
-</p>
-
-<p>
-Each state carries:
-</p>
-
-<ul>
-<li>intention</li>
-<li>justification</li>
-<li>a reference to prior reasoning</li>
-</ul>
-
-<p>
-These traces are carried forward through
-<a href="/concepts/pifr.html"><strong>PIFRs</strong></a>,
-which act as structured reasoning artifacts within the system.
-</p>
-
-<hr>
-
-<h2>Accountability as reconstruction</h2>
-
-<p>
-When reasoning can be reconstructed,
-accountability becomes grounded.
-</p>
-
-<p>
-It becomes possible to:
-</p>
-
-<ul>
-<li>understand how a decision emerged</li>
-<li>identify where assumptions entered</li>
-<li>challenge specific steps in the reasoning process</li>
-</ul>
-
-<p>
-This shifts accountability from explanation to reconstruction.
-</p>
-
-<p><strong>
-What matters is not only what the system produced,
-but whether the path to that result can be followed.
-</strong></p>
-
-<hr>
-
-<h2>Why it matters now</h2>
-
-<p>
-As AI systems are integrated into governance, healthcare, and economic decision-making,
-the cost of untraceable reasoning increases.
-</p>
-
-<p>
-Without reconstructable reasoning:
-</p>
-
-<ul>
-<li>decisions cannot be meaningfully audited</li>
-<li>responsibility becomes diffuse</li>
-<li>trust depends on authority rather than understanding</li>
-</ul>
-
-<p>
-With reconstructable reasoning:
-</p>
-
-<ul>
-<li>decisions become inspectable</li>
-<li>responsibility becomes attributable</li>
-<li>systems can be improved over time</li>
-</ul>
-
-<p>
-This perspective connects to broader structural considerations,
-as explored in
-<a href="/eu-ai-act/eu-ai-act-structural-alignment.html">
-EU AI Act: Structural Alignment
-</a>.
-</p>
-
-<hr>
-
-<h2>Conclusion</h2>
-
-<p>
-Explainability makes AI outputs interpretable.
-</p>
-
-<p>
-Reconstructability makes them accountable.
-</p>
-
-<p><strong>
-Without reconstructable reasoning,
-accountability remains incomplete.
-</strong></p>
+  <div class="editorial-note">
+    <strong>Editorial note:</strong> a clean, well-structured piece needing only light fixes — one PKOS reference updated, and a new confirmed lexicon link ("Responsibility Boundary"). Likely the anchor piece for a genuine "AI Accountability &amp; Governance" cluster, alongside "Shadow AI and the Collapse of Institutional Visibility," "Trust in the Age of Collaborative Conjecture," and "From Data Provenance to Reasoning Lineage" — not yet confirmed, but worth checking next given how directly this one connects to those titles.
+  </div>
 
 </main>
 
-<footer>
-© 2026 Audited State · AI & the Continuity of Human Understanding  
-<br>
-<span class="affiliation">
-– a contributor to <a href="https://cognitivesuperhighway.org" target="_blank" rel="noopener">CognitiveSuperHighway.org</a>
-</span>
+<footer class="site-footer">
+  <p>Part of the <a href="https://auditedstate.app/research/publications/">Audited State Research</a> essays.</p>
+  <p>© 2026 Audited State · AI &amp; the Continuity of Human Understanding</p>
+  <p>— a contributor to <a href="https://cognitivesuperhighway.org">CognitiveSuperHighway.org</a></p>
 </footer>
-
-
-<script>
-      document.querySelector('.mobile-toggle').addEventListener('click', function() {
-        document.querySelector('nav').classList.toggle('active');
-      });
-</script>
 
 </body>
 </html>

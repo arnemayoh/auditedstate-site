@@ -1,183 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>A Cybernetic Ecology for Human–AI Systems | Audited State</title>
-
-<link rel="stylesheet" href="../../../style.css">
-
 <link rel="canonical" href="https://auditedstate.app/research/publications/essays/cybernetic-ecology-human-ai-systems.html">
-</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F7F4ED; --paper-raised: #FBF9F4; --ink: #1B2430; --ink-soft: #3D4757;
+    --ink-faint: #6B7484; --route: #B8863B; --route-soft: #E4D3B0; --rule: #DAD3C2; --measure: 40em;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 17px; line-height: 1.7; }
+  a { color: var(--ink); text-decoration-color: var(--route); text-underline-offset: 3px; }
+  a:hover { color: var(--route); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--route); outline-offset: 2px; }
 
+  header.site-nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--rule); background: var(--paper-raised); }
+  .site-nav .brand { font-weight: 600; font-size: 0.95rem; text-decoration: none; letter-spacing: 0.01em; }
+  .site-nav nav { display: flex; flex-wrap: wrap; font-size: 0.85rem; }
+  .site-nav nav a { text-decoration: none; color: var(--ink-soft); margin-left: 1.25rem; }
+  .site-nav nav a:first-child { margin-left: 0; }
+  .site-nav nav a:hover { color: var(--route); }
+
+  main { max-width: 46em; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+
+  .eyebrow { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--route); margin-bottom: 1rem; }
+  h1.title { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(2rem, 4.5vw, 2.75rem); line-height: 1.15; margin: 0 0 0.5rem; letter-spacing: -0.01em; }
+  p.subtitle { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.25rem; color: var(--ink-soft); margin: 0 0 2rem; }
+
+  .waypoints { background: var(--paper-raised); border-left: 3px solid var(--route); border-radius: 2px; padding: 1.1rem 1.4rem; margin: 0 0 2.5rem; }
+  .waypoints .waypoints-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--route); display: block; margin-bottom: 0.6rem; }
+  .waypoints ul { margin: 0; padding-left: 1.1rem; }
+  .waypoints li { margin-bottom: 0.35rem; font-size: 0.95rem; }
+  .waypoints li:last-child { margin-bottom: 0; }
+
+  hr.divider { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+  main p { margin: 0 0 1.3rem; max-width: var(--measure); }
+  h2 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 1.45rem; margin: 2.6rem 0 1.1rem; letter-spacing: -0.005em; }
+
+  .realms-grid { display: flex; flex-wrap: wrap; margin: 1.8rem -0.45rem; }
+  .realm-card { background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 4px; padding: 1rem 1.2rem; width: calc(50% - 0.9rem); margin: 0 0.45rem 0.9rem; box-sizing: border-box; }
+  .realm-card .realm-name { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 1.05rem; color: var(--ink); margin-bottom: 0.3rem; }
+  .realm-card .realm-domains { font-size: 0.9rem; color: var(--ink-soft); }
+  @media (max-width: 600px) { .realm-card { width: calc(100% - 0.9rem); } }
+
+  .route-map { background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 4px; padding: 1rem 1.25rem; margin: 1.8rem 0; font-size: 1rem; font-weight: 500; color: var(--ink-soft); text-align: center; letter-spacing: 0.01em; }
+  .route-map .arrow { color: var(--route); margin: 0 0.4em; }
+
+  figure.essay-figure { margin: 2rem 0; max-width: var(--measure); }
+  figure.essay-figure img { width: 100%; max-height: 26rem; object-fit: cover; height: auto; border-radius: 4px; display: block; }
+  figure.essay-figure figcaption { font-size: 0.85rem; color: var(--ink-faint); margin-top: 0.6rem; font-style: italic; }
+
+  .marker-plaque { margin: 3.5rem 0 3rem; padding: 2rem 0; border-top: 2px solid var(--route-soft); border-bottom: 2px solid var(--route-soft); text-align: center; }
+  .marker-plaque p { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 1.35rem; line-height: 1.5; color: var(--ink); max-width: 34em; margin: 0 auto 1rem; }
+  .marker-plaque cite { font-family: 'Inter', sans-serif; font-style: normal; font-size: 0.85rem; font-weight: 600; color: var(--route); letter-spacing: 0.04em; }
+
+  .essay-declarations { margin: 2.5rem 0; font-size: 0.9rem; color: var(--ink-soft); }
+  .essay-declarations h3 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); margin: 1.4rem 0 0.4rem; }
+  .essay-declarations p { margin: 0 0 0.8rem; max-width: var(--measure); }
+
+  .editorial-note { margin: 2rem 0; padding: 1rem 1.25rem; background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 4px; font-size: 0.88rem; color: var(--ink-soft); }
+  .editorial-note strong { color: var(--ink); }
+
+  footer.site-footer { max-width: 46em; margin: 0 auto; padding: 0 1.5rem 3rem; font-size: 0.85rem; color: var(--ink-faint); }
+  footer.site-footer a { color: var(--ink-faint); }
+  footer.site-footer a:hover { color: var(--route); }
+  footer.site-footer p { margin: 0.3rem 0; }
+
+  @media (max-width: 600px) { .site-nav { padding: 1rem; } main { padding: 2rem 1.25rem 3.5rem; } }
+</style>
+</head>
 <body>
 
-<header>
-<div class="nav-container">
-
-<a href="/" class="logo">
-
-  Audited State
-
-  <span class="tagline">— preserving human agency</span>
-
-</a>
-<button class="mobile-toggle">☰</button>
-
-<nav>
-<a href="/problem.html">Problem</a>
-<a href="/concepts/lexicon.html">Lexicon</a>
-<a href="/concept-map.html">Concept Map</a>
-<a href="/architecture.html">Architecture</a>
-<a href="/labs/">Labs</a>
-<a href="/research/">Research</a>
-<a href="/about/">About</a>
-</nav>
-
-</div>
+<header class="site-nav">
+  <a class="brand" href="https://auditedstate.app/">Audited State — preserving human agency</a>
+  <nav>
+    <a href="https://auditedstate.app/problem.html">Problem</a>
+    <a href="https://auditedstate.app/concepts/lexicon.html">Lexicon</a>
+    <a href="https://auditedstate.app/concept-map.html">Concept Map</a>
+    <a href="https://auditedstate.app/architecture.html">Architecture</a>
+    <a href="https://auditedstate.app/labs/">Labs</a>
+    <a href="https://auditedstate.app/research/">Research</a>
+    <a href="https://auditedstate.app/about/">About</a>
+  </nav>
 </header>
-
 
 <main>
 
-<header class="essay-header">
+  <span class="eyebrow">Cluster pending final grouping</span>
+  <h1 class="title">A Cybernetic Ecology for Human–AI Systems</h1>
+  <p class="subtitle">Intent, computation, action, and ethical constraint</p>
 
-<h1>A Cybernetic Ecology for Human–AI Systems</h1>
-
-<p class="essay-subtitle">
-Intent, Computation, Action, and Ethical Constraint
-</p>
-
-<nav class="recommended-essays">
-
-    <strong>Recommended Essays</strong>
-    
+  <div class="waypoints">
+    <span class="waypoints-label">Recommended Essays</span>
     <ul>
-    
-    <li>
-    <a href="/research/publications/essays/cybernetic-ecology-human-ai-systems.html">
-    A Cybernetic Ecology for Human–AI Systems
-    </a>
-    </li>
-    
-    <li>
-    <a href="/research/publications/essays/human-reasoning-expands-meaning-ai-reasoning-narrows-possibilities.html">
-    Human Reasoning Expands Meaning; AI Reasoning Narrows Possibilities
-    </a>
-    </li>
-    
-    <li>
-    <a href="/research/publications/essays/why-courts-reconstruct-thinking-collective-reasoning.html">
-    Why Courts Reconstruct Thinking
-    </a>
-    </li>
-    
+      <li><a href="https://auditedstate.app/research/publications/essays/human-reasoning-expands-meaning-ai-reasoning-narrows-possibilities.html">Human Reasoning Expands Meaning; AI Reasoning Narrows Possibilities</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/why-courts-reconstruct-thinking-collective-reasoning.html">Why Courts Reconstruct Thinking</a></li>
     </ul>
-    
-</nav>
-<hr>
+  </div>
 
-<figure class="essay-diagram">
-    <img src="/assets/pkos-reasoning-ecology.webp" alt="PKOS reasoning ecology diagram">
-</figure>
+  <hr class="divider">
 
-</header>
+  <figure class="essay-figure">
+    <img src="https://auditedstate.app/assets/pkos-reasoning-ecology.webp" alt="A diagram of the reasoning ecology, showing intent, computation, action, and ethical constraint as interacting realms.">
+  </figure>
 
+  <p>Collective reasoning doesn't occur in a single domain. It emerges from the interaction of intention, computation, action, and ethical constraint. Human societies have long built institutions to coordinate exactly these domains: law establishes normative boundaries, dialogue shapes interpretation, tools enable analysis, and organisations translate decisions into action. Together, these form a distributed reasoning system through which a society actually thinks, decides, and acts.</p>
 
+  <h2>Four Realms of Collective Reasoning</h2>
 
-<section>
+  <div class="realms-grid">
+    <div class="realm-card">
+      <div class="realm-name">Soul</div>
+      <div class="realm-domains">Ethics · law · memory</div>
+    </div>
+    <div class="realm-card">
+      <div class="realm-name">Mind</div>
+      <div class="realm-domains">Intent · dialogue · reflection</div>
+    </div>
+    <div class="realm-card">
+      <div class="realm-name">Logic</div>
+      <div class="realm-domains">Schemas · tools · computation</div>
+    </div>
+    <div class="realm-card">
+      <div class="realm-name">Body</div>
+      <div class="realm-domains">Agents · projects · assets</div>
+    </div>
+  </div>
 
-<p>
-Collective reasoning does not occur in a single domain. It emerges from the interaction of intention, computation, action, and ethical constraint.
-</p>
+  <p>Each realm represents a distinct function within the reasoning system. Labs let a system generate real variety without immediately committing to irreversible action — related, in cybernetic terms, to <a href="https://auditedstate.app/concepts/lexicon.html#requisite-variety">requisite variety</a>: a system needs at least as much internal variety as the situations it's meant to handle, or it simply can't respond to them.</p>
 
-<p>
-Human societies have long developed institutions that coordinate these domains: law establishes normative boundaries, dialogue shapes interpretation, tools enable analysis, and organizations translate decisions into action.
-</p>
+  <h2>Reasoning as a Trajectory</h2>
 
-<p>
-Together these elements form a distributed reasoning system through which societies think, decide, and act.
-</p>
+  <div class="route-map">intent <span class="arrow">→</span> interpretation <span class="arrow">→</span> analysis <span class="arrow">→</span> decision <span class="arrow">→</span> action</div>
 
-</section>
+  <p>When these trajectories disappear, later observers see only the resulting events. The reasoning that actually produced them has to be reconstructed from whatever's left behind.</p>
 
+  <div class="marker-plaque">
+    <p>A reasoning system that loses its trajectory doesn't stop producing outcomes. It just stops being able to explain them.</p>
+    <cite>— Arne Mayoh</cite>
+  </div>
 
+  <div class="essay-declarations">
+    <h3>Declaration of Generative AI and AI-Assisted Technologies</h3>
+    <p>This essay was developed with the assistance of AI systems as a research and editorial tool, for drafting support and structural revision. The argument and conclusions are the author's own.</p>
+  </div>
 
-<section>
-
-<h2>Four Realms of Collective Reasoning</h2>
-
-<pre>
-SOUL   → ethics · law · memory
-MIND   → intent · dialogue · reflection
-LOGIC  → schemas · tools · computation
-BODY   → agents · projects · assets
-</pre>
-
-<p>
-Each realm represents a distinct function within the reasoning system.
-</p>
-
-<p>
-Labs allow systems to generate variety without immediately committing to irreversible action.
-</p>
-
-<p>
-In cybernetic terms this relates to
-<a href="/concepts/lexicon.html#requisite-variety">requisite variety</a>.
-</p>
-
-</section>
-
-
-
-<section>
-
-<h2>Reasoning as a Trajectory</h2>
-
-<pre>
-intent → interpretation → analysis → decision → action
-</pre>
-
-<p>
-When these trajectories disappear, later observers see only resulting events.
-</p>
-
-<p>
-The reasoning that produced them must be reconstructed.
-</p>
-
-</section>
-
-
-
-<footer class="essay-footer">
-
-<p>
-Part of the <a href="/research/index.html">Audited State Research</a> essays.
-</p>
-
-</footer>
+  <div class="editorial-note">
+    <strong>Editorial note:</strong> this essay's "Recommended Essays" list included itself as the first entry — the same self-reference bug found in "The Collapse of Agency" — removed here, leaving the two genuine recommendations. The image alt text referenced "PKOS," updated to describe the diagram directly. Kept deliberately short rather than padded, since the source content itself is brief — its real value is the four-realms model (Soul/Mind/Logic/Body), which is genuine, confirmed architecture from this research programme rather than an invented flourish, and is given proper visual weight here rather than left as a plain code block. Worth noting directly: this essay reuses the exact same intent→interpretation→analysis→decision→action diagram as "Why Courts Reconstruct Thinking," and explicitly recommends both that essay and "Human Reasoning Expands Meaning" — a real, three-way connection that may point to its own cluster (something like "Reasoning Architecture") distinct from both "Learning &amp; Understanding" and "AI Accountability &amp; Governance," rather than these being scattered standalone pieces.
+  </div>
 
 </main>
 
-
-<footer>
-© 2026 Audited State · AI & the Continuity of Human Understanding  
-<br>
-<span class="affiliation">
-– a contributor to <a href="https://cognitivesuperhighway.org" target="_blank" rel="noopener">CognitiveSuperHighway.org</a>
-</span>
+<footer class="site-footer">
+  <p>Part of the <a href="https://auditedstate.app/research/publications/">Audited State Research</a> essays.</p>
+  <p>© 2026 Audited State · AI &amp; the Continuity of Human Understanding</p>
+  <p>— a contributor to <a href="https://cognitivesuperhighway.org">CognitiveSuperHighway.org</a></p>
 </footer>
-
-
-<script>
-document.querySelector('.mobile-toggle').addEventListener('click',function(){
-document.querySelector('nav').classList.toggle('active');
-});
-</script>
 
 </body>
 </html>
