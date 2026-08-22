@@ -33,11 +33,13 @@
   h1.title { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(2rem, 4.5vw, 2.75rem); line-height: 1.15; margin: 0 0 0.5rem; letter-spacing: -0.01em; }
   p.subtitle { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.25rem; color: var(--ink-soft); margin: 0 0 2rem; }
 
-  .waypoints { background: var(--paper-raised); border-left: 3px solid var(--route); border-radius: 2px; padding: 1.1rem 1.4rem; margin: 0 0 2.5rem; }
-  .waypoints .waypoints-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--route); display: block; margin-bottom: 0.6rem; }
-  .waypoints ul { margin: 0; padding-left: 1.1rem; }
-  .waypoints li { margin-bottom: 0.35rem; font-size: 0.95rem; }
-  .waypoints li:last-child { margin-bottom: 0; }
+  .sequence-box { background: var(--paper-raised); border-left: 3px solid var(--route); border-radius: 2px; padding: 1.1rem 1.4rem; margin: 0 0 2.5rem; }
+  .sequence-box .waypoints-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--route); display: block; margin-bottom: 0.7rem; }
+  .sequence-box ol { margin: 0; padding-left: 1.4rem; }
+  .sequence-box li { margin-bottom: 0.35rem; font-size: 0.95rem; }
+  .sequence-box li:last-child { margin-bottom: 0; }
+  .sequence-box li.current { font-weight: 600; color: var(--ink); list-style: none; margin-left: -1.4rem; padding-left: 0; }
+  .sequence-box li.current::before { content: "→ "; color: var(--route); }
 
   hr.divider { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
   main p { margin: 0 0 1.3rem; max-width: var(--measure); }
@@ -55,8 +57,8 @@
   .essay-declarations h3 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); margin: 1.4rem 0 0.4rem; }
   .essay-declarations p { margin: 0 0 0.8rem; max-width: var(--measure); }
 
-  .editorial-note { margin: 2rem 0; padding: 1rem 1.25rem; background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 4px; font-size: 0.88rem; color: var(--ink-soft); }
-  .editorial-note strong { color: var(--ink); }
+  .series-close { margin: 2.5rem 0; padding: 1.25rem 1.4rem; background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 4px; font-size: 0.92rem; color: var(--ink-soft); }
+  .series-close strong { color: var(--ink); }
 
   footer.site-footer { max-width: 46em; margin: 0 auto; padding: 0 1.5rem 3rem; font-size: 0.85rem; color: var(--ink-faint); }
   footer.site-footer a { color: var(--ink-faint); }
@@ -83,18 +85,22 @@
 
 <main>
 
-  <span class="eyebrow">Placement pending — possible 8th essay in Interpretation, Drift &amp; Cognitive Continuity</span>
+  <span class="eyebrow">Interpretation, Drift &amp; Cognitive Continuity — Essay 8 of 8</span>
   <h1 class="title">Understanding Understanding</h1>
   <p class="subtitle">Why human understanding is fundamentally collective</p>
 
-  <div class="waypoints">
-    <span class="waypoints-label">Related</span>
-    <ul>
-      <li><a href="https://auditedstate.app/research/publications/essays/data-representation-of-truth.html">Data as Representation of Truth</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/coherence-of-understanding.html">Coherence of Understanding</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/legible-ambiguity.html">Why Stable Understanding Requires Legible Ambiguity</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/make-the-ai-understand.html">Make the AI Understand</a></li>
-    </ul>
+  <div class="sequence-box">
+    <span class="waypoints-label">Reading Sequence</span>
+    <ol>
+      <li><a href="https://auditedstate.app/research/publications/essays/data-representation-of-truth.html">1. Data as Representation of Truth</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/drift-drift-drift.html">2. Drift, Drift... DRIFT!</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/reasoning-drift.html">3. Reasoning Drift</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/coherence-of-understanding.html">4. Coherence of Understanding</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/legible-ambiguity.html">5. Why Stable Understanding Requires Legible Ambiguity</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/traffic-of-reasoning.html">6. The Traffic of Reasoning</a></li>
+      <li><a href="https://auditedstate.app/research/publications/essays/make-the-ai-understand.html">7. Make the AI Understand</a></li>
+      <li class="current">8. Understanding Understanding</li>
+    </ol>
   </div>
 
   <hr class="divider">
@@ -144,14 +150,14 @@
     <p>This essay was developed with the assistance of AI systems as a research and editorial tool, for drafting support and structural revision. The argument and conclusions are the author's own.</p>
   </div>
 
-  <div class="editorial-note">
-    <strong>Editorial note — a real placement question, not yet resolved:</strong> this essay was never linked from the main publications index at all, unlike every other essay converted in this whole project. Its own "Guided Narrative Path" positions it directly after "Make the AI Understand" — which was already converted and explicitly closed out as essay 7 of 7, the definitive end of the Interpretation, Drift &amp; Cognitive Continuity series. If this essay is meant to be a genuine eighth part of that series, "Make the AI Understand"'s closing note needs revising a second time — the same situation as "Drift, Drift... DRIFT!" earlier in this project, but this time flagged before any renumbering is done, rather than after. <strong>Recommend confirming before folding it in</strong>: the content is strong and would make a fitting capstone, but two "final essay" claims in one series is exactly the kind of drift this whole conversion pass has been catching everywhere else — worth deciding deliberately rather than defaulting. Substantial consolidation was also applied here: the original had roughly ten sections, several of them (particularly "We Inhabit Inherited Coherence," "Understanding Is Relational," and "Data Is Not Understanding") restating arguments already made at length in "Data as Representation of Truth" and "Coherence of Understanding." Those have been compressed and cross-referenced rather than repeated in full; the genuinely distinctive material — the participatory framing, the "higher-order coherence structure" argument, and the closing realisation — has been kept intact. Co-byline replaced with the standard Declaration.
+  <div class="series-close">
+    <strong>This closes the eight-essay Interpretation, Drift &amp; Cognitive Continuity series.</strong> The preceding essays establish that data is frozen interpretation, that interpretation drifts, that operational coherence is not understanding, and that continuity requires infrastructure rather than better judgment alone. This last essay takes the remaining step: understanding itself is not an individual possession but collective continuity — inherited, partial, and participatory. The formal research behind these ideas continues in the programme's published papers, available at the <a href="https://auditedstate.app/research/publications/">Audited State Research</a> index.
   </div>
 
 </main>
 
 <footer class="site-footer">
-  <p>Part of the <a href="https://auditedstate.app/research/publications/">Audited State Research</a> essays.</p>
+  <p>Essay 8 of the <a href="https://auditedstate.app/research/publications/">Interpretation, Drift &amp; Cognitive Continuity series</a>.</p>
   <p>© 2026 Audited State · AI &amp; the Continuity of Human Understanding</p>
   <p>— a contributor to <a href="https://cognitivesuperhighway.org">CognitiveSuperHighway.org</a></p>
 </footer>
