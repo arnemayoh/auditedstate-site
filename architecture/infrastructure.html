@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infrastructure | Audited State</title>
+<link rel="canonical" href="https://auditedstate.app/architecture/infrastructure.html">
+<meta name="description" content="The carrier itself. What's actually read, passed, and forwarded — and what makes it something a distributed operation can trust to keep carrying it.">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header>
+<div class="nav-container">
+<a href="/" class="logo">
+  Audited State
+  <span class="tagline">— preserving human agency</span>
+</a>
+<button class="mobile-toggle">☰</button>
+<nav>
+<a href="/problem.html">Problem</a>
+<a href="/architecture/">Architecture</a>
+<a href="/philosophy/">Philosophy</a>
+<a href="/concept-map.html">Concept Map</a>
+<a href="/labs/">Labs</a>
+<a href="/research/">Research</a>
+<a href="/about/">About</a>
+</nav>
+</div>
+</header>
+
+<div class="diagram">
+  <img src="/assets/infrastructure-hero.jpg" alt="A sectional view of a city street: traffic moving on the surface, a technician working on cables and conduits in the layer beneath it, and a train running through a tunnel further below.">
+</div>
+
+<main>
+
+<h1>Infrastructure</h1>
+<p class="lead">The carrier itself. What's actually read, passed, and forwarded</p>
+
+<p>
+If you're bringing your own stack, this is the one page you need. Systems and Process explain why the whole thing holds together and who gets to move when — useful context, but not what a distributed operation actually needs to trust before it plugs in. This page is about the layer underneath both of those: what has to persist so movement can happen at all.
+</p>
+
+<h2>The Traffic Isn't the Infrastructure</h2>
+
+<p>
+Look at a city street and it's easy to think the traffic <em>is</em> the system — cars, buses, the visible motion. It isn't. Underneath the surface: cable runs, junction boxes, signal wiring, a rail tunnel that was there before today's traffic and will still be there tomorrow. The traffic is what moves. The infrastructure is what stays, so that movement keeps being possible.
+</p>
+
+<p>
+The same distinction holds here: <strong>the reasoning output isn't the continuity infrastructure.</strong> A conclusion, a decision, an answer — all of that is traffic. PIFR, PSS, and the Ledger are the road, the cables, and the maintenance record underneath it.
+</p>
+
+<h2>Traffic Vocabulary, Infrastructure Vocabulary</h2>
+
+<table class="concept-table">
+<tr><th>In traffic</th><th>Infrastructure</th></tr>
+<tr><td>The road itself</td><td>Persistent Semantic Scaffold (PSS)</td></tr>
+<tr><td>Lane markings</td><td>Semantic structure</td></tr>
+<tr><td>Junction map</td><td>Relationship structure</td></tr>
+<tr><td>A vehicle carrying cargo</td><td>PIFR carrying reasoning</td></tr>
+<tr><td>Road signs</td><td>Metadata needed for interpretation</td></tr>
+<tr><td>Maintenance and history records</td><td>The Ledger</td></tr>
+<tr><td>An on-ramp</td><td>Interface / admissibility</td></tr>
+<tr><td>Shared traffic standards</td><td>Interoperability</td></tr>
+<tr><td>Maintenance access</td><td>Recoverability</td></tr>
+<tr><td>The repair crew</td><td>Audit &amp; Repair</td></tr>
+<tr><td>The entire transport network</td><td>Shared continuity infrastructure</td></tr>
+</table>
+
+<h2>The Carrier Chain</h2>
+
+<p>
+Continuity depends on preserving enough structure for the next participant to continue the journey — not restart it. Here's the same chain, told twice:
+</p>
+
+<pre>
+   DRIVER
+     │
+     ▼
+ VEHICLE / CARGO
+     │
+     ▼
+ ROAD NETWORK
+     │
+     ▼
+ ROUTE + SIGNS + HISTORY
+     │
+     ▼
+ NEXT DRIVER / DESTINATION
+</pre>
+
+<pre>
+ PERSON / AGENT A
+     │  creates reasoning
+     ▼
+    PIFR
+     │  carried through
+     ▼
+    PSS ──────────► LEDGER
+     │              how this state became this state
+     ▼
+ NEXT CONTEXT
+     │
+     ▼
+ PERSON / AGENT B
+     │  can continue rather than reconstruct
+     ▼
+ NEW REASONING
+</pre>
+
+<p>
+Nothing here is exotic. A next driver following a route doesn't need to relearn the city from scratch — the road, the signage, and the maintenance history already did that work. A next agent inheriting a PIFR doesn't need to reconstruct the reasoning behind it — PSS and the Ledger already did that work. This is what "carrier" actually means: not moving something once, but making it possible for whoever comes next to keep moving it.
+</p>
+
+<h2>Output Isn't the Same Thing as the PIFR</h2>
+
+<p>
+The chain above shows the simplest possible case — one relay, one handoff, A to B — for the sake of a clear first picture. It's worth being precise about what it's simplifying, because two different things are easy to blur together.
+</p>
+
+<p>
+An <strong>output</strong> — an answer, a decision, a finished piece of writing — is like a package that's arrived. It can carry a trace back to where it came from: a backlink to the PIFR that produced it, the way cargo carries a manifest. That trace is what <a href="/concepts/traceable-state.html">Traceable State</a> actually is.
+</p>
+
+<p>
+The <strong>PIFR itself</strong> is a different kind of thing entirely. It isn't a single package moving down a single line from one point to another. It's a node connected to many other PIFRs at once — closer to a neuron inside a brain than a parcel on a truck. In practice, PIFRs interconnect densely, forming what this site calls a <a href="/concepts/reasoning-network.html">Reasoning Network</a> — and it's that network, not any one delivery, that actually holds continuity together.
+</p>
+
+<h2>What This Means for Your Stack</h2>
+
+<p>
+An on-ramp doesn't ask your vehicle to explain how its engine works. It asks for exactly one thing: merge under the same rules everyone else merges under. Interfacing with this infrastructure works the same way — your own stack stays yours. What has to be admissible is the PIFR you hand across the boundary: identifiable, structured, and built to be carried forward rather than silently dropped the moment it changes hands.
+</p>
+
+<p>
+But an on-ramp isn't accessible to just anyone, either. A driver who doesn't recognize a red light isn't merely unwelcome — they're a hazard to themselves and to everyone merging around them. The same holds here: <strong>agent-agnostic doesn't mean assumption-free.</strong> It means any agent that shares the protocol may participate — not any agent, regardless of whether it does.
+</p>
+
+<p>
+None of this requires new hardware or new cabling, either. PKOS doesn't propose a physical layer of its own — it's a protocol, typically carried as NDJSON (newline-delimited JSON), riding on infrastructure that already exists. The wiring in the image above was already there before this page was written. What's new is the shared format traveling through it, not the conduit itself.
+</p>
+
+<p class="closing">
+This completes the three perspectives. For the felt version of why any of this needed a name at all, see <a href="/philosophy/">Philosophy</a>. For precise definitions, the <a href="/concepts/lexicon.html">Lexicon</a>.
+</p>
+
+<h2>Related Concepts</h2>
+
+<ul class="related-concepts">
+<li><a href="/concepts/pifr.html">PIFR</a></li>
+<li><a href="/concepts/persistent-semantic-scaffold.html">Persistent Semantic Scaffold</a></li>
+<li><a href="/concepts/feedforward.html">Feedforward</a></li>
+<li><a href="/concepts/audit-repair.html">Audit &amp; Repair</a></li>
+<li><a href="/concepts/traceable-state.html">Traceable State</a></li>
+<li><a href="/concepts/reasoning-network.html">Reasoning Network</a></li>
+</ul>
+
+</main>
+
+<footer>
+© 2026 Audited State · AI & the Continuity of Human Understanding
+<br>
+<span class="affiliation">
+– a contributor to <a href="https://cognitivesuperhighway.org" target="_blank" rel="noopener">CognitiveSuperHighway.org</a>
+</span>
+</footer>
+
+<script>
+document.querySelector('.mobile-toggle').addEventListener('click', function() {
+document.querySelector('nav').classList.toggle('active');
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Process Perspective | Audited State</title>
+<link rel="canonical" href="https://auditedstate.app/architecture/process-perspective.html">
+<meta name="description" content="Who may move, when, under what conditions, and who remains responsible? The moment-by-moment mechanics of Promotion Gate, seen at street level.">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header>
+<div class="nav-container">
+<a href="/" class="logo">
+  Audited State
+  <span class="tagline">— preserving human agency</span>
+</a>
+<button class="mobile-toggle">☰</button>
+<nav>
+<a href="/problem.html">Problem</a>
+<a href="/architecture/">Architecture</a>
+<a href="/philosophy/">Philosophy</a>
+<a href="/concept-map.html">Concept Map</a>
+<a href="/labs/">Labs</a>
+<a href="/research/">Research</a>
+<a href="/about/">About</a>
+</nav>
+</div>
+</header>
+
+<div class="diagram">
+  <img src="/assets/process-perspective-hero.jpg" alt="A busy controlled intersection at night, with traffic signals, a pedestrian crossing, an ambulance under priority, a cyclist waiting in a marked lane, and a technician working on a signal cabinet.">
+</div>
+
+<main>
+
+<h1>Process Perspective</h1>
+<p class="lead">Who may move, when, under what conditions, and who remains responsible</p>
+
+<h2>The Process Question</h2>
+
+<p>
+Systems Perspective looked at the whole network from above. This page comes down to street level, to one intersection, at one moment — because that's where the actual decision happens. Not "does this network work in general," but: <strong>this vehicle, right now, at this line — may it proceed?</strong>
+</p>
+
+<p>
+Every driver already knows the answer without having to think about it. Approach the junction. Be identifiable — plates, lights, position in the lane. Signal your intention. Wait for the light that grants you the right of way. Only then, proceed. It happens so automatically that it doesn't feel like a process at all. It is one, and it's the same process PKOS asks of a piece of reasoning before it's allowed to become durable.
+</p>
+
+<h2>Traffic Vocabulary, Process Vocabulary</h2>
+
+<table class="concept-table">
+<tr><th>In traffic</th><th>Process Perspective</th></tr>
+<tr><td>Vehicle approaches junction</td><td>Exploration / proposed action</td></tr>
+<tr><td>Driver identified</td><td>Authorship / attribution</td></tr>
+<tr><td>Traffic light, stop line</td><td>Promotion Gate</td></tr>
+<tr><td>Right-of-way rules</td><td>Authority / admissibility</td></tr>
+<tr><td>Ambulance exception</td><td>Context-dependent authority</td></tr>
+<tr><td>Crossing the intersection</td><td>Execution</td></tr>
+<tr><td>Cameras, logs</td><td>Traceable State</td></tr>
+<tr><td>Incident review</td><td>Audit</td></tr>
+<tr><td>Changed signal timing</td><td>Repair</td></tr>
+</table>
+
+<h2>The Gate, Step by Step</h2>
+
+<pre>
+     APPROACH
+        │
+        ▼
+    IDENTIFY
+        │
+        ▼
+  SIGNAL / INTENTION
+        │
+        ▼
+  PROMOTION GATE
+        │
+        ▼
+      ACTION
+        │
+        ▼
+  TRACEABLE STATE
+        │
+        ▼
+  AUDIT / REPAIR
+        │
+        ▼
+  changed future behaviour
+</pre>
+
+<p style="text-align:center;"><em>approach → identify → signal → receive right-of-way → proceed → record → review</em></p>
+
+<p>
+Nothing about this is exotic once it's stated this plainly. Everyone already accepts this logic every time they drive through a junction — identify yourself, declare your intention, wait for clearance, proceed, and accept that what you did is now on record. Promotion Gate asks reasoning to clear the same sequence before it's trusted the way a completed crossing is trusted.
+</p>
+
+<h2>The Exception That Proves the Rule</h2>
+
+<p>
+An ambulance under priority doesn't skip the gate. It clears a different one — a context-dependent authority, declared by lights and siren, that other traffic is expected to recognize and yield to. This is the same logic behind PKOS's tiered Promotion strictness across Personal, Professional, and Public contexts: the gate doesn't disappear for higher-stakes or lower-stakes situations, it recalibrates to what the situation actually requires.
+</p>
+
+<p class="closing">
+Everything on this page happens because something persists underneath it — the road itself, the signal history, the record a technician can actually go and check. <a href="/architecture/infrastructure.html">Infrastructure</a> is what that persistence is made of.
+</p>
+
+<h2>Related Concepts</h2>
+
+<ul class="related-concepts">
+<li><a href="/concepts/promotion-gate.html">Promotion Gate</a></li>
+<li><a href="/concepts/reasoning-vehicle.html">Reasoning Vehicle</a></li>
+<li><a href="/concepts/traceable-state.html">Traceable State</a></li>
+<li><a href="/concepts/audit-repair.html">Audit &amp; Repair</a></li>
+<li><a href="/concepts/decision-lineage.html">Decision Lineage</a></li>
+</ul>
+
+</main>
+
+<footer>
+© 2026 Audited State · AI & the Continuity of Human Understanding
+<br>
+<span class="affiliation">
+– a contributor to <a href="https://cognitivesuperhighway.org" target="_blank" rel="noopener">CognitiveSuperHighway.org</a>
+</span>
+</footer>
+
+<script>
+document.querySelector('.mobile-toggle').addEventListener('click', function() {
+document.querySelector('nav').classList.toggle('active');
+});
+</script>
+
+</body>
+</html>

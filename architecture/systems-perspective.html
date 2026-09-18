@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Systems Perspective | Audited State</title>
+<link rel="canonical" href="https://auditedstate.app/architecture/systems-perspective.html">
+<meta name="description" content="How can thousands of independent actors remain sufficiently coordinated without one intelligence directing every movement? The systems question, and why requisite variety is the answer.">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header>
+<div class="nav-container">
+<a href="/" class="logo">
+  Audited State
+  <span class="tagline">— preserving human agency</span>
+</a>
+<button class="mobile-toggle">☰</button>
+<nav>
+<a href="/problem.html">Problem</a>
+<a href="/architecture/">Architecture</a>
+<a href="/philosophy/">Philosophy</a>
+<a href="/concept-map.html">Concept Map</a>
+<a href="/labs/">Labs</a>
+<a href="/research/">Research</a>
+<a href="/about/">About</a>
+</nav>
+</div>
+</header>
+
+<div class="diagram">
+  <img src="/assets/systems-perspective-hero.jpg" alt="An aerial view of a dense highway, rail, and bridge interchange at dusk, with a single small monitoring station visible in the foreground, dwarfed by the scale of the network it watches.">
+</div>
+
+<main>
+
+<h1>Systems Perspective</h1>
+<p class="lead">Why the whole thing holds together, with no one in charge of it</p>
+
+<p class="caption" style="text-align:center;">A system can look convincing long before it truly works. <span class="pressure"><strong>Its faults appear in flow, friction, delay, and failure</strong></span> — <span class="recovery"><strong>measurable effects that drive adaptation</strong></span>.</p>
+
+<h2>The Systems Question</h2>
+
+<p>
+Look down on any real interchange at rush hour and the honest question isn't "who is in charge of this." Nobody is. Thousands of drivers, buses, trains, cyclists, and pedestrians move through the same shared space, each making their own decisions, and the whole thing mostly works anyway.
+</p>
+
+<p>
+The systems question is simply: <strong>how?</strong> How can this many independent actors remain sufficiently coordinated without one intelligence directing every movement — and what does it take for that coordination to survive an accident, a closed lane, or a sudden surge nobody planned for?
+</p>
+
+<p>
+PKOS asks the same question about reasoning instead of traffic.
+</p>
+
+<h2>Traffic Vocabulary, Systems Vocabulary</h2>
+
+<table class="concept-table">
+<tr><th>In traffic</th><th>Systems Perspective</th></tr>
+<tr><td>Changing traffic conditions</td><td>Environment</td></tr>
+<tr><td>Cars, buses, trains, pedestrians</td><td>Agents</td></tr>
+<tr><td>Traffic lights</td><td>Signals</td></tr>
+<tr><td>Cameras, detectors</td><td>Sensors</td></tr>
+<tr><td>Queues, accidents, delays</td><td>Feedback</td></tr>
+<tr><td>Diversions, changed timing</td><td>Adaptation</td></tr>
+<tr><td>Different vehicle capabilities</td><td>Variety</td></tr>
+<tr><td>Rules, signals, infrastructure together</td><td>Regulation</td></tr>
+<tr><td>Emergency vehicle priority</td><td>Handling exceptional states</td></tr>
+<tr><td>Traffic control centre</td><td>Governance / system observation</td></tr>
+</table>
+
+<h2>The Feedback Loop</h2>
+
+<p>
+A functioning system has to perceive enough of what is happening to regulate what is happening. That single sentence is most of what W. Ross Ashby's cybernetics was ever really about, and it holds together the same way in a traffic network or a reasoning network:
+</p>
+
+<pre>
+                ENVIRONMENT
+     traffic volume · weather · incidents
+                    │
+                    ▼
+                 SENSORS
+                    │
+                    ▼
+     ┌──────────  REGULATION  ──────────┐
+     │                                  │
+     ▼                                  │
+   SIGNALS ─────────► AGENTS ───────────┘
+     │                   │
+     │                   ▼
+     │             SYSTEM EFFECTS
+     │           flow · delay · conflict
+     │                   │
+     └────────  FEEDBACK ◄┘
+                    │
+                    ▼
+          GOVERNANCE / MAINTENANCE
+</pre>
+
+<p>
+Notice what this diagram does not contain: a single box labeled "controller" that everything answers to. Regulation emerges from the loop itself — sensors feeding signals, signals shaping agents, agents producing effects, effects feeding back into sensors again. Remove any one piece and the loop doesn't get smaller. It stops being a loop.
+</p>
+
+<h2>Requisite Variety</h2>
+
+<p>
+There's a precise reason a fixed, one-size-fits-all signal timing eventually fails no matter how well it's tuned: the system trying to regulate traffic has to have at least as much variety in its own responses as the traffic itself throws at it. A signal that can only ever do "red, then green, on a timer" cannot regulate a network that sometimes has an ambulance, sometimes has a parade, and sometimes has black ice. This is Ashby's Law of Requisite Variety, and it's the same reason PKOS treats reasoning-handling capacity as something that has to match the actual variety of situations reasoning encounters, not the variety someone assumed in advance.
+</p>
+
+<p class="closing">
+Everything on this page is the theory. <a href="/architecture/process-perspective.html">Process Perspective</a> is what it looks like at street level, at the moment something is actually allowed to move.
+</p>
+
+<h2>Related Concepts</h2>
+
+<ul class="related-concepts">
+<li><a href="/concepts/requisite-variety.html">Requisite Variety</a></li>
+<li><a href="/concepts/feedforward.html">Feedforward</a></li>
+<li><a href="/concepts/audit-repair.html">Audit &amp; Repair</a></li>
+<li><a href="/concepts/mutation-blast-radius.html">Mutation Blast Radius</a></li>
+<li><a href="/concepts/navigational-coherence.html">Navigational Coherence</a></li>
+</ul>
+
+</main>
+
+<footer>
+© 2026 Audited State · AI & the Continuity of Human Understanding
+<br>
+<span class="affiliation">
+– a contributor to <a href="https://cognitivesuperhighway.org" target="_blank" rel="noopener">CognitiveSuperHighway.org</a>
+</span>
+</footer>
+
+<script>
+document.querySelector('.mobile-toggle').addEventListener('click', function() {
+document.querySelector('nav').classList.toggle('active');
+});
+</script>
+
+</body>
+</html>

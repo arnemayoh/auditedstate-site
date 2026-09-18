@@ -145,6 +145,28 @@ Feedback → Audit & Repair
 Together these mechanisms allow reasoning systems to remain both continuous and corrigible.
 </p>
 
+<h2>Two triggers, not one</h2>
+
+<p>
+Environment Response, described above, is a <strong>reactive</strong> trigger — audit begins because something in the world has already signaled that a prior assumption did not hold. This is necessary, but it is not sufficient on its own.
+</p>
+
+<p>
+A PIFR that is reused often, and that other PIFRs now depend on, is doing more work in the system than one that is rarely touched. If audit only ever waits for the environment to complain, a heavily-relied-on PIFR can go a long time unexamined for exactly the wrong reason: nothing has visibly broken, precisely because so much now depends on it working the way it always has.
+</p>
+
+<p>
+PKOS therefore pairs Environment Response with a second, <strong>proactive</strong> trigger: a TTL (time-to-live) assigned whenever a PIFR strengthens — is reused, relied upon, or gains Mutation Blast Radius. Each strengthening event starts a new countdown to the next mandatory audit.
+</p>
+
+<p>
+One detail here matters more than it looks: the TTL gets <strong>shorter</strong>, not longer, as a PIFR strengthens. Resetting to a fresh, full-length countdown on every use would just be reinforcement without scrutiny — the more a PIFR is relied upon, the longer it would go unchecked, which is precisely the drift audit exists to prevent. The correct rule inverts that: strength raises the bar for re-validation. A rarely-used, low-blast-radius PIFR can sit on a long TTL, because little depends on it. A heavily-relied-on PIFR earns a short one, because so much now does.
+</p>
+
+<p>
+This is what keeps audit genuinely paired with feedforward, rather than trailing behind it. Feedforward can strengthen a PIFR's role in the system; audit's TTL response is what stops that strengthening from quietly becoming immunity from being checked.
+</p>
+
 <h2>Relation to cumulative reasoning</h2>
 
 <p>
@@ -160,19 +182,21 @@ the ability to extend prior reasoning across time rather than repeatedly reconst
 <h2>A simple sequence</h2>
 
 <pre>
-Environment Response
-        ↓
-Audit
-(recognition / acceptance)
-        ↓
-Repair
-(what did we learn?
-how do we proceed without further damage?
-what can be repaired?)
-        ↓
-New Reasoning
-        ↓
-New PIFR
+Environment Response          TTL Expiry
+         \                    /
+          \                  /
+                ↓
+              Audit
+      (recognition / acceptance)
+                ↓
+              Repair
+      (what did we learn?
+      how do we proceed without further damage?
+      what can be repaired?)
+                ↓
+          New Reasoning
+                ↓
+            New PIFR
 </pre>
 
 <p>

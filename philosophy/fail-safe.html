@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fail-Safe | Audited State</title>
+<link rel="canonical" href="https://auditedstate.app/philosophy/fail-safe.html">
+<meta name="description" content="Why the right design goal was never 'don't fail' — a fail-safe system assumes failure is certain, and engineers which direction it falls.">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body class="essay-mode">
+
+<header>
+  <div class="nav-container">
+    <a class="logo" href="/">Audited State <span class="tagline">preserving human agency</span></a>
+    <button class="mobile-toggle" aria-label="Toggle navigation">&#9776;</button>
+    <nav>
+      <a href="/problem.html">Problem</a>
+      <a href="/architecture/">Architecture</a>
+      <a href="/philosophy/">Philosophy</a>
+      <a href="/concept-map.html">Concept Map</a>
+      <a href="/labs/">Labs</a>
+      <a href="/research/">Research</a>
+      <a href="/about/">About</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <p class="kicker">Philosophy — Points of View</p>
+
+  <h1>Fail-Safe</h1>
+  <p class="lead">Why the right design goal was never "don't fail"</p>
+
+  <p>Most people hear "fail-safe" and assume it means something can't fail. It means almost the opposite. A fail-safe system is one built on the assumption that it absolutely will fail eventually — and designed so that when it does, it fails toward the safe outcome, not the catastrophic one.</p>
+
+  <p>A circuit breaker doesn't stop electrical faults from happening. Faults happen constantly, in every building, every day. What the breaker does is make sure a fault trips the power off instead of starting a fire. The failure still occurs. Only its direction was engineered.</p>
+
+  <p>This is a completely different design goal from "prevent all failure," and it's a more honest one, because it's the only one actually available. Nothing stays correct forever — not a belief, not a decision, not a piece of reasoning inherited from someone else. The real design question was never whether failure will happen. It's which direction it falls when it does.</p>
+
+  <div class="note">
+    Ethics bolted on as a rule only works when someone remembers to apply it. Ethics built into the shape of the structure works even when nobody's watching, because there's no separate step to skip.
+  </div>
+
+  <p>Promotion Gate and Audit &amp; Repair are this exact idea, doing the exact same job, on reasoning instead of electricity. Promotion Gate doesn't promise a decision will be right. It makes sure that before a decision becomes durable, it has to clear a boundary — who said this, why, at what cost if it's wrong — so that a bad decision fails toward <em>caught before it spreads</em> rather than <em>silently compounding.</em> Audit &amp; Repair doesn't promise nothing will ever drift. It promises that when something does, the system fails toward <em>repairable, with the history intact</em> rather than <em>erased, or hidden, or repeated.</em></p>
+
+  <p>Neither of these is a rule someone has to remember to follow. They're the shape of the structure itself — which means the safety doesn't depend on anyone's good intentions holding up under pressure, on a bad day, when it would be easiest to skip the check. <span class="punch">It holds because skipping it was never actually an option built into the shape.</span></p>
+
+  <p class="essay-closing-quote">That's the real reason this project puts so much weight on architecture and so little on appeals to good behavior. Good behavior is a hope. A fail-safe is a guarantee about which direction things fall — and it's the only kind of promise that survives contact with someone who wasn't trying very hard that day.</p>
+
+  <div class="cta-inline">
+    → Where this is actually built: <a href="/concepts/promotion-gate.html">Promotion Gate</a> · <a href="/concepts/audit-repair.html">Audit &amp; Repair</a>
+  </div>
+
+</main>
+
+<footer>
+  © 2026 Audited State · AI & the Continuity of Human Understanding
+  <span class="affiliation">— a contributor to <a href="https://cognitivesuperhighway.org">CognitiveSuperHighway.org</a></span>
+</footer>
+
+</body>
+</html>

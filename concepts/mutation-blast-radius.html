@@ -1,41 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mutation Blast Radius | Audited State</title>
-  <link rel="stylesheet" href="../style.css" />
-
-  <link rel="canonical" href="https://auditedstate.app/concepts/mutation-blast-radius.html" />
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mutation Blast Radius | Audited State</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="canonical" href="https://auditedstate.app/concepts/mutation-blast-radius.html">
 </head>
 
 <body>
 
 <header>
-  <div class="nav-container">
-    <a href="/" class="logo">
-      Audited State
-      <span class="tagline">— preserving human agency</span>
-    </a>
-    <button class="mobile-toggle" aria-label="Toggle navigation">☰</button>
-    <nav>
-      <a href="/problem.html">Problem</a>
-      <a href="/concepts/lexicon.html">Lexicon</a>
-      <a href="/concept-map.html">Concept Map</a>
-      <a href="/architecture.html">Architecture</a>
-      <a href="/labs/">Labs</a>
-      <a href="/research/">Research</a>
-      <a href="/about/">About</a>
-    </nav>
-  </div>
+<div class="nav-container">
+<a href="/" class="logo">
+  Audited State
+  <span class="tagline">— preserving human agency</span>
+</a>
+<button class="mobile-toggle">☰</button>
+<nav>
+<a href="/problem.html">Problem</a>
+<a href="/architecture/">Architecture</a>
+<a href="/philosophy/">Philosophy</a>
+<a href="/concept-map.html">Concept Map</a>
+<a href="/labs/">Labs</a>
+<a href="/research/">Research</a>
+<a href="/about/">About</a>
+</nav>
+</div>
 </header>
 
 <main>
 
 <h1>🔴 Mutation Blast Radius</h1>
-<p class="lead">
-Mutation Blast Radius is the extent to which a proposed semantic or structural change propagates across dependent anchors within the Semantic Surface Area. </p>
+
+<p class="lead">Mutation Blast Radius is the extent to which a proposed semantic or structural change propagates across dependent anchors within the Semantic Surface Area.</p>
 
 <h2>The Danger of Deep Dependencies</h2>
 
@@ -45,33 +43,43 @@ Even nominal changes (e.g., renaming a core term) may exhibit high MBR when the 
 
 <h2>Governing the Radius</h2>
 
-<p>
-High-MBR environments require structured containment. This includes:
-</p>
+<p>High-MBR environments require structured containment. This includes:</p>
 
 <ul>
-  <li>Pre-mutation reference inventory </li>
-  <li>Criteria articulation </li>
-  <li>Backward compatibility evaluation </li>
-  <li>Authority validation </li>
-  <li>Structured mutation containers </li>
+<li>Pre-mutation reference inventory</li>
+<li>Criteria articulation</li>
+<li>Backward compatibility evaluation</li>
+<li>Authority validation</li>
+<li>Structured mutation containers</li>
 </ul>
+
+<h2>Mutation Blast Radius and Audit Frequency</h2>
+
+<p>
+Blast radius isn't only assessed before a change — it directly determines how often a piece of reasoning gets re-checked afterward. A PIFR's Mutation Blast Radius is what sets its TTL: the more a PIFR is relied on, the shorter its time-to-live before the next mandatory audit, not the longer. See <a href="/concepts/audit-repair.html">Audit &amp; Repair</a> for the full mechanism — high blast radius earns more scrutiny, never less.
+</p>
+
+<p class="closing">
+Mutation Blast Radius is what the Coherence half of Navigational Coherence has to protect: the shared structure a change could unknowingly break for everyone who depends on it.
+</p>
+
 <p>
 Part of the <a href="/concepts/lexicon.html">PKOS Lexicon</a>.
 </p>
 
-
 <h2>Related Concepts</h2>
 
-<ul>
-  <li><a href="./promotion-gate.html">Promotion Gate</a></li>
-  <li><a href="./semantic-surface-area.html">Semantic Surface Area</a></li>
+<ul class="related-concepts">
+<li><a href="/concepts/promotion-gate.html">Promotion Gate</a></li>
+<li><a href="/concepts/semantic-surface-area.html">Semantic Surface Area</a></li>
+<li><a href="/concepts/audit-repair.html">Audit &amp; Repair</a></li>
+<li><a href="/concepts/navigational-coherence.html">Navigational Coherence</a></li>
 </ul>
 
 </main>
 
 <footer>
-© 2026 Audited State · AI & the Continuity of Human Understanding  
+© 2026 Audited State · AI & the Continuity of Human Understanding
 <br>
 <span class="affiliation">
 – a contributor to <a href="https://cognitivesuperhighway.org" target="_blank" rel="noopener">CognitiveSuperHighway.org</a>
@@ -79,9 +87,10 @@ Part of the <a href="/concepts/lexicon.html">PKOS Lexicon</a>.
 </footer>
 
 <script>
-  document.querySelector('.mobile-toggle').addEventListener('click', function() {
-    document.querySelector('nav').classList.toggle('active');
-  });
+document.querySelector('.mobile-toggle').addEventListener('click', function() {
+document.querySelector('nav').classList.toggle('active');
+});
 </script>
+
 </body>
 </html>

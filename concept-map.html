@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Concept Map | Audited State</title>
-<link rel="stylesheet" href="./style.css" />
-<link rel="canonical" href="https://auditedstate.app/concept-map.html" />
+<link rel="canonical" href="https://auditedstate.app/concept-map.html">
+<meta name="description" content="A map of the site itself — where each part lives, and which one is yours to start with.">
+<link rel="stylesheet" href="/style.css">
 </head>
-
 <body>
 
 <header>
@@ -16,12 +16,12 @@
   Audited State
   <span class="tagline">— preserving human agency</span>
 </a>
-<button class="mobile-toggle" aria-label="Toggle navigation">☰</button>
+<button class="mobile-toggle">☰</button>
 <nav>
 <a href="/problem.html">Problem</a>
-<a href="/concepts/lexicon.html">Lexicon</a>
-<a href="/concept-map.html" style="color: var(--text-color); font-weight: 600;">Concept Map</a>
-<a href="/architecture.html">Architecture</a>
+<a href="/architecture/">Architecture</a>
+<a href="/philosophy/">Philosophy</a>
+<a href="/concept-map.html">Concept Map</a>
 <a href="/labs/">Labs</a>
 <a href="/research/">Research</a>
 <a href="/about/">About</a>
@@ -29,308 +29,50 @@
 </div>
 </header>
 
+<div class="diagram">
+  <img src="/assets/concept-map-hero.jpg" alt="A hand tracing a route across an old parchment map with a compass resting beside it.">
+</div>
+
 <main>
 
 <h1>Concept Map</h1>
-
-<p class="lead">
-Understanding does not emerge from isolated concepts.  
-It emerges from relationships — within an infrastructure that enables reasoning to persist, move, and accumulate.
-</p>
+<p class="lead">Where each part of this site lives, and which one is yours to start with</p>
 
 <p>
-This concept map describes the internal topology of that infrastructure:
-how pressures, reasoning, and continuity interact as a system.
+This isn't a map of every idea inside PKOS — that map already exists, and it's called <a href="/architecture/">Architecture</a>. This is a map of the site itself: seven destinations, each doing a different job, so you can find the one that's actually yours before going any deeper.
 </p>
 
-<p class="context">
-See: 
-<a href="/core/infrastructure-of-understanding.html">Infrastructure for Understanding</a> · 
-<a href="/concepts/structure-and-flow.html">Structure and Flow</a>
-</p>
+<h2>The Shape of It</h2>
 
 <p>
-The system can be understood through three perspectives:
+Start with <a href="/problem.html">Problem</a> if you want to know what's actually at stake, plainly stated. Move to <a href="/architecture/">Architecture</a> once you want the mechanism — how it actually works, in three perspectives depending on what you're bringing to it. Visit <a href="/philosophy/">Philosophy</a> if the words themselves need a foothold first, or if you want the felt version of an idea rather than the functional one. <a href="/labs/">Labs</a> shows the mechanism in practice — the actual loop a piece of reasoning moves through. <a href="/research/">Research</a> holds the formal papers and citations behind all of it. The <a href="/concepts/lexicon.html">Lexicon</a> is where you go once you already know what you're looking for and just need the precise definition.
 </p>
 
-<ul>
-<li><strong>System Pressures</strong> — forces that destabilize meaning</li>
-<li><strong>Reasoning Practices</strong> — how ideas are explored and refined</li>
-<li><strong>Continuity Architecture</strong> — how reasoning is preserved across time</li>
-</ul>
+<table class="concept-table">
+<tr><th>If you want…</th><th>Go to</th></tr>
+<tr><td>What's actually at stake, stated plainly</td><td><a href="/problem.html">Problem</a></td></tr>
+<tr><td>How it works — signalling, safety, what's carried</td><td><a href="/architecture/">Architecture</a></td></tr>
+<tr><td>A foothold for an idea before the precise words make sense</td><td><a href="/philosophy/">Philosophy</a></td></tr>
+<tr><td>The mechanism in practice, one step at a time</td><td><a href="/labs/">Labs</a></td></tr>
+<tr><td>The formal papers and citations</td><td><a href="/research/">Research</a></td></tr>
+<tr><td>A precise definition, once you know the term</td><td><a href="/concepts/lexicon.html">Lexicon</a></td></tr>
+<tr><td>Who's behind this, and why</td><td><a href="/about/">About</a></td></tr>
+</table>
+
+<h2>If You Already Know Some of the Vocabulary</h2>
 
 <p>
-Together, these form a continuous learning system.
+A few terms come up everywhere on this site and are worth knowing before you go further: <a href="/concepts/pifr.html">PIFR</a> is the carrier of a piece of reasoning. <a href="/concepts/promotion-gate.html">Promotion Gate</a> is the checkpoint reasoning passes through to become durable. <a href="/concepts/audit-repair.html">Audit &amp; Repair</a> is what keeps the whole thing honest over time. Everything else builds outward from those three.
 </p>
 
-<p>
-      <span style="color: var(--pressure);">●</span> pressure / drift &nbsp;
-      <span style="color: var(--recovery);">●</span> recovery / continuity
-</p>
-
-<hr>
-
-<h2>Structure and Flow</h2>
-
-<p>
-The system described here operates through the interaction between:
-</p>
-
-<ul>
-<li><strong>Flow</strong> — how reasoning moves and evolves</li>
-<li><strong>Structure</strong> — how meaning persists and connects</li>
-</ul>
-
-<p>
-Without flow, systems do not progress.  
-Without structure, systems cannot retain understanding.
-</p>
-
-<p>
-This dual perspective is explored in:
-</p>
-
-<p class="context">
-<a href="/concepts/structure-and-flow.html">Structure and Flow</a>
-</p>
-
-<hr>
-
-<h2>The Reasoning Loop</h2>
-
-<div class="mermaid">
-      graph TD;
-      
-      A["System Pressures"] --> B["Collaborative Conjecture"];
-      B --> C["PIFR"];
-      C --> D["Responsibility Boundary"];
-      D --> E["Inspectable Accumulation"];
-      E --> F["Audit and Repair"];
-      F --> G["New Exploration"];
-      G --> B;
-      
-      subgraph "Persistent Semantic Scaffold (PSS)"
-      C;
-      E;
-      F;
-      end;
-</div>
-
-<p>
-      Human-in-the-loop checkpoints occur both at the moment of promotion
-      and during audit and repair, ensuring that responsibility remains visible
-      whenever system state is evaluated or revised.
-</p>
-
-<p>
-Reasoning moves through a continuous loop:
-pressure creates instability, conjecture explores possibilities,
-PIFRs preserve reasoning, and audit enables revision.
-</p>
-
-<p>
-The <strong>Persistent Semantic Scaffold (PSS)</strong> is not a step in this process.
-It is the substrate in which reasoning artifacts, accumulation, and audit history are stored.
-</p>
-
-<hr>
-
-<h2 class="pressure">System Pressures</h2>
-<p>
-As knowledge systems scale, structural pressures emerge naturally:
-</p>
-
-<div class="pressure">
-<ul>
-<li><a href="/concepts/lexicon.html#semantic-surface-area"><strong>Semantic Surface Area</strong></a></li>
-<li><a href="/concepts/lexicon.html#reconstruction-cost"><strong>Reconstruction Cost</strong></a></li>
-<li><a href="/concepts/lexicon.html#interpretive-entropy"><strong>Interpretive Entropy</strong></a></li>
-<li><a href="/concepts/lexicon.html#semantic-drift"><strong>Semantic Drift</strong></a></li>
-<li><a href="/concepts/lexicon.html#mutation-blast-radius"><strong>Mutation Blast Radius</strong></a></li>
-</ul>
-</div>
-
-<p>
-These pressures are not failures.
-They are consequences of scale.
-</p>
-
-<hr>
-
-<h2>The Continuity Threshold</h2>
-
-<p>
-As pressures increase, systems may cross the 
-<a href="/concepts/continuity-threshold.html"><strong>Continuity Threshold</strong></a>,
-where reasoning can no longer be maintained continuously and must instead be reconstructed.
-</p>
-
-<p>
-Beyond this point, understanding fragments and reconstruction cost rises.
-The system must then rely on recovery mechanisms to restore continuity.
-</p>
-
-<hr>
-
-<h2>Reasoning Practices</h2>
-
-<p>
-To respond to these pressures, systems rely on structured reasoning practices:
-</p>
-
-<ul>
-<li><a href="/concepts/lexicon.html#collaborative-conjecture"><strong>Collaborative Conjecture</strong></a></li>
-<li><a href="/concepts/lexicon.html#assumption-inference-review"><strong>Assumption & Inference Review</strong></a></li>
-<li><a href="/concepts/lexicon.html#inspectable-reasoning"><strong>Inspectable Reasoning</strong></a></li>
-</ul>
-
-<p>
-      This stage aligns with what is often referred to as <em>hybrid intelligence</em>,
-      where human and AI reasoning interact. In PKOS, this interaction produces
-      structured reasoning artifacts that persist beyond the interaction itself.
-</p>
-
-<p>
-These practices generate structured reasoning artifacts that can be preserved and extended.
-</p>
-
-<hr>
-
-<h2 class="recovery">Continuity Architecture</h2>
-
-<p>
-The architecture stabilizes reasoning across time through:
-</p>
-
-<div class="recovery">
-<ul>
-<li><a href="/concepts/lexicon.html#persistent-semantic-scaffold"><strong>Persistent Semantic Scaffold (PSS)</strong></a></li>
-<li><a href="/concepts/lexicon.html#inspectable-accumulation"><strong>Inspectable Accumulation</strong></a></li>
-<li><a href="/concepts/promotion-gate.html"><strong>Promotion Gate</strong></a></li>
-<li><a href="/concepts/lexicon.html#state-anchoring"><strong>State Anchoring</strong></a></li>
-<li><a href="/concepts/lexicon.html#cumulative-reasoning"><strong>Cumulative Reasoning</strong></a></li>
-<</ul>
-</div>
-
-<p>
-These mechanisms ensure that reasoning remains reconstructable,
-traceable, and extendable across time.
-</p>
-
-<hr>
-
-<h2 class="recovery">The Continuity Spine</h2>
-
-<p>
-The operational core of the system is a sequence of
-<a href="/concepts/lexicon.html#pifr"><strong>PIFRs</strong></a>.
-</p>
-
-<p>
-Each PIFR captures reasoning at a moment in time
-and links to prior reasoning, forming a continuous lineage:
-</p>
-
-<pre>
-PIFR₁ → PIFR₂ → PIFR₃ → PIFR₄
-</pre>
-
-<p>
-This lineage allows reasoning to accumulate rather than restart.
-</p>
-
-<h2>Signals and Lineage</h2>
-
-<p>
-The continuity spine can be understood in two complementary ways:
-as structure and as movement.
-</p>
-
-<p>
-Structurally, each PIFR anchors a point in the reasoning lineage.
-Dynamically, each PIFR acts as a signal,
-carrying reasoning across contexts and domains.
-</p>
-
-<p>
-This dual perspective is explored in
-<a href="/concepts/reasoning-as-signal.html"><strong>Reasoning as Signal</strong></a>
-and
-<a href="/concepts/traceable-state.html"><strong>Traceable State</strong></a>,
-which describe how reasoning moves and how it remains anchored.
-</p>
-
-<p>
-Together, they ensure that reasoning is both continuous and reconstructable.
-</p>
-
-<hr>
-
-<h2>Human-in-the-Loop</h2>
-
-<p>
-Every transition from reasoning to decision passes through
-<strong>human-in-the-loop checkpoints</strong>.
-</p>
-
-<p>
-These checkpoints ensure that responsibility remains visible and accountable
-as reasoning becomes consequential.
-</p>
-
-<hr>
-
-<h2>Relationship to the System</h2>
-
-<p>
-The concept map describes the internal logic of PKOS.
-</p>
-
-<p>
-The broader context is a distributed reasoning system —
-a <strong>cybernetic ecology</strong> of human intention,
-AI computation, institutional action, and ethical constraint.
-</p>
-
-<p>
-PKOS operates within this ecology as a structure
-for preserving reasoning continuity.
-</p>
-
-<hr>
-
-<h2>Orientation</h2>
-
-<p>
-The framework can be read in three interconnected layers:
-</p>
-
-<p>
-      <a href="/concepts/lexicon.html"><strong>Lexicon</strong></a> — definitions<br/>
-      <a href="/core/infrastructure-of-understanding.html"><strong>Infrastructure</strong></a> — system foundation<br/>
-      <a href="/concepts/structure-and-flow.html"><strong>Structure & Flow</strong></a> — system behavior<br/>
-      <a href="/concept-map.html"><strong>Concept Map</strong></a> — system relationships<br/>
-      <a href="/architecture.html"><strong>Architecture</strong></a> — system implementation     <a href="/architecture.html"><strong>Architecture</strong></a> — operational structure
-</p>
-
-<p>
-Together, these layers describe how reasoning systems
-can remain stable under acceleration.
-</p>
-
-<p>
-      The system does not end in structure.
-      It continues through practice.
-      </p>
-      
-      <p class="context">
-      See: <a href="/labs/">Labs</a>
+<p class="closing">
+That's the whole map. Pick a door.
 </p>
 
 </main>
 
 <footer>
-© 2026 Audited State · AI & the Continuity of Human Understanding  
+© 2026 Audited State · AI & the Continuity of Human Understanding
 <br>
 <span class="affiliation">
 – a contributor to <a href="https://cognitivesuperhighway.org" target="_blank" rel="noopener">CognitiveSuperHighway.org</a>
@@ -341,11 +83,6 @@ can remain stable under acceleration.
 document.querySelector('.mobile-toggle').addEventListener('click', function() {
 document.querySelector('nav').classList.toggle('active');
 });
-</script>
-
-<script type="module">
-import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-mermaid.initialize({ startOnLoad: true });
 </script>
 
 </body>
