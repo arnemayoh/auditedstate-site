@@ -4,153 +4,89 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Traffic of Reasoning | Audited State</title>
+<link rel="stylesheet" href="../../../style.css">
 <link rel="canonical" href="https://auditedstate.app/research/publications/essays/traffic-of-reasoning.html">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --paper: #F7F4ED; --paper-raised: #FBF9F4; --ink: #1B2430; --ink-soft: #3D4757;
-    --ink-faint: #6B7484; --route: #B8863B; --route-soft: #E4D3B0; --rule: #DAD3C2; --measure: 40em;
-  }
-  * { box-sizing: border-box; }
-  html { -webkit-text-size-adjust: 100%; }
-  body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 17px; line-height: 1.7; }
-  a { color: var(--ink); text-decoration-color: var(--route); text-underline-offset: 3px; }
-  a:hover { color: var(--route); }
-  a:focus-visible, button:focus-visible { outline: 2px solid var(--route); outline-offset: 2px; }
-
-  header.site-nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--rule); background: var(--paper-raised); }
-  .site-nav .brand { font-weight: 600; font-size: 0.95rem; text-decoration: none; letter-spacing: 0.01em; }
-  .site-nav nav { display: flex; flex-wrap: wrap; font-size: 0.85rem; }
-  .site-nav nav a { text-decoration: none; color: var(--ink-soft); margin-left: 1.25rem; }
-  .site-nav nav a:first-child { margin-left: 0; }
-  .site-nav nav a:hover { color: var(--route); }
-
-  main { max-width: 46em; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
-
-  .eyebrow { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--route); margin-bottom: 1rem; }
-  h1.title { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(2rem, 4.5vw, 2.75rem); line-height: 1.15; margin: 0 0 0.5rem; letter-spacing: -0.01em; }
-  p.subtitle { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.25rem; color: var(--ink-soft); margin: 0 0 2rem; }
-
-  .sequence-box { background: var(--paper-raised); border-left: 3px solid var(--route); border-radius: 2px; padding: 1.1rem 1.4rem; margin: 0 0 2.5rem; }
-  .sequence-box .waypoints-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--route); display: block; margin-bottom: 0.7rem; }
-  .sequence-box ol { margin: 0; padding-left: 1.4rem; }
-  .sequence-box li { margin-bottom: 0.35rem; font-size: 0.95rem; }
-  .sequence-box li:last-child { margin-bottom: 0; }
-  .sequence-box li.current { font-weight: 600; color: var(--ink); list-style: none; margin-left: -1.4rem; padding-left: 0; }
-  .sequence-box li.current::before { content: "→ "; color: var(--route); }
-
-  hr.divider { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
-  main p { margin: 0 0 1.3rem; max-width: var(--measure); }
-  h2 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 1.45rem; margin: 2.6rem 0 1.1rem; letter-spacing: -0.005em; }
-
-  figure.essay-figure { margin: 2rem 0; max-width: var(--measure); }
-  figure.essay-figure img { width: 100%; max-height: 26rem; object-fit: cover; height: auto; border-radius: 4px; display: block; }
-  figure.essay-figure figcaption { font-size: 0.85rem; color: var(--ink-faint); margin-top: 0.6rem; font-style: italic; }
-
-  .marker-plaque { margin: 3.5rem 0 3rem; padding: 2rem 0; border-top: 2px solid var(--route-soft); border-bottom: 2px solid var(--route-soft); text-align: center; }
-  .marker-plaque p { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 1.35rem; line-height: 1.5; color: var(--ink); max-width: 34em; margin: 0 auto 1rem; }
-  .marker-plaque cite { font-family: 'Inter', sans-serif; font-style: normal; font-size: 0.85rem; font-weight: 600; color: var(--route); letter-spacing: 0.04em; }
-
-  .essay-declarations { margin: 2.5rem 0; font-size: 0.9rem; color: var(--ink-soft); }
-  .essay-declarations h3 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); margin: 1.4rem 0 0.4rem; }
-  .essay-declarations p { margin: 0 0 0.8rem; max-width: var(--measure); }
-
-
-  footer.site-footer { max-width: 46em; margin: 0 auto; padding: 0 1.5rem 3rem; font-size: 0.85rem; color: var(--ink-faint); }
-  footer.site-footer a { color: var(--ink-faint); }
-  footer.site-footer a:hover { color: var(--route); }
-  footer.site-footer p { margin: 0.3rem 0; }
-
-  @media (max-width: 600px) { .site-nav { padding: 1rem; } main { padding: 2rem 1.25rem 3.5rem; } }
-</style>
 </head>
-<body>
 
-<header class="site-nav">
-  <a class="brand" href="https://auditedstate.app/">Audited State — preserving human agency</a>
-  <nav>
-    <a href="https://auditedstate.app/problem.html">Problem</a>
-    <a href="https://auditedstate.app/architecture/">Architecture</a>
-    <a href="https://auditedstate.app/philosophy/">Philosophy</a>
-    <a href="https://auditedstate.app/concept-map.html">Concept Map</a>
-    <a href="https://auditedstate.app/labs/">Labs</a>
-    <a href="https://auditedstate.app/research/">Research</a>
-    <a href="https://auditedstate.app/about/">About</a>
+<body class="essay-mode">
+
+<header>
+<div class="nav-container">
+<a href="/" class="logo">
+  Audited State
+  <span class="tagline">— preserving human agency</span>
+</a>
+<button class="mobile-toggle">☰</button>
+<nav>
+<a href="/problem.html">Problem</a>
+<a href="/architecture/">Architecture</a>
+<a href="/philosophy/">Philosophy</a>
+<a href="/concept-map.html">Concept Map</a>
+<a href="/labs/">Labs</a>
+<a href="/research/">Research</a>
+<a href="/about/">About</a>
 </nav>
+</div>
 </header>
 
 <main>
 
-  <span class="eyebrow">Interpretation, Drift &amp; Cognitive Continuity — Essay 6 of 8</span>
-  <h1 class="title">The Traffic of Reasoning</h1>
-  <p class="subtitle">What traffic quietly teaches us about continuity, coordination, and shared understanding</p>
+<p class="kicker">Interpretation, Drift &amp; Cognitive Continuity — Essay 6 of 7</p>
 
-  <div class="sequence-box">
-    <span class="waypoints-label">Reading Sequence</span>
-    <ol>
-      <li><a href="https://auditedstate.app/research/publications/essays/data-representation-of-truth.html">1. Data as Representation of Truth</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/drift-drift-drift.html">2. Drift, Drift... DRIFT!</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/reasoning-drift.html">3. Reasoning Drift</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/coherence-of-understanding.html">4. Coherence of Understanding</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/legible-ambiguity.html">5. Why Stable Understanding Requires Legible Ambiguity</a></li>
-      <li class="current">6. The Traffic of Reasoning</li>
-      <li><a href="https://auditedstate.app/research/publications/essays/make-the-ai-understand.html">7. Make the AI Understand</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/understanding-understanding.html">8. Understanding Understanding</a></li>
-    </ol>
-  </div>
+<h1>The Traffic of Reasoning</h1>
+<p class="lead">What traffic quietly teaches us about continuity, coordination, and shared understanding</p>
 
-  <hr class="divider">
+<p>Many of the coordination problems now emerging around AI, institutions, and large-scale systems are hard to talk about, because there isn't yet a shared vocabulary for them. People can feel that coordination is getting harder and reconstruction is getting more exhausting, without quite being able to say why. Part of the reason is that we tend to think of knowledge as information, rather than as continuity of understanding between the people actually inside a shared system. Traffic — mundane as it is — turns out to be one of the clearest examples humanity has of large-scale coordination among people with conflicting intentions and dangerous momentum, solved not through better drivers but through better infrastructure.</p>
 
-  <figure class="essay-figure">
-    <img src="https://auditedstate.app/assets/traffic-of-reasoning.jpg" alt="A conceptual mapping from traffic systems to reasoning systems, showing vehicles, roads, signals, rules, logs, intersections, and governance.">
-    <figcaption>Traffic systems externalize coordination. Reasoning systems increasingly require similar infrastructure for continuity, accountability, and shared interpretation.</figcaption>
-  </figure>
+<h2>The Core Observation</h2>
 
-  <p>Many of the coordination problems now emerging around AI, institutions, and large-scale systems are hard to talk about, because there isn't yet a shared vocabulary for them. People can feel that coordination is getting harder and reconstruction is getting more exhausting, without quite being able to say why. Part of the reason is that we tend to think of knowledge as information, rather than as continuity of understanding between the people actually inside a shared system. Traffic — mundane as it is — turns out to be one of the clearest examples humanity has of large-scale coordination among people with conflicting intentions and dangerous momentum, solved not through better drivers but through better infrastructure.</p>
+<p>Traffic was never really about cars. It's about coordination under movement — shared interpretation, limited attention, conflicting intentions, all moving at speed. That's precisely why modern digital systems increasingly resemble traffic: many actors, high velocity, partial understanding, distributed decisions, and rising consequences when coordination fails. Civilization didn't solve traffic by making humans perfect. It solved traffic by building continuity-preserving infrastructure around humans who were always going to be imperfect.</p>
 
-  <h2>The Core Observation</h2>
+<h2>Shared Symbols Reduce the Need to Reconstruct</h2>
 
-  <p>Traffic was never really about cars. It's about coordination under movement — shared interpretation, limited attention, conflicting intentions, all moving at speed. That's precisely why modern digital systems increasingly resemble traffic: many actors, high velocity, partial understanding, distributed decisions, and rising consequences when coordination fails. Civilization didn't solve traffic by making humans perfect. It solved traffic by building continuity-preserving infrastructure around humans who were always going to be imperfect.</p>
+<p>Imagine driving with no lanes and no signs. Everyone still has a destination and an intention, but every single encounter becomes a fresh negotiation, because nothing tells you whether the person next to you understands the road the same way you do. Lanes and signs solve this cheaply: a lane quietly says that everyone around you probably shares the same directional structure you do, and a speed sign communicates a shared expectation, not just a number. Both remove the need for every participant to reconstruct everyone else's intentions from scratch, at every single moment. That's manageable at small scale. Without it, large scale becomes chaos.</p>
 
-  <h2>Shared Symbols Reduce the Need to Reconstruct</h2>
+<h2>Structure Concentrates Where Danger Does</h2>
 
-  <p>Imagine driving with no lanes and no signs. Everyone still has a destination and an intention, but every single encounter becomes a fresh negotiation, because nothing tells you whether the person next to you understands the road the same way you do. Lanes and signs solve this cheaply: a lane quietly says that everyone around you probably shares the same directional structure you do, and a speed sign communicates a shared expectation, not just a number. Both remove the need for every participant to reconstruct everyone else's intentions from scratch, at every single moment. That's manageable at small scale. Without it, large scale becomes chaos.</p>
+<p>A guard rail is really an admission: attention fails, conditions change, mistakes happen regardless of how careful anyone intends to be. It isn't there because society expects perfection — it's there because momentum becomes dangerous once continuity breaks down, so the failure gets bounded structurally instead of relying on hope. Intersections work the same way for a different reason: they're where trajectories actually cross, so signs multiply, signals multiply, and movement slows, because continuity gets harder exactly where consequences rise. Modern institutions increasingly look like intersections — many actors, many interpretations, rising velocity — and the answer was never going to be "people should just think harder." Traffic worked that out generations ago. The answer is structure at the point where the danger actually concentrates.</p>
 
-  <h2>Structure Concentrates Where Danger Does</h2>
+<h2>Ambiguity Means Slow Down</h2>
 
-  <p>A guard rail is really an admission: attention fails, conditions change, mistakes happen regardless of how careful anyone intends to be. It isn't there because society expects perfection — it's there because momentum becomes dangerous once continuity breaks down, so the failure gets bounded structurally instead of relying on hope. Intersections work the same way for a different reason: they're where trajectories actually cross, so signs multiply, signals multiply, and movement slows, because continuity gets harder exactly where consequences rise. Modern institutions increasingly look like intersections — many actors, many interpretations, rising velocity — and the answer was never going to be "people should just think harder." Traffic worked that out generations ago. The answer is structure at the point where the danger actually concentrates.</p>
+<p>Traffic teaches a quieter lesson too. When a situation turns ambiguous — fog, a broken light, an unclear intersection, roadwork — competent traffic systems don't pretend certainty has increased. They slow movement down, increase signaling, and clarify right-of-way before letting momentum continue. Reasoning systems need exactly the same instinct. When assumptions are unclear or intention has drifted, the answer isn't to accelerate toward an output — it's to slow down and make the ambiguity visible before acting on it. In traffic, ambiguity without slowing down produces accidents. In reasoning, ambiguity without visibility produces drift, false certainty, and a system nobody can hold accountable anymore.</p>
 
-  <h2>Ambiguity Means Slow Down</h2>
+<h2>Reconstruction Burden</h2>
 
-  <p>Traffic teaches a quieter lesson too. When a situation turns ambiguous — fog, a broken light, an unclear intersection, roadwork — competent traffic systems don't pretend certainty has increased. They slow movement down, increase signaling, and clarify right-of-way before letting momentum continue. Reasoning systems need exactly the same instinct. When assumptions are unclear or intention has drifted, the answer isn't to accelerate toward an output — it's to slow down and make the ambiguity visible before acting on it. In traffic, ambiguity without slowing down produces accidents. In reasoning, ambiguity without visibility produces drift, false certainty, and a system nobody can hold accountable anymore.</p>
+<p>Traffic reduces reconstruction constantly — road markings, lane conventions, standardized signals all exist so nobody has to rebuild an understanding of the road from nothing every time they use it. Modern knowledge systems frequently do the opposite, requiring people to reconstruct context manually, recover fragmented intent, and reinterpret information that arrived with no continuity attached. That's the same <a href="/concepts/reconstruction-cost.html">reconstruction cost</a> this whole series keeps circling back to, just visible here in a domain everyone already has direct, physical experience with.</p>
 
-  <h2>Reconstruction Burden</h2>
+<h2>Why This Matters More as AI Accelerates</h2>
 
-  <p>Traffic reduces reconstruction constantly — road markings, lane conventions, standardized signals all exist so nobody has to rebuild an understanding of the road from nothing every time they use it. Modern knowledge systems frequently do the opposite, requiring people to reconstruct context manually, recover fragmented intent, and reinterpret information that arrived with no continuity attached. That's the same <a href="https://auditedstate.app/concepts/reconstruction-cost.html">reconstruction cost</a> this whole series keeps circling back to, just visible here in a domain everyone already has direct, physical experience with.</p>
+<p>Traffic infrastructure didn't appear fully formed — it evolved through accidents and accumulated observation about where misunderstanding actually occurs. Nobody experienced lanes or guard rails as a restriction on freedom. They were infrastructure supporting coordination under real complexity, and that distinction matters more, not less, as AI accelerates communication, decision cycles, and interpretive load without automatically producing shared understanding to match. The question isn't whether intelligence can increase. It's whether continuity of understanding can survive the acceleration. Most people don't consciously notice traffic infrastructure anymore, and that's largely because it's working. The same kind of infrastructure — quiet, mostly invisible, doing its job precisely by not calling attention to itself — may be exactly what reasoning and coordination need next.</p>
 
-  <h2>Why This Matters More as AI Accelerates</h2>
+<p>Traffic works not because humans are perfect drivers, but because we built infrastructure around imperfect coordination.</p>
 
-  <p>Traffic infrastructure didn't appear fully formed — it evolved through accidents and accumulated observation about where misunderstanding actually occurs. Nobody experienced lanes or guard rails as a restriction on freedom. They were infrastructure supporting coordination under real complexity, and that distinction matters more, not less, as AI accelerates communication, decision cycles, and interpretive load without automatically producing shared understanding to match. The question isn't whether intelligence can increase. It's whether continuity of understanding can survive the acceleration. Most people don't consciously notice traffic infrastructure anymore, and that's largely because it's working. The same kind of infrastructure — quiet, mostly invisible, doing its job precisely by not calling attention to itself — may be exactly what reasoning and coordination need next.</p>
+<p class="closing">This observation is the seed of something worked out in full elsewhere on this site: <a href="/architecture/">Architecture</a> takes this exact metaphor — signals, lanes, intersections, guard rails — and develops it into the actual mechanism, from three different vantage points.</p>
 
-  <div class="marker-plaque">
-    <p>Traffic works not because humans are perfect drivers, but because we built infrastructure around imperfect coordination.</p>
-    <cite>— Arne Mayoh</cite>
-  </div>
+<p class="essay-attribution">— Arne Mayoh</p>
 
-  <div class="essay-declarations">
-    <h3>Declaration of Generative AI and AI-Assisted Technologies</h3>
-    <p>This essay was developed with the assistance of AI systems as a research and editorial tool, for drafting support and structural revision. The argument and conclusions are the author's own.</p>
-  </div>
+<div class="note">
+<h3>Declaration of Generative AI and AI-Assisted Technologies</h3>
+<p>This essay was developed with the assistance of AI systems as a research and editorial tool, for drafting support and structural revision. The argument and conclusions are the author's own.</p>
+</div>
+
+<p class="cta-inline">Essay 6 of the <a href="/research/publications/">Interpretation, Drift &amp; Cognitive Continuity series</a>.</p>
 
 </main>
 
-<footer class="site-footer">
-  <p>Essay 6 of the <a href="https://auditedstate.app/research/publications/">Interpretation, Drift &amp; Cognitive Continuity series</a>.</p>
-  <p>© 2026 Audited State · AI &amp; the Continuity of Human Understanding</p>
-  <p>— a contributor to <a href="https://cognitivesuperhighway.org">CognitiveSuperHighway.org</a></p>
+<footer>
+© 2026 Audited State · AI & the Continuity of Human Understanding
+<span class="affiliation">— a contributor to <a href="https://cognitivesuperhighway.org">CognitiveSuperHighway.org</a></span>
 </footer>
+
+<script>
+document.querySelector('.mobile-toggle').addEventListener('click', function() {
+document.querySelector('nav').classList.toggle('active');
+});
+</script>
 
 </body>
 </html>

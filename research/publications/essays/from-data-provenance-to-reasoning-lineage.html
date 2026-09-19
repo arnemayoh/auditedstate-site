@@ -4,118 +4,83 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>From Data Provenance to Reasoning Lineage | Audited State</title>
+<link rel="stylesheet" href="../../../style.css">
 <link rel="canonical" href="https://auditedstate.app/research/publications/essays/from-data-provenance-to-reasoning-lineage.html">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --paper: #F7F4ED; --paper-raised: #FBF9F4; --ink: #1B2430; --ink-soft: #3D4757;
-    --ink-faint: #6B7484; --route: #B8863B; --route-soft: #E4D3B0; --rule: #DAD3C2; --measure: 40em;
-  }
-  * { box-sizing: border-box; }
-  html { -webkit-text-size-adjust: 100%; }
-  body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 17px; line-height: 1.7; }
-  a { color: var(--ink); text-decoration-color: var(--route); text-underline-offset: 3px; }
-  a:hover { color: var(--route); }
-  a:focus-visible, button:focus-visible { outline: 2px solid var(--route); outline-offset: 2px; }
-
-  header.site-nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--rule); background: var(--paper-raised); }
-  .site-nav .brand { font-weight: 600; font-size: 0.95rem; text-decoration: none; letter-spacing: 0.01em; }
-  .site-nav nav { display: flex; flex-wrap: wrap; font-size: 0.85rem; }
-  .site-nav nav a { text-decoration: none; color: var(--ink-soft); margin-left: 1.25rem; }
-  .site-nav nav a:first-child { margin-left: 0; }
-  .site-nav nav a:hover { color: var(--route); }
-
-  main { max-width: 46em; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
-
-  .eyebrow { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--route); margin-bottom: 1rem; }
-  h1.title { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(2rem, 4.5vw, 2.75rem); line-height: 1.15; margin: 0 0 0.5rem; letter-spacing: -0.01em; }
-  p.subtitle { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.25rem; color: var(--ink-soft); margin: 0 0 2rem; }
-
-  hr.divider { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
-  main p { margin: 0 0 1.3rem; max-width: var(--measure); }
-  h2 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 1.45rem; margin: 2.6rem 0 1.1rem; letter-spacing: -0.005em; }
-
-  .marker-plaque { margin: 3.5rem 0 3rem; padding: 2rem 0; border-top: 2px solid var(--route-soft); border-bottom: 2px solid var(--route-soft); text-align: center; }
-  .marker-plaque p { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 1.35rem; line-height: 1.5; color: var(--ink); max-width: 34em; margin: 0 auto 1rem; }
-  .marker-plaque cite { font-family: 'Inter', sans-serif; font-style: normal; font-size: 0.85rem; font-weight: 600; color: var(--route); letter-spacing: 0.04em; }
-
-  .essay-declarations { margin: 2.5rem 0; font-size: 0.9rem; color: var(--ink-soft); }
-  .essay-declarations h3 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); margin: 1.4rem 0 0.4rem; }
-  .essay-declarations p { margin: 0 0 0.8rem; max-width: var(--measure); }
-
-
-  footer.site-footer { max-width: 46em; margin: 0 auto; padding: 0 1.5rem 3rem; font-size: 0.85rem; color: var(--ink-faint); }
-  footer.site-footer a { color: var(--ink-faint); }
-  footer.site-footer a:hover { color: var(--route); }
-  footer.site-footer p { margin: 0.3rem 0; }
-
-  @media (max-width: 600px) { .site-nav { padding: 1rem; } main { padding: 2rem 1.25rem 3.5rem; } }
-</style>
 </head>
-<body>
 
-<header class="site-nav">
-  <a class="brand" href="https://auditedstate.app/">Audited State — preserving human agency</a>
-  <nav>
-    <a href="https://auditedstate.app/problem.html">Problem</a>
-    <a href="https://auditedstate.app/architecture/">Architecture</a>
-    <a href="https://auditedstate.app/philosophy/">Philosophy</a>
-    <a href="https://auditedstate.app/concept-map.html">Concept Map</a>
-    <a href="https://auditedstate.app/labs/">Labs</a>
-    <a href="https://auditedstate.app/research/">Research</a>
-    <a href="https://auditedstate.app/about/">About</a>
+<body class="essay-mode">
+
+<header>
+<div class="nav-container">
+<a href="/" class="logo">
+  Audited State
+  <span class="tagline">— preserving human agency</span>
+</a>
+<button class="mobile-toggle">☰</button>
+<nav>
+<a href="/problem.html">Problem</a>
+<a href="/architecture/">Architecture</a>
+<a href="/philosophy/">Philosophy</a>
+<a href="/concept-map.html">Concept Map</a>
+<a href="/labs/">Labs</a>
+<a href="/research/">Research</a>
+<a href="/about/">About</a>
 </nav>
+</div>
 </header>
 
 <main>
 
-  <span class="eyebrow">AI Accountability &amp; Governance — cluster pending final grouping</span>
-  <h1 class="title">From Data Provenance to Reasoning Lineage</h1>
-  <p class="subtitle">We know where data comes from. We rarely know how reasoning emerges.</p>
+<p class="kicker">AI Accountability &amp; Governance</p>
 
-  <hr class="divider">
+<h1>From Data Provenance to Reasoning Lineage</h1>
+<p class="lead">We know where data comes from. We rarely know how reasoning emerges.</p>
 
-  <p>The concept of provenance plays a central role in data systems, knowledge graphs, and scientific workflows. It answers questions like where a piece of data originated, how it was transformed, and what sources contributed to it — a real form of traceability, letting a system track the history of information as it moves.</p>
+<p>The concept of provenance plays a central role in data systems, knowledge graphs, and scientific workflows. It answers questions like where a piece of data originated, how it was transformed, and what sources contributed to it — a real form of traceability, letting a system track the history of information as it moves.</p>
 
-  <h2>The Limit of Provenance</h2>
+<h2>The Limit of Provenance</h2>
 
-  <p>Provenance captures the lineage of data. It doesn't capture the lineage of reasoning. In most systems, conclusions get derived through a real sequence of steps — assumptions get introduced, interpretations get made, intermediate conclusions get formed — and almost none of it gets preserved in any structured way. The system retains what was produced, but not how it was actually thought.</p>
+<p>Provenance captures the lineage of data. It doesn't capture the lineage of reasoning. In most systems, conclusions get derived through a real sequence of steps — assumptions get introduced, interpretations get made, intermediate conclusions get formed — and almost none of it gets preserved in any structured way. The system retains what was produced, but not how it was actually thought.</p>
 
-  <h2>From Origin to Understanding</h2>
+<h2>From Origin to Understanding</h2>
 
-  <p>In practice, provenance often gets used as a proxy for credibility: information from a trusted source gets treated as more reliable, not because its reasoning is visible, but because its origin carries weight on its own. That's a limited form of epistemic grounding. A more complete approach wouldn't only track where something came from — it would track how it was actually reasoned into existence. That's the shift from data provenance to reasoning lineage.</p>
+<p>In practice, provenance often gets used as a proxy for credibility: information from a trusted source gets treated as more reliable, not because its reasoning is visible, but because its origin carries weight on its own. That's a limited form of epistemic grounding. A more complete approach wouldn't only track where something came from — it would track how it was actually reasoned into existence. That's the shift from data provenance to reasoning lineage.</p>
 
-  <h2>Reasoning Lineage</h2>
+<h2>Reasoning Lineage</h2>
 
-  <p>Reasoning lineage extends the idea of provenance from data to thought. Instead of tracking only how information gets transformed, it preserves the actual sequence of reasoning artifacts that led to a conclusion. This research programme achieves that through <a href="https://auditedstate.app/concepts/traceable-state.html">Traceable State</a>, where each state retains a reference back to the reasoning that produced it — carried forward through <a href="https://auditedstate.app/concepts/pifr.html">PIFRs</a>, which carry intention, justification, and intermediate understanding along with them rather than leaving it behind.</p>
+<p><a href="/concepts/decision-lineage.html">Reasoning lineage</a> extends the idea of provenance from data to thought. Instead of tracking only how information gets transformed, it preserves the actual sequence of reasoning artifacts that led to a conclusion. This research programme achieves that through <a href="/concepts/traceable-state.html">Traceable State</a>, where each state retains a reference back to the reasoning that produced it — carried forward through <a href="/concepts/pifr.html">PIFRs</a>, which carry intention, justification, and intermediate understanding along with them rather than leaving it behind.</p>
 
-  <h2>Epistemic Maturity</h2>
+<h2>Epistemic Maturity</h2>
 
-  <p>Once provenance extends to include reasoning, it starts reflecting something different — not just origin, but understanding. A system that can reconstruct how a conclusion actually formed shows a higher degree of epistemic maturity than one that can only report where its data came from. Provenance, in that sense, evolves from a record of origin into a structure for understanding itself.</p>
+<p>Once provenance extends to include reasoning, it starts reflecting something different — not just origin, but understanding. A system that can reconstruct how a conclusion actually formed shows a higher degree of epistemic maturity than one that can only report where its data came from. Provenance, in that sense, evolves from a record of origin into a structure for understanding itself.</p>
 
-  <h2>Why It Matters</h2>
+<h2>Why It Matters</h2>
 
-  <p>Without reasoning lineage, conclusions are hard to evaluate, assumptions stay implicit, and errors are hard to trace back to where they actually entered. With it, decisions can be reconstructed, reasoning can be genuinely challenged, and understanding can accumulate over time instead of resetting. This matters most in exactly the systems where human and AI reasoning interact directly — the same territory explored in <a href="https://auditedstate.app/research/publications/essays/hybrid-intelligence-needs-memory.html">Hybrid Intelligence Needs Memory</a>.</p>
+<p>Without reasoning lineage, conclusions are hard to evaluate, assumptions stay implicit, and errors are hard to trace back to where they actually entered. With it, decisions can be reconstructed, reasoning can be genuinely challenged, and understanding can accumulate over time instead of resetting. This matters most in exactly the systems where human and AI reasoning interact directly — the same territory explored in <a href="/research/publications/essays/hybrid-intelligence-needs-memory.html">Hybrid Intelligence Needs Memory</a>.</p>
 
-  <div class="marker-plaque">
-    <p>Provenance has made data traceable. The next step is to make reasoning traceable.</p>
-    <cite>— Arne Mayoh</cite>
-  </div>
+<p>Provenance has made data traceable. The next step is to make <a href="/concepts/decision-lineage.html">reasoning traceable</a>.</p>
 
-  <div class="essay-declarations">
-    <h3>Declaration of Generative AI and AI-Assisted Technologies</h3>
-    <p>This essay was developed with the assistance of AI systems as a research and editorial tool, for drafting support and structural revision. The argument and conclusions are the author's own.</p>
-  </div>
+<p class="essay-attribution">— Arne Mayoh</p>
+
+<div class="note">
+<h3>Declaration of Generative AI and AI-Assisted Technologies</h3>
+<p>This essay was developed with the assistance of AI systems as a research and editorial tool, for drafting support and structural revision. The argument and conclusions are the author's own.</p>
+</div>
+
+<p class="cta-inline">Part of the <a href="/research/publications/">Audited State Research</a> essays.</p>
 
 </main>
 
-<footer class="site-footer">
-  <p>Part of the <a href="https://auditedstate.app/research/publications/">Audited State Research</a> essays.</p>
-  <p>© 2026 Audited State · AI &amp; the Continuity of Human Understanding</p>
-  <p>— a contributor to <a href="https://cognitivesuperhighway.org">CognitiveSuperHighway.org</a></p>
+<footer>
+© 2026 Audited State · AI & the Continuity of Human Understanding
+<span class="affiliation">— a contributor to <a href="https://cognitivesuperhighway.org">CognitiveSuperHighway.org</a></span>
 </footer>
+
+<script>
+document.querySelector('.mobile-toggle').addEventListener('click', function() {
+document.querySelector('nav').classList.toggle('active');
+});
+</script>
 
 </body>
 </html>
