@@ -3,145 +3,86 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Road Ahead | Audited State</title>
+<title>The Road Ahead: Requirements for Continuity | Audited State</title>
+<link rel="stylesheet" href="../../../style.css">
 <link rel="canonical" href="https://auditedstate.app/research/publications/essays/the-road-ahead.html">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --paper: #F7F4ED; --paper-raised: #FBF9F4; --ink: #1B2430; --ink-soft: #3D4757;
-    --ink-faint: #6B7484; --route: #B8863B; --route-soft: #E4D3B0; --rule: #DAD3C2; --measure: 40em;
-  }
-  * { box-sizing: border-box; }
-  html { -webkit-text-size-adjust: 100%; }
-  body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 17px; line-height: 1.7; }
-  a { color: var(--ink); text-decoration-color: var(--route); text-underline-offset: 3px; }
-  a:hover { color: var(--route); }
-  a:focus-visible, button:focus-visible { outline: 2px solid var(--route); outline-offset: 2px; }
-
-  header.site-nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--rule); background: var(--paper-raised); }
-  .site-nav .brand { font-weight: 600; font-size: 0.95rem; text-decoration: none; letter-spacing: 0.01em; }
-  .site-nav nav { display: flex; flex-wrap: wrap; font-size: 0.85rem; }
-  .site-nav nav a { text-decoration: none; color: var(--ink-soft); margin-left: 1.25rem; }
-  .site-nav nav a:first-child { margin-left: 0; }
-  .site-nav nav a:hover { color: var(--route); }
-
-  main { max-width: 46em; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
-
-  .eyebrow { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--route); margin-bottom: 1rem; }
-  h1.title { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(2rem, 4.5vw, 2.75rem); line-height: 1.15; margin: 0 0 0.5rem; letter-spacing: -0.01em; }
-  p.subtitle { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.25rem; color: var(--ink-soft); margin: 0 0 2rem; }
-
-  .sequence-box { background: var(--paper-raised); border-left: 3px solid var(--route); border-radius: 2px; padding: 1.1rem 1.4rem; margin: 0 0 2.5rem; }
-  .sequence-box .waypoints-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--route); display: block; margin-bottom: 0.7rem; }
-  .sequence-box ol { margin: 0; padding-left: 1.4rem; }
-  .sequence-box li { margin-bottom: 0.35rem; font-size: 0.95rem; }
-  .sequence-box li:last-child { margin-bottom: 0; }
-  .sequence-box li.current { font-weight: 600; color: var(--ink); list-style: none; margin-left: -1.4rem; padding-left: 0; }
-  .sequence-box li.current::before { content: "→ "; color: var(--route); }
-
-  hr.divider { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
-  main p { margin: 0 0 1.3rem; max-width: var(--measure); }
-  h2 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 1.45rem; margin: 2.6rem 0 1.1rem; letter-spacing: -0.005em; }
-
-  .marker-plaque { margin: 3.5rem 0 3rem; padding: 2rem 0; border-top: 2px solid var(--route-soft); border-bottom: 2px solid var(--route-soft); text-align: center; }
-  .marker-plaque p { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 1.35rem; line-height: 1.5; color: var(--ink); max-width: 34em; margin: 0 auto 1rem; }
-  .marker-plaque cite { font-family: 'Inter', sans-serif; font-style: normal; font-size: 0.85rem; font-weight: 600; color: var(--route); letter-spacing: 0.04em; }
-
-  .essay-declarations { margin: 2.5rem 0; font-size: 0.9rem; color: var(--ink-soft); }
-  .essay-declarations h3 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); margin: 1.4rem 0 0.4rem; }
-  .essay-declarations p { margin: 0 0 0.8rem; max-width: var(--measure); }
-
-  footer.site-footer { max-width: 46em; margin: 0 auto; padding: 0 1.5rem 3rem; font-size: 0.85rem; color: var(--ink-faint); }
-  footer.site-footer a { color: var(--ink-faint); }
-  footer.site-footer a:hover { color: var(--route); }
-  footer.site-footer p { margin: 0.3rem 0; }
-
-  @media (max-width: 600px) { .site-nav { padding: 1rem; } main { padding: 2rem 1.25rem 3.5rem; } }
-</style>
 </head>
-<body>
 
-<header class="site-nav">
-  <a class="brand" href="https://auditedstate.app/">Audited State — preserving human agency</a>
-  <nav>
-    <a href="https://auditedstate.app/problem.html">Problem</a>
-    <a href="https://auditedstate.app/architecture/">Architecture</a>
-    <a href="https://auditedstate.app/philosophy/">Philosophy</a>
-    <a href="https://auditedstate.app/concept-map.html">Concept Map</a>
-    <a href="https://auditedstate.app/labs/">Labs</a>
-    <a href="https://auditedstate.app/research/">Research</a>
-    <a href="https://auditedstate.app/about/">About</a>
+<body class="essay-mode">
+
+<header>
+<div class="nav-container">
+<a href="/" class="logo">
+  Audited State
+  <span class="tagline">— preserving human agency</span>
+</a>
+<button class="mobile-toggle">☰</button>
+<nav>
+<a href="/problem.html">Problem</a>
+<a href="/architecture/">Architecture</a>
+<a href="/philosophy/">Philosophy</a>
+<a href="/concept-map.html">Concept Map</a>
+<a href="/labs/">Labs</a>
+<a href="/research/">Research</a>
+<a href="/about/">About</a>
 </nav>
+</div>
 </header>
 
 <main>
 
-  <span class="eyebrow">Backbone Narrative — Essay 7 of 11</span>
-  <h1 class="title">The Road Ahead</h1>
-  <p class="subtitle">The two requirements for a shared infrastructure of understanding</p>
+<p class="kicker">Backbone Narrative — Essay 7 of 11</p>
 
-  <div class="sequence-box">
-    <span class="waypoints-label">Reading Sequence</span>
-    <ol>
-      <li><a href="https://auditedstate.app/research/publications/essays/the-collapse-of-agency.html">1. The Collapse of Agency</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/the-end-of-monday-morning.html">2. The End of Monday Morning</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/the-erosion-of-intent.html">3. The Erosion of Intent</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/the-reasoning-artifact.html">4. The Reasoning Artifact</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/the-honest-agent.html">5. The Honest Agent</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/the-great-accumulation-human-agency.html">6. The Great Compounding</a></li>
-      <li class="current">7. The Road Ahead</li>
-      <li><a href="https://auditedstate.app/research/publications/essays/continuity-of-learning.html">8. The Continuity of Learning</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/wealth-of-understanding-invisible-opportunity-cost.html">9. Civilisational Decay and the Invisible Opportunity Cost</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/data-representation-of-truth.html">10. Data as Representation of Truth</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/reconstruction-bankruptcy.html">11. The Horizon of Reconstruction Bankruptcy</a></li>
-    </ol>
-  </div>
+<h1>The Road Ahead</h1>
+<p class="lead">Three requirements for a shared infrastructure of understanding</p>
 
-  <hr class="divider">
+<p>No single person is going to design their way out of this alone. That's not a failure of ambition — it's just not how coordination at scale has ever worked. Civilization didn't solve movement by asking every driver to privately reason out a personal code of road ethics. It built shared infrastructure instead: lanes, signals, and rules that let independent people move through the same space without negotiating from scratch at every intersection.</p>
 
-  <p>Years have gone into discussing the "threat" of AI, and comparatively little into the infrastructure of our own progress. Traffic is a useful comparison here: roads aren't made safe by teaching every driver a private code of ethics. They're made safe by building lanes and requiring signals.</p>
+<p>Reasoning at scale needs the same thing — not a single brilliant design that solves everything, but a shared direction sturdy enough for many people and systems to move in together. That's the actual argument underneath everything this research programme calls <a href="/concepts/navigational-coherence.html">Navigational Coherence</a>: not a fixed answer, arrived at once, but an orientation held in common, correctable as conditions change. Three requirements make that possible.</p>
 
-  <p>Moving from an uncoordinated tangle of systems toward something like a Cognitive Super Highway doesn't require more intelligence. It requires more sensible structure.</p>
+<h2>1. A Shared Language</h2>
 
-  <h2>A Shared Language</h2>
+<p>Traffic only works because everyone agrees on what a red light means before they ever reach the intersection. Reasoning at scale needs the same prior agreement — a <a href="/concepts/persistent-semantic-scaffold.html">Persistent Semantic Scaffold</a> where terms like Continuity, Lineage, and <a href="/concepts/pifr.html">PIFR</a> aren't just ideas floating independently, but the shared lanes that keep everyone's thinking from colliding. Without that agreement first, meaning gets reconstructed separately by every participant, and <a href="/concepts/semantic-drift.html">semantic drift</a> sets in before anyone notices.</p>
 
-  <p>Traffic works because everyone agrees on what a red light means. In the space of cognition, there's currently no equivalent agreement — meaning gets reconstructed daily, and intent is lost to ordinary semantic drift.</p>
+<h2>2. Signaling Intent</h2>
 
-  <p>The first requirement is adopting a <a href="https://auditedstate.app/concepts/persistent-semantic-scaffold.html">Persistent Semantic Scaffold</a>: a shared lexicon and structure where terms like continuity, lineage, and PIFR function as more than ideas — they become the lanes that actually hold reasoning in place.</p>
+<p>A driver signals before changing lanes not out of politeness, but because the signal is what lets everyone else keep moving safely around them. Reasoning needs the equivalent: every agent, human or synthetic, packaging its reasoning into a visible <a href="/concepts/reasoning-vehicle.html">Reasoning Vehicle</a> rather than acting silently and letting others reconstruct the intent after the fact. Reasoning that never signals is what this site calls <a href="/concepts/shadow-ai.html">Shadow AI</a> — not because it's malicious, but because nobody else can see it coming.</p>
 
-  <h2>Signaling Intent</h2>
+<h2>3. Correcting the Course</h2>
 
-  <p>On the road, responsibility is something lived moment to moment: a driver signals, then moves. Making continuity real requires something similar — a real commitment to structural signaling.</p>
+<p>The first two requirements are both about getting a shared direction established. This one is about what happens once that direction turns out to be wrong — because it will, at some point, for someone. Roads get resurfaced. Signs get replaced when they're misleading. Accident investigations feed back into safer design, rather than being filed away and forgotten.</p>
 
-  <p>That means moving past the black box of <a href="https://auditedstate.app/concepts/shadow-ai.html">Shadow AI</a>, and requiring every agent, human or synthetic, to package its reasoning into a <a href="https://auditedstate.app/concepts/reasoning-vehicle.html">Reasoning Vehicle</a> before it acts. Signaling intent isn't an added burden. It's what actually lets someone else continue from where a person left off.</p>
+<p>Reasoning needs the same standing capacity to revise: what this site calls <a href="/concepts/audit-repair.html">Audit &amp; Repair</a>. A shared direction that can't be corrected isn't navigation — it's just a different kind of trap, dressed up as consensus. This is the actual navigational half of Navigational Coherence: not getting the direction right once, but staying able to adjust it as new evidence arrives.</p>
 
-  <h2>The Movement Begins</h2>
+<h2>The Movement Begins</h2>
 
-  <p>The underlying coordination isn't a new invention. Traffic already proves people can share a path without constant collision. What's needed is applying that same basic logic — signal your intent, and let others act on it accordingly — to reasoning itself, not just to physical movement.</p>
+<p>None of this requires a miracle. The pattern already exists, worked out over a century of getting physical traffic right — the same logic just hasn't been applied to reasoning yet. What it requires is a shared language, the willingness to signal intent honestly, and a standing commitment to correct course rather than defend a wrong one.</p>
 
-  <p>When reasoning stops being hidden and starts being signaled, understanding starts to compound instead of being rebuilt from zero each time.</p>
+<p class="closing">Signal your thinking, stay willing to correct it, and the rest of the movement can follow.</p>
 
-  <p>More on the broader movement is available at <a href="https://cognitivesuperhighway.org">CognitiveSuperHighway.org</a>.</p>
+<p>More on the broader vision this connects to is available at <a href="https://cognitivesuperhighway.org">CognitiveSuperHighway.org</a>.</p>
 
-  <div class="marker-plaque">
-    <p>Signal your thought, and the movement will follow.</p>
-    <cite>— Arne Mayoh</cite>
-  </div>
+<p class="essay-attribution">— Arne Mayoh</p>
 
-  <div class="essay-declarations">
-    <h3>Declaration of Generative AI and AI-Assisted Technologies</h3>
-    <p>This essay was developed with the assistance of AI systems as a research and editorial tool, for drafting support and structural revision. The argument and conclusions are the author's own.</p>
-  </div>
+<div class="note">
+<h3>Declaration of Generative AI and AI-Assisted Technologies</h3>
+<p>This essay was developed with the assistance of AI systems as a research and editorial tool, for drafting support and structural revision. The argument and conclusions are the author's own.</p>
+</div>
+
+<p class="cta-inline">Essay 7 of the <a href="/research/publications/">Audited State Backbone Narrative</a>.</p>
 
 </main>
 
-<footer class="site-footer">
-  <p>Essay 7 of the <a href="https://auditedstate.app/research/publications/">Audited State Backbone Narrative</a>.</p>
-  <p>© 2026 Audited State · AI &amp; the Continuity of Human Understanding</p>
-  <p>— a contributor to <a href="https://cognitivesuperhighway.org">CognitiveSuperHighway.org</a></p>
+<footer>
+© 2026 Audited State · AI & the Continuity of Human Understanding
+<span class="affiliation">— a contributor to <a href="https://cognitivesuperhighway.org">CognitiveSuperHighway.org</a></span>
 </footer>
+
+<script>
+document.querySelector('.mobile-toggle').addEventListener('click', function() {
+document.querySelector('nav').classList.toggle('active');
+});
+</script>
 
 </body>
 </html>

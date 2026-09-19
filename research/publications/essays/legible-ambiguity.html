@@ -4,154 +4,95 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Why Stable Understanding Requires Legible Ambiguity | Audited State</title>
+<link rel="stylesheet" href="../../../style.css">
 <link rel="canonical" href="https://auditedstate.app/research/publications/essays/legible-ambiguity.html">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --paper: #F7F4ED; --paper-raised: #FBF9F4; --ink: #1B2430; --ink-soft: #3D4757;
-    --ink-faint: #6B7484; --route: #B8863B; --route-soft: #E4D3B0; --rule: #DAD3C2; --measure: 40em;
-  }
-  * { box-sizing: border-box; }
-  html { -webkit-text-size-adjust: 100%; }
-  body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 17px; line-height: 1.7; }
-  a { color: var(--ink); text-decoration-color: var(--route); text-underline-offset: 3px; }
-  a:hover { color: var(--route); }
-  a:focus-visible, button:focus-visible { outline: 2px solid var(--route); outline-offset: 2px; }
-
-  header.site-nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--rule); background: var(--paper-raised); }
-  .site-nav .brand { font-weight: 600; font-size: 0.95rem; text-decoration: none; letter-spacing: 0.01em; }
-  .site-nav nav { display: flex; flex-wrap: wrap; font-size: 0.85rem; }
-  .site-nav nav a { text-decoration: none; color: var(--ink-soft); margin-left: 1.25rem; }
-  .site-nav nav a:first-child { margin-left: 0; }
-  .site-nav nav a:hover { color: var(--route); }
-
-  main { max-width: 46em; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
-
-  .eyebrow { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--route); margin-bottom: 1rem; }
-  h1.title { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(2rem, 4.5vw, 2.75rem); line-height: 1.15; margin: 0 0 0.5rem; letter-spacing: -0.01em; }
-  p.subtitle { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.25rem; color: var(--ink-soft); margin: 0 0 2rem; }
-
-  .sequence-box { background: var(--paper-raised); border-left: 3px solid var(--route); border-radius: 2px; padding: 1.1rem 1.4rem; margin: 0 0 2.5rem; }
-  .sequence-box .waypoints-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--route); display: block; margin-bottom: 0.7rem; }
-  .sequence-box ol { margin: 0; padding-left: 1.4rem; }
-  .sequence-box li { margin-bottom: 0.35rem; font-size: 0.95rem; }
-  .sequence-box li:last-child { margin-bottom: 0; }
-  .sequence-box li.current { font-weight: 600; color: var(--ink); list-style: none; margin-left: -1.4rem; padding-left: 0; }
-  .sequence-box li.current::before { content: "→ "; color: var(--route); }
-
-  hr.divider { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
-  main p { margin: 0 0 1.3rem; max-width: var(--measure); }
-  h2 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 1.45rem; margin: 2.6rem 0 1.1rem; letter-spacing: -0.005em; }
-
-  figure.essay-figure { margin: 2rem 0; max-width: var(--measure); }
-  figure.essay-figure img { width: 100%; max-height: 26rem; object-fit: cover; height: auto; border-radius: 4px; display: block; }
-  figure.essay-figure figcaption { font-size: 0.85rem; color: var(--ink-faint); margin-top: 0.6rem; font-style: italic; }
-
-  .marker-plaque { margin: 3.5rem 0 3rem; padding: 2rem 0; border-top: 2px solid var(--route-soft); border-bottom: 2px solid var(--route-soft); text-align: center; }
-  .marker-plaque p { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 1.35rem; line-height: 1.5; color: var(--ink); max-width: 34em; margin: 0 auto 1rem; }
-  .marker-plaque cite { font-family: 'Inter', sans-serif; font-style: normal; font-size: 0.85rem; font-weight: 600; color: var(--route); letter-spacing: 0.04em; }
-
-  .essay-declarations { margin: 2.5rem 0; font-size: 0.9rem; color: var(--ink-soft); }
-  .essay-declarations h3 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); margin: 1.4rem 0 0.4rem; }
-  .essay-declarations p { margin: 0 0 0.8rem; max-width: var(--measure); }
-
-
-  footer.site-footer { max-width: 46em; margin: 0 auto; padding: 0 1.5rem 3rem; font-size: 0.85rem; color: var(--ink-faint); }
-  footer.site-footer a { color: var(--ink-faint); }
-  footer.site-footer a:hover { color: var(--route); }
-  footer.site-footer p { margin: 0.3rem 0; }
-
-  @media (max-width: 600px) { .site-nav { padding: 1rem; } main { padding: 2rem 1.25rem 3.5rem; } }
-</style>
 </head>
-<body>
 
-<header class="site-nav">
-  <a class="brand" href="https://auditedstate.app/">Audited State — preserving human agency</a>
-  <nav>
-    <a href="https://auditedstate.app/problem.html">Problem</a>
-    <a href="https://auditedstate.app/architecture/">Architecture</a>
-    <a href="https://auditedstate.app/philosophy/">Philosophy</a>
-    <a href="https://auditedstate.app/concept-map.html">Concept Map</a>
-    <a href="https://auditedstate.app/labs/">Labs</a>
-    <a href="https://auditedstate.app/research/">Research</a>
-    <a href="https://auditedstate.app/about/">About</a>
+<body class="essay-mode">
+
+<header>
+<div class="nav-container">
+<a href="/" class="logo">
+  Audited State
+  <span class="tagline">— preserving human agency</span>
+</a>
+<button class="mobile-toggle">☰</button>
+<nav>
+<a href="/problem.html">Problem</a>
+<a href="/architecture/">Architecture</a>
+<a href="/philosophy/">Philosophy</a>
+<a href="/concept-map.html">Concept Map</a>
+<a href="/labs/">Labs</a>
+<a href="/research/">Research</a>
+<a href="/about/">About</a>
 </nav>
+</div>
 </header>
 
 <main>
 
-  <span class="eyebrow">Interpretation, Drift &amp; Cognitive Continuity — Essay 5 of 8</span>
-  <h1 class="title">Why Stable Understanding Requires Legible Ambiguity</h1>
-  <p class="subtitle">Interpretive ambiguity as a foundation for continuity, governance, and distributed cognition</p>
+<p class="kicker">Interpretation, Drift &amp; Cognitive Continuity — Essay 4 of 7</p>
 
-  <div class="sequence-box">
-    <span class="waypoints-label">Reading Sequence</span>
-    <ol>
-      <li><a href="https://auditedstate.app/research/publications/essays/data-representation-of-truth.html">1. Data as Representation of Truth</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/drift-drift-drift.html">2. Drift, Drift... DRIFT!</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/reasoning-drift.html">3. Reasoning Drift</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/coherence-of-understanding.html">4. Coherence of Understanding</a></li>
-      <li class="current">5. Why Stable Understanding Requires Legible Ambiguity</li>
-      <li><a href="https://auditedstate.app/research/publications/essays/traffic-of-reasoning.html">6. The Traffic of Reasoning</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/make-the-ai-understand.html">7. Make the AI Understand</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/understanding-understanding.html">8. Understanding Understanding</a></li>
-    </ol>
-  </div>
+<h1>Why Stable Understanding Requires Legible Ambiguity</h1>
+<p class="lead">Interpretive ambiguity as a foundation for continuity, governance, and distributed cognition</p>
 
-  <hr class="divider">
+<figure class="essay-diagram">
+<img src="/assets/determinism.jpg" alt="A person standing before a true/false sign while many branching paths unfold beyond the binary choice.">
+<figcaption>Binary certainty may stabilize a decision point, but interpretation opens into a much larger space of consequence.</figcaption>
+</figure>
 
-  <figure class="essay-figure">
-    <img src="https://auditedstate.app/assets/determinism.jpg" alt="A person standing before a true/false sign while many branching paths unfold beyond the binary choice.">
-    <figcaption>Binary certainty may stabilize a decision point, but interpretation opens into a much larger space of consequence.</figcaption>
-  </figure>
+<p>Modern systems increasingly behave as though ambiguity were a failure state. We optimize for precision, determinism, classification, confidence scores. The assumption underneath all of it is usually the same: ambiguity is a temporary imperfection on the way to truth. This essay argues that assumption is incomplete. Ambiguity isn't only an obstacle to understanding — it may be a structural property of how understanding forms in the first place, the same way this series has already shown that even something as simple as a single apple carries more interpretive instability than it first appears to.</p>
 
-  <p>Modern systems increasingly behave as though ambiguity were a failure state. We optimize for precision, determinism, classification, confidence scores. The assumption underneath all of it is usually the same: ambiguity is a temporary imperfection on the way to truth. This essay argues that assumption is incomplete. Ambiguity isn't only an obstacle to understanding — it may be a structural property of how understanding forms in the first place, the same way this series has already shown that even something as simple as a single apple carries more interpretive instability than it first appears to.</p>
+<h2>What Science Already Learned to Do</h2>
 
-  <h2>What Science Already Learned to Do</h2>
+<p>Mature scientific systems settled this question long ago, and not by pretending measurements were perfectly precise. Physics became more rigorous by explicitly representing uncertainty — confidence intervals, error ranges, probability distributions weren't admissions of failure. They were improvements in epistemic honesty. A system became more coherent precisely because its ambiguity became legible instead of hidden. Science doesn't progress by eliminating uncertainty completely; it progresses by refining uncertainty's boundaries, stabilizing its assumptions, and keeping them revisable. The goal was never absolute certainty. It was coherent navigation under conditions that were always going to be uncertain.</p>
 
-  <p>Mature scientific systems settled this question long ago, and not by pretending measurements were perfectly precise. Physics became more rigorous by explicitly representing uncertainty — confidence intervals, error ranges, probability distributions weren't admissions of failure. They were improvements in epistemic honesty. A system became more coherent precisely because its ambiguity became legible instead of hidden. Science doesn't progress by eliminating uncertainty completely; it progresses by refining uncertainty's boundaries, stabilizing its assumptions, and keeping them revisable. The goal was never absolute certainty. It was coherent navigation under conditions that were always going to be uncertain.</p>
+<p>This research programme names that same discipline directly, applied to institutional decisions rather than scientific measurement: <a href="/concepts/epistemic-maturity.html">Epistemic Maturity</a> — keeping perspective, hypothesis, proposal, commitment, and constraint distinguishable from each other, rather than collapsing them into one undifferentiated claim of certainty.</p>
 
-  <h2>Hidden Ambiguity Is the Actual Danger</h2>
+<h2>Hidden Ambiguity Is the Actual Danger</h2>
 
-  <p>The real risk isn't ambiguity itself — it's ambiguity that's been hidden rather than resolved. Modern systems often try to reduce uncertainty by increasing symbolic certainty instead: rigid categories, deterministic labels, compressed abstractions. But ambiguity doesn't disappear just because a system stops representing it. It submerges beneath an appearance of coherence, and that produces a specific, dangerous kind of instability — people using the same words while quietly carrying different interpretations, organizations that look aligned while their underlying assumptions have already diverged, AI systems producing coherent-looking output that's already detached from the context that was supposed to ground it. Operational coherence survives. Interpretive coherence doesn't. What's left is the illusion of stable understanding, with ambiguity quietly expanding underneath it.</p>
+<p>The real risk isn't ambiguity itself — it's ambiguity that's been hidden rather than resolved. Modern systems often try to reduce uncertainty by increasing symbolic certainty instead: rigid categories, deterministic labels, compressed abstractions. But ambiguity doesn't disappear just because a system stops representing it. It submerges beneath an appearance of coherence, and that produces a specific, dangerous kind of instability — people using the same words while quietly carrying different interpretations, organizations that look aligned while their underlying assumptions have already diverged, AI systems producing coherent-looking output that's already detached from the context that was supposed to ground it. Operational coherence survives. Interpretive coherence doesn't. What's left is the illusion of stable understanding, with ambiguity quietly expanding underneath it — <a href="/concepts/interpretive-entropy.html">Interpretive Entropy</a>, running exactly as this series has already described it, just wearing the disguise of confidence rather than obvious confusion.</p>
 
-  <h2>Interpretive Polarity</h2>
+<h2>Interpretive Polarity</h2>
 
-  <p>This becomes especially dangerous once a system organizes around strong binary categories — good versus evil, true versus false, aligned versus misaligned, safe versus unsafe. Polarity does real work at one level: it stabilizes coordination, creates shared narratives, compresses complicated situations into decisions people can act on together. But it comes at a cost that isn't visible from inside the binary itself — the categories stay interpretive even while the language around them sounds absolute. Definitions drift. Contexts differ. The same label ends up absorbing incompatible meanings across different groups and institutions without anyone quite noticing. The stronger the symbolic certainty on the surface, the larger the hidden interpretive ambiguity can grow underneath it.</p>
+<p>This becomes especially dangerous once a system organizes around strong binary categories — good versus evil, true versus false, aligned versus misaligned, safe versus unsafe. Polarity does real work at one level: it stabilizes coordination, creates shared narratives, compresses complicated situations into decisions people can act on together. But it comes at a cost that isn't visible from inside the binary itself — the categories stay interpretive even while the language around them sounds absolute. Definitions drift. Contexts differ. The same label ends up absorbing incompatible meanings across different groups and institutions without anyone quite noticing. The stronger the symbolic certainty on the surface, the larger the hidden interpretive ambiguity can grow underneath it.</p>
 
-  <figure class="essay-figure">
-    <img src="https://auditedstate.app/assets/bell-curve.jpg" alt="A bell curve showing bad and good as extreme poles, with legible ambiguity as the most probable interpretive space between them.">
-    <figcaption>Interpretive polarity compresses complex meaning into binary extremes. The most fertile space for understanding often sits in the legible ambiguity between them.</figcaption>
-  </figure>
+<figure class="essay-diagram">
+<img src="/assets/bell-curve.jpg" alt="A bell curve showing bad and good as extreme poles, with legible ambiguity as the most probable interpretive space between them.">
+<figcaption>Interpretive polarity compresses complex meaning into binary extremes. The most fertile space for understanding often sits in the legible ambiguity between them.</figcaption>
+</figure>
 
-  <p>This is why systems built this way often look stable right up until they suddenly aren't. The instability wasn't sudden. The ambiguity was there the whole time — it had just become illegible.</p>
+<p>This is why systems built this way often look stable right up until they suddenly aren't. The instability wasn't sudden. The ambiguity was there the whole time — it had just become illegible.</p>
 
-  <h2>Legible Ambiguity Is Not Relativism</h2>
+<h2>Legible Ambiguity Is Not Relativism</h2>
 
-  <p>Treating ambiguity as legible doesn't mean abandoning truth, rejecting evidence, or losing the ability to act. It means acknowledging something more specific: that finite observers working from interpreted representations can't fully eliminate ambiguity from a genuinely complex reality, no matter how much certainty their systems project. The goal becomes preserving coherent understanding despite that — building systems that expose their own assumptions, inference chains, and unresolved uncertainty rather than papering over them. Reviewing ambiguity isn't a sign a system has failed. It's part of what keeping understanding coherent actually requires.</p>
+<p>Treating ambiguity as legible doesn't mean abandoning truth, rejecting evidence, or losing the ability to act. It means acknowledging something more specific: that finite observers working from interpreted representations can't fully eliminate ambiguity from a genuinely complex reality, no matter how much certainty their systems project. The goal becomes preserving coherent understanding despite that — building systems that expose their own assumptions, inference chains, and unresolved uncertainty rather than papering over them. Reviewing ambiguity isn't a sign a system has failed. It's part of what keeping understanding coherent actually requires.</p>
 
-  <p>Continuity of understanding, seen this way, depends less on preserving certainty than on preserving coherent navigation through ambiguity that was never going away. It needs to stay reconstructable, revisable, and interpretable enough to support responsible action — not perfectly settled. As reasoning spreads further across humans, institutions, and AI systems together, hidden ambiguity compounds fast, and a system can keep drifting from its own intentions while still looking, from the outside, perfectly coherent.</p>
+<p>Continuity of understanding, seen this way, depends less on preserving certainty than on preserving coherent navigation through ambiguity that was never going away. It needs to stay reconstructable, revisable, and interpretable enough to support responsible action — not perfectly settled. As reasoning spreads further across humans, institutions, and AI systems together, hidden ambiguity compounds fast, and a system can keep drifting from its own intentions while still looking, from the outside, perfectly coherent.</p>
 
-  <div class="marker-plaque">
-    <p>Ambiguity is not the enemy of understanding. Hidden ambiguity is.</p>
-    <cite>— Arne Mayoh</cite>
-  </div>
+<p class="closing">Ambiguity is not the enemy of understanding. Hidden ambiguity is.</p>
 
-  <div class="essay-declarations">
-    <h3>Declaration of Generative AI and AI-Assisted Technologies</h3>
-    <p>This essay was developed with the assistance of AI systems as a research and editorial tool, for drafting support and structural revision. The argument and conclusions are the author's own.</p>
-  </div>
+<p class="essay-attribution">— Arne Mayoh</p>
+
+<div class="note">
+<h3>Declaration of Generative AI and AI-Assisted Technologies</h3>
+<p>This essay was developed with the assistance of AI systems as a research and editorial tool, for drafting support and structural revision. The argument and conclusions are the author's own.</p>
+</div>
+
+<p class="cta-inline">Essay 4 of the <a href="/research/publications/">Interpretation, Drift &amp; Cognitive Continuity series</a>.</p>
 
 </main>
 
-<footer class="site-footer">
-  <p>Essay 5 of the <a href="https://auditedstate.app/research/publications/">Interpretation, Drift &amp; Cognitive Continuity series</a>.</p>
-  <p>© 2026 Audited State · AI &amp; the Continuity of Human Understanding</p>
-  <p>— a contributor to <a href="https://cognitivesuperhighway.org">CognitiveSuperHighway.org</a></p>
+<footer>
+© 2026 Audited State · AI & the Continuity of Human Understanding
+<span class="affiliation">— a contributor to <a href="https://cognitivesuperhighway.org">CognitiveSuperHighway.org</a></span>
 </footer>
+
+<script>
+document.querySelector('.mobile-toggle').addEventListener('click', function() {
+document.querySelector('nav').classList.toggle('active');
+});
+</script>
 
 </body>
 </html>
