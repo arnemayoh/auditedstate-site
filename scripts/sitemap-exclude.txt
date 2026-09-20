@@ -1,0 +1,7 @@
+about/constitution.html   # redirect stub -> about/charter.html; keep the stub, never list it
+architecture.html         # UNDECIDED: older essay overlapping the newer /architecture/ hub; 8 inbound links; author to decide
+governance.html           # UNDECIDED: orphan (0 inbound links); short stewardship note; author to decide
+quotes.html               # UNDECIDED: orphan; outdated in-page nav and "temp edit" footnote; author to decide
+assets/experiments/transferable-understanding/brochure-A1.html  # UNDECIDED: experiment brochure under assets/; author to decide
+assets/experiments/transferable-understanding/brochure-B1.html  # UNDECIDED: experiment brochure under assets/; author to decide
+assets/experiments/transferable-understanding/brochure-D1.html  # UNDECIDED: experiment brochure under assets/; author to decide

@@ -1,0 +1,20 @@
+9a35a86acf19bca9dd45c902d09df6d9b2c8c094  # nav Architecture/Philosophy
+deeb5e78af94c81002d591026c4c855b333a63b6  # Authority Membrane -> Promotion Gate
+153cc449ff1feb0aab13c05bfd83d71dd5a28294  # editorial-note removal
+a4eb1ec71737749ef3c982e8b56f68b10eb5c0e5  # HuLoo / stub / link cleanup
+8a745da3305c4a5dbb07c833ef941fee6ce04d3f  # green markers
+8d35874ce86a3ace558432f24c8719c158df4a86  # sitewide footer
+e89b476d41946e51596d445dba64b23ddce472d9  # nav Lexicon
+4708199331be460c4cdabe2b143b2d9b412bc431  # header tagline
+9d6f41447a66664d46d02d54aeee255b2468b98e  # lexicon backlinks
+bf59d4864b0a4d254ddd989d892a3705c125b255  # PKOS hyperlinks
+0a24e1859ca957c436a4efbac71119729f0a1a38  # PKOS hyperlinks (also added 3 concept pages)
+3c456b2a83ec5bfce37c9bae9d8a65c8d601f6d7  # nav /research/
+59e017b5ff14999574ab1a193946733bbb2d0ba9  # canonical + nav + hub renames (rename only, body unchanged); confirmed mechanical by author
+76902aee5b22861bb75fe67ad8562a0978ae2355  # nav About
+97519ab51737336d4b67fe90a82aff7a00de7452  # nav Concept Map
+b5f8a48c93b038a56bdc2dee624acbc1edccd942  # style.css relative paths
+1f486be5299dc3a3817b9d34c5631a6b437d04c4  # mobile-toggle / shared CSS
+e1f4d143627c7a9cf7676711020a2755180dc64c  # early nav
+02867d69c71d9dc588015c15dff5e0a021392fb0  # Contact stub title + infrastructure hrefs
+89072c310c1c100c4ea0f08c2b969a8962bf76ce  # removed site issues (links)

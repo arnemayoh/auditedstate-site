@@ -3,7 +3,7 @@
 
   <sitemap>
     <loc>https://auditedstate.app/sitemap-core.xml</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-20</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://auditedstate.app/sitemap-concepts.xml</loc>
@@ -19,7 +19,7 @@
   </sitemap>
   <sitemap>
     <loc>https://auditedstate.app/sitemap-essays.xml</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-20</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://auditedstate.app/sitemap-research.xml</loc>
@@ -30,7 +30,8 @@
     <lastmod>2026-09-19</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://auditedstate.app/sitemap-eu-ai-act.xml</loc>
+    <loc>https://auditedstate.app/sitemap-structural-alignment.xml</loc>
+    <lastmod>2026-09-20</lastmod>
   </sitemap>
 
 </sitemapindex>
