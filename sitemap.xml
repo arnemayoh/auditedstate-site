@@ -3,21 +3,35 @@
 
   <sitemap>
     <loc>https://auditedstate.app/sitemap-core.xml</loc>
+    <lastmod>2026-09-19</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://auditedstate.app/sitemap-concepts.xml</loc>
+    <lastmod>2026-09-19</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://auditedstate.app/sitemap-architecture.xml</loc>
+    <lastmod>2026-09-19</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://auditedstate.app/sitemap-philosophy.xml</loc>
+    <lastmod>2026-09-18</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://auditedstate.app/sitemap-essays.xml</loc>
+    <lastmod>2026-09-19</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://auditedstate.app/sitemap-research.xml</loc>
+    <lastmod>2026-09-20</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://auditedstate.app/sitemap-about.xml</loc>
+    <lastmod>2026-09-19</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://auditedstate.app/sitemap-eu-ai-act.xml</loc>
+    <lastmod>2026-03-04</lastmod>
   </sitemap>
 
 </sitemapindex>
