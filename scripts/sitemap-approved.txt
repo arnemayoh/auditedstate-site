@@ -21,3 +21,7 @@ acceleration.html
 pifr.html
 cumulative-cognition.html
 research/citation-index.html
+concepts/orientation.html
+concepts/super-optimization.html
+concepts/legibility.html
+concepts/transparency.html
