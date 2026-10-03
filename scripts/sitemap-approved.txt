@@ -25,3 +25,5 @@ concepts/orientation.html
 concepts/super-optimization.html
 concepts/legibility.html
 concepts/transparency.html
+research/publications/essays/index.html
+research/publications/papers/index.html
