@@ -4,11 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Institutional Governance | PKOS Research Entry</title>
+<meta name="description" content="Governance that happens after the fact is reconstruction. Governance that happens during reasoning is continuity — and institutions can no longer govern by reconstruction alone.">
 <link rel="canonical" href="https://auditedstate.app/research/entry/governance.html">
 <link rel="stylesheet" href="../../style.css">
 </head>
 
-<body>
+<body class="essay-mode">
 
 <header>
 <div class="nav-container">
@@ -29,12 +30,37 @@
 </div>
 </header>
 
+<!--
+  DRAFT NOTICE.
+  - Hero image below points at /assets/reconstruction-of-justice.jpg,
+    which is NOT yet in the repo — you have it locally, it needs
+    uploading to /assets/ before this works.
+  - That image currently has garbled text in its embedded annotations
+    ("Why† was insperted?", "Who owm this decision") — a known AI
+    image-gen artifact. The top/bottom captions are clean. Recommend
+    regenerating with corrected text before this goes live, especially
+    given the audience. If you decide to ship it as-is, that's your
+    call, not mine to override — but flagging it plainly rather than
+    letting it slip through.
+  - The alt text below describes the image correctly regardless of
+    the typo issue, for accessibility.
+  - Funding/impact phrasing below reuses the same abstraction level
+    already agreed for research/entry/funding.html (multi-user,
+    agent-agnostic, execution/audit/state-management layers) rather
+    than inventing a new disclosure boundary on this page.
+-->
+
+<div class="hero" style="background-image: url('/assets/reconstruction-of-justice.jpg');" role="img" aria-label="Two scenes side by side: on the left, officials in a dim courtroom reassembling a decision from fragments after the fact, beneath a blindfolded statue of justice; on the right, a glowing network of reasoning, with the questions 'why was this decided,' 'what assumptions were used,' and 'who owns this decision' answered visibly as the decision is made."></div>
+
+<p class="caption" style="text-align:center; margin: 0.75rem auto 0; max-width: var(--max-width);">Governance that happens after the fact is reconstruction. Governance that happens during reasoning is continuity.</p>
+
 <main>
 
 <h1>Institutional Governance</h1>
 
-<p>Institutions rely on structures that preserve accountability across time.
-Governance systems must ensure that decisions remain understandable, reviewable, and correctable even as organizations evolve and knowledge accumulates — the institutional expression of what this research programme calls <a href="/concepts/navigational-coherence.html">Navigational Coherence</a>.</p>
+<p>Most institutional governance already works the same way: a decision gets made, time passes, and only when something goes wrong — an audit, a complaint, a court case — does anyone try to reconstruct why it was made, on what basis, and who is actually responsible for it. By then the people who knew have moved on, the context has decayed, and reconstruction stands in for understanding. This is not a hypothetical risk. It is the ordinary condition of institutional memory, and AI-accelerated decision-making is making it worse, faster, not slower.</p>
+
+<p>This research programme — <a href="/concepts/navigational-coherence.html">Navigational Coherence</a> — names the alternative directly: governance that happens <em>during</em> reasoning, not after it. The distinction is argued in full, with legal and historical precedent, in the essay <a href="/research/publications/essays/why-courts-reconstruct-thinking-collective-reasoning.html">Why Courts Reconstruct Thinking</a>.</p>
 
 <h2>Decision-Making in Complex Institutions</h2>
 
@@ -42,14 +68,14 @@ Governance systems must ensure that decisions remain understandable, reviewable,
 Policies, regulations, and operational decisions often depend on layers of prior reasoning, interpretation, and negotiation.</p>
 
 <p>To manage this complexity, institutions typically maintain formal records such as reports, policy documents, meeting minutes, and legal archives.
-These artifacts help preserve the outcomes of decision-making processes.</p>
+These artifacts preserve the outcomes of decision-making processes.</p>
 
-<p>However, the reasoning that produced those outcomes may not always remain fully reconstructable.</p>
+<p>The reasoning that produced those outcomes usually does not survive alongside them.</p>
 
 <h2>The Accountability Challenge</h2>
 
 <p>Governance systems must ensure that decisions remain accountable across time.
-When institutions revisit earlier decisions, they often attempt to answer questions such as:</p>
+When institutions revisit earlier decisions, they routinely attempt to answer questions such as:</p>
 
 <ul>
 <li>What problem was being addressed?</li>
@@ -58,47 +84,59 @@ When institutions revisit earlier decisions, they often attempt to answer questi
 <li>Why was a particular conclusion chosen?</li>
 </ul>
 
-<p>If the reasoning trajectory behind a decision cannot be reconstructed, evaluating and improving institutional behavior becomes difficult.</p>
+<p>When the reasoning trajectory behind a decision cannot be reconstructed, evaluating and improving institutional behavior becomes guesswork dressed as review.</p>
 
 <h2>From Decision Records to Decision Lineage</h2>
 
-<p>Many governance systems preserve documentation of decisions.
-While such records are valuable, they often focus on the final outcome rather than the reasoning that produced it.</p>
+<p>Most governance systems preserve documentation of decisions.
+These records typically focus on the final outcome rather than the reasoning that produced it — which is precisely the gap <a href="/research/publications/essays/ai-accountability-reconstructable-reasoning.html">Why AI Accountability Requires Reconstructable Reasoning</a> argues cannot be closed by better documentation alone.</p>
 
 <p>This research programme names that gap directly as <a href="/concepts/decision-lineage.html">decision lineage</a>: the traceable chain that connects intention, reasoning, validation, and recorded state.</p>
 
-<p>Decision lineage does not simply document what decision was made.
-It preserves the reasoning context that explains how the decision emerged.</p>
+<p>Decision lineage does not document what decision was made.
+It preserves the reasoning context that explains how the decision emerged — while it was still forming, not after it was finalized.</p>
 
 <h2>The Promotion Gate</h2>
 
-<p>Institutions must also maintain boundaries between exploratory reasoning and authoritative commitments.
-Ideas, proposals, and analyses often evolve through discussion and experimentation before becoming official policy.</p>
+<p>Institutions must also maintain a real boundary between exploratory reasoning and authoritative commitments.
+Ideas, proposals, and analyses evolve through discussion and experimentation before becoming official policy — and that boundary, not just the record on either side of it, is what governance actually depends on.</p>
 
-<p>PKOS refers to this boundary as the <a href="/concepts/promotion-gate.html">Promotion Gate</a> (referred to in earlier writing as the Authority Membrane).</p>
+<p>PKOS implements this boundary as the <a href="/concepts/promotion-gate.html">Promotion Gate</a> (referred to in earlier writing as the Authority Membrane).</p>
 
 <p>On the exploratory side lie hypotheses, policy drafts, internal analysis, and debate.
 On the other side of the Promotion Gate lie durable commitments such as regulations, institutional policies, or formal decisions.</p>
 
-<p>Maintaining this boundary allows institutions to explore ideas freely while ensuring that authoritative decisions remain traceable and accountable.</p>
+<p>Maintaining this boundary lets institutions explore ideas freely while ensuring that authoritative decisions remain traceable and accountable — not as a constraint imposed afterward, but as a property of how the decision was made.</p>
 
 <h2>Audit and Institutional Learning</h2>
 
-<p>Effective governance systems allow institutions to examine and revise earlier decisions.
-Audit processes, review mechanisms, and oversight bodies provide opportunities to identify errors, reconsider assumptions, and update policies.</p>
+<p>Effective governance systems let institutions examine and revise earlier decisions.
+Audit processes, review mechanisms, and oversight bodies exist to identify errors, reconsider assumptions, and update policies.</p>
 
-<p>For these processes to function effectively, the reasoning behind earlier decisions must remain reconstructable.</p>
+<p>None of that works if the reasoning behind earlier decisions cannot be reconstructed. PKOS treats reasoning infrastructure — structured reasoning artifacts, <a href="/concepts/state-anchoring.html">state anchoring</a>, and preserved decision lineage — as the precondition audit depends on, not an optional enhancement to it. This is precisely the territory the essay <a href="/research/publications/essays/continuity-of-understanding-across-systems.html">Continuity of Understanding Across Systems</a> works through in full.</p>
 
-<p>PKOS explores whether reasoning infrastructure — such as structured reasoning artifacts, <a href="/concepts/state-anchoring.html">state anchoring</a>, and preserved decision lineage — could help institutions maintain continuity of understanding across long time horizons. This is precisely the territory the essay <a href="/research/publications/essays/continuity-of-understanding-across-systems.html">Continuity of Understanding Across Systems</a> works through in full.</p>
+<h2>Governance in Human&ndash;AI Collaboration</h2>
 
-<h2>Governance in Human–AI Collaboration</h2>
+<p>As AI systems increasingly assist analysis and decision support, this problem does not stay hypothetical. It compounds. AI can produce an assessment, a recommendation, or a draft decision in minutes; the reasoning behind it, unless something deliberately preserves it, is gone by the time anyone needs to ask why.</p>
 
-<p>As AI systems increasingly assist analysis and decision support, governance systems face new challenges.
-Accelerated reasoning processes may produce insights rapidly, but the reasoning behind those insights may become harder to reconstruct if it is not deliberately preserved.</p>
+<p>PKOS is a working answer to that, not a proposal awaiting implementation: a multi-user, agent-agnostic architecture, with its own execution, audit, and state-management layers built specifically to keep reasoning traceable as human and AI participants collaborate. What it has not yet had is institutional-scale empirical validation &mdash; which is the open question this research programme is now looking to answer, not a reason to doubt that the architecture works.</p>
 
-<p>Institutions must therefore consider how reasoning processes themselves can remain accountable when human and AI participants collaborate.</p>
+<h2>The Research Behind This</h2>
 
-<p>PKOS investigates architectural mechanisms that may help stabilize such reasoning systems while preserving human responsibility and institutional oversight.</p>
+<p>The underlying claim &mdash; that disclosure and audit trails are not the same thing as legibility, and that optimization under institutional pressure reliably outpaces the capacity to revise it &mdash; is argued formally, not just asserted, in two anchor papers:</p>
+
+<ul>
+<li><a href="https://doi.org/10.2139/ssrn.7524218" target="_blank" rel="noopener">Legible Risk: Why Disclosure Isn't Enough</a></li>
+<li><a href="https://doi.org/10.2139/ssrn.7517059" target="_blank" rel="noopener">Super-Optimization: When Optimization Outpaces the Capacity for Double-Loop Revision</a></li>
+</ul>
+
+<p>Both sit inside a wider, sustained <a href="/research/publications/papers/">research programme</a>, not a single pitch built around one idea.</p>
+
+<h2>Where This Stands</h2>
+
+<p>This is independent research, not a finished product pitch. The diagnosis is argued in full in the papers above. The architecture described on this page already exists as working infrastructure. What it needs now is institutional-scale validation, and partners willing to test it against real governance practice &mdash; not further argument that the underlying problem is real.</p>
+
+<p>&rarr; If you're assessing this for funding or impact rather than governance practice, see <a href="/research/entry/funding.html">Funding &amp; Impact</a>.</p>
 
 <h2>Related Concepts</h2>
 <ul>
@@ -107,6 +145,7 @@ Accelerated reasoning processes may produce insights rapidly, but the reasoning 
 <li><a href="/concepts/state-anchoring.html">State Anchoring</a></li>
 <li><a href="/concepts/audit-repair.html">Audit &amp; Repair</a></li>
 <li><a href="/concepts/cumulative-reasoning.html">Cumulative Reasoning</a></li>
+<li><a href="/concepts/legibility.html">Legibility</a></li>
 </ul>
 
 </main>
