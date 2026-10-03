@@ -43,6 +43,46 @@
 
   hr.divider { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
   main p { margin: 0 0 1.3rem; max-width: var(--measure); }
+
+  .backbone-nav { margin: 0 0 1.25rem; max-width: var(--measure); }
+  .backbone-nav p { margin: 0; }
+  .backbone-breadcrumb {
+    margin: 0 0 0.2rem;
+    font-size: 0.75rem;
+    line-height: 1.35;
+    color: var(--ink-faint);
+  }
+  .backbone-breadcrumb a { color: var(--ink-faint); text-decoration: none; }
+  .backbone-breadcrumb a:hover { color: var(--route); }
+  .backbone-position {
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--ink);
+  }
+  .backbone-position a { color: var(--route); font-weight: 600; text-decoration: none; }
+  .backbone-position a:hover { text-decoration: underline; }
+  .backbone-nav details > summary {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--route);
+    list-style: none;
+  }
+  .backbone-nav details > summary::-webkit-details-marker { display: none; }
+  .backbone-nav details > summary::before { content: "▸"; margin-right: 0.45rem; color: var(--route); }
+  .backbone-nav details[open] > summary::before { content: "▾"; }
+  .backbone-nav details ol { margin: 0 0 0.4rem; padding-left: 1.3rem; font-size: 0.9rem; }
+  .backbone-nav details li { margin: 0 0 0.25rem; }
+  .backbone-pager { margin: 1.5rem 0 0; font-size: 0.95rem; font-weight: 600; }
+  .backbone-pager a { color: var(--route); text-decoration: none; }
+  .backbone-pager a:hover { text-decoration: underline; }
+
   h2 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 1.45rem; margin: 2.6rem 0 1.1rem; letter-spacing: -0.005em; }
   ul.plain { margin: 0 0 1.3rem; padding-left: 1.3rem; max-width: var(--measure); }
   ul.plain li { margin-bottom: 0.6rem; }
@@ -91,22 +131,28 @@
   <h1 class="title">The Continuity of Learning</h1>
   <p class="subtitle">Why wisdom now compounds instead of resetting</p>
 
-  <div class="sequence-box">
-    <span class="waypoints-label">Reading Sequence</span>
-    <ol>
-      <li><a href="https://auditedstate.app/research/publications/essays/the-collapse-of-agency.html">1. The Collapse of Agency</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/the-end-of-monday-morning.html">2. The End of Monday Morning</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/the-erosion-of-intent.html">3. The Erosion of Intent</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/the-reasoning-artifact.html">4. The Reasoning Artifact</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/the-honest-agent.html">5. The Honest Agent</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/the-great-accumulation-human-agency.html">6. The Great Compounding</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/the-road-ahead.html">7. The Road Ahead</a></li>
-      <li class="current">8. The Continuity of Learning</li>
-      <li><a href="https://auditedstate.app/research/publications/essays/wealth-of-understanding-invisible-opportunity-cost.html">9. Civilisational Decay and the Invisible Opportunity Cost</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/data-representation-of-truth.html">10. Data as Representation of Truth</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/reconstruction-bankruptcy.html">11. The Horizon of Reconstruction Bankruptcy</a></li>
-    </ol>
-  </div>
+  <!-- BACKBONE-NAV:START -->
+  <nav class="backbone-nav" aria-label="Backbone Narrative">
+    <p class="backbone-breadcrumb"><a href="https://auditedstate.app/research/">Research</a> › <a href="https://auditedstate.app/research/publications/">Publications</a> › <a href="https://auditedstate.app/research/publications/essays/">Essays</a> › Backbone Narrative</p>
+    <p class="backbone-position">Essay 8 of 11 · Next: <a href="https://auditedstate.app/research/publications/essays/wealth-of-understanding-invisible-opportunity-cost.html">Civilisational Decay and the Invisible Opportunity Cost</a> →</p>
+    <details>
+      <summary>All 11 essays</summary>
+      <ol>
+        <li><a href="https://auditedstate.app/research/publications/essays/the-collapse-of-agency.html">1. The Collapse of Agency</a></li>
+        <li><a href="https://auditedstate.app/research/publications/essays/the-end-of-monday-morning.html">2. The End of Monday Morning</a></li>
+        <li><a href="https://auditedstate.app/research/publications/essays/the-erosion-of-intent.html">3. The Erosion of Intent</a></li>
+        <li><a href="https://auditedstate.app/research/publications/essays/the-reasoning-artifact.html">4. The Reasoning Artifact</a></li>
+        <li><a href="https://auditedstate.app/research/publications/essays/the-honest-agent.html">5. The Honest Agent</a></li>
+        <li><a href="https://auditedstate.app/research/publications/essays/the-great-accumulation-human-agency.html">6. The Great Compounding</a></li>
+        <li><a href="https://auditedstate.app/research/publications/essays/the-road-ahead.html">7. The Road Ahead</a></li>
+        <li aria-current="page">8. The Continuity of Learning</li>
+        <li><a href="https://auditedstate.app/research/publications/essays/wealth-of-understanding-invisible-opportunity-cost.html">9. Civilisational Decay and the Invisible Opportunity Cost</a></li>
+        <li><a href="https://auditedstate.app/research/publications/essays/data-representation-of-truth.html">10. Data as Representation of Truth</a></li>
+        <li><a href="https://auditedstate.app/research/publications/essays/reconstruction-bankruptcy.html">11. The Horizon of Reconstruction Bankruptcy</a></li>
+      </ol>
+    </details>
+  </nav>
+  <!-- BACKBONE-NAV:END -->
 
   <hr class="divider">
 
@@ -149,6 +195,10 @@
   <div class="series-close">
     <strong>The Backbone Narrative continues.</strong> These first eight essays trace one continuous argument — from the everyday cost of reconstructing lost reasoning, through the case for honest, traceable AI collaboration, to the shared infrastructure that would let human understanding compound rather than reset. Three further essays complete the sequence: <a href="https://auditedstate.app/research/publications/essays/wealth-of-understanding-invisible-opportunity-cost.html">Civilisational Decay and the Invisible Opportunity Cost</a>, <a href="https://auditedstate.app/research/publications/essays/data-representation-of-truth.html">Data as Representation of Truth</a>, and <a href="https://auditedstate.app/research/publications/essays/reconstruction-bankruptcy.html">The Horizon of Reconstruction Bankruptcy</a>. The formal research behind these ideas continues in the programme's published papers, available at the <a href="https://auditedstate.app/research/publications/">Audited State Research</a> index.
   </div>
+
+  <!-- BACKBONE-ENDNAV:START -->
+  <p class="backbone-pager"><a href="https://auditedstate.app/research/publications/essays/the-road-ahead.html">← Prev</a> · <a href="https://auditedstate.app/research/publications/essays/wealth-of-understanding-invisible-opportunity-cost.html">Next →</a></p>
+  <!-- BACKBONE-ENDNAV:END -->
 
 </main>
 

@@ -144,6 +144,45 @@
 
   main p { margin: 0 0 1.3rem; max-width: var(--measure); }
 
+  .backbone-nav { margin: 0 0 1.25rem; max-width: var(--measure); }
+  .backbone-nav p { margin: 0; }
+  .backbone-breadcrumb {
+    margin: 0 0 0.2rem;
+    font-size: 0.75rem;
+    line-height: 1.35;
+    color: var(--ink-faint);
+  }
+  .backbone-breadcrumb a { color: var(--ink-faint); text-decoration: none; }
+  .backbone-breadcrumb a:hover { color: var(--route); }
+  .backbone-position {
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--ink);
+  }
+  .backbone-position a { color: var(--route); font-weight: 600; text-decoration: none; }
+  .backbone-position a:hover { text-decoration: underline; }
+  .backbone-nav details > summary {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--route);
+    list-style: none;
+  }
+  .backbone-nav details > summary::-webkit-details-marker { display: none; }
+  .backbone-nav details > summary::before { content: "▸"; margin-right: 0.45rem; color: var(--route); }
+  .backbone-nav details[open] > summary::before { content: "▾"; }
+  .backbone-nav details ol { margin: 0 0 0.4rem; padding-left: 1.3rem; font-size: 0.9rem; }
+  .backbone-nav details li { margin: 0 0 0.25rem; }
+  .backbone-pager { margin: 1.5rem 0 0; font-size: 0.95rem; font-weight: 600; }
+  .backbone-pager a { color: var(--route); text-decoration: none; }
+  .backbone-pager a:hover { text-decoration: underline; }
+
   h2 {
     font-family: 'Source Serif 4', Georgia, serif;
     font-weight: 600;
@@ -267,22 +306,28 @@
   <h1 class="title">The Collapse of Agency</h1>
   <p class="subtitle">Recognizing the symptoms of cognitive dissolution</p>
 
-  <div class="sequence-box">
-    <span class="waypoints-label">Reading Sequence</span>
-    <ol>
-      <li class="current">1. The Collapse of Agency</li>
-      <li><a href="https://auditedstate.app/research/publications/essays/the-end-of-monday-morning.html">2. The End of Monday Morning</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/the-erosion-of-intent.html">3. The Erosion of Intent</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/the-reasoning-artifact.html">4. The Reasoning Artifact</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/the-honest-agent.html">5. The Honest Agent</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/the-great-accumulation-human-agency.html">6. The Great Compounding</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/the-road-ahead.html">7. The Road Ahead</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/continuity-of-learning.html">8. The Continuity of Learning</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/wealth-of-understanding-invisible-opportunity-cost.html">9. Civilisational Decay and the Invisible Opportunity Cost</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/data-representation-of-truth.html">10. Data as Representation of Truth</a></li>
-      <li><a href="https://auditedstate.app/research/publications/essays/reconstruction-bankruptcy.html">11. The Horizon of Reconstruction Bankruptcy</a></li>
-    </ol>
-  </div>
+  <!-- BACKBONE-NAV:START -->
+  <nav class="backbone-nav" aria-label="Backbone Narrative">
+    <p class="backbone-breadcrumb"><a href="https://auditedstate.app/research/">Research</a> › <a href="https://auditedstate.app/research/publications/">Publications</a> › <a href="https://auditedstate.app/research/publications/essays/">Essays</a> › Backbone Narrative</p>
+    <p class="backbone-position">Essay 1 of 11 · Next: <a href="https://auditedstate.app/research/publications/essays/the-end-of-monday-morning.html">The End of Monday Morning</a> →</p>
+    <details>
+      <summary>All 11 essays</summary>
+      <ol>
+        <li aria-current="page">1. The Collapse of Agency</li>
+        <li><a href="https://auditedstate.app/research/publications/essays/the-end-of-monday-morning.html">2. The End of Monday Morning</a></li>
+        <li><a href="https://auditedstate.app/research/publications/essays/the-erosion-of-intent.html">3. The Erosion of Intent</a></li>
+        <li><a href="https://auditedstate.app/research/publications/essays/the-reasoning-artifact.html">4. The Reasoning Artifact</a></li>
+        <li><a href="https://auditedstate.app/research/publications/essays/the-honest-agent.html">5. The Honest Agent</a></li>
+        <li><a href="https://auditedstate.app/research/publications/essays/the-great-accumulation-human-agency.html">6. The Great Compounding</a></li>
+        <li><a href="https://auditedstate.app/research/publications/essays/the-road-ahead.html">7. The Road Ahead</a></li>
+        <li><a href="https://auditedstate.app/research/publications/essays/continuity-of-learning.html">8. The Continuity of Learning</a></li>
+        <li><a href="https://auditedstate.app/research/publications/essays/wealth-of-understanding-invisible-opportunity-cost.html">9. Civilisational Decay and the Invisible Opportunity Cost</a></li>
+        <li><a href="https://auditedstate.app/research/publications/essays/data-representation-of-truth.html">10. Data as Representation of Truth</a></li>
+        <li><a href="https://auditedstate.app/research/publications/essays/reconstruction-bankruptcy.html">11. The Horizon of Reconstruction Bankruptcy</a></li>
+      </ol>
+    </details>
+  </nav>
+  <!-- BACKBONE-NAV:END -->
 
   <hr class="divider">
 
@@ -326,6 +371,10 @@
     <h3>Declaration of Generative AI and AI-Assisted Technologies</h3>
     <p>This essay was developed with the assistance of AI systems as a research and editorial tool, for drafting support and structural revision. The argument and conclusions are the author's own.</p>
   </div>
+
+  <!-- BACKBONE-ENDNAV:START -->
+  <p class="backbone-pager"><a href="https://auditedstate.app/research/publications/essays/the-end-of-monday-morning.html">Next →</a></p>
+  <!-- BACKBONE-ENDNAV:END -->
 
 </main>
 
