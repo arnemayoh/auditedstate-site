@@ -6,3 +6,5 @@ quotes.html               # redirect stub → /about/; never list it
 assets/experiments/transferable-understanding/brochure-A1.html  # UNDECIDED: experiment brochure under assets/; author to decide
 assets/experiments/transferable-understanding/brochure-B1.html  # UNDECIDED: experiment brochure under assets/; author to decide
 assets/experiments/transferable-understanding/brochure-D1.html  # UNDECIDED: experiment brochure under assets/; author to decide
+research/publications/papers/dual-representation.html  # redirect stub → /research/publications/; never list it
+research/publications/papers/pss-working-paper.html    # redirect stub → /research/publications/; never list it
