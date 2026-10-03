@@ -1,11 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Audited State — Continuity of Human Understanding</title>
-<link rel="stylesheet" href="./style.css" />
-<link rel="canonical" href="https://auditedstate.app/" />
+<meta name="description" content="Research on how human understanding stays continuous as reasoning systems accelerate.">
+<link rel="stylesheet" href="style.css">
+<link rel="canonical" href="https://auditedstate.app/">
+
+<!--
+  DRAFT NOTICE — this page is a working draft, not final.
+  - Colors/fonts below are placeholders. Reconcile against the real
+    style.css before this replaces the live homepage.
+  - Door destinations are best guesses against what exists today —
+    see the conversation log / strategy doc for the open questions.
+  - Door copy is a first pass.
+-->
+
+<style>
+  :root {
+    --paper: #F7F4ED;
+    --ink: #1B2430;
+    --ink-soft: #3D4757;
+    --ink-faint: #6B7484;
+    --route: #B8863B;
+    --rule: #DAD3C2;
+  }
+
+  .hero-vignette {
+    max-width: 38em;
+    margin: 3.5rem auto 2.5rem;
+    padding: 0 1.5rem;
+    text-align: center;
+  }
+
+  /*
+    VARIANT 2 HINT — not built, optional later direction.
+    A version of this hero where line-1 briefly renders in full,
+    then visibly loses words/connective phrases on load, leaving
+    line-2's fragments behind — the loss shown happening rather
+    than described. Delete this comment and this section entirely
+    if the static typographic version below is kept instead.
+  */
+
+  .hero-vignette p {
+    font-family: 'Source Serif 4', Georgia, serif;
+    margin: 0 0 1.4rem;
+  }
+
+  .hero-line-1 {
+    font-size: clamp(1.4rem, 3.2vw, 1.9rem);
+    line-height: 1.5;
+    color: var(--ink-soft);
+  }
+
+  .hero-line-2 {
+    font-size: clamp(1.7rem, 4vw, 2.4rem);
+    line-height: 1.4;
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+
+  .hero-line-2 .gap {
+    color: var(--ink-faint);
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .problem-line {
+    max-width: 34em;
+    margin: 0 auto 3rem;
+    padding: 2rem 1.5rem 0;
+    text-align: center;
+    border-top: 1px solid var(--rule);
+  }
+
+  .problem-line p.question {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+    line-height: 1.5;
+    color: var(--ink);
+    margin: 0 0 0.8rem;
+  }
+
+  .problem-line p.sub {
+    font-size: 0.95rem;
+    color: var(--ink-faint);
+    margin: 0;
+  }
+
+  .doors {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    max-width: 52em;
+    margin: 0 auto 3rem;
+    padding: 0 1.5rem;
+  }
+
+  @media (max-width: 640px) {
+    .doors { grid-template-columns: 1fr; }
+  }
+
+  .door {
+    display: block;
+    padding: 1.4rem 1.3rem;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    text-decoration: none;
+    color: inherit;
+    background: #FBF9F4;
+    transition: border-color 0.15s ease;
+  }
+
+  .door:hover { border-color: var(--route); }
+
+  .door .door-label {
+    display: block;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--ink);
+    margin: 0 0 0.4rem;
+  }
+
+  .door .door-sub {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--ink-faint);
+    line-height: 1.4;
+  }
+
+  /* explore + research must be the first two tiles so they stay
+     above the mobile fold together — see strategy doc §D4 */
+
+  .below-fold {
+    max-width: 34em;
+    margin: 0 auto 3.5rem;
+    padding: 0 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--ink-faint);
+  }
+
+  .below-fold a { color: var(--ink-soft); }
+
+  .concierge-slot {
+    /* reserved, inert — no function yet; keeps header layout
+       stable for when this is wired up */
+    font-size: 0.8rem;
+    color: var(--ink-faint);
+    margin-left: 1.25rem;
+    opacity: 0.6;
+  }
+</style>
+
 </head>
 
 <body>
@@ -16,7 +165,7 @@
   Audited State
   <span class="tagline">— preserving human agency</span>
 </a>
-<button class="mobile-toggle" aria-label="Toggle navigation">☰</button>
+<button class="mobile-toggle">☰</button>
 <nav>
 <a href="/problem.html">Problem</a>
 <a href="/architecture/">Architecture</a>
@@ -25,317 +174,55 @@
 <a href="/labs/">Labs</a>
 <a href="/research/">Research</a>
 <a href="/about/">About</a>
+<span class="concierge-slot" aria-hidden="true">Ask — coming soon</span>
 </nav>
 </div>
 </header>
 
-<section class="hero">
-</section>
-
 <main>
 
-<!-- INTRO -->
-
-<section class="intro">
-<p class="lead">
-The ideas on this site explore a simple question:
-<strong>How can human understanding remain continuous in a world of accelerating reasoning systems?</strong>
-</p>
-
-<p>
-AI did not create the problems of meaning drift, lost reasoning, or unclear responsibility.
-It simply accelerates them.
-</p>
-
-<p>
-The Audited State project explores structures that allow reasoning to remain
-<strong>traceable, durable, and cumulative</strong>.
-</p>
-
-<p class="cta-inline">
-→ <a href="/human-ai-mind.html">How understanding is formed - and lost</a>
-</p>
+<section class="hero-vignette">
+  <p class="hero-line-1">Last night, this made sense.<br>You wrote it down.</p>
+  <p class="hero-line-2">This morning the words are still here &mdash;<br><span class="gap">but something that held them together isn&rsquo;t.</span></p>
 </section>
 
-<!-- SECTION 1 -->
+<section class="problem-line">
+  <p class="question">How can human understanding remain continuous in a world of accelerating reasoning systems?</p>
+  <p class="sub">AI did not create this problem. It accelerates it.</p>
+</section>
 
-<section>
+<section class="doors" aria-label="Choose what brings you here">
 
-<blockquote>
-<strong>“Civilizations accumulate knowledge only when reasoning becomes durable enough to continue.”</strong><br/>
-— Arne Mayoh & AI
-</blockquote>
+  <a class="door" href="/cognitive-journey.html">
+    <span class="door-label">Just curious</span>
+    <span class="door-sub">No agenda yet &mdash; a short walk through how understanding is formed and lost.</span>
+  </a>
 
-<pre>
-experience
-   ↓
-intention
-   ↓
-artifact
-   ↓
-network
-   ↓
-continuity
-</pre>
+  <a class="door" href="/research/">
+    <span class="door-label">Reviewing or citing this work</span>
+    <span class="door-sub">Papers, essays, and where this sits relative to existing research.</span>
+  </a>
 
-<p>
-Human ideas shape the world.
-But without durable reasoning records, meaning drifts and decisions must be reconstructed again and again.
-</p>
+  <a class="door" href="/architecture/">
+    <span class="door-label">Looking to build or integrate</span>
+    <span class="door-sub">What&rsquo;s real, what&rsquo;s proposed, and where the architecture lives.</span>
+  </a>
 
-<div class="cta-box">
-<a href="/continuity.html">Explore continuity of reasoning →</a>
-</div>
+  <a class="door" href="/research/entry/funding.html">
+    <span class="door-label">Assessing for funding or impact</span>
+    <span class="door-sub">The published research and the governance stakes behind it.</span>
+  </a>
 
 </section>
 
-<!-- SECTION 2 -->
-
-<section>
-
-<blockquote>
-<strong>“AI can produce words at machine speed. Without continuity, meaning dissolves at machine speed too.”</strong><br/>
-— Arne Mayoh
-</blockquote>
-
-<pre>
-semantic drift
-interpretive drift
-memory loss
-cognitive overload
-       +
-AI acceleration
-       ↓
-interpretive entropy
-</pre>
-
-<p>
-Many reasoning problems existed long before AI.
-AI does not create these problems.
-It <strong>amplifies their consequences</strong>.
-</p>
-
-<div class="cta-box">
-<a href="/acceleration.html">Explore acceleration and entropy →</a>
-</div>
-
+<section class="below-fold">
+  <p>Or go straight to the <a href="/concepts/lexicon.html">Lexicon</a>, the <a href="/concept-map.html">Concept Map</a>, or the most recent <a href="/research/publications/papers/">paper</a>.</p>
 </section>
-
-<!-- SECTION 2.a -->
-
-<section>
-
-   <blockquote>
-   <strong>“Systems do not fail when they lose information.  
-   They fail when they can no longer maintain continuity.”</strong><br/>
-   — Arne Mayoh
-   </blockquote>
-   
-   <img src="../assets/continuity-threshold1.webp" alt="Continuity Threshold" class="full-image">
-   
-   <p class="caption">
-   Below the continuity threshold, understanding accumulates.
-   Beyond it, knowledge fragments and must be reconstructed at increasing cost.
-   </p>
-   
-   <p>
-   As systems grow in complexity and speed, they approach a critical condition:
-   </p>
-   
-   <p class="lead">
-   The point where understanding can no longer be carried forward.
-   </p>
-   
-   <ul>
-   <li>reasoning fragments across contexts</li>
-   <li>interpretation diverges</li>
-   <li>reconstruction becomes the default</li>
-   </ul>
-   
-   <p>
-   At this point, progress slows — not because of lack of intelligence,
-   but because continuity can no longer be maintained.
-   </p>
-   
-   <p class="lead">
-   This is the continuity threshold.
-   </p>
-   
-   <div class="cta-box">
-   <a href="/concepts/continuity-threshold.html">Explore the continuity threshold →</a>
-   </div>
-   
-   </section>
-
-<!-- SECTION 3 -->
-
-<section>
-
-<blockquote>
-<strong>“A Pay-It-Forward Record is not an answer. It is a path others can continue.”</strong><br/>
-— Arne Mayoh & AI
-</blockquote>
-
-<pre>
-inspiration
-   ↓
-intention
-   ↓
-PIFR
-   ↓
-artifact network
-</pre>
-
-<p>
-Ideas become durable when they leave structured artifacts that preserve their reasoning.
-</p>
-
-<div class="cta-box">
-<a href="/pifr.html">Explore reasoning artifacts (PIFR) →</a>
-</div>
-
-</section>
-
-<!-- SECTION 4 -->
-
-<section>
-
-<blockquote>
-<strong>“The purpose of AI dialogue is not faster answers. It is better questions.”</strong><br/>
-— Arne Mayoh & AI
-</blockquote>
-
-<pre>
-human exploration
-        ↔
-AI counterexamples
-        ↔
-refined reasoning
-</pre>
-
-<p>
-Collaborative conjecture allows human and artificial reasoning to interact —
-generating insight while preserving structure.
-</p>
-
-<div class="cta-box">
-<a href="/concepts/collaborative-conjecture.html">Explore collaborative conjecture →</a>
-</div>
-
-</section>
-
-<!-- SECTION 5 -->
-
-<section>
-
-<blockquote>
-<strong>“Civilization progresses when reasoning stops restarting and begins accumulating.”</strong><br/>
-— Arne Mayoh & AI
-</blockquote>
-
-<pre>
-fragmented cognition
-       ↓
-cumulative cognition
-       ↓
-collective cognition
-</pre>
-
-<p>
-When reasoning becomes inspectable and durable,
-knowledge can accumulate across people and institutions.
-</p>
-
-<div class="cta-box">
-<a href="/cumulative-cognition.html">Explore cumulative cognition →</a>
-</div>
-
-</section>
-
-<!-- FINAL -->
-
-<section>
-
-<blockquote>
-<strong>“AI should expand human agency — not dissolve responsibility.”</strong><br/>
-— Arne Mayoh
-</blockquote>
-
-<pre>
-human intention
-      ↓
-AI reasoning support
-      ↓
-traceable decisions
-      ↓
-preserved human agency
-</pre>
-
-<p>
-The goal is not to control intelligence.
-It is to ensure that reasoning systems remain
-<strong>inspectable, accountable, and human-directed</strong>.
-</p>
-
-</section>
-
-<!-- FINAL LINE -->
-
-<section class="closing">
-<p>
-The Audited State project explores how reasoning, memory, and responsibility
-can remain visible in an age of accelerating intelligence.
-</p>
-</section>
-
-<section class="agency-epilogue">
-   <blockquote>
-     <p>Human agency is not a technical property.</p>
- 
-     <p>
-     It is the quiet ability to recognize a moment as yours —<br>
-     and to choose what becomes of it.
-     </p>
- 
-     <p>
-     It does not appear as force,<br>
-     but as presence.
-     </p>
- 
-     <p>
-     Not everything we think becomes ours.<br>
-     Not everything we do defines us.
-     </p>
- 
-     <p>
-     Agency is the point at which something does —<br>
-     because we chose it.
-     </p>
- 
-     <p>
-     Like light touching the edge of a landscape,<br>
-     it does not create the world,<br>
-     but reveals where we stand within it.
-     </p>
- 
-     <footer>— Arne Mayoh</footer>
-   </blockquote>
- </section>
-
- <blockquote>
-   <strong>“Human agency requires continuity of understanding”</strong><br/>
-   — Arne Mayoh
-</blockquote>
-
-<p>
-   Understanding is not something we state.  
-   It is something we preserve — through <a href="/architecture/infrastructure.html">structure</a>.
-</p>
 
 </main>
 
 <footer>
-© 2026 Audited State · AI & the Continuity of Human Understanding  
+© 2026 Audited State · AI & the Continuity of Human Understanding
 <br>
 <span class="affiliation">
 – a contributor to <a href="https://cognitivesuperhighway.org" target="_blank" rel="noopener">CognitiveSuperHighway.org</a>
