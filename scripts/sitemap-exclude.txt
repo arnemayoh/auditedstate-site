@@ -8,3 +8,4 @@ assets/experiments/transferable-understanding/brochure-B1.html  # UNDECIDED: exp
 assets/experiments/transferable-understanding/brochure-D1.html  # UNDECIDED: experiment brochure under assets/; author to decide
 research/publications/papers/dual-representation.html  # redirect stub → /research/publications/; never list it
 research/publications/papers/pss-working-paper.html    # redirect stub → /research/publications/; never list it
+about/first-record.html   # redirect stub → /about/why-pkos.html; never list it

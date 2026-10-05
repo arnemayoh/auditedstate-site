@@ -363,12 +363,24 @@ blockquote {
   border-radius: 8px; /* Softens the integration into the white scaffold */
 }
 
-.essay-diagram figcaption {
+.essay-diagram figcaption,
+.essay-image figcaption {
   text-align: center;
   font-style: italic;
   font-size: 0.9rem;
   color: #666;
   margin-top: 0.5rem;
+}
+
+.essay-image {
+  margin: 2rem 0;
+}
+
+.essay-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
 }
 
 .cta-box {

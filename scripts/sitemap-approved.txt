@@ -3,7 +3,6 @@ about/why-pkos.html
 about/why-audited-state.html
 about/charter.html
 about/research-vision.html
-about/first-record.html
 about/origin.html
 about/contact.html
 structural-alignment/index.html
@@ -27,3 +26,7 @@ concepts/legibility.html
 concepts/transparency.html
 research/publications/essays/index.html
 research/publications/papers/index.html
+cognitive-journey.html
+about/before-it-had-a-name.html
+research/entry/index.html
+research/entry/funding.html

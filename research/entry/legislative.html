@@ -4,11 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Legislative &amp; Regulatory Perspectives | PKOS Research Entry</title>
+<meta name="description" content="Governance has three moments: before a system acts, while it acts, and after. Most AI governance leans on disclosure. What other regulated fields do differently, and why we have built this kind of infrastructure before.">
 <link rel="canonical" href="https://auditedstate.app/research/entry/legislative.html">
 <link rel="stylesheet" href="../../style.css">
 </head>
 
-<body>
+<body class="essay-mode">
 
 <header>
 <div class="nav-container">
@@ -33,71 +34,94 @@
 
 <h1>Legislative &amp; Regulatory Perspectives</h1>
 
-<p>Governments and regulatory bodies increasingly face the challenge of governing decision systems that incorporate artificial intelligence.
-As reasoning processes accelerate, policymakers must ensure that accountability, transparency, and human oversight remain intact — the regulatory expression of what this research programme develops directly as <a href="/concepts/structural-alignment.html">Structural Alignment</a> and, more generally, <a href="/concepts/navigational-coherence.html">Navigational Coherence</a>.</p>
+<p class="lead">Governance has three moments: before a system acts, while it acts, and after. Most of the weight on AI sits at the end.</p>
 
-<h2>The Governance Challenge of AI Acceleration</h2>
+<p>A risk can be disclosed in exhaustive detail and still be one that nobody in particular is positioned to act on. Most AI governance instruments are built around disclosure: documentation, logs, risk assessments, reports. Disclosure is necessary. It is not the same thing as being able to intervene. This research programme calls the missing property <a href="/concepts/legibility.html">legibility</a>, and argues that the gap is older than computing. AI is its current, urgent instance, with the shortest runway between disclosure and consequence.</p>
 
-<p>Artificial intelligence systems can assist analysis, recommendation, and decision support at a pace far beyond traditional institutional processes.
-While these capabilities offer substantial benefits, they also raise questions about how decisions can remain accountable within rapidly evolving reasoning environments.</p>
+<p>The argument is made in full, with evidence from six regulated fields, in <a href="https://doi.org/10.2139/ssrn.7524218" target="_blank" rel="noopener">Legible Risk: Why Disclosure Isn't Enough</a>. This page is the short version for people who write and apply the rules.</p>
 
-<p>Policymakers must ensure that decisions influenced by AI remain understandable, reviewable, and subject to human responsibility.</p>
+<h2>Three Moments</h2>
 
-<h2>Transparency and Traceability</h2>
+<p><strong>Before.</strong> What a system is, what it may do, and what has to be in place before it does it. Mature fields scope this tightly. Aviation certifies a specific aircraft type, model, and configuration. Financial regulation after 2008 runs stress tests and requires resolution plans in advance. Conservation translocation makes monitoring and contingency commitments a condition of approval, resourced before release.</p>
 
-<p>Many emerging regulatory frameworks emphasize transparency and traceability in automated or AI-assisted systems.
-These principles attempt to ensure that decisions affecting individuals or institutions can be examined after the fact.</p>
+<p><strong>During.</strong> What is recorded as it happens: what was asked, what was assumed, what was reasoned, and which human validated it before it became a commitment. A flight recorder does not prevent a crash. It means that what happened during the flight does not have to be reconstructed from wreckage afterwards. Current AI instruments do reach this moment: events are logged and oversight tools are required. What they capture is system behaviour. The reasoning behind a decision usually does not survive it.</p>
 
-<p>Examples include requirements for documentation, risk assessments, model transparency, and oversight mechanisms.</p>
+<p><strong>After.</strong> Audit, repair, and where necessary withdrawal. Aviation separates the body that investigates from the body that grounds aircraft, and an airworthiness directive grounds a specific type, not &ldquo;aviation.&rdquo; Pharmacovigilance pairs signal detection with a recall power that is actually exercised. This moment works only as well as what was kept before and during.</p>
 
-<p>While these measures are valuable, they often focus on documenting system behavior rather than preserving the reasoning processes that produced particular decisions.</p>
+<h2>Disclosure Is Not Legibility</h2>
 
-<h2>Decision Provenance</h2>
-
-<p>A growing area of research explores the concept of <em>decision provenance</em>: the preservation of records showing how decisions emerge from complex systems of data, algorithms, and human oversight. See Singh, Cobbe &amp; Norval (2018) in the <a href="/research/bibliography.html">research bibliography</a> for the formal treatment this programme builds on directly.</p>
-
-<p>Decision provenance aims to capture the context in which decisions were made so that responsibility and accountability can be reconstructed later.</p>
-
-<p><a href="/concepts/pkos.html">PKOS</a> explores a related, narrower question: whether reasoning systems themselves require structured infrastructure to preserve the lineage of reasoning across time — not just where data came from, but how it was actually reasoned into a decision.</p>
-
-<h2>From Documentation to Reasoning Lineage</h2>
-
-<p>Regulatory frameworks often require documentation of processes and outcomes.
-However, documentation alone may not fully preserve the reasoning trajectory behind complex decisions.</p>
-
-<p>This research programme's answer to that gap is <a href="/concepts/decision-lineage.html">decision lineage</a>, which connects:</p>
+<p>A risk is legible, at any of the three moments, when three things are true at once:</p>
 
 <ul>
-<li>intent and problem framing</li>
-<li>assumptions and interpretations</li>
-<li>reasoning processes</li>
-<li>validation and oversight</li>
-<li>the recorded decision state</li>
+<li><strong>It has been disclosed</strong> &mdash; documented, logged, and made available in a form a competent reader could understand.</li>
+<li><strong>It has been rendered as a stable, scoped object</strong> &mdash; a specific deployment, version, or configuration, bounded well enough that an intervention can be aimed at it and not at something broader or vaguer.</li>
+<li><strong>It sits in front of a party with the standing and the means to act on it.</strong></li>
 </ul>
 
-<p>Preserving decision lineage may help institutions maintain accountability in environments where reasoning increasingly involves collaboration between humans and AI systems.</p>
+<p>All three are required. Disclosure alone satisfies the first and neither of the others.</p>
 
-<h2>Human Oversight and Responsibility</h2>
+<h2>The EU AI Act, Read Against That Definition</h2>
 
-<p>Regulatory frameworks consistently emphasize the importance of human oversight in AI-assisted decision systems.
-Human participants must remain responsible for interpreting system outputs and authorizing decisions that affect individuals or institutions.</p>
+<p>The EU AI Act is a serious and detailed instrument, and a useful test for exactly that reason. Read against the three-part definition, the paper finds it disclosure-shaped even where it comes closest to governance:</p>
 
-<p><a href="/concepts/pkos.html">PKOS</a> aligns with this principle by assuming that human participants validate and assume responsibility for reasoning states before they become durable commitments, at the <a href="/concepts/promotion-gate.html">Promotion Gate</a>.</p>
+<ul>
+<li><strong>Articles 12 and 13</strong> (event logging; instructions for use) make information available to a competent reader. They do not by themselves produce a stable object that a specific party is positioned to act on.</li>
+<li><strong>Article 14</strong> (human oversight) requires that oversight tools exist. It does not require that a recall, containment, or correction has ever been demonstrated with them.</li>
+<li><strong>Articles 72 and 73</strong> (post-market monitoring; serious-incident reporting) make disclosure continuous. They remain a reporting obligation, not a demonstrated capacity to withdraw a system, and the party that builds and deploys a system is also the party primarily responsible for detecting and reporting its own serious incidents.</li>
+</ul>
 
-<p>Such checkpoints ensure that AI systems assist reasoning without replacing human accountability.</p>
+<p>This is a reading of the Act's structure as written. It is not a report on enforcement practice, and it makes no claim about how national authorities will exercise their powers.</p>
 
-<h2>Regulation as Governance Infrastructure</h2>
+<p>&rarr; <a href="/structural-alignment/eu-ai-act-structural-alignment.html">How the EU AI Act maps onto this work</a> &mdash; structural alignment, not legal advice.</p>
 
-<p>Legislation and regulatory frameworks function as structural infrastructure for governance.
-They define boundaries, responsibilities, and procedures that help maintain accountability across complex systems.</p>
+<h2>A Diagnostic Available Today</h2>
 
-<p>As reasoning environments evolve, policymakers may increasingly consider how infrastructure for reasoning continuity could support the goals of transparency, oversight, and institutional learning.</p>
+<p>Declared is not demonstrated. A recall or containment authority that has never been exercised is, evidentially, asserted rather than shown. The paper turns this into a question any regulator, researcher, or deployer can ask without waiting for a visible failure:</p>
 
-<p>PKOS therefore contributes to a broader conversation about how governance structures can remain effective as reasoning processes accelerate through human–AI collaboration.</p>
+<blockquote>Has this organisation's declared recall or containment capacity ever actually been exercised, on a real instance, at a cost to its own operative metric?</blockquote>
+
+<p>In other fields the answer has sometimes been yes, and visibly so. For AI deployment, nothing currently plays that role.</p>
+
+<h2>Where the Gap Is, and Where It Isn't</h2>
+
+<p>The paper's claim is narrower than either easy conclusion. It is not that AI can be regulated like anything else, and it is not that AI is ungovernable. Closed, API-gated deployment already has a demonstrated, regularly exercised capacity to revoke access. The gap is specific to forms of release that leave no single traceable object, open weights chief among them. Once copies and derivatives multiply, there is no longer one thing to keep in view.</p>
+
+<p>For that case the paper sets out a research and design agenda, not a claimed solution: a persistent lineage identity that survives redistribution, a recurring measure of drift from the origin, a reporting pipeline that can attribute a signal to a specific lineage, a tiered ladder of responses, and a positioned party relocated to the chokepoints that remain checkable after release. Two of the five have real technical groundwork, one has an institutional start, and the last has no attempted analogue. Its conclusion is to build the parts that can be built and name the part that has not yet been attempted.</p>
+
+<h2>The Missing Middle: Reasoning Lineage</h2>
+
+<p>A separate question sits alongside this one: not the lineage of a deployed model, but the lineage of a decision. Research on <em>decision provenance</em> treats it formally, preserving records of how decisions emerge from data, algorithms, and human oversight. See Singh, Cobbe &amp; Norval (2018) in the <a href="/research/bibliography.html">research bibliography</a> for the treatment this programme builds on.</p>
+
+<p>This programme's contribution is narrower: the reasoning itself. <a href="/concepts/decision-lineage.html">Decision lineage</a> connects intent and problem framing, assumptions and interpretations, the reasoning process, validation and oversight, and the recorded decision state, so that responsibility can be reconstructed from what was actually reasoned and not only from what was logged.</p>
+
+<p>That is the middle moment, and it matters most for human oversight. Oversight is a duty on paper until something records what the human reviewed and decided. PKOS puts that checkpoint at the <a href="/concepts/promotion-gate.html">Promotion Gate</a>: human participants validate and take responsibility for reasoning states before they become durable commitments. It is the structural point at which AI assists reasoning without replacing human accountability.</p>
+
+<h2>Where This Stands</h2>
+
+<p>This is independent research. The diagnosis is argued formally in the paper above, and the reasoning-lineage architecture described on this page exists as working infrastructure. What it has not yet had is validation against real regulatory practice. That is the open question this programme wants to answer with partners, not one it claims to have settled. Nothing here is legal advice or a compliance certification.</p>
+
+<p>&rarr; For institutions rather than regulators, see <a href="/research/entry/governance.html">Institutional Governance</a>.<br>
+&rarr; The wider body of work: <a href="/research/publications/papers/">the research programme</a>.</p>
+
+<h2>We Have Done This Before</h2>
+
+<p>Traffic is a system with millions of independent actors, no one in charge, and consequences measured in lives. It was not made workable by controlling every driver. It was made workable by infrastructure that carries the rules with it: licences and vehicle standards before the journey; lanes, signals, and right of way during it; investigation, repair, and changed signal timing after. Each moment feeds the next, and the whole system learns from what happens on the road.</p>
+
+<p>None of it is exotic. Everyone accepts it every time they drive through a junction. It was built piece by piece over decades, and it is why a system this large runs at all.</p>
+
+<p>Knowledge generation is the next system of that shape: millions of actors, human and artificial, producing reasoning faster than any one institution can follow, with no one in charge. We know how to build infrastructure for a problem like that. We have done it before. What remains is to build it for the way knowledge is made now.</p>
+
+<p>&rarr; The same logic at street level: <a href="/architecture/process-perspective.html">Process Perspective</a><br>
+&rarr; The road, not one vehicle's stack: <a href="/architecture/">Architecture</a></p>
+
+<p class="closing">We built it for traffic. We now need it for knowledge.</p>
 
 <h2>Related Concepts</h2>
 <ul>
+<li><a href="/concepts/legibility.html">Legibility</a></li>
+<li><a href="/concepts/structural-alignment.html">Structural Alignment</a></li>
 <li><a href="/concepts/decision-lineage.html">Decision Lineage</a></li>
+<li><a href="/concepts/promotion-gate.html">Promotion Gate</a></li>
 <li><a href="/concepts/traceable-state.html">Traceability</a></li>
 <li><a href="/concepts/state-anchoring.html">State Anchoring</a></li>
 <li><a href="/concepts/audit-repair.html">Audit &amp; Repair</a></li>
