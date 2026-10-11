@@ -30,3 +30,4 @@ cognitive-journey.html
 about/before-it-had-a-name.html
 research/entry/index.html
 research/entry/funding.html
+unattained-gains.html
